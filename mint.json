@@ -403,11 +403,6 @@
   "seo": {
     "indexHiddenPages": false
   },
-  "analytics": {
-    "posthog": {
-      "apiKey": ""
-    }
-  },
   "redirects": [],
   "isWhiteLabeled": true,
   "backgroundImage": "/background.svg"
