@@ -1,0 +1,183 @@
+---
+title: Journal Entries
+sidebarTitle: Journal entries
+description: Create manual journal entries for adjustments and corrections.
+---
+
+Sometimes transactions don't fit neatly into your normal accounting flow:
+
+- You realized Q2 rent was recorded twice and need to reverse one entry
+- Your accountant says to record $500 in monthly depreciation
+- You took a personal loan to cover payroll and need to track the liability
+- A client's invoice is 180 days old and probably uncollectible
+
+That's where journal entries come in. They let you post directly to your accounts without going through invoices, bills, or bank transactions. Think of them as your escape hatch when the normal system doesn't cover it.
+
+## When you actually need journal entries
+
+Most of the time, you don't. Transactions flow in automatically from your bank, invoices create revenue, bills create expenses. Journal entries are for the exceptions:
+
+| Situation | What's happening |
+|-----------|------------------|
+| **Accruals** | You earned revenue or incurred expense this month, but money moves next month |
+| **Depreciation** | Recording the value decline of equipment over time |
+| **Corrections** | Fixing a mistake in a previous entry |
+| **Owner transactions** | Putting money in or taking money out of the business |
+| **Write-offs** | That invoice isn't getting paid — time to recognize the loss |
+| **Prepaid allocation** | You paid $12,000 for annual insurance, spreading it over 12 months |
+
+If you're creating journal entries for regular expenses or income, you're probably doing something the hard way. Use the normal transaction flow when you can.
+
+## Creating a journal entry
+
+Go to **Accounting → Journal Entries → New Entry**.
+
+You'll fill out:
+- **Date** — When this entry should hit your books
+- **Description** — What this entry is for (be specific — future-you will thank you)
+- **Lines** — At least two: one debit, one credit, and they must balance
+
+### The debit/credit thing
+
+Here's the part that confuses people. Every journal entry needs debits and credits that equal each other. Which account gets which?
+
+| To increase... | You... |
+|----------------|--------|
+| Assets (cash, equipment, AR) | Debit |
+| Expenses (rent, salaries, supplies) | Debit |
+| Liabilities (loans, AP, credit cards) | Credit |
+| Equity (owner's investment, retained earnings) | Credit |
+| Revenue (sales, services) | Credit |
+
+To decrease any of these, do the opposite.
+
+### Example: Recording depreciation
+
+Your accountant tells you to record $500 monthly depreciation on your equipment:
+
+| Account | Debit | Credit |
+|---------|-------|--------|
+| Depreciation Expense | $500 | |
+| Accumulated Depreciation | | $500 |
+
+Expense goes up (debit), the contra-asset account goes up (credit). Equipment value on your books decreases over time.
+
+### Example: Owner investment
+
+You put $10,000 of your own money into the business:
+
+| Account | Debit | Credit |
+|---------|-------|--------|
+| Cash | $10,000 | |
+| Owner's Equity | | $10,000 |
+
+Cash goes up (debit), owner's stake goes up (credit).
+
+### Example: Bad debt write-off
+
+That $2,000 invoice from 6 months ago? Client went out of business. Time to write it off:
+
+| Account | Debit | Credit |
+|---------|-------|--------|
+| Bad Debt Expense | $2,000 | |
+| Accounts Receivable | | $2,000 |
+
+You recognize the loss and remove the fake receivable from your books.
+
+## Types of entries
+
+**Standard entries** — Most entries. They post and stay posted.
+
+**Adjusting entries** — Month-end or year-end adjustments. Tagged as "adjusting" so your accountant can find them easily.
+
+**Reversing entries** — These auto-reverse on a future date. Perfect for accruals. You accrue $5,000 in salary expense on December 31, then it reverses on January 1 when you actually pay it. Check the "Auto-reverse" box and pick the reversal date.
+
+## Recurring entries
+
+Some entries repeat every month:
+- Depreciation
+- Prepaid expense allocation
+- Rent accrual
+
+Instead of creating 12 separate entries:
+
+1. Create the entry once
+2. Click **Make Recurring**
+3. Set frequency (monthly is most common)
+4. Set an end date if it's not indefinite
+
+Pluvel posts the entry automatically on schedule.
+
+## Finding your entries
+
+Go to **Accounting → Journal Entries** to see all entries.
+
+You can filter by:
+- Date range
+- Entry type (standard, adjusting, reversing)
+- Account affected
+- Status (draft, posted, reversed)
+
+Click any entry to see the full detail and audit trail.
+
+## Editing entries
+
+**Draft entries** — Edit freely until you post them.
+
+**Posted entries in an open period** — You can edit, but every change is logged. Someone will see you modified it.
+
+**Posted entries in a closed period** — You can't edit directly. Create a reversing entry for the original, then create a new corrected entry. This keeps your audit trail clean.
+
+<Warning>
+If you're editing posted entries frequently, something's wrong with your process. Figure out why entries are wrong in the first place.
+</Warning>
+
+## Attachments
+
+Always attach supporting documentation:
+
+- The email from your accountant saying "record $500 depreciation"
+- The calculation showing how you got the accrual amount
+- The invoice you're writing off
+
+Click **Attach** on any entry to upload files. Your future auditor will appreciate this.
+
+## The audit trail
+
+Every journal entry records:
+- Who created it
+- When
+- Who edited it (if anyone)
+- What changed
+- When it posted
+
+This isn't optional. You can't turn it off. That's the point — journal entries are a sensitive area where fraud can happen, so everything is tracked.
+
+View the full history in the **Activity** tab on any entry.
+
+## Common mistakes
+
+**Entries that don't balance.** Pluvel won't let you save these, so you'll catch it immediately. But if you're constantly fighting to make entries balance, you might not understand what you're trying to record. Step back and think about which accounts should increase and decrease.
+
+**Vague descriptions.** "Adjustment" tells you nothing in 6 months. "Dec 2024 depreciation - office equipment" tells you exactly what this is.
+
+**Using journal entries for everything.** If you're creating journal entries for regular vendor payments or customer receipts, you're working too hard. Use bills and invoices.
+
+**Forgetting reversing entries.** You accrued $10,000 in December, then forgot to reverse it in January when the actual expense hit. Now your books are overstated. Use auto-reversing entries.
+
+<CardGroup cols={2}>
+  <Card
+    title="Chart of accounts"
+    icon="list"
+    href="/features/accounting/chart-of-accounts"
+  >
+    The accounts your journal entries post to.
+  </Card>
+  <Card
+    title="Year-end close"
+    icon="calendar"
+    href="/features/accounting/year-end-close"
+  >
+    Closing entries that finalize your fiscal year.
+  </Card>
+</CardGroup>

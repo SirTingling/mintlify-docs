@@ -1,0 +1,182 @@
+---
+title: Gusto
+sidebarTitle: Gusto
+description: Import employees, contractors, payroll history, and tax forms from Gusto.
+---
+
+Switching payroll providers is supposed to be painful. Re-entering every employee's information, retyping W-4s, hoping you get the YTD totals right so Q4 taxes don't explode.
+
+Connect your Gusto account instead. We'll import your employees, contractors, payroll history, tax withholdings, and PTO balances. Your first Pluvel payroll will calculate correctly because we know what's already been paid this year.
+
+## What comes over
+
+| Data | What imports |
+|------|--------------|
+| **Employees** | Names, addresses, pay rates, tax withholdings, bank info |
+| **Contractors** | Names, addresses, payment info, YTD payments |
+| **Payroll history** | All payrolls from the current year |
+| **Tax documents** | W-2s, 1099s, quarterly filings |
+| **Benefits** | Deduction types and amounts |
+| **PTO balances** | Current vacation and sick balances |
+
+<Info>
+This is a migration — not an ongoing sync. Once you import, you run future payrolls in Pluvel. Changes you make in Gusto won't appear here.
+</Info>
+
+## When to migrate
+
+Timing matters for payroll migrations.
+
+| Timing | Recommendation |
+|--------|----------------|
+| **Year-end** | Ideal — finish the year in Gusto, start fresh in Pluvel January 1 |
+| **Quarter-end** | Good — complete quarterly filings in Gusto, then switch |
+| **Mid-quarter** | Possible but requires careful coordination |
+| **Mid-pay-period** | Don't do this |
+
+<Warning>
+Mid-quarter migrations require careful tax coordination. We need to file partial-quarter returns in both systems. It's doable, but year-end or quarter-end is much cleaner.
+</Warning>
+
+## Before you connect
+
+Make sure you have:
+
+- Admin access to your Gusto account
+- All pending payrolls completed (finish current payroll in Gusto)
+- Any reports you want downloaded
+
+## Connect Gusto
+
+<Steps>
+  <Step title="Start the connection">
+    Go to **Settings → Integrations**, find Gusto in the Payroll section, and click **Connect**.
+  </Step>
+
+  <Step title="Authorize with Gusto">
+    You'll be redirected to Gusto. Log in and authorize Pluvel to access your company data.
+  </Step>
+
+  <Step title="Choose what to import">
+    Select which data to bring over:
+    - Employee information
+    - Contractor information
+    - Payroll history
+    - Tax documents
+    - PTO balances
+  </Step>
+
+  <Step title="Review the preview">
+    We show you exactly what will import before we do it. Verify employee count and data types.
+  </Step>
+
+  <Step title="Run the import">
+    Click **Import** to bring everything into Pluvel.
+  </Step>
+</Steps>
+
+## What we import for each employee
+
+| Field | Notes |
+|-------|-------|
+| Personal info | Name, address, SSN (encrypted), date of birth |
+| Employment info | Start date, job title, department |
+| Pay info | Salary or hourly rate, pay schedule |
+| Tax withholding | Federal W-4, state withholding elections |
+| Direct deposit | Bank account info |
+| Deductions | Health insurance, 401(k), HSA, etc. |
+
+After import, employees can log into Pluvel to view pay stubs and update their information.
+
+## Why payroll history matters
+
+We import all payroll runs from the current calendar year. This ensures:
+
+- **Accurate YTD totals** — Tax calculations use actual year-to-date wages
+- **Correct W-2s** — Year-end forms reflect all wages, not just Pluvel wages
+- **Proper quarterly filing** — Quarterly taxes account for what's already been withheld
+
+<Tip>
+If you migrate mid-year, your first Pluvel payroll will automatically account for wages and taxes already paid through Gusto.
+</Tip>
+
+## Tax documents that transfer
+
+- Quarterly Form 941 filings (current year)
+- State tax filings
+- W-2s from previous years (for reference)
+- 1099s from previous years (for reference)
+
+Find these in **Payroll → Tax Documents**.
+
+## Migration checklist
+
+<Steps>
+  <Step title="Run your last Gusto payroll">
+    Complete any pending payrolls before migrating. Don't leave a payroll half-done.
+  </Step>
+
+  <Step title="Import data to Pluvel">
+    Use the Gusto integration to bring over employees, contractors, and history.
+  </Step>
+
+  <Step title="Have employees verify their info">
+    Send employees their Pluvel login. Have them confirm pay rate, direct deposit, and tax withholding.
+  </Step>
+
+  <Step title="Set up payroll in Pluvel">
+    Configure your pay schedule, tax registration, and funding account.
+  </Step>
+
+  <Step title="Run your first payroll">
+    Process a payroll and verify the calculations look right.
+  </Step>
+
+  <Step title="Cancel Gusto">
+    Once you've run 2-3 successful payrolls, cancel your Gusto subscription.
+  </Step>
+</Steps>
+
+## Common issues
+
+<AccordionGroup>
+  <Accordion title="Import failed">
+    Check that:
+
+    1. You have admin access in Gusto (not just view-only)
+    2. Your Gusto account is active (not suspended)
+    3. You're connected to the right company
+
+    Try disconnecting and reconnecting. Contact support if it persists.
+  </Accordion>
+
+  <Accordion title="Some employees didn't import">
+    Only active employees import by default. Terminated employees don't come over unless you select "Include terminated employees" during import.
+  </Accordion>
+
+  <Accordion title="Tax withholding looks different">
+    We import the most recent W-4 information from Gusto. If an employee recently changed their withholding in Gusto, verify it came through correctly.
+  </Accordion>
+
+  <Accordion title="YTD totals don't match">
+    Compare YTD totals in Pluvel with your last Gusto pay stub. Small rounding differences are normal. Large differences should be reported to support before you run payroll.
+  </Accordion>
+</AccordionGroup>
+
+## What happens to Gusto
+
+Connecting Pluvel doesn't affect your Gusto account. You can:
+
+- Continue running payroll in Gusto until you're ready to switch
+- Keep Gusto active as long as you want during transition
+- Access historical Gusto data even after canceling (Gusto retains records)
+
+Don't cancel Gusto until you've successfully run at least 2-3 payrolls in Pluvel.
+
+<Card
+  title="Run payroll in Pluvel"
+  icon="money-check-dollar"
+  href="/guides/payroll/run-payroll"
+>
+  Learn how to run your first payroll after migrating.
+</Card>

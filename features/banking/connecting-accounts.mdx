@@ -1,0 +1,145 @@
+---
+title: Connecting Bank Accounts
+sidebarTitle: Connecting accounts
+description: Link your bank accounts to Pluvel for automatic transaction sync.
+---
+
+You're still manually downloading CSV files from your bank every week. Then uploading them. Then matching transactions you've already categorized three times before.
+
+Or maybe you're entering transactions by hand, hoping you don't miss anything.
+
+Connect your bank accounts once and that busywork disappears. Transactions flow in automatically. Balances stay current. You spend time on actual bookkeeping instead of data entry.
+
+## Connecting via Plaid
+
+Most bank connections use Plaid, a secure service trusted by thousands of financial apps (Venmo, Robinhood, and most fintech apps you've used).
+
+<Steps>
+  <Step title="Go to Banking">
+    Navigate to **Settings → Banking** or **Banking → Accounts**.
+  </Step>
+
+  <Step title="Click Connect Bank">
+    Click **Connect Bank Account** to open the Plaid interface.
+  </Step>
+
+  <Step title="Find your bank">
+    Search for your bank by name. Over 12,000 institutions are supported — if you've heard of it, it's probably there.
+  </Step>
+
+  <Step title="Log in">
+    Enter your online banking credentials. This happens in Plaid's secure interface — we never see your password.
+  </Step>
+
+  <Step title="Select accounts">
+    Choose which accounts to connect (checking, savings, credit cards).
+  </Step>
+
+  <Step title="Done">
+    Transactions start importing immediately. Historical data (up to 24 months) imports within a few hours.
+  </Step>
+</Steps>
+
+## What we can and can't access
+
+When you connect a bank account, we receive:
+
+| Data | What we use it for |
+|------|-------------------|
+| Account balances | Cash position, dashboard metrics |
+| Transaction history | Categorization, reporting, reconciliation |
+| Account info | Name, type, last 4 digits |
+
+We **don't** receive:
+- Your login credentials (ever)
+- Full account numbers
+- Ability to move money
+
+<Info>
+All bank connections are read-only. We cannot initiate transfers, payments, or any changes to your accounts. Technically impossible.
+</Info>
+
+## Direct integrations
+
+Some banks offer direct integrations with enhanced features:
+
+| Bank | What you get |
+|------|----------|
+| Mercury | Real-time sync, full history, enhanced transaction details |
+| More coming | We're adding more direct integrations |
+
+For banks with direct integrations, connect through **Settings → Integrations** instead of Plaid. You'll get better data.
+
+## What account types work
+
+| Account type | Supported |
+|--------------|-----------|
+| Checking | ✓ |
+| Savings | ✓ |
+| Money market | ✓ |
+| Credit cards | ✓ |
+| Lines of credit | ✓ |
+| Business loans | Varies by bank |
+
+## Connecting multiple accounts
+
+Connect as many accounts as you need:
+
+- Multiple accounts at the same bank
+- Accounts at different banks
+- Credit cards
+- Both business and personal (if you need to track both)
+
+Each account appears separately. You can manage them independently, and we won't mix your transactions.
+
+## How often transactions sync
+
+| Sync type | When it happens |
+|-----------|-----------------|
+| Automatic | Every 6-12 hours |
+| Manual | Click "Sync Now" anytime |
+| Initial | First sync imports up to 24 months |
+
+New transactions typically appear within a few hours of posting to your bank. Not instant, but close enough for most bookkeeping.
+
+## Connection health
+
+Monitor connection status in **Banking → Accounts**:
+
+| Status | What it means |
+|--------|---------|
+| 🟢 Connected | Working normally |
+| 🟡 Needs attention | Temporary issue, usually resolves on its own |
+| 🔴 Disconnected | Your bank needs you to re-authenticate |
+
+## When connections break
+
+Connections occasionally need refreshing — usually because you changed your bank password, or your bank pushed a security update.
+
+When that happens:
+
+1. Go to **Banking → Accounts**
+2. Click on the affected account
+3. Click **Reconnect**
+4. Log in again through Plaid
+
+Takes about 30 seconds. Your historical data stays intact.
+
+## Security
+
+Bank connections are secured by:
+
+- **Plaid's security** — SOC 2 Type II certified, bank-level encryption
+- **No credential storage** — We never see or store your password
+- **Token-based access** — Secure tokens, not credentials
+- **Read-only access** — Cannot modify your accounts
+
+Your bank data is probably safer in Plaid than in most other systems you use.
+
+<Card
+  title="Mercury integration"
+  icon="building-columns"
+  href="/features/banking/mercury"
+>
+  Connect Mercury for real-time banking.
+</Card>

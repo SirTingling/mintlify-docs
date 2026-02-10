@@ -1,0 +1,137 @@
+---
+title: Projects
+sidebarTitle: Projects
+description: Track income and expenses by project to see which work is actually profitable.
+---
+
+You've got multiple clients, multiple projects, multiple things going on. At the end of the month, you know you made money — but which projects made money? Which ones ate up more time than they were worth?
+
+Projects in Pluvel let you tag transactions to specific jobs, clients, or initiatives. Then you can see profitability at a glance.
+
+## Setting Up Projects
+
+Go to **Finance → Accounting → Projects** and click **New Project**.
+
+Give it:
+- **Name** — "Acme Rebrand", "Q1 Marketing Campaign", "Client: Johnson Corp"
+- **Customer** (optional) — Link it to a customer if it's client work
+- **Budget** (optional) — Set a spending limit if you have one
+- **Date range** (optional) — When the project starts and ends
+
+That's it. Projects are lightweight by design.
+
+## Assigning Transactions
+
+Once a project exists, you can tag transactions to it:
+
+**When categorizing** — Every transaction can have a project in addition to a category. "Office Supplies" (category) for "Website Redesign" (project).
+
+**On invoices** — When you create an invoice, assign it to a project. The revenue goes to that project.
+
+**On bills** — Vendor bills can be tagged too. That contractor you hired for a specific client? Their invoice counts against that project.
+
+**On time entries** — If you track time, assign hours to projects. We'll calculate labor cost based on pay rates.
+
+<Info>
+You can assign a transaction to a project at any time, even after it's been categorized. Just edit the transaction and add the project.
+</Info>
+
+## Project Profitability
+
+This is where it gets useful. Go to any project and you'll see:
+
+| Metric | What It Shows |
+|--------|---------------|
+| Revenue | Total invoiced for this project |
+| Direct Costs | Expenses directly tagged to this project |
+| Labor | Time × pay rate for hours logged |
+| Gross Profit | Revenue minus direct costs and labor |
+| Margin | Gross profit as a percentage of revenue |
+
+If you quoted $10,000 for a project, spent $3,000 on contractors, and logged 40 hours at an internal cost of $50/hour, your gross profit is $5,000 (50% margin).
+
+## Why This Matters
+
+**Know your winners.** Some projects look great but barely break even when you add up the hours. Others seem small but are highly profitable. This helps you see which is which.
+
+**Price better next time.** If every web project takes 30% more hours than you quote, you'll know to adjust your estimates.
+
+**Have informed conversations.** When a client asks for a discount, you'll know whether you can afford it.
+
+## Project Views
+
+**List view** — All projects with status, revenue, profit. Sort and filter as needed.
+
+**Dashboard view** — Active projects with progress bars showing budget vs. actual.
+
+**Timeline view** — Projects plotted by date. See what's starting, ending, overlapping.
+
+## Budget Tracking
+
+If you set a budget on a project, Pluvel tracks spending against it:
+
+- Current spend vs. budget
+- Alerts when you hit 80% or 100%
+- Projected total based on spending pace
+
+Useful for fixed-price work where scope creep means lost margin.
+
+## Project Status
+
+Projects can be:
+
+| Status | Meaning |
+|--------|---------|
+| Active | Work is ongoing |
+| On Hold | Paused but not finished |
+| Completed | Done, ready for review |
+| Archived | Hidden from default views |
+
+Mark projects complete when they're done. Archived projects don't show in dropdowns but are still visible in reports.
+
+## Reporting
+
+Find project-specific reports in **Reports → Projects**:
+
+- **Project profitability** — All projects compared side by side
+- **Project detail** — Deep dive into one project's finances
+- **Time by project** — Hours logged per project
+- **Budget vs. actual** — For projects with budgets
+
+You can also filter most other reports by project. Want a P&L just for one client? Filter by project.
+
+## Sub-Projects
+
+For complex work, create sub-projects:
+
+- Acme Rebrand
+  - Phase 1: Discovery
+  - Phase 2: Design
+  - Phase 3: Development
+
+Tag transactions to sub-projects, and the parent project totals everything up. Useful for phased work or multiple deliverables under one contract.
+
+## Tips
+
+**Don't over-complicate it.** Not every expense needs a project. Use projects for work where you actually want to track profitability — usually client work or major initiatives.
+
+**Tag consistently.** Projects only work if you tag things. Build it into your workflow — when you categorize a transaction, also assign the project.
+
+**Review regularly.** Check project profitability monthly. Catching an over-budget project early is better than discovering it when you invoice.
+
+<CardGroup cols={2}>
+  <Card
+    title="Time tracking"
+    icon="clock"
+    href="/features/invoicing/time-tracking"
+  >
+    Log hours and assign them to projects.
+  </Card>
+  <Card
+    title="Budgets"
+    icon="calculator"
+    href="/features/accounting/budgets"
+  >
+    Set and track budgets at the company or project level.
+  </Card>
+</CardGroup>

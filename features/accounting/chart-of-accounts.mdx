@@ -1,0 +1,176 @@
+---
+title: Chart of Accounts
+sidebarTitle: Chart of accounts
+description: Set up and manage your account structure.
+---
+
+Your chart of accounts is where every transaction ends up. Money comes in? It goes to a revenue account. You pay rent? It goes to an expense account. Buy equipment? Asset account.
+
+Think of it as a filing system for money. The better organized it is, the easier it is to understand where your money goes — and to answer questions like "how much did I spend on software this year?"
+
+## The five types of accounts
+
+Every account falls into one of five categories:
+
+| Type | What it tracks | Increases when... |
+|------|---------------|-------------------|
+| **Assets** | What you own | You receive money or buy something valuable |
+| **Liabilities** | What you owe | You borrow money or receive a bill |
+| **Equity** | Owner's stake | You invest in the business or keep profits |
+| **Revenue** | Money earned | You invoice a customer or make a sale |
+| **Expenses** | Money spent | You buy something or pay for a service |
+
+That's it. Every transaction in your business touches at least one of these.
+
+## Setting up your chart
+
+When you complete Pluvel setup, you choose a template:
+
+| Template | Accounts | Best for |
+|----------|----------|----------|
+| Simple | ~25 | Freelancers, consultants, solo businesses |
+| Standard | ~50 | Most small businesses |
+| Advanced | ~100+ | Businesses with complex reporting needs |
+
+Don't overthink it. Start with Standard. You can add accounts later but removing them is harder (accounts with transactions can't be deleted, only archived).
+
+## How accounts are organized
+
+Accounts form a hierarchy:
+
+```
+Assets
+├── Cash and Bank
+│   ├── Operating Checking
+│   ├── Savings
+│   └── Petty Cash
+├── Accounts Receivable
+└── Fixed Assets
+    ├── Equipment
+    └── Vehicles
+```
+
+Sub-accounts roll up to their parents. When you look at a report, you can see "Cash and Bank: $50,000" or drill down to see each individual bank account.
+
+## Adding accounts
+
+Go to **Accounting → Chart of Accounts → Add Account**.
+
+You'll need:
+- **Name** — What you'll see in reports ("Software Subscriptions", "Travel Expenses")
+- **Type** — One of the five categories
+- **Parent** (optional) — Where it sits in the hierarchy
+- **Number** (optional) — Pluvel auto-assigns if you skip this
+
+That's it. The account is ready to use.
+
+<Info>
+Most businesses add 5-10 custom accounts over time. Common additions: specific expense categories for your industry, separate bank accounts, or sub-accounts for tracking by department.
+</Info>
+
+## Account numbers
+
+Account numbers help organize and sort. Pluvel uses a standard numbering scheme:
+
+| Range | Type |
+|-------|------|
+| 1000-1999 | Assets |
+| 2000-2999 | Liabilities |
+| 3000-3999 | Equity |
+| 4000-4999 | Revenue |
+| 5000-5999 | Cost of Goods Sold |
+| 6000-8999 | Expenses |
+| 9000-9999 | Other Income/Expense |
+
+You don't have to memorize these — Pluvel auto-assigns within the right range based on account type. But if you care about account numbers (accountants often do), you can set them manually.
+
+## Common chart of accounts mistakes
+
+**Too many accounts.** Having separate accounts for "Google Ads", "Facebook Ads", "LinkedIn Ads", and "Twitter Ads" seems organized, but your reports become unreadable. One "Advertising" account with a memo field for the platform is usually better.
+
+**Too few accounts.** Everything dumped into "Miscellaneous Expense" means you can't analyze spending. If you're constantly using "Misc" or "Other", you need more specific accounts.
+
+**Wrong account types.** Putting owner draws in "Expenses" instead of "Equity" makes your P&L misleading. If something seems off in your reports, check that accounts are the right type.
+
+**Duplicate accounts.** "Office Supplies" and "Office Supply" both exist because you created one and forgot. Merge them.
+
+## Editing accounts
+
+Click any account to edit:
+
+- Rename it
+- Change its parent
+- Update the description
+- Deactivate it (if you're not using it anymore)
+
+<Warning>
+Be careful changing an account's type after transactions exist. A "Software" expense becoming a "Software" asset changes your financial statements retroactively. Ask your accountant first.
+</Warning>
+
+## Deactivating vs. deleting
+
+**Deactivating** hides an account from dropdowns but keeps it in reports. Use this for accounts you no longer need but have historical transactions.
+
+**Deleting** removes the account entirely. You can only delete accounts with zero transactions.
+
+Most of the time, deactivate rather than delete.
+
+## Merging accounts
+
+Made duplicates? Merge them:
+
+1. Go to **Chart of Accounts**
+2. Click **Merge Accounts**
+3. Select the accounts to combine
+4. Choose which one to keep
+5. All transactions move to the surviving account
+
+## Importing from another system
+
+Switching from QuickBooks, Xero, or Wave? You can import your chart of accounts:
+
+1. Export your chart from the old system (usually CSV)
+2. Go to **Chart of Accounts → Import**
+3. Map columns (account name, number, type, parent)
+4. Review the preview
+5. Import
+
+Pluvel will match account types as best it can. Review the results — sometimes "Fixed Assets" gets imported as a generic "Asset" and needs adjustment.
+
+## Tips from real users
+
+**Freelancers:** You probably need 20-30 accounts max. Revenue for each type of service you offer, expenses broken out by category, and a few asset accounts for your bank and equipment. Don't overcomplicate it.
+
+**Agencies:** Consider tracking revenue by service type (Design, Development, Strategy) and expenses by department if you have teams.
+
+**E-commerce:** You'll want Cost of Goods Sold accounts for inventory tracking, plus separate expense accounts for shipping, packaging, and marketplace fees.
+
+**Professional services:** Keep client-related expenses (meals, travel, client gifts) separate from operating expenses for profitability analysis.
+
+## Viewing your chart
+
+Go to **Accounting → Chart of Accounts** to see everything:
+
+- Filter by type (just show expenses)
+- Filter by status (hide inactive accounts)
+- Search by name or number
+- See current balances
+
+Click any account to see its transaction history.
+
+<CardGroup cols={2}>
+  <Card
+    title="Journal entries"
+    icon="pen"
+    href="/features/accounting/journal-entries"
+  >
+    Post manual entries to your accounts.
+  </Card>
+  <Card
+    title="Reports"
+    icon="chart-bar"
+    href="/features/reports/profit-loss"
+  >
+    See your accounts in context on financial statements.
+  </Card>
+</CardGroup>

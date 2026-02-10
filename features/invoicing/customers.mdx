@@ -1,0 +1,196 @@
+---
+title: Customers
+sidebarTitle: Customers
+description: Manage customer information and history.
+---
+
+Every invoice needs a customer. Instead of typing their info each time, save it once and reuse it forever.
+
+Customer records also give you history — every invoice you've sent them, every payment they've made, their current balance. Useful when someone asks "how much have we billed Acme Corp this year?"
+
+## Adding a customer
+
+<Steps>
+  <Step title="Go to Customers">
+    Navigate to **Invoicing → Customers** or click **Add Customer**.
+  </Step>
+
+  <Step title="Enter their details">
+    - Company name (or individual name)
+    - Contact person
+    - Email (where invoices go)
+    - Phone
+    - Billing address
+  </Step>
+
+  <Step title="Set defaults">
+    - Payment terms (Net 30, etc.)
+    - Tax status (taxable or exempt)
+    - Currency (if different from your default)
+  </Step>
+
+  <Step title="Save">
+    Customer is ready for invoicing.
+  </Step>
+</Steps>
+
+## Customer information
+
+| Field | What it's for |
+|-------|---------|
+| Company name | Primary identifier |
+| Display name | How they appear on invoices |
+| Contact name | Who to address communications to |
+| Email | Where invoices get sent |
+| Phone | Contact number |
+| Billing address | Appears on invoices |
+| Shipping address | If different from billing |
+
+## Customer defaults
+
+Set defaults that apply every time you invoice this customer:
+
+| Setting | What it does |
+|---------|-------------|
+| Payment terms | Net 15, Net 30, Due on receipt, etc. |
+| Tax status | Taxable or exempt |
+| Tax exemption ID | For exempt customers (resellers, nonprofits) |
+| Currency | Their preferred currency |
+| Payment method | How they usually pay |
+
+Saves you from setting these on every invoice.
+
+## The customer profile
+
+Everything about a customer in one place:
+
+### Overview
+
+- Contact information
+- Account balance (what they owe)
+- Total invoiced (all time)
+- Total paid (all time)
+
+### Invoices tab
+
+All invoices for this customer:
+- Drafts you haven't sent
+- Outstanding (sent, not paid)
+- Paid invoices
+- Overdue invoices
+
+### Payments tab
+
+Payment history:
+- Every payment they've made
+- Payment methods used
+- Dates received
+
+### Activity tab
+
+Timeline of everything:
+- Invoices sent
+- Payments received
+- Emails delivered
+- Notes you've added
+
+## Account balance
+
+Track what each customer owes:
+
+| Metric | What it shows |
+|--------|-------------|
+| Current balance | Total outstanding right now |
+| Overdue | Amount that's past due |
+| Available credit | Credits or overpayments to apply |
+
+## Customer statements
+
+Generate a statement showing all account activity:
+
+1. Open customer profile
+2. Click **Generate Statement**
+3. Select date range
+4. Generate PDF
+5. Send to customer
+
+Statements show:
+- Opening balance
+- Invoices issued
+- Payments received
+- Ending balance
+
+Good for customers who want a summary of their account.
+
+## Credits
+
+Apply a credit to a customer's account (refund, goodwill adjustment, correction):
+
+1. Go to customer profile
+2. Click **Add Credit**
+3. Enter amount and reason
+4. Credit applies to their next invoice automatically
+
+Or manually apply it to a specific invoice.
+
+## Importing customers
+
+Moving from another system?
+
+1. Go to **Customers → Import**
+2. Upload CSV file
+3. Map columns to fields
+4. Review and import
+
+### CSV format example
+
+```csv
+Company Name,Contact Name,Email,Phone,Address
+Acme Corp,John Smith,john@acme.com,555-1234,"123 Main St"
+```
+
+## Merging duplicates
+
+If you accidentally created the same customer twice:
+
+1. Go to **Customers**
+2. Click **Merge**
+3. Select the duplicates
+4. Choose which record to keep as primary
+5. Merge
+
+All invoices and payments consolidate under one customer.
+
+## Archiving customers
+
+For customers you no longer work with:
+
+1. Open customer profile
+2. Click **Archive**
+3. Customer hides from active lists but history is preserved
+
+Archived customers don't clutter your dropdowns when creating new invoices. You can unarchive them anytime.
+
+## Customer portal
+
+Give customers self-service access:
+
+1. Go to customer profile
+2. Click **Send Portal Access**
+3. Customer receives login link
+
+In the portal, they can:
+- View all their invoices
+- Make payments
+- Download receipts
+- Update their contact information
+
+Less "can you resend that invoice?" emails for you.
+
+<Card
+  title="Payment reminders"
+  icon="bell"
+  href="/features/invoicing/reminders"
+>
+  Send automatic payment reminders.
+</Card>

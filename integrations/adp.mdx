@@ -1,0 +1,195 @@
+---
+title: ADP
+sidebarTitle: ADP
+description: Import employee and payroll data from ADP.
+---
+
+You've been running payroll through ADP — maybe ADP Run, maybe Workforce Now. Hundreds of payroll runs, complex benefits, multi-state taxes. Now you want to switch, but the idea of recreating all that employee data makes you tired.
+
+Connect your ADP account and we'll import your employees, pay history, tax withholdings, and deductions. Your YTD totals come over so your next payroll calculates correctly.
+
+## What imports
+
+| Data | What comes over |
+|------|-----------------|
+| **Employees** | Names, addresses, pay rates, tax info |
+| **Pay history** | YTD earnings and deductions |
+| **Tax withholdings** | Federal and state W-4 data |
+| **Direct deposit** | Bank account information |
+| **Deductions** | Benefit deductions and amounts |
+
+<Info>
+This is a migration integration. It imports your historical data — future payrolls run in Pluvel, not ADP.
+</Info>
+
+## Supported ADP products
+
+We can import from:
+
+- ADP Run
+- ADP Workforce Now
+- ADP TotalSource (PEO)
+
+<Warning>
+ADP TotalSource migrations are more complex since you're leaving a PEO arrangement. You're not just switching software — you're becoming the employer of record. Contact support for guidance.
+</Warning>
+
+## Before you connect
+
+Make the migration smoother:
+
+1. **Get admin credentials** — You need ADP admin access, not just employee access
+2. **Run pending payrolls** — Complete any in-progress payrolls in ADP first
+3. **Download reports** — Export any reports you want to keep
+4. **Know your pay schedule** — Note your current pay dates
+
+## Connect ADP
+
+<Steps>
+  <Step title="Start the connection">
+    Go to **Settings → Integrations**, find ADP in the Payroll section, and click **Connect**.
+  </Step>
+
+  <Step title="Select your ADP product">
+    Tell us which ADP you're using — Run, Workforce Now, or TotalSource.
+  </Step>
+
+  <Step title="Authorize access">
+    Log into ADP and authorize Pluvel to access your data.
+  </Step>
+
+  <Step title="Choose what to import">
+    Select the data to bring over:
+    - Active employees
+    - Terminated employees (optional, useful for YTD reporting)
+    - Payroll history
+    - Deduction setup
+  </Step>
+
+  <Step title="Review and import">
+    Preview what's coming over, then click **Import**.
+  </Step>
+</Steps>
+
+## How fields map
+
+| ADP field | Pluvel field |
+|-----------|--------------|
+| Associate ID | Employee ID |
+| Legal name | Full name |
+| Work address | Office location |
+| Pay rate | Salary/hourly rate |
+| Federal filing status | W-4 status |
+| State tax code | State withholding |
+
+## Handling ADP-specific features
+
+### Company codes
+
+If you have multiple company codes in ADP, each imports as a separate entity in Pluvel. You can merge them or keep them separate depending on how you want to structure things.
+
+### Departments and cost centers
+
+ADP department codes import as departments in Pluvel. Cost center allocations import if you use our cost tracking features.
+
+### Benefit deductions
+
+Pre-tax and post-tax deductions import with their types:
+
+| ADP deduction type | Pluvel equivalent |
+|-------------------|-------------------|
+| 401(k) | Retirement - 401(k) |
+| Health insurance | Benefits - Health |
+| HSA | Benefits - HSA |
+| Garnishments | Deductions - Garnishment |
+
+## How long it takes
+
+| Phase | Duration |
+|-------|----------|
+| Data export from ADP | 1-2 days |
+| Import and validation | 1 day |
+| Employee verification | 2-3 days |
+| First Pluvel payroll | Your next pay date |
+
+Start the process 2-3 weeks before you want to run your first Pluvel payroll. Don't rush it.
+
+## Canceling ADP
+
+After you've successfully run payroll in Pluvel:
+
+1. **Confirm data accuracy** — Verify YTD totals match between systems
+2. **Run 2-3 payrolls** — Make sure everything works correctly
+3. **Cancel ADP** — Follow ADP's cancellation process
+4. **Keep records** — ADP retains historical data for compliance
+
+<Warning>
+Don't cancel ADP until you've verified Pluvel is working correctly. Keep both systems active during the transition period. Better safe than sorry.
+</Warning>
+
+## Common issues
+
+<AccordionGroup>
+  <Accordion title="Can't connect to ADP">
+    Common culprits:
+
+    - You need admin-level access in ADP, not just employee self-service
+    - Multi-factor authentication must be completed
+    - Some ADP configurations require API access to be enabled
+
+    Contact ADP support to verify your account has API access enabled.
+  </Accordion>
+
+  <Accordion title="Missing employees">
+    Only active employees import by default. To include terminated employees, select "Include terminated" during import — useful for accurate YTD reporting if you've had turnover.
+  </Accordion>
+
+  <Accordion title="Deductions not matching">
+    Complex deduction setups may require manual verification. Compare each employee's deduction amounts with their ADP pay stub. Some custom deduction types may need manual mapping.
+  </Accordion>
+
+  <Accordion title="Pay rate discrepancies">
+    ADP stores multiple pay rates (regular, overtime multipliers, shift differentials). We import the base rate. Overtime calculations in Pluvel follow standard rules (1.5x for overtime, 2x for double-time in California, etc.).
+  </Accordion>
+</AccordionGroup>
+
+## What doesn't import
+
+Some ADP features don't have Pluvel equivalents:
+
+- Time and attendance data (import from your time tracking system)
+- Performance reviews
+- Learning management courses
+- Benefits enrollment details (just deduction amounts, not plan specifics)
+
+## After migration
+
+<Steps>
+  <Step title="Verify employee data">
+    Review each employee's information in Pluvel. Spot-check pay rates, addresses, and withholding.
+  </Step>
+
+  <Step title="Have employees confirm">
+    Send employees their Pluvel login. Have them verify pay info and direct deposit.
+  </Step>
+
+  <Step title="Set up payroll schedule">
+    Configure your pay schedule to match your current dates.
+  </Step>
+
+  <Step title="Connect funding account">
+    Add the bank account for payroll debits.
+  </Step>
+
+  <Step title="Run test payroll">
+    Process your first payroll and verify the numbers look right.
+  </Step>
+</Steps>
+
+<Card
+  title="Need help with migration?"
+  icon="headset"
+  href="mailto:support@pluvel.com"
+>
+  Our team can help coordinate your ADP migration.
+</Card>

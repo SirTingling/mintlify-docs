@@ -1,0 +1,169 @@
+---
+title: Firm Alerts
+sidebarTitle: Alerts
+description: Issues and notifications needing your attention.
+---
+
+Client B's bank connection broke three days ago. You didn't notice because you were busy with other clients. Now their transactions are stale and you're behind on reconciliation.
+
+Alerts prevent this. Problems across all your clients — disconnected banks, overdue filings, unusual transactions — surface in one place. Red means urgent. Yellow means soon. You see what needs attention before it becomes a crisis.
+
+## Alert types
+
+| Type | Icon | Description |
+|------|------|-------------|
+| **Critical** | 🔴 | Requires immediate action |
+| **Warning** | 🟡 | Needs attention soon |
+| **Info** | 🔵 | FYI, no action required |
+| **Success** | 🟢 | Completed or resolved |
+
+## Critical alerts
+
+These require immediate action:
+
+| Alert | Cause |
+|-------|-------|
+| Bank disconnected | Plaid connection failed |
+| Negative cash balance | Account balance below zero |
+| Overdue filing | Tax or compliance deadline passed |
+| Failed payroll | Payroll didn't process |
+| Bounced payment | Payment returned or failed |
+
+## Warning alerts
+
+Address these within a few days:
+
+| Alert | Cause |
+|-------|-------|
+| Unreconciled (30+ days) | Bank account not reconciled |
+| Large transaction | Unusually large expense or deposit |
+| Duplicate detected | Possible duplicate transaction |
+| Document request overdue | Client hasn't responded |
+| Low cash warning | Cash below threshold |
+| License expiring | Business license renewal due |
+
+## Info alerts
+
+For your awareness:
+
+| Alert | Cause |
+|-------|-------|
+| Client login | Client accessed their portal |
+| Document uploaded | Client submitted a document |
+| New transactions | Bank synced new transactions |
+| Report generated | Scheduled report is ready |
+
+## Viewing alerts
+
+### Alert center
+
+Click the bell icon to see all alerts. Alerts are grouped by:
+- Today
+- This week
+- Older
+
+### Client alerts
+
+View alerts for a specific client:
+1. Open the client
+2. Click the Alerts tab
+3. See only that client's alerts
+
+### Alert feed
+
+The firm dashboard shows a real-time feed of alerts across all clients.
+
+## Managing alerts
+
+### Dismiss an alert
+
+If an alert doesn't require action:
+1. Click the alert
+2. Click **Dismiss**
+3. Add a note (optional)
+
+Dismissed alerts move to your alert history.
+
+### Snooze an alert
+
+Delay an alert temporarily:
+1. Click the alert
+2. Click **Snooze**
+3. Choose: 1 hour, 1 day, 1 week
+
+The alert reappears after the snooze period.
+
+### Resolve an alert
+
+When you've addressed the issue:
+1. Click the alert
+2. Take the suggested action (if any)
+3. Click **Mark Resolved**
+
+## Alert rules
+
+Customize what triggers alerts:
+
+### Cash threshold
+
+Set a minimum cash balance that triggers warnings:
+1. Go to client settings
+2. Set "Low cash threshold"
+3. Get alerted when balance drops below
+
+### Large transaction threshold
+
+Flag unusually large transactions:
+1. Set "Large transaction threshold"
+2. Any transaction above this amount triggers an alert
+
+### Inactivity alerts
+
+Get alerted if a client has no transactions:
+1. Set "Inactivity threshold" (e.g., 14 days)
+2. Alerted if no new transactions in that period
+
+## Notification preferences
+
+Control how you receive alerts:
+
+### Email notifications
+
+| Setting | Options |
+|---------|---------|
+| Immediate | Critical alerts only |
+| Daily digest | All alerts in morning email |
+| Weekly summary | Weekly roundup on Monday |
+| Off | Check dashboard only |
+
+### In-app notifications
+
+Desktop and mobile notifications for urgent items.
+
+### Team escalation
+
+Set up escalation rules:
+1. If alert not addressed in X hours
+2. Escalate to senior team member
+3. Notify firm admin
+
+## Alert history
+
+View past alerts:
+1. Go to **Firm Settings → Alert History**
+2. Filter by client, type, or date
+3. See how alerts were resolved
+
+History is retained for 12 months.
+
+<Info>
+Alert history helps identify patterns — like clients who frequently have issues.
+</Info>
+
+<Card
+  title="Client onboarding"
+  icon="clipboard-check"
+  href="/accountants/clients/onboarding"
+>
+  Set up new clients for success.
+</Card>

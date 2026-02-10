@@ -1,0 +1,139 @@
+---
+title: Estimates & Quotes
+sidebarTitle: Estimates
+description: Send proposals to clients and convert them to invoices when approved.
+---
+
+Before you send an invoice, sometimes you need to send an estimate. Here's how much the project will cost, here's what's included, sign here if you're in.
+
+Pluvel estimates work exactly like invoices — same editor, same templates — but they don't count as money owed until the client approves.
+
+## Creating an Estimate
+
+Go to **Finance → Invoicing → Estimates** and click **New Estimate**.
+
+You'll fill out:
+
+- **Customer** — Who's this for
+- **Line items** — Services, products, hourly rates, whatever you're quoting
+- **Expiration date** — How long is this price valid
+- **Notes** — Scope of work, terms, disclaimers
+
+Same interface as invoices. If you've created invoices before, you already know how this works.
+
+## Estimate vs. Invoice vs. Quote
+
+In Pluvel, they're technically the same thing with different labels:
+
+| Document | Status | Counts as Revenue |
+|----------|--------|-------------------|
+| Estimate | Draft proposal | No |
+| Quote | Same as estimate (some industries prefer this term) | No |
+| Invoice | Billed to customer | Yes, when sent |
+
+You can relabel "Estimate" to "Quote" or "Proposal" in **Settings → Invoicing → Labels** if your industry uses different terminology.
+
+## Sending to Customers
+
+Once your estimate is ready:
+
+1. Click **Send**
+2. Enter the customer's email (or use the one on file)
+3. Add a message if you want
+4. Send
+
+The customer receives an email with a link to view the estimate. They can:
+
+- **Accept** — Marks the estimate as approved
+- **Decline** — Marks it as lost (with an optional reason)
+- **Comment** — Ask questions before deciding
+
+You'll get notified when they respond.
+
+<Info>
+Customers can accept estimates without creating a Pluvel account. They just click the link in the email.
+</Info>
+
+## Converting to Invoice
+
+When a customer accepts an estimate (or you agree on the scope), convert it to an invoice:
+
+1. Open the estimate
+2. Click **Convert to Invoice**
+3. Review the details (they'll carry over)
+4. Send the invoice
+
+The estimate is marked as "Converted" and linked to the resulting invoice. You can still view it for reference.
+
+You can also partially convert — take some line items from an estimate and invoice them while keeping others for later. Useful for phased projects.
+
+## Tracking Estimates
+
+Your estimate list shows:
+
+| Status | Meaning |
+|--------|---------|
+| Draft | Not sent yet |
+| Sent | Waiting for response |
+| Viewed | Customer opened it (they might be thinking) |
+| Accepted | They said yes — time to convert |
+| Declined | They said no (or you marked it as lost) |
+| Expired | Past the expiration date with no response |
+| Converted | Now an invoice |
+
+Filter by status to see your pipeline. "Sent" and "Viewed" are your active opportunities.
+
+## Tips for Better Estimates
+
+**Be specific about scope.** Vague estimates lead to scope creep and awkward conversations later. List exactly what's included (and what's not).
+
+**Set realistic expiration dates.** 30 days is standard for most services. Complex projects might need 60-90 days. Too short feels pushy, too long lets people forget.
+
+**Include terms.** Payment terms (50% upfront, net 30 on completion), revision limits, timeline expectations. Better to agree now than fight later.
+
+**Follow up.** If an estimate has been "Viewed" for a week with no response, send a follow-up. People get busy.
+
+## Estimate Templates
+
+If you send similar estimates often, save them as templates:
+
+1. Create an estimate with your standard line items
+2. Before sending, click **Save as Template**
+3. Name it ("Standard Web Project", "Hourly Consulting")
+
+Next time, start from the template instead of scratch.
+
+## Revisions
+
+Customer wants changes? You can:
+
+- Edit the existing estimate and resend (they'll see "Revised")
+- Create a new version and archive the old one
+- Duplicate the estimate, modify it, and send as a new option
+
+Pluvel tracks versions so you know which estimate they ultimately accepted.
+
+## Reporting
+
+**Estimate pipeline** — Total value of sent estimates, acceptance rate, average time to decision.
+
+**Won/Lost analysis** — Which types of estimates win more often? Which customers decline most?
+
+Find these in **Reports → Sales → Estimate Pipeline**.
+
+<CardGroup cols={2}>
+  <Card
+    title="Creating invoices"
+    icon="file-invoice"
+    href="/features/invoicing/creating-invoices"
+  >
+    Once estimates are accepted, invoice your customers.
+  </Card>
+  <Card
+    title="Invoice templates"
+    icon="palette"
+    href="/features/invoicing/templates"
+  >
+    Customize how your estimates and invoices look.
+  </Card>
+</CardGroup>

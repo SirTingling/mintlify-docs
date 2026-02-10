@@ -1,0 +1,179 @@
+---
+title: Invoice Payments
+sidebarTitle: Payments
+description: Accept payments online and record offline payments.
+---
+
+The invoice is sent. Now you wait.
+
+Or you could make it easier for customers to pay. Online payments mean they click a button instead of writing a check, finding an envelope, and remembering to mail it. You get paid faster. They don't have to think about it.
+
+## Online payments
+
+Let customers pay directly from their invoice with a credit card or bank transfer.
+
+### Setting up
+
+<Steps>
+  <Step title="Connect Stripe">
+    Go to **Settings → Payments → Connect Stripe** and complete the setup. Takes about 5 minutes.
+  </Step>
+
+  <Step title="Enable on invoices">
+    In invoice settings, enable **Allow Online Payments**.
+  </Step>
+
+  <Step title="Send invoices">
+    Every invoice now includes a "Pay Now" button.
+  </Step>
+</Steps>
+
+### What customers can pay with
+
+With Stripe connected:
+
+- Credit cards (Visa, Mastercard, Amex, Discover)
+- Debit cards
+- ACH bank transfer (lower fees for you)
+- Apple Pay / Google Pay
+
+### The payment experience
+
+When customers click "Pay Now":
+
+1. They see the invoice details
+2. Select payment method
+3. Enter payment info (or use saved card)
+4. Confirm payment
+5. Receipt sent automatically
+
+The whole thing takes about 30 seconds.
+
+## Recording offline payments
+
+For payments that come in outside Pluvel — checks, wire transfers, cash:
+
+<Steps>
+  <Step title="Open the invoice">
+    Find it in your invoice list.
+  </Step>
+
+  <Step title="Click Record Payment">
+    Click **Record Payment**.
+  </Step>
+
+  <Step title="Enter details">
+    - Amount received
+    - Date received
+    - Payment method (check, cash, wire, etc.)
+    - Reference number (check number, wire reference)
+  </Step>
+
+  <Step title="Save">
+    Invoice status updates automatically.
+  </Step>
+</Steps>
+
+## Partial payments
+
+Sometimes customers pay in installments. That's fine:
+
+1. Record the partial amount
+2. Invoice shows remaining balance
+3. Customer can pay the rest later
+4. Status shows "Partial" until paid in full
+
+## Payment status
+
+| Status | What it means |
+|--------|---------|
+| Unpaid | Nothing received yet |
+| Partial | Some payment, balance remaining |
+| Paid | Full amount received |
+| Overpaid | They paid more than owed (rare, but happens) |
+
+## Processing fees
+
+Online payments have fees (charged by Stripe, not us):
+
+| Method | Fee |
+|--------|-----|
+| Credit/debit card | 2.9% + $0.30 |
+| ACH bank transfer | 0.8% (max $5) |
+
+On a $1,000 invoice, that's $29.30 for card or $5 for ACH. Fees are deducted from the payment — you receive the net amount.
+
+### Passing fees to customers
+
+Some businesses add a convenience fee for card payments:
+
+1. Go to **Settings → Payments**
+2. Enable **Add convenience fee**
+3. Set percentage or fixed amount
+4. Fee appears on invoice for card payments
+
+Check your local regulations — some places restrict this.
+
+## Payment receipts
+
+When payment comes in, customers automatically receive:
+
+- Confirmation of amount paid
+- Invoice reference
+- Payment method used
+- PDF receipt attached
+
+Customize the receipt email in **Settings → Emails → Payment Receipt**.
+
+## Refunds
+
+Sometimes you need to give money back:
+
+1. Open the invoice
+2. Click the payment
+3. Click **Refund**
+4. Enter refund amount (full or partial)
+5. Confirm
+
+For online payments, refund goes back to the original payment method. Usually takes 5-10 business days to appear.
+
+## Automatic payment matching
+
+When payments import from your bank:
+
+1. Pluvel matches payments to invoices automatically
+2. Uses amount and customer name to find matches
+3. Suggests matches for your review
+4. You confirm or adjust
+
+Saves time when you're processing a lot of payments.
+
+## Deposits and retainers
+
+Collecting payment before work begins?
+
+1. Create an invoice for the deposit amount
+2. Send to customer
+3. Record payment when received
+4. Apply credit to the final invoice
+
+Or use estimates with deposit requests (see [Estimates](/features/invoicing/estimates)).
+
+## Payment links
+
+Share a payment link directly — useful for texts, Slack, or any channel outside email:
+
+1. Open the invoice
+2. Click **Copy Payment Link**
+3. Send however you want
+4. Customer pays at the link
+
+Same payment experience, different delivery method.
+
+<Card
+  title="Manage customers"
+  icon="users"
+  href="/features/invoicing/customers"
+>
+  Track customer information.
+</Card>

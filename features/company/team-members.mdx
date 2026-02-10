@@ -1,0 +1,147 @@
+---
+title: Team members
+sidebarTitle: Team members
+description: Invite others to access your company in Pluvel.
+---
+
+You shouldn't be the only person who can categorize transactions, send invoices, or run payroll. But you also don't want your part-time assistant to have access to your bank accounts and tax filings.
+
+Pluvel lets you invite team members with specific roles — from read-only viewers who can see reports, to admins who can do almost everything. Everyone gets their own login, and you control exactly what they can access.
+
+## Roles
+
+| Role | Access level |
+|------|--------------|
+| **Owner** | Full access including billing and ownership transfer |
+| **Admin** | Full access except billing and ownership |
+| **Member** | Day-to-day features (transactions, invoices, bills) |
+| **Viewer** | Read-only access to reports and data |
+| **Accountant** | Special role for external accountants |
+
+### Role permissions
+
+| Permission | Owner | Admin | Member | Viewer | Accountant |
+|------------|-------|-------|--------|--------|------------|
+| View dashboard | ✓ | ✓ | ✓ | ✓ | ✓ |
+| View reports | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Manage transactions | ✓ | ✓ | ✓ | — | ✓ |
+| Create invoices | ✓ | ✓ | ✓ | — | — |
+| Run payroll | ✓ | ✓ | ✓ | — | — |
+| Manage team | ✓ | ✓ | — | — | — |
+| Company settings | ✓ | ✓ | — | — | — |
+| Billing | ✓ | — | — | — | — |
+| Transfer ownership | ✓ | — | — | — | — |
+
+## Invite a team member
+
+<Steps>
+  <Step title="Go to Settings → Team">
+    Click **Settings** in the sidebar, then **Team**.
+  </Step>
+
+  <Step title="Click Invite Member">
+    Click the **Invite Member** button.
+  </Step>
+
+  <Step title="Enter their details">
+    - **Email address** — They'll receive an invitation here
+    - **Role** — Select appropriate access level
+    - **Name** (optional) — For your reference
+  </Step>
+
+  <Step title="Send invitation">
+    Click **Send Invite**. They receive an email with a link to join.
+  </Step>
+</Steps>
+
+The invitation is valid for 7 days. You can resend if it expires.
+
+## Managing team members
+
+### Change someone's role
+
+1. Go to **Settings → Team**
+2. Click on the team member
+3. Select new role from dropdown
+4. Save
+
+### Remove someone
+
+1. Go to **Settings → Team**
+2. Click on the team member
+3. Click **Remove**
+4. Confirm
+
+They immediately lose access. Their past actions remain in the audit log.
+
+## Transfer ownership
+
+To transfer ownership to another person:
+
+1. Ensure they're already a team member (Admin level)
+2. Go to **Settings → Team**
+3. Click on their profile
+4. Click **Transfer Ownership**
+5. Confirm with your password
+
+<Warning>
+Ownership transfer is permanent. You'll become an Admin and lose billing access.
+</Warning>
+
+## Inviting your accountant
+
+For external accountants or bookkeepers:
+
+1. Invite them with the **Accountant** role
+2. They get access to:
+   - All financial data and reports
+   - Transaction categorization
+   - Bank reconciliation
+3. They can't access billing or team settings
+
+If your accountant manages multiple clients, they can use [Firm Mode](/accountants/overview) instead.
+
+## Team activity log
+
+See what team members have done:
+
+1. Go to **Settings → Team → Activity Log**
+2. View actions by team member
+3. Filter by date range or action type
+
+Logged actions include:
+- Invoices created/sent
+- Transactions categorized
+- Settings changed
+- Reports exported
+
+## Security best practices
+
+<AccordionGroup>
+  <Accordion title="Use strong passwords">
+    Each team member should use a unique, strong password. Consider requiring password managers.
+  </Accordion>
+
+  <Accordion title="Enable 2FA">
+    Strongly recommend all team members enable two-factor authentication. Admins can require it for the whole team.
+  </Accordion>
+
+  <Accordion title="Review access regularly">
+    Quarterly, review who has access. Remove people who no longer need it.
+  </Accordion>
+
+  <Accordion title="Use appropriate roles">
+    Don't give everyone Admin access. Use the minimum role needed for their job.
+  </Accordion>
+</AccordionGroup>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Company settings" icon="gear" href="/features/company/settings">
+    Configure company preferences.
+  </Card>
+  <Card title="Firm Mode" icon="building-columns" href="/accountants/overview">
+    For accountants managing multiple clients.
+  </Card>
+</CardGroup>

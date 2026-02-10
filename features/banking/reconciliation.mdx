@@ -1,0 +1,168 @@
+---
+title: Bank Reconciliation
+sidebarTitle: Reconciliation
+description: Reconcile your bank accounts to ensure accuracy.
+---
+
+Your bank says you have $47,832.16. Pluvel says you have $48,106.44. Who's right?
+
+Reconciliation answers that question. You compare your records to your bank statement, line by line, until the numbers match. It catches errors, missing transactions, and those duplicates that snuck in.
+
+Yes, even with automatic bank feeds. Especially with automatic bank feeds.
+
+## Why reconciliation matters
+
+Even with automatic sync, things go wrong:
+
+- **Duplicate imports** — The same transaction appears twice
+- **Missing transactions** — Bank fees, interest, or manual transactions you forgot
+- **Timing differences** — Pending transactions that posted differently than expected
+- **Data errors** — Occasionally, Plaid sends wrong data
+
+Reconciliation catches all of this before it becomes a bigger problem. Your accountant will reconcile anyway — better to do it now than explain discrepancies at tax time.
+
+## Starting reconciliation
+
+<Steps>
+  <Step title="Get your bank statement">
+    Download or access your statement for the period you're reconciling. PDF or paper both work.
+  </Step>
+
+  <Step title="Go to Reconciliation">
+    Navigate to **Banking → Reconciliation**.
+  </Step>
+
+  <Step title="Select account">
+    Choose the account to reconcile.
+  </Step>
+
+  <Step title="Enter statement info">
+    Enter the statement ending date and ending balance (exactly as shown on the statement).
+  </Step>
+
+  <Step title="Start">
+    Click **Start Reconciliation**.
+  </Step>
+</Steps>
+
+## The reconciliation screen
+
+| Section | What it shows |
+|---------|---------|
+| Statement balance | The ending balance from your bank statement |
+| Cleared balance | Sum of transactions you've marked as cleared |
+| Difference | Amount remaining to match (goal: $0.00) |
+| Transactions | List of transactions to clear |
+
+## Clearing transactions
+
+For each transaction on your bank statement:
+
+1. Find it in the Pluvel list
+2. Check the box to mark it as cleared
+3. Watch the difference decrease
+
+When "Difference" reaches $0.00, you're balanced.
+
+### Auto-matching
+
+Pluvel automatically matches:
+- Identical amounts and dates
+- Similar amounts within a few days
+- Previously matched recurring transactions
+
+Auto-matched transactions show a green checkmark. You can override if it's wrong.
+
+## Common discrepancies
+
+### Transaction in Pluvel but not on statement
+
+- **Timing** — It may appear on next statement (leave uncleared)
+- **Not yet posted** — Bank hasn't processed it yet
+- **Error** — Transaction was entered incorrectly (investigate)
+
+### Transaction on statement but not in Pluvel
+
+- **Sync delay** — Click "Sync Now" and refresh
+- **Missing from feed** — Add manually
+- **Bank fee or interest** — These often don't import automatically, add as new transaction
+
+Click **Add Transaction** during reconciliation to add missing items on the spot.
+
+## Making adjustments
+
+For small unexplained differences (a few cents or dollars):
+
+1. Click **Add Adjustment**
+2. Enter amount
+3. Select adjustment account (usually "Bank Adjustments" or "Rounding")
+4. Add explanation note
+
+<Warning>
+Only adjust small amounts after investigation. A $200 difference isn't rounding error — it's a real problem that needs real investigation.
+</Warning>
+
+## Completing reconciliation
+
+When the difference is $0.00:
+
+1. Click **Complete Reconciliation**
+2. Add any notes (optional)
+3. Confirm
+
+Reconciled transactions get locked. The reconciliation creates a record with:
+- Date completed
+- Who completed it
+- Statement balance verified
+- All cleared transactions
+
+This is your audit trail.
+
+## Reconciliation history
+
+View past reconciliations:
+
+1. Go to **Banking → Reconciliation → History**
+2. See all completed reconciliations
+3. Click to view details
+
+If your accountant or auditor needs proof you reconciled January 2024, it's there.
+
+## Undoing a reconciliation
+
+If you made a mistake:
+
+1. Go to reconciliation history
+2. Click the reconciliation
+3. Click **Unreconcile**
+
+This reopens all transactions from that period. Use carefully — you'll need to re-reconcile.
+
+## Reconciliation status
+
+Track which accounts are current:
+
+| Account | Last Reconciled | Status |
+|---------|-----------------|--------|
+| Checking | Jan 31 | Current |
+| Savings | Jan 31 | Current |
+| Credit Card | Dec 31 | Behind |
+
+View in **Banking → Reconciliation → Overview**. Red means you're behind.
+
+## Making reconciliation less painful
+
+- **Do it monthly** — Don't let months build up
+- **Use statement dates** — Match your bank's statement periods
+- **Document adjustments** — Future you will want to know why
+- **Reconcile before month-end close** — Required for accurate financial statements
+
+Reconciliation takes 10-15 minutes per account when you do it monthly. Let it slide and it takes hours.
+
+<Card
+  title="Chart of accounts"
+  icon="sitemap"
+  href="/features/accounting/chart-of-accounts"
+>
+  Set up your account structure.
+</Card>

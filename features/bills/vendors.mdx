@@ -1,0 +1,176 @@
+---
+title: Vendors
+sidebarTitle: Vendors
+description: Manage vendor information and payment details.
+---
+
+Every bill comes from someone. Instead of retyping "Acme Supplies, 123 Main Street, Net 30" every time, save your vendors once and reuse their info forever.
+
+Vendor records also track payment history, W-9 status (important for 1099s), and how much you've spent with them over time.
+
+## Adding a vendor
+
+<Steps>
+  <Step title="Go to Vendors">
+    Navigate to **Bills & Expenses → Vendors** or click **Add Vendor**.
+  </Step>
+
+  <Step title="Enter their details">
+    - Vendor name
+    - Contact person
+    - Email
+    - Phone
+    - Address
+  </Step>
+
+  <Step title="Add payment info">
+    - Payment terms (Net 30, etc.)
+    - Default expense account
+    - Tax ID (if you'll need to send them a 1099)
+  </Step>
+
+  <Step title="Save">
+    Vendor is ready for bills.
+  </Step>
+</Steps>
+
+## Vendor information
+
+| Field | What it's for |
+|-------|---------|
+| Vendor name | How you identify them |
+| Display name | How they appear on reports |
+| Contact name | Who to reach out to |
+| Email | For sending POs or questions |
+| Phone | Contact number |
+| Address | Where to send checks |
+| Website | Their website |
+
+## Payment details
+
+| Field | What it does |
+|-------|-------------|
+| Payment terms | Net 30, Net 15, Due on receipt, etc. |
+| Default account | Which expense account bills auto-assign to |
+| Payment method | How you usually pay them (check, ACH, card) |
+| Account number | Your account number with them |
+
+## Tax information (for 1099s)
+
+If you pay a vendor $600 or more in a year, you might need to send them a 1099. Collect this upfront:
+
+| Field | What it is |
+|-------|-------------|
+| Tax ID type | SSN or EIN |
+| Tax ID | Their actual number |
+| 1099 eligible | Yes/no for 1099 reporting |
+| 1099 type | NEC, MISC, etc. |
+
+<Info>
+Get W-9 forms from any vendor you expect to pay $600+ annually. January is too late to start collecting them.
+</Info>
+
+## The vendor profile
+
+Everything about a vendor in one place:
+
+### Overview
+
+- Contact information
+- Year-to-date spending
+- Current balance (what you owe them)
+
+### Bills tab
+
+All bills from this vendor:
+- Open (unpaid)
+- Paid
+- Overdue
+
+### Payments tab
+
+Payment history:
+- What you've paid them
+- When
+- How
+
+### Documents tab
+
+Store related files:
+- W-9 forms
+- Contracts
+- Correspondence
+
+## 1099 tracking
+
+Track payments for year-end 1099 reporting:
+
+1. Mark the vendor as **1099 Eligible**
+2. Enter their Tax ID
+3. Pluvel tracks payments throughout the year
+4. Generate 1099s at year-end
+
+### Alerts
+
+We'll warn you when:
+- A vendor approaches the $600 threshold
+- W-9 is missing for an eligible vendor
+- Tax ID isn't on file
+
+Better to catch this in July than scramble in January.
+
+## Vendor categories
+
+Organize vendors by type:
+
+- Contractors
+- Suppliers
+- Professional services
+- Utilities
+- Software/subscriptions
+
+Filter and report by category. "How much did we spend on contractors this year?" becomes a one-click answer.
+
+## Importing vendors
+
+Moving from another system?
+
+1. Go to **Vendors → Import**
+2. Upload CSV
+3. Map columns
+4. Import
+
+### CSV format
+
+```csv
+Vendor Name,Email,Phone,Address,Tax ID
+Acme Supplies,ap@acme.com,555-1234,"123 Main St",12-3456789
+```
+
+## Merging duplicates
+
+Created the same vendor twice?
+
+1. Go to **Vendors**
+2. Click **Merge**
+3. Select the duplicates
+4. Choose which record to keep
+5. All bills consolidate under one vendor
+
+## Archiving vendors
+
+For vendors you don't use anymore:
+
+1. Open vendor profile
+2. Click **Archive**
+3. Hidden from active lists but history is preserved
+
+Won't clutter your dropdowns when creating new bills.
+
+<Card
+  title="Expense claims"
+  icon="file-invoice-dollar"
+  href="/features/bills/expense-claims"
+>
+  Submit and approve employee expenses.
+</Card>

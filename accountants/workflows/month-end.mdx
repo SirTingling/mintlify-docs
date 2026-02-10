@@ -1,0 +1,205 @@
+---
+title: Month-End Close
+sidebarTitle: Month-end
+description: Complete the monthly close process for your clients.
+---
+
+Month-end close is the finish line. All the transactions are categorized. Banks are reconciled. Adjustments are posted. Reports reflect reality.
+
+Then you lock the period so nobody can accidentally (or intentionally) mess with the numbers.
+
+## The close checklist
+
+Pluvel generates a checklist for each client. Don't close until everything is checked off.
+
+### Before you start
+
+- [ ] **All bank accounts reconciled** — No exceptions. If it's not reconciled, the numbers can't be trusted.
+- [ ] **All transactions categorized** — Zero uncategorized items. Anything in "Needs Review" gets resolved now.
+- [ ] **Outstanding questions answered** — Any "Ask Client" items need responses before close.
+- [ ] **Credit cards reconciled** — Same as bank accounts.
+- [ ] **Petty cash balanced** — If they have a cash drawer, it better match.
+
+### Adjustments to consider
+
+- [ ] **Prepaid expenses allocated** — That $12,000 annual insurance payment? $1,000 should expense this month.
+- [ ] **Depreciation recorded** — Monthly depreciation on fixed assets.
+- [ ] **Accrued expenses** — Did they incur costs this month that they haven't been billed for yet?
+- [ ] **Revenue recognition** — Any revenue that needs to be recognized or deferred?
+- [ ] **Payroll accruals** — If pay period spans month-end, accrue wages earned but not yet paid.
+
+### Review the numbers
+
+- [ ] **Trial balance balances** — Debits equal credits. If not, stop.
+- [ ] **P&L makes sense** — Revenue reasonable? Expenses in line with history? No weird spikes?
+- [ ] **Balance sheet reviewed** — Assets, liabilities, equity all looking right?
+- [ ] **Compare to prior period** — Anything dramatically different needs explanation.
+
+### Lock it down
+
+- [ ] **All adjusting entries posted**
+- [ ] **Period locked**
+- [ ] **Final reports generated**
+
+## The close workflow
+
+<Steps>
+  <Step title="Start the close">
+    Go to **Accounting → Close Period**. Select the month you're closing.
+
+    Pluvel shows you the checklist with your current progress. Items that are already complete show green checkmarks.
+  </Step>
+
+  <Step title="Work through what's left">
+    Incomplete items show what's needed. Click any item to jump directly to that area.
+
+    - "5 uncategorized transactions" → Click to go categorize them
+    - "Operating checking not reconciled" → Click to start reconciliation
+  </Step>
+
+  <Step title="Post adjusting entries">
+    Create any month-end adjustments. Date them the last day of the month you're closing.
+
+    Mark entries as "Adjusting Entry" so they're easy to find later.
+  </Step>
+
+  <Step title="Review the reports">
+    Generate preliminary P&L and balance sheet. Look for:
+    - Revenue that seems too high or low
+    - Expense spikes that need explanation
+    - Balance sheet accounts that look off
+
+    Fix anything that doesn't look right before you lock.
+  </Step>
+
+  <Step title="Close the period">
+    When everything is complete, click **Close Period**.
+
+    You can choose soft close (preliminary, can still edit) or hard close (final, period locked).
+  </Step>
+</Steps>
+
+## Adjusting journal entries
+
+Month-end usually requires some adjustments. Common ones:
+
+| Adjustment | Example |
+|------------|---------|
+| **Prepaid amortization** | $12,000 annual insurance → $1,000/month expense |
+| **Depreciation** | $500/month on fixed assets |
+| **Accrued expenses** | $3,000 in legal fees incurred but not billed yet |
+| **Accrued revenue** | Work completed but not yet invoiced |
+| **Deferred revenue** | Prepayment received, service not yet delivered |
+
+### Creating an adjusting entry
+
+1. Go to **Accounting → Journal Entries**
+2. Click **New Entry**
+3. Date it the last day of the closing month
+4. Add your debit and credit lines
+5. Check "Adjusting Entry"
+6. Save and post
+
+### Make recurring adjustments recurring
+
+Depreciation is the same every month. Prepaid amortization is the same every month. Don't re-create these entries 12 times:
+
+1. Create the entry once
+2. Click **Make Recurring**
+3. Set it to post monthly on the last day
+4. Forget about it
+
+Pluvel posts it automatically. One less thing on your checklist.
+
+## Reviewing before close
+
+### Trial balance
+
+The basics:
+- Total debits = Total credits (if not, something's broken)
+- Cash matches reconciled bank balance
+- AR matches your invoice aging
+- AP matches your bill aging
+
+### P&L review
+
+Questions to ask:
+- Is revenue close to last month? If not, why?
+- Any expense accounts way higher than normal?
+- COGS ratio consistent with history?
+- Any unallocated amounts in suspense accounts?
+
+### Balance sheet review
+
+Check that:
+- Assets make sense (no negative cash, reasonable AR/AP)
+- Liabilities are complete (nothing missing?)
+- Equity rolls forward correctly from last month
+- If multi-entity, intercompany balances net to zero
+
+## Soft close vs. hard close
+
+| Type | What it means | When to use |
+|------|--------------|-------------|
+| **Soft close** | Preliminary. Reports generated, but you can still edit. | When client needs to review before final. |
+| **Hard close** | Final. Period locked, no changes allowed. | When you're done done. |
+
+Most workflows: soft close first for client review, then hard close after approval.
+
+## Period locking
+
+When you hard close:
+- No new transactions can post to that period
+- Existing transactions can't be edited
+- Reports are frozen
+- Audit trail is complete
+
+This is the point. You want closed periods to stay closed.
+
+### If you need to reopen
+
+It happens. You closed January, then found an error.
+
+1. Go to **Accounting → Periods**
+2. Click **Reopen** on the closed period
+3. Make your fix
+4. Close again
+
+<Warning>
+Reopening requires admin permission. Every change is logged. Don't make a habit of this — it defeats the purpose of closing.
+</Warning>
+
+## Tracking close status across clients
+
+The firm dashboard shows close status for everyone:
+
+| Client | Period | Status |
+|--------|--------|--------|
+| Acme Corp | January | ✓ Closed |
+| Beta LLC | January | ⏳ In progress (3 items left) |
+| Gamma Inc | January | ○ Not started |
+
+Sort by status to see who's behind. Work through them systematically.
+
+## Close timeline
+
+A reasonable schedule for a standard client:
+
+| Day of month | Activity |
+|--------------|----------|
+| 1-3 | Bank feeds download, start reconciliation |
+| 4-5 | Finish reconciliation, transaction review |
+| 6-7 | Post adjustments, preliminary review |
+| 8-10 | Final review, close period |
+
+Adjust based on client complexity. Simple clients close in 2 days. Complex ones take longer.
+
+The goal: close the prior month within 10 business days. Don't let it drag into week three.
+
+<Card
+  title="Document requests"
+  icon="file-circle-question"
+  href="/accountants/workflows/document-requests"
+>
+  Need documents from clients to finish the close? Send a request.
+</Card>

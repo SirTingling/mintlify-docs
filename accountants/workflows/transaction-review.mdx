@@ -1,0 +1,188 @@
+---
+title: Transaction Review
+sidebarTitle: Transaction review
+description: Efficiently review and categorize transactions across clients.
+---
+
+You've got 200 uncategorized transactions waiting across 8 clients. You could spend your entire afternoon clicking through them one at a time. Or you could work smart.
+
+Transaction review is where bookkeepers spend most of their time. Pluvel's workflow is built to make that time count.
+
+## The review queue
+
+Instead of hunting through each client separately, see everything in one place:
+
+**From the firm dashboard:**
+1. Click **Tasks → Transaction Review**
+2. See which clients have pending items
+3. Click a client to start reviewing
+
+**From inside a client:**
+1. Go to **Banking → Transactions**
+2. Filter to "Needs Review"
+3. Work through the list
+
+The firm-level view is better for batch work. The client-level view is better when you're focused on one client.
+
+## The review interface
+
+When you're reviewing transactions, you see:
+
+| Panel | What it shows |
+|-------|--------------|
+| **Transaction list** | Everything needing review, sorted by date |
+| **Transaction detail** | Full info on the selected transaction |
+| **Category selector** | Account dropdown with search |
+| **Similar transactions** | Same vendor or amount — helps spot patterns |
+| **History** | How you've categorized this vendor before |
+
+That history panel is the time-saver. "Last time I saw a charge from ADOBE, I put it in Software Subscriptions." Accept it in one click.
+
+## Categorizing efficiently
+
+### Single transactions
+
+The slow way:
+1. Click transaction
+2. Click dropdown
+3. Scroll through 80 accounts
+4. Find the right one
+5. Click Save
+
+The fast way:
+1. Click transaction
+2. Type "soft" (for Software Subscriptions)
+3. Hit Enter
+
+Three seconds. Next transaction.
+
+### Bulk categorization
+
+Twelve transactions from the same coffee shop:
+
+1. Select all 12 (Shift+Click or check boxes)
+2. Click **Categorize**
+3. Pick the account
+4. **Categorize All**
+
+Done. 12 transactions in 5 seconds.
+
+### Accepting suggestions
+
+Pluvel suggests categories based on vendor names, similar transactions, and patterns it's learned from your categorization history.
+
+Suggestions show confidence levels:
+- **High confidence** (green) — Probably right. Accept unless something seems off.
+- **Medium confidence** (yellow) — Possible match. Worth checking.
+- **No suggestion** — Pluvel has no idea. You're on your own.
+
+For high-confidence suggestions, just hit Enter. Don't overthink it.
+
+## Keyboard shortcuts
+
+Stop clicking. Learn these:
+
+| Shortcut | What it does |
+|----------|--------------|
+| `↑` / `↓` | Move between transactions |
+| `Enter` | Accept suggestion or save |
+| `Tab` | Jump to account field |
+| `/` | Search accounts |
+| `R` | Mark as reviewed |
+| `D` | Mark as duplicate |
+| `S` | Split transaction |
+| `?` | Send to client with a question |
+
+A skilled bookkeeper with keyboard shortcuts can process 100 transactions in 15 minutes. Clicking through the same 100 takes an hour.
+
+## Creating bank rules
+
+If you're categorizing the same vendor for the third time, stop. Create a rule.
+
+1. Categorize the transaction
+2. Click **Create Rule**
+3. Set conditions:
+   - "Vendor contains DROPBOX"
+   - "Amount is between $10 and $15"
+4. Set the action: "Assign to Software Subscriptions"
+5. Save
+
+Next month, that Dropbox charge categorizes itself. You never touch it again.
+
+### Managing rules
+
+Each client has their own rules in **Client → Settings → Bank Rules**.
+
+You can:
+- See all active rules
+- Check which rules are firing most often
+- Disable rules that aren't working
+- Set priority (when multiple rules match, which wins?)
+
+Good rule hygiene saves hours per month per client. It compounds.
+
+## Handling the weird stuff
+
+### Unknown vendors
+
+Transaction says "STRIPE TRANSFER 847261" — no idea what it is.
+
+1. Click **Ask Client**
+2. Type your question: "What's this $347 Stripe transfer for?"
+3. Send
+
+The client gets a notification. Their answer appears right on the transaction. You don't need to email back and forth.
+
+### Duplicates
+
+Same transaction imported twice (common when clients use multiple bank feeds):
+
+1. Click **Mark as Duplicate**
+2. Select which one is the original
+3. The duplicate disappears from reports
+
+Don't delete it — mark it as duplicate. The audit trail matters.
+
+### Splits
+
+One transaction, multiple categories:
+- $500 Costco run = $350 office supplies + $150 break room snacks
+
+1. Click **Split**
+2. Add lines with amounts and categories
+3. Make sure they sum to the original
+4. Save
+
+Reports show the real breakdown, not a misleading lump.
+
+## Review workflow
+
+Here's how efficient bookkeepers attack transaction review:
+
+1. **Start at the firm dashboard.** See which clients have the biggest backlogs.
+2. **Pick the worst one.** Get it to zero before moving on.
+3. **Filter to Needs Review.** Don't look at already-categorized items.
+4. **Sort by vendor.** Group similar transactions together.
+5. **Bulk categorize obvious patterns.** 15 coffee shop charges? One action.
+6. **Accept high-confidence suggestions.** Don't second-guess the obvious ones.
+7. **Create rules as you go.** Third time seeing the same vendor? Make a rule.
+8. **Send questions to clients immediately.** Don't let unknown items pile up.
+9. **Mark complete and move to next client.**
+
+## Tracking your progress
+
+The firm dashboard shows:
+- **Transactions reviewed** per period
+- **Average time per transaction**
+- **Rule hit rate** (% auto-categorized)
+- **Exception rate** (% requiring client input)
+
+Watch your rule hit rate. It should climb over time. If you're manually categorizing the same things month after month, you're working too hard.
+
+<Card
+  title="Bank reconciliation"
+  icon="check-double"
+  href="/accountants/workflows/reconciliation"
+>
+  Next step: reconcile those categorized transactions.
+</Card>

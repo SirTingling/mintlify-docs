@@ -1,0 +1,192 @@
+---
+title: Transaction Categorization
+sidebarTitle: Categorization
+description: Categorize transactions to the right accounts.
+---
+
+You've got 127 transactions sitting in your feed. Twelve are from the same coffee shop. Eight are Uber rides. A dozen software subscriptions you barely remember signing up for.
+
+Categorizing them one by one sounds tedious because it is. The good news: once you build momentum, it goes fast. And after a few months, most transactions categorize themselves.
+
+## What categorization actually does
+
+Every transaction needs a home — an account in your chart of accounts. That home determines where the money shows up in your reports:
+
+- A Starbucks charge goes to "Meals & Entertainment" → appears on your expense report
+- A client payment goes to "Revenue" → shows up as income on your P&L
+- A transfer to savings goes nowhere (it's just moving money between your accounts)
+
+Get categorization right, and your financial reports tell the truth. Get it wrong, and you're making decisions based on fiction.
+
+## The three-way categorization dance
+
+When a transaction lands in Pluvel:
+
+**1. Bank rules fire first.** If you've told Pluvel "anything from DROPBOX goes to Software Subscriptions," it happens automatically. No review needed.
+
+**2. AI suggests what's left.** Pluvel looks at the vendor name, amount, description, and your history. It makes its best guess:
+- **Green confidence** — Pretty sure it's right. You can probably accept it.
+- **Yellow confidence** — Possible match, worth checking.
+- **No suggestion** — Pluvel has no idea. You're on your own.
+
+**3. You review the rest.** Accept suggestions, override bad ones, and categorize the stragglers manually.
+
+## Single transaction categorization
+
+The basics:
+
+1. Go to **Banking → Transactions**
+2. Click a transaction
+3. Pick a category from the dropdown
+4. Save
+
+That's it. Most people spend 30 seconds per transaction when they're starting out, 5 seconds once they know their patterns.
+
+## Bulk categorization (the time saver)
+
+Got 15 transactions from the same vendor? Don't categorize them one at a time:
+
+1. Check the boxes next to similar transactions
+2. Click **Categorize**
+3. Select the category
+4. Apply to all
+
+Done. 15 transactions in 10 seconds instead of 15 minutes.
+
+<Info>
+Bulk categorization applies the same category to everything selected. If your selection includes transactions that need different categories, you'll need to break it up.
+</Info>
+
+## Category search tricks
+
+When you're selecting a category:
+
+- **Type to search** — "soft" finds "Software Subscriptions"
+- **Search by number** — "6001" finds account 6001
+- **Recent accounts first** — Your frequently-used categories appear at the top
+
+Power users rarely scroll through the full list. They type two letters and hit Enter.
+
+## How Pluvel learns your patterns
+
+The more you categorize, the smarter suggestions get:
+
+| Signal | What Pluvel learns |
+|--------|-------------------|
+| **Vendor name** | "ADOBE" always goes to Software? Got it. |
+| **Amount patterns** | Charges around $15 from coffee shops = Meals |
+| **Description keywords** | "Monthly subscription" = probably software |
+| **Your history** | You categorized this vendor three times. Pattern detected. |
+
+After 2-3 months, expect 60-80% of transactions to be auto-categorized or suggested correctly.
+
+## Splitting transactions
+
+Sometimes one purchase hits multiple categories:
+
+- A $500 Costco run: $350 supplies, $100 snacks for the office, $50 cleaning products
+- A $2,000 contractor payment that's 75% development, 25% design
+
+To split:
+
+1. Open the transaction
+2. Click **Split**
+3. Add lines with categories and amounts
+4. Make sure the total equals the original
+5. Save
+
+Your reports now show the real allocation, not one misleading lump sum.
+
+## Transfer detection
+
+Transfer between your own accounts creates two transactions:
+- $5,000 withdrawal from checking
+- $5,000 deposit to savings
+
+If Pluvel sees both sides (because you connected both accounts), it flags the match:
+
+1. You'll see "Possible transfer" on both transactions
+2. Click **Mark as Transfer**
+3. They link together and disappear from income/expense reports
+
+Because transfers aren't income or expense — they're just money moving around.
+
+## The "this shouldn't count" problem
+
+Some transactions need special handling:
+
+| Situation | How to handle it |
+|-----------|-----------------|
+| **Personal expense** | Mark as "Personal/Exclude" — won't affect business reports |
+| **Duplicate** | Click "Mark as Duplicate" — hidden but trackable |
+| **Error/reversal** | Match it with the correction |
+| **Owner's draw** | Categorize to Owner's Draw (equity account) |
+| **Reimbursable expense** | Categorize normally, tag as "Billable" if you're passing it to a client |
+
+## A workflow that actually works
+
+Here's how efficient bookkeepers handle categorization:
+
+1. **Filter to "Needs Review"** — Focus only on uncategorized items
+2. **Sort by date** — Start with oldest so nothing slips through the cracks
+3. **Accept suggestions quickly** — Green confidence? Just hit Enter.
+4. **Batch similar transactions** — See five from the same vendor? Select all, categorize once.
+5. **Create rules as you go** — Third time categorizing the same vendor? Make a rule.
+6. **Flag uncertainties** — Not sure? Mark it for review later rather than guessing.
+
+## Keyboard shortcuts
+
+Stop clicking. Start flying:
+
+| Key | Action |
+|-----|--------|
+| `↑` / `↓` | Navigate between transactions |
+| `Enter` | Accept suggestion or save |
+| `Tab` | Jump to category field |
+| `/` | Open category search |
+| `S` | Split transaction |
+| `E` | Exclude transaction |
+| `R` | Mark as reviewed |
+
+You can process 50 transactions in 5 minutes once you're comfortable with shortcuts.
+
+## Tracking your progress
+
+Pluvel shows you how you're doing:
+
+- **Needs Review count** in the sidebar — your backlog
+- **Categorization Rate** — percentage of transactions categorized
+- **Oldest Uncategorized** — how behind you are
+
+<Warning>
+Month-end close requires all transactions categorized. Running close with pending items means your reports will be incomplete or misleading. Don't do it.
+</Warning>
+
+## Recategorizing mistakes
+
+Made an error? No problem:
+
+1. Find the transaction
+2. Click to open it
+3. Change the category
+4. Save
+
+The audit trail shows both the old and new category, so you can see what changed and when.
+
+## Common categorization mistakes
+
+**Guessing when uncertain.** Better to flag it for review than categorize wrong. Wrong categories = wrong reports = bad decisions.
+
+**Not creating rules.** If you're manually categorizing the same vendor every month, you're wasting time. Create a rule and never touch it again.
+
+**Over-splitting.** A $50 purchase doesn't need to be split four ways. Unless it matters for tax purposes, keep it simple.
+
+**Ignoring the backlog.** Two months of uncategorized transactions is much harder to deal with than staying current. Do a little every week.
+
+<Card
+  title="Bank rules"
+  icon="wand-magic-sparkles"
+  href="/features/accounting/bank-rules"
+>
+  Automate categorization so you don't have to think about recurring vendors.
+</Card>

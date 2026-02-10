@@ -1,0 +1,176 @@
+---
+title: Bank Rules
+sidebarTitle: Bank rules
+description: Automate transaction categorization with rules.
+---
+
+You just imported 47 transactions from your business checking account. Only 8 are categorized. The other 39? You're going to review each one manually.
+
+Or you could spend 5 minutes setting up bank rules.
+
+Bank rules watch for patterns in your transactions — a specific vendor name, an amount range, a description — and automatically categorize matches. Create a rule once, and every future transaction from that vendor gets sorted without you lifting a finger.
+
+## The basics
+
+When a new transaction comes in:
+
+1. Pluvel checks it against all your active rules
+2. First matching rule wins
+3. Transaction gets categorized automatically
+4. You can still override it if needed
+
+The magic is in step 2. A single rule for "AMAZON" can match 30 transactions a month. That's 30 fewer things to manually categorize.
+
+## Creating your first rule
+
+The easiest way is from a transaction you've already categorized:
+
+1. Find a transaction (say, your monthly Dropbox charge)
+2. Categorize it as "Software Subscriptions"
+3. Click **Create Rule**
+4. Pluvel pre-fills conditions based on that transaction
+5. Save
+
+Done. Every future Dropbox charge auto-categorizes.
+
+You can also create rules from scratch in **Settings → Accounting → Bank Rules → New Rule**.
+
+## Writing good conditions
+
+Rules match based on conditions you define:
+
+| Field | Options | Example |
+|-------|---------|---------|
+| Description | Contains, equals, starts with | "Contains ADOBE" |
+| Amount | Equals, greater than, less than, between | "Between $10 and $100" |
+| Account | Is (specific bank account) | "Is: Operating Checking" |
+
+### Combining conditions
+
+**All conditions (AND)** — Everything must be true. Use this when you need precision.
+- "Description contains AWS AND amount greater than $500"
+
+**Any condition (OR)** — At least one must be true. Use this to catch variations.
+- "Description contains GUSTO OR description contains ADP"
+
+### Start specific, expand later
+
+Here's a mistake people make: they create a rule for "Description contains FEE" and suddenly half their transactions auto-categorize as bank fees — including that $500 "CONSULTING FEE" from a client.
+
+Better approach: Start narrow. "Description contains MONTHLY SERVICE FEE AND account is Chase Business Checking." If you miss some legitimate fees, you can always broaden it later.
+
+## Real examples that work
+
+### The recurring software rule
+
+You pay for 12 SaaS tools. Each one shows up with a slightly different description: "NOTION*TEAM", "SLACK T03K", "FIGMA INC".
+
+One option: Create 12 rules.
+Better option: Create a rule group with OR conditions:
+- Description contains "NOTION" OR
+- Description contains "SLACK" OR
+- Description contains "FIGMA" OR
+- Description contains "DROPBOX"
+- → Category: Software Subscriptions
+
+### The coffee shop problem
+
+Your team buys coffee during client meetings. You want these as "Meals & Entertainment" but you keep seeing transactions from the same three coffee shops.
+
+Create a rule:
+- Description contains "STARBUCKS" OR "BLUE BOTTLE" OR "PHILZ"
+- Amount less than $50 (to avoid gift card purchases)
+- → Category: Meals & Entertainment
+
+### The payroll catch-all
+
+Payroll processors use consistent naming. Match them:
+- Description contains "GUSTO" OR "ADP" OR "PAYCHEX"
+- Amount greater than $1,000 (to skip the $4.99 fee transactions)
+- → Category: Payroll Expense
+- → Add note: "Payroll run"
+- → Mark as reviewed
+
+That last action — mark as reviewed — tells Pluvel you trust this rule enough to skip manual review.
+
+## Rule actions
+
+Beyond categorizing, rules can:
+
+| Action | When to use |
+|--------|-------------|
+| Set category | Always — this is the main point |
+| Add note | When you want context ("Client lunch with Acme Corp") |
+| Mark reviewed | When you fully trust the rule, skip your review queue |
+| Apply to both sides | For transfers between your own accounts |
+
+## Managing your rules
+
+Go to **Settings → Accounting → Bank Rules** to see all your rules.
+
+Each rule shows:
+- How many transactions it's matched (ever)
+- When it last matched
+- Whether it's active
+
+### Priority matters
+
+If two rules could match the same transaction, the first one wins. Drag rules to reorder.
+
+Put your most specific rules at the top. General catch-alls (like "contains FEE") should be near the bottom.
+
+### Test before you save
+
+Every new rule has a **Test** button. Click it to see which existing transactions would match. If you see surprises, tighten your conditions.
+
+## When rules go wrong
+
+**Override rate is high:** If you're constantly changing auto-categorized transactions, your rule is too broad. Make conditions more specific.
+
+**Vendor changed their name:** Companies get acquired, rebrand, or just change how charges appear. "GOOGLE CLOUD" became "GOOGLE*CLOUD" one day and broke a rule. Check your rules quarterly.
+
+**New account, rules don't apply:** Rules can be account-specific. If you open a new bank account, check if your rules apply to it or just the old one.
+
+## Importing rules
+
+Migrating from QuickBooks or another system? You might be able to export your rules as CSV and import them:
+
+1. Export rules from your old system
+2. Go to **Bank Rules → Import**
+3. Map columns to Pluvel's format
+4. Review and import
+
+The mapping isn't always perfect — you may need to adjust after import.
+
+## How to know it's working
+
+After a month of using rules, check your metrics:
+
+| Metric | What good looks like |
+|--------|---------------------|
+| Match rate | 60-80% of transactions auto-categorize |
+| Override rate | Under 5% (you rarely change auto-categorized items) |
+| Time saved | You used to spend 2 hours/month on categorization, now it's 20 minutes |
+
+If your match rate is under 50%, you need more rules. Look at your uncategorized transactions — what patterns do you see?
+
+<Info>
+Power users often have 30-50 rules. That sounds like a lot, but each one took 30 seconds to create and saves minutes every month.
+</Info>
+
+<CardGroup cols={2}>
+  <Card
+    title="Transaction categorization"
+    icon="tags"
+    href="/features/accounting/categorization"
+  >
+    Manual categorization for transactions rules don't catch.
+  </Card>
+  <Card
+    title="Chart of accounts"
+    icon="list"
+    href="/features/accounting/chart-of-accounts"
+  >
+    The categories your rules assign to.
+  </Card>
+</CardGroup>

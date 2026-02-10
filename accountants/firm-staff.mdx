@@ -1,0 +1,146 @@
+---
+title: Firm Staff
+sidebarTitle: Team
+description: Manage your firm's team members and their access to clients.
+---
+
+As your firm grows, you'll need staff with access to client accounts. Firm Staff lets you invite bookkeepers, accountants, and admins — each with appropriate permissions.
+
+## Team Roles
+
+| Role | Access Level |
+|------|--------------|
+| Firm Owner | Full access to everything. Billing, settings, all clients. |
+| Firm Admin | Manage clients and staff. Can't access billing or firm settings. |
+| Bookkeeper | Access to assigned clients. Transaction review, categorization, reconciliation. |
+| Reviewer | Read-only access to assigned clients. Can view but not edit. |
+
+Custom roles available on Scale plans.
+
+## Inviting Team Members
+
+Go to **Firm Settings → Team → Invite**.
+
+1. Enter their email
+2. Select a role
+3. Assign clients (or "all clients")
+4. Send invitation
+
+They'll get an email to create their Pluvel account. Once they accept, they appear in your team list and can access assigned clients.
+
+<Info>
+Team members have their own login credentials. They don't share yours. You can see their activity in the audit log.
+</Info>
+
+## Client Assignments
+
+Not everyone needs to see every client. Assign staff to specific clients:
+
+**By client:** Assign Team Member A to Client 1, 2, 3.
+
+**By tag:** Assign Team Member A to all clients tagged "Bookkeeping" — new clients with that tag auto-assign.
+
+**All clients:** Admins often have access to everyone.
+
+Change assignments anytime in **Firm Settings → Team → [Person] → Clients**.
+
+## Permissions
+
+Within a role, you can further restrict access:
+
+| Permission | Options |
+|------------|---------|
+| View transactions | Yes / No |
+| Edit transactions | Yes / No |
+| View documents | Yes / No |
+| Upload documents | Yes / No |
+| Run reports | Yes / No |
+| Message clients | Yes / No |
+| Manage billing | Owner only |
+
+Example: A bookkeeper who can edit transactions but can't message clients directly.
+
+Configure in **Firm Settings → Team → [Person] → Permissions**.
+
+## Activity Tracking
+
+See what your team is doing:
+
+- **Activity feed** — Recent actions across all staff
+- **By person** — Filter to see one person's actions
+- **By client** — Who did what in this client's account
+
+This helps with:
+- Quality control (reviewing team member work)
+- Training (seeing where people get stuck)
+- Accountability (who made that change?)
+
+Find this in **Firm Settings → Team → Activity Log**.
+
+## Seat Management
+
+Your plan includes a number of team seats:
+
+| Plan | Included Seats |
+|------|----------------|
+| Firm Starter | 3 |
+| Firm Growth | 10 |
+| Firm Scale | Unlimited |
+
+Need more? Upgrade your plan or contact support for custom pricing.
+
+View current usage in **Firm Settings → Billing → Seats**.
+
+## Removing Team Members
+
+When someone leaves:
+
+1. Go to **Firm Settings → Team**
+2. Find the person
+3. Click **Remove**
+
+They immediately lose access to all clients. Their past activity stays in the audit log.
+
+If you want to temporarily disable access without removing them entirely, use **Suspend** instead. They can be reactivated later without re-inviting.
+
+## Transferring Clients
+
+Staff member leaving? Transfer their clients:
+
+1. Go to the team member's profile
+2. Click **Transfer Clients**
+3. Select the new assignee
+4. Confirm
+
+All their clients reassign to the new person. Nothing else changes — the clients' data stays the same.
+
+## Tips
+
+**Start narrow, expand later.** Give new staff access to a few clients while they're learning. Add more as they get up to speed.
+
+**Use tags for assignments.** If you have 50 clients and hire a new bookkeeper, tagging clients by type makes assignments automatic.
+
+**Review activity regularly.** Spot errors early by checking what team members are doing, especially for new hires.
+
+**Don't share logins.** Each person should have their own account. Shared logins break audit trails and create security risks.
+
+<Warning>
+Removing a team member is immediate. Make sure to transfer their clients first, or those clients will have no assigned staff.
+</Warning>
+
+<CardGroup cols={2}>
+  <Card
+    title="Invite team members"
+    icon="user-plus"
+    href="/accountants/invite-team"
+  >
+    Step-by-step guide to inviting your first team member.
+  </Card>
+  <Card
+    title="Client permissions"
+    icon="lock"
+    href="/accountants/clients/permissions"
+  >
+    Control what clients can see and do.
+  </Card>
+</CardGroup>

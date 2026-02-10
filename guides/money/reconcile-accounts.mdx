@@ -1,0 +1,156 @@
+---
+title: Reconcile accounts
+sidebarTitle: Reconcile accounts
+description: Match your books to your bank statements.
+---
+
+Your bank says you have $14,523.18. Your books say $14,678.42. Which one is right? Where did that $155.24 go?
+
+Bank reconciliation answers these questions. It's the process of matching every transaction in your books to your bank statement, catching errors, duplicates, and missing transactions before they compound into bigger problems.
+
+## Why reconcile
+
+**Catch errors** — Duplicate entries, wrong amounts, missing transactions
+
+**Spot fraud** — Unauthorized transactions you didn't notice
+
+**Accurate financials** — Your reports only matter if the underlying data is correct
+
+**Audit ready** — Reconciled accounts are a basic expectation for audits and tax prep
+
+## How reconciliation works
+
+You compare two numbers:
+
+1. **Your book balance** — What Pluvel says your account balance is
+2. **Bank statement balance** — What your bank says on the statement
+
+If they match, you're reconciled. If they don't, you need to find and fix the differences.
+
+## Reconcile an account
+
+<Steps>
+  <Step title="Go to Banking">
+    Click **Banking** in the sidebar.
+  </Step>
+
+  <Step title="Select an account">
+    Click on the bank account you want to reconcile.
+  </Step>
+
+  <Step title="Click Reconcile">
+    Click the **Reconcile** button.
+  </Step>
+
+  <Step title="Enter statement details">
+    From your bank statement:
+    - **Statement date** — The ending date of the statement
+    - **Ending balance** — The final balance shown on the statement
+  </Step>
+
+  <Step title="Match transactions">
+    Pluvel shows transactions for the statement period. Check off each transaction that appears on your bank statement.
+
+    - ✓ **Cleared** — Transaction matches the statement
+    - **Uncleared** — Transaction isn't on this statement yet
+  </Step>
+
+  <Step title="Review the difference">
+    Pluvel calculates:
+    - **Statement balance** (what you entered)
+    - **Cleared balance** (sum of checked transactions)
+    - **Difference** (should be $0.00)
+  </Step>
+
+  <Step title="Fix any differences">
+    If the difference isn't zero:
+    - Look for unchecked transactions that should be cleared
+    - Look for transactions on the statement that aren't in Pluvel
+    - Check for amount errors
+
+    Once the difference is $0.00, click **Finish Reconciliation**.
+  </Step>
+</Steps>
+
+## Common reconciliation issues
+
+<AccordionGroup>
+  <Accordion title="Transactions on statement but not in Pluvel">
+    This means Pluvel missed a transaction. It could be:
+    - A bank fee
+    - Interest earned
+    - A transaction that didn't sync
+
+    Add the missing transaction manually, then continue reconciling.
+  </Accordion>
+
+  <Accordion title="Transactions in Pluvel but not on statement">
+    If a transaction is in Pluvel but not on the bank statement, it probably:
+    - Hasn't cleared yet (leave it unchecked)
+    - Was entered incorrectly (check the date and amount)
+    - Is a duplicate (delete it)
+  </Accordion>
+
+  <Accordion title="Amount mismatch">
+    If a transaction exists in both places but with different amounts:
+    1. Check if you edited the transaction in Pluvel
+    2. Check if the bank made a correction
+    3. Adjust the Pluvel transaction to match reality
+  </Accordion>
+
+  <Accordion title="Opening balance wrong">
+    If your first reconciliation has a large difference, the opening balance might be wrong. Go to the account settings and adjust the opening balance.
+  </Accordion>
+</AccordionGroup>
+
+## Reconciliation tips
+
+### How often to reconcile
+
+| Business size | Recommendation |
+|---------------|----------------|
+| Low volume (<50 tx/month) | Monthly |
+| Medium volume | Weekly |
+| High volume | Daily or continuous |
+
+More frequently = smaller problems when something's wrong.
+
+### Best practices
+
+1. **Use your statement, not online banking** — The statement is the official record
+2. **Reconcile in order** — Don't skip months
+3. **Keep bank statements** — Download PDFs monthly
+4. **Don't adjust cleared transactions** — If you need to fix something, add an adjusting entry instead
+5. **Investigate every difference** — Don't just write off unexplained amounts
+
+## Unreconcile (undo)
+
+Made a mistake? You can undo a reconciliation:
+
+1. Go to **Banking → [Account] → Reconciliation History**
+2. Find the reconciliation you want to undo
+3. Click **Unreconcile**
+
+This marks all transactions from that reconciliation as uncleared so you can redo it.
+
+## For accountants
+
+If you're managing client books:
+
+1. Request or download bank statements monthly
+2. Reconcile all accounts before month-end close
+3. Document any adjustments made
+4. Flag any suspicious transactions for client review
+
+The reconciliation history provides an audit trail showing who reconciled and when.
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="View financial reports" icon="chart-line" href="/features/reports/profit-loss">
+    Once reconciled, your reports are accurate.
+  </Card>
+  <Card title="Month-end close" icon="calendar-check" href="/accountants/workflows/month-end">
+    Learn the full month-end process.
+  </Card>
+</CardGroup>

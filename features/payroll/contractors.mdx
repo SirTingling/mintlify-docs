@@ -1,0 +1,174 @@
+---
+title: Contractors
+sidebarTitle: Contractors
+description: Manage independent contractors and 1099 payments.
+---
+
+You hired a freelancer, consultant, or agency to do some work. They're not an employee — you don't withhold taxes, you don't offer benefits, and at year-end you send them a 1099 instead of a W-2.
+
+But you still need to track what you pay them. Both because you want to know where your money goes, and because the IRS requires you to report payments over $600.
+
+## Employee vs. contractor
+
+The distinction matters — a lot.
+
+| Factor | Employee | Contractor |
+|--------|----------|------------|
+| Tax withholding | You withhold from their pay | They handle their own taxes |
+| Benefits | May receive | Not eligible |
+| Work control | You direct when/how/where | They control their process |
+| Equipment | You provide | They provide their own |
+| Tax form | W-2 | 1099-NEC |
+
+<Warning>
+Misclassifying employees as contractors can result in back taxes, penalties, and lawsuits. The IRS and state agencies take this seriously. If you're unsure, consult an employment attorney or accountant.
+</Warning>
+
+## Adding a contractor
+
+<Steps>
+  <Step title="Go to Payroll">
+    Navigate to **Payroll → Contractors** and click **Add Contractor**.
+  </Step>
+
+  <Step title="Enter info">
+    - Name (or business name)
+    - Email
+    - Phone
+    - Address
+  </Step>
+
+  <Step title="Tax information">
+    From their W-9:
+    - Tax ID type (SSN or EIN)
+    - Tax ID number
+    - Business type
+  </Step>
+
+  <Step title="Payment info">
+    - Payment method (check, ACH, etc.)
+    - Bank details (if direct deposit)
+    - Default rate (optional)
+  </Step>
+</Steps>
+
+## Contractor information
+
+What you need for each contractor:
+
+| Field | Why it matters |
+|-------|-------------|
+| Name | Legal name or business name (as it appears on their W-9) |
+| Email | For payment notifications and 1099 delivery |
+| Address | Goes on their 1099 |
+| Tax ID | SSN or EIN — required for 1099 filing |
+| Business type | Sole prop, LLC, Corp (corps usually don't need 1099s) |
+| W-9 on file | Have you collected it? |
+
+## Collecting W-9s
+
+Get the W-9 *before* you pay them. Chasing contractors for tax info in January is not fun.
+
+**Electronic (recommended):**
+
+1. Click **Request W-9**
+2. Contractor receives a secure link
+3. They complete and sign electronically
+4. W-9 saves to their profile
+
+**Manual:**
+
+Upload a PDF of a completed W-9 they've sent you.
+
+## Paying contractors
+
+### One-time payment
+
+Fastest way to pay a contractor:
+
+1. Go to **Payroll → Pay Contractor**
+2. Select the contractor
+3. Enter amount and description
+4. Choose payment method
+5. Process
+
+### Through accounts payable
+
+If you prefer to treat contractor payments like bills:
+
+1. Add the contractor as a vendor
+2. Create a bill when they invoice you
+3. Pay the bill
+4. Payment links to their 1099 tracking automatically
+
+This approach gives you more visibility into cash flow and upcoming payments.
+
+### Recurring payments
+
+For ongoing retainers or regular work:
+
+1. Set up a recurring payment
+2. Payments process automatically
+3. All tracked for year-end 1099
+
+## Payment methods
+
+| Method | Details |
+|--------|---------|
+| Check | Print or mail check |
+| Direct deposit | ACH to their bank |
+| Wire | For larger payments |
+| PayPal/Venmo | Track but pay externally |
+
+## 1099 tracking
+
+Throughout the year, Pluvel tracks:
+
+| What's tracked | Why |
+|--------------|---------|
+| Total payments YTD | This becomes Box 1 on the 1099 |
+| Payment dates | Audit trail if anyone asks |
+| Payment method | Your records |
+
+### The $600 threshold
+
+If you pay a contractor $600 or more in a calendar year, you must send them a 1099-NEC.
+
+Pluvel alerts you when:
+- A contractor approaches $600 (time to make sure you have their W-9)
+- W-9 is missing for someone you've paid $600+
+- Tax ID isn't on file
+
+Don't wait until January to collect W-9s. By then, contractors have moved on and don't care about your tax compliance problems.
+
+## Generating 1099s
+
+At year-end (deadline: January 31):
+
+1. Go to **Payroll → Tax Forms → 1099s**
+2. Review all contractors over $600
+3. Verify names, addresses, and tax IDs
+4. Generate forms
+5. E-file with IRS
+6. Send copies to contractors
+
+See [1099 Forms](/features/payroll/1099) for the full process.
+
+## Contractor portal
+
+Give contractors access to:
+
+- View their payment history
+- Download 1099s when available
+- Update their contact info
+- Submit W-9 electronically
+
+Less email back-and-forth for everyone.
+
+<Card
+  title="Pay schedules"
+  icon="calendar-days"
+  href="/features/payroll/pay-schedules"
+>
+  Set up when employees get paid.
+</Card>

@@ -1,0 +1,246 @@
+---
+title: State Taxes
+sidebarTitle: State Taxes
+description: State income tax withholding and unemployment taxes across all 50 states.
+---
+
+If payroll taxes were simple, every state would use the same rules. Instead, you have 50 states with 50 different systems — different withholding rates, different unemployment programs, different wage bases, different filing schedules, and (of course) different forms.
+
+Have employees in California, Texas, and New York? That's three separate registrations, three different unemployment rates, and three sets of quarterly filings. Pluvel handles all 50 states so you don't need to become an expert in each one.
+
+## Types of state payroll taxes
+
+| Tax Type | Who Pays | Purpose |
+|----------|----------|---------|
+| State Income Tax | Employee (withheld) | Funds state government |
+| State Unemployment (SUTA) | Employer | Funds state unemployment benefits |
+| State Disability (SDI) | Employee or Both | Disability insurance (CA, NJ, NY, etc.) |
+| Paid Family Leave (PFL) | Employee or Both | Family leave benefits (some states) |
+| Local Income Tax | Employee (withheld) | City/county taxes (some locations) |
+
+## State income tax withholding
+
+### How it works
+
+1. Employee completes a state W-4 (or uses federal for states that allow it)
+2. We calculate withholding based on state tax tables
+3. Amount is deducted from each paycheck
+4. We deposit to the state and file returns
+
+### States with no income tax
+
+Nine states have no state income tax:
+
+- Alaska
+- Florida
+- Nevada
+- New Hampshire (dividends only)
+- South Dakota
+- Tennessee
+- Texas
+- Washington
+- Wyoming
+
+For employees in these states, you only withhold federal taxes.
+
+### Multi-state employees
+
+If an employee works in multiple states (or lives in one, works in another):
+
+| Situation | How It's Handled |
+|-----------|------------------|
+| Lives and works in same state | Tax that state |
+| Lives in State A, works in State B | Usually tax work state (some exceptions) |
+| Reciprocal agreement states | Tax residence state only |
+| Remote workers | Complex—depends on state rules |
+
+We determine the correct state(s) based on employee addresses and work locations.
+
+### Reciprocal agreements
+
+Some neighboring states have agreements where residents only pay tax in their home state:
+
+| State | Reciprocal With |
+|-------|-----------------|
+| Pennsylvania | Indiana, Maryland, New Jersey, Ohio, Virginia, West Virginia |
+| Virginia | DC, Kentucky, Maryland, Pennsylvania, West Virginia |
+| New Jersey | Pennsylvania |
+
+We apply reciprocity automatically based on employee addresses.
+
+## State unemployment (SUTA)
+
+### How SUTA works
+
+1. States set a wage base (e.g., $7,000 to $56,500)
+2. Your company is assigned a rate (new employers get a standard rate)
+3. Rate adjusts based on claims history (experience rating)
+4. You pay SUTA on wages up to the wage base
+
+### State wage bases (examples)
+
+| State | Wage Base | Typical New Employer Rate |
+|-------|-----------|--------------------------|
+| California | $7,000 | 3.4% |
+| New York | $12,500 | 4.0% |
+| Texas | $9,000 | 2.7% |
+| Florida | $7,000 | 2.7% |
+| Washington | $68,500 | 1.0% |
+
+<Info>
+Wage bases and rates change annually. We update them automatically each year.
+</Info>
+
+### Experience rating
+
+After you've been in business for a while (typically 2-3 years), your SUTA rate adjusts based on claims:
+
+- **Fewer claims** → Lower rate
+- **More claims** → Higher rate
+
+You receive an annual rate notice from each state—enter your new rates in **Settings → Tax → State Accounts**.
+
+## State disability and paid leave
+
+Several states require additional withholdings:
+
+### State Disability Insurance (SDI)
+
+| State | Who Pays | Rate |
+|-------|----------|------|
+| California | Employee | 1.1% (2024) |
+| New Jersey | Both | Employee 0.27%, Employer varies |
+| New York | Employee | 0.5% (capped) |
+| Rhode Island | Employee | 1.1% |
+| Hawaii | Both | Varies |
+
+### Paid Family Leave (PFL)
+
+| State | Who Pays | Benefit |
+|-------|----------|---------|
+| California | Employee | Family bonding, care |
+| New York | Employee | Family leave |
+| New Jersey | Employee | Family leave |
+| Washington | Both | Family and medical leave |
+| Massachusetts | Both | Paid family and medical leave |
+
+We calculate and withhold these taxes automatically for employees in applicable states.
+
+## Setting up state taxes
+
+<Steps>
+  <Step title="Register with each state">
+    Before running payroll in a state, you need state tax accounts:
+
+    - State withholding account number
+    - State unemployment account number
+    - Any additional program registrations (SDI, PFL)
+  </Step>
+
+  <Step title="Enter account numbers">
+    Go to **Settings → Tax → State Accounts** and add each state.
+  </Step>
+
+  <Step title="Enter your SUTA rate">
+    Input your assigned unemployment rate for each state.
+  </Step>
+
+  <Step title="Run payroll">
+    We handle calculation, deposit, and filing automatically.
+  </Step>
+</Steps>
+
+### State registration help
+
+When you add employees in a new state, Pluvel can help with registration:
+
+1. We detect the new state when you add the employee
+2. You see a prompt to register or enter existing account numbers
+3. For many states, we can register you automatically
+4. For others, we provide links and instructions
+
+## Filing state returns
+
+### Filing schedules
+
+Most states require quarterly filings, but schedules vary:
+
+| Pattern | States (Examples) |
+|---------|-------------------|
+| Monthly (large employers) | CA, NY (if liability exceeds threshold) |
+| Quarterly | Most states |
+| Annual reconciliation | Many states (January/February) |
+
+### What we file
+
+For each state where you have employees:
+
+| Return | Frequency | Contents |
+|--------|-----------|----------|
+| Withholding return | Quarterly (usually) | Wages paid, tax withheld |
+| Unemployment return | Quarterly | Wages by employee, tax due |
+| Annual reconciliation | Annual | Total wages and tax for year |
+| Wage reports | Quarterly or Annual | Employee-level detail |
+
+Go to **Payroll → Tax Filings** and filter by state to see your filing schedule.
+
+## Common state tax issues
+
+<AccordionGroup>
+  <Accordion title="Employee moved to a new state">
+    When an employee relocates:
+
+    1. Update their address in **Employees → [Name] → Personal Info**
+    2. We stop withholding for the old state
+    3. We start withholding for the new state
+    4. If you have no registration in the new state, we prompt you to register
+  </Accordion>
+
+  <Accordion title="State says I owe more than expected">
+    Discrepancies can occur because:
+
+    - Late payments incur penalties and interest
+    - Rate changes weren't updated in Pluvel
+    - Prior period adjustments
+
+    Upload the notice to **Mailroom** and we'll help reconcile.
+  </Accordion>
+
+  <Accordion title="SUTA rate notice received">
+    When you receive your annual rate notice:
+
+    1. Go to **Settings → Tax → State Accounts → [State]**
+    2. Click **Update Rate**
+    3. Enter the new rate and effective date
+    4. Future payrolls use the new rate
+  </Accordion>
+
+  <Accordion title="Local taxes">
+    Some cities and counties levy their own income taxes (Philadelphia, New York City, Ohio cities, etc.):
+
+    1. We track local jurisdictions based on employee work addresses
+    2. Local taxes are calculated and withheld automatically
+    3. We file local returns where required
+
+    If you're in a locale we don't recognize, contact support to add it.
+  </Accordion>
+</AccordionGroup>
+
+## State tax resources
+
+| State | Agency | Portal |
+|-------|--------|--------|
+| California | EDD | edd.ca.gov |
+| New York | DOL | labor.ny.gov |
+| Texas | TWC | twc.texas.gov |
+| Florida | DOR | floridarevenue.com |
+
+We provide direct links to state portals in **Settings → Tax → State Accounts**.
+
+<Card
+  title="Payroll tax overview"
+  icon="arrow-right"
+  href="/features/tax/payroll-tax"
+>
+  Learn how we handle all payroll taxes.
+</Card>

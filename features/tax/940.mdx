@@ -1,0 +1,212 @@
+---
+title: Form 940
+sidebarTitle: Form 940
+description: Annual federal unemployment (FUTA) tax return filed by Pluvel.
+---
+
+FUTA — Federal Unemployment Tax — is the one payroll tax that comes entirely out of your pocket, not your employees'. It funds federal unemployment programs and is filed once a year on Form 940.
+
+The math is straightforward: you pay 0.6% on the first $7,000 each employee earns (assuming you paid your state unemployment taxes on time). That's about $42 per employee per year. Pluvel handles the deposits and filing automatically.
+
+## What FUTA is
+
+FUTA funds unemployment insurance at the federal level. It works alongside state unemployment (SUTA):
+
+| Aspect | FUTA | SUTA |
+|--------|------|------|
+| Who pays | Employer only | Employer (usually) |
+| Rate | 6.0% (0.6% after credit) | Varies by state and employer |
+| Wage base | First $7,000 per employee | Varies by state |
+| Filed on | Form 940 | State forms |
+
+### The FUTA credit
+
+If you pay state unemployment taxes on time, you receive a credit against FUTA:
+
+- **Standard credit:** 5.4%
+- **Net FUTA rate:** 6.0% - 5.4% = 0.6%
+
+This means you effectively pay 0.6% on the first $7,000 per employee = **$42 per employee per year** maximum.
+
+<Info>
+Some states have credit reduction due to federal unemployment loans. This increases your FUTA rate slightly. We track this and apply the correct rate.
+</Info>
+
+## Filing schedule
+
+Form 940 is filed annually:
+
+| For Tax Year | Due Date |
+|--------------|----------|
+| 2025 | January 31, 2026 |
+| 2026 | January 31, 2027 |
+
+If you deposited all FUTA tax when due, you have until February 10 to file.
+
+## FUTA deposits
+
+FUTA deposits are made quarterly (not with each payroll):
+
+| Quarter | Period | Deposit Due |
+|---------|--------|-------------|
+| Q1 | January - March | April 30 |
+| Q2 | April - June | July 31 |
+| Q3 | July - September | October 31 |
+| Q4 | October - December | January 31 |
+
+<Info>
+You only need to deposit if your accumulated FUTA liability exceeds $500. If it's $500 or less, you can carry it to the next quarter.
+</Info>
+
+### How deposits work
+
+1. After each payroll, we calculate FUTA on wages up to $7,000 per employee
+2. We accumulate the liability through the quarter
+3. If it exceeds $500, we deposit on time
+4. If under $500, it carries forward (deposited with the 940 or next quarter)
+
+## How Pluvel handles 940
+
+<Steps>
+  <Step title="Track FUTA wages">
+    We track each employee's wages against the $7,000 FUTA wage base.
+  </Step>
+
+  <Step title="Make quarterly deposits">
+    We deposit FUTA when your liability exceeds $500.
+  </Step>
+
+  <Step title="Apply state credits">
+    We determine your credit based on state unemployment payments.
+  </Step>
+
+  <Step title="File Form 940">
+    In January, we prepare and file your annual 940 return.
+  </Step>
+</Steps>
+
+## Viewing your 940
+
+Go to **Payroll → Tax Filings → 940** to see:
+
+- **Draft 940** — Current year (before filing)
+- **Filed 940s** — Historical returns
+- **FUTA deposits** — Quarterly deposit history
+
+### Key lines on Form 940
+
+| Line | Description |
+|------|-------------|
+| Line 3 | Total payments to all employees |
+| Line 4 | Payments exempt from FUTA |
+| Line 5 | Total taxable FUTA wages |
+| Line 7 | FUTA tax before adjustments (Line 5 × 0.006) |
+| Line 9 | Credit reduction states adjustment |
+| Line 12 | Total FUTA tax after adjustments |
+| Line 13 | FUTA tax deposited |
+| Line 14 | Balance due or overpayment |
+
+## Credit reduction states
+
+When states borrow from the federal government to pay unemployment benefits and don't repay on time, employers in that state lose part of their FUTA credit:
+
+### How it works
+
+- Normal credit: 5.4% (net rate 0.6%)
+- If credit reduction applies: Credit reduced by 0.3% per year
+- You pay higher FUTA tax
+
+### Checking your state
+
+We monitor credit reduction states and apply the correct rate automatically. Affected states are listed on Form 940 Schedule A.
+
+Recent credit reduction states have included:
+
+- California (historically)
+- New York (historically)
+- Various states during economic downturns
+
+## Common 940 situations
+
+<AccordionGroup>
+  <Accordion title="Multi-state employers">
+    If you have employees in multiple states:
+
+    1. FUTA applies to all employees regardless of state
+    2. State unemployment credits vary by state
+    3. We calculate blended credits based on wages in each state
+    4. Schedule A lists your state breakdown
+  </Accordion>
+
+  <Accordion title="New employer">
+    If this is your first year:
+
+    1. You may not have paid enough SUTA to get full credit
+    2. Your 940 may show additional FUTA due
+    3. This balances out as your state payments normalize
+  </Accordion>
+
+  <Accordion title="Employees over wage base">
+    Once an employee earns $7,000:
+
+    1. No more FUTA accrues for them that year
+    2. Most employees hit this in Q1 or Q2
+    3. Your quarterly deposits decrease as more employees max out
+  </Accordion>
+
+  <Accordion title="Overpayment on Line 15">
+    If you deposited more than you owe:
+
+    1. You can apply the overpayment to next year's 940
+    2. Or request a refund from the IRS
+    3. We note the overpayment and track the credit
+  </Accordion>
+</AccordionGroup>
+
+## Special considerations
+
+### Exempt wages
+
+Certain payments don't count toward FUTA:
+
+- Family employees (under certain conditions)
+- Wages to H-2A visa workers
+- Retirement/pension payments
+- Group life insurance payments
+
+We exclude exempt wages automatically based on your payroll setup.
+
+### Closing a business
+
+If you close your business during the year:
+
+1. File a final 940 covering the period you were open
+2. Check the "final return" box
+3. We help you with the closure process
+
+## Accessing filed returns
+
+To download a filed 940:
+
+1. Go to **Payroll → Tax Filings**
+2. Select the year
+3. Click **Download PDF**
+
+The PDF includes Schedule A (for multi-state employers) if applicable.
+
+<CardGroup cols={2}>
+  <Card
+    title="State unemployment taxes"
+    icon="building"
+    href="/features/tax/state-taxes"
+  >
+    Learn about SUTA and state requirements.
+  </Card>
+  <Card
+    title="Form 941"
+    icon="file-invoice"
+    href="/features/tax/941"
+  >
+    Quarterly federal tax return.
+  </Card>
+</CardGroup>

@@ -1,0 +1,193 @@
+---
+title: Bookkeeper Tools
+sidebarTitle: Bookkeeper Tools
+description: Batch operations and productivity features for efficient bookkeeping.
+---
+
+When you're managing books for multiple clients, you need efficiency. Bookkeeper Tools are batch operations and shortcuts designed for professionals who do this all day.
+
+## Batch Categorization
+
+Categorize multiple transactions at once:
+
+1. Go to a client's **Transactions** view
+2. Select multiple transactions (checkbox or shift-click)
+3. Click **Categorize**
+4. Choose the category
+5. Apply
+
+Done. 50 transactions categorized in seconds.
+
+You can also split the selection — some go to one category, some to another. The batch tool handles it.
+
+<Info>
+Batch categorization applies the same category and rules to all selected transactions. For transactions that need different treatment, categorize individually.
+</Info>
+
+## Bank Rules (Bulk Create)
+
+Instead of setting up rules one at a time:
+
+1. Go to **Accounting → Bank Rules**
+2. Click **Bulk Create**
+3. Upload a CSV with vendor patterns and categories
+4. Preview and confirm
+
+Common use case: Client has consistent vendors you've categorized before. Export the patterns, upload them as rules, and future transactions auto-categorize.
+
+## Multi-Client Reports
+
+Generate the same report across multiple clients:
+
+1. Go to **Reports** in Firm Mode
+2. Select the report type (P&L, Balance Sheet, etc.)
+3. Check the clients you want
+4. Choose date range
+5. Generate
+
+You get a combined PDF with each client's report as a section. Good for batch deliveries.
+
+## Transaction Review Queue
+
+See uncategorized or flagged transactions across all clients:
+
+1. Go to **Dashboard → Review Queue**
+2. Filter by client or leave it as "all"
+3. Work through the list
+
+The queue surfaces items that need attention:
+- Uncategorized transactions
+- Duplicate candidates
+- Unusual amounts flagged by AI
+- Client-marked "needs review"
+
+Clear your queue regularly to keep books clean.
+
+## Quick Switch
+
+Jump between clients without navigating:
+
+- **Keyboard shortcut:** Press `Cmd+K` (Mac) or `Ctrl+K` (Windows)
+- Type the client name
+- Hit Enter
+
+You're in that client's account instantly. Works from anywhere in Pluvel.
+
+## Reconciliation Status Dashboard
+
+See reconciliation status across all clients:
+
+| Column | What It Shows |
+|--------|---------------|
+| Client | Client name |
+| Accounts | Number of bank accounts |
+| Last Reconciled | When accounts were last reconciled |
+| Unreconciled | Transactions since last reconciliation |
+| Status | On track, behind, attention needed |
+
+Find this in **Dashboard → Reconciliation Status**.
+
+Click any client to jump directly to their reconciliation view.
+
+## Memo and Notes
+
+Add internal notes that clients don't see:
+
+**Transaction memo:** Right-click any transaction → Add Memo. These are internal notes about the transaction.
+
+**Client notes:** In the client profile, add notes about their setup, preferences, or issues.
+
+**Journal entry notes:** Explain adjusting entries for future reference.
+
+Notes are searchable. Useful when you need to remember why you did something 6 months ago.
+
+## Task Templates
+
+For repeating workflows:
+
+1. Go to **Firm Settings → Task Templates**
+2. Create a template ("Monthly Close Tasks")
+3. Add the steps:
+   - Reconcile bank accounts
+   - Review uncategorized transactions
+   - Generate draft P&L
+   - Send to client for review
+4. Save
+
+When you start month-end for a client, apply the template. All tasks get created automatically.
+
+## Keyboard Shortcuts
+
+Speed up common actions:
+
+| Shortcut | Action |
+|----------|--------|
+| `Cmd/Ctrl + K` | Quick client switch |
+| `C` | Categorize selected transaction |
+| `R` | Mark as reviewed |
+| `D` | Mark as duplicate |
+| `M` | Add memo |
+| `J` | Jump to journal entries |
+| `Esc` | Close modals |
+
+See all shortcuts in **Settings → Keyboard Shortcuts** or press `?` from anywhere.
+
+## Split Transactions
+
+For transactions that need multiple categories:
+
+1. Click the transaction
+2. Click **Split**
+3. Add line items with different categories
+4. Amounts must total the original transaction
+5. Save
+
+Example: A $500 Costco purchase — $300 to Supplies, $200 to Meals.
+
+## Duplicate Detection
+
+Pluvel flags potential duplicates:
+
+- Same vendor, same amount, same date
+- Similar amounts within a few days
+- Common patterns from bank/card overlap
+
+Review flagged duplicates in the Review Queue. Confirm true duplicates or dismiss false positives.
+
+## Exporting Work
+
+Export your work for records or client delivery:
+
+- **Transaction list:** CSV or Excel with all transactions and categories
+- **Journal entries:** All entries for a period
+- **Trial balance:** At any date
+- **Workpapers:** Reconciliation documentation
+
+Find exports in each section's "Export" menu or in **Reports → Export**.
+
+## Tips
+
+**Use the queue.** The Review Queue is your home base. Process it daily and you'll never have a backlog.
+
+**Build rules aggressively.** Every recurring vendor should have a rule. Future-you will thank past-you.
+
+**Templates for consistency.** Task templates ensure you don't miss steps, especially for month-end or year-end procedures.
+
+**Learn the shortcuts.** Five minutes learning shortcuts saves hours over time.
+
+<CardGroup cols={2}>
+  <Card
+    title="Transaction review"
+    icon="list-check"
+    href="/accountants/workflows/transaction-review"
+  >
+    Detailed transaction review workflow.
+  </Card>
+  <Card
+    title="Month-end close"
+    icon="calendar"
+    href="/accountants/workflows/month-end"
+  >
+    Complete month-end close process.
+  </Card>
+</CardGroup>

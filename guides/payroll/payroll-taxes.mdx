@@ -1,0 +1,178 @@
+---
+title: Understanding payroll taxes
+sidebarTitle: Payroll taxes
+description: What taxes you pay and when Pluvel files them.
+---
+
+Payroll taxes are confusing. Employee-paid vs employer-paid. FICA vs FUTA vs SUTA. Quarterly filings, annual filings, deposit schedules. Miss a deadline or make a math error? Penalties add up fast.
+
+Here's what you need to know: Pluvel calculates all of this automatically, withholds the right amounts, makes the deposits, and files the returns. But it helps to understand what's happening behind the scenes.
+
+## Types of payroll taxes
+
+### Employee withholdings
+
+Amounts withheld from employee paychecks:
+
+| Tax | Rate | Limit | Who pays |
+|-----|------|-------|----------|
+| Federal Income Tax | Varies by W-4 | None | Employee |
+| Social Security | 6.2% | $168,600 (2024) | Employee |
+| Medicare | 1.45% | None | Employee |
+| Additional Medicare | 0.9% | Over $200,000 | Employee |
+| State Income Tax | Varies by state | Varies | Employee |
+| Local Tax | Varies | Varies | Employee (some areas) |
+
+### Employer taxes
+
+What you pay as the employer (not deducted from employee pay):
+
+| Tax | Rate | Limit |
+|-----|------|-------|
+| Social Security | 6.2% | $168,600 (2024) |
+| Medicare | 1.45% | None |
+| FUTA (Federal Unemployment) | 0.6% | $7,000 |
+| SUTA (State Unemployment) | Varies | Varies |
+
+## How Pluvel handles taxes
+
+### Calculation
+
+When you run payroll, Pluvel automatically:
+1. Calculates federal income tax based on W-4
+2. Calculates FICA (Social Security + Medicare)
+3. Calculates state and local taxes
+4. Calculates employer taxes
+
+### Withholding
+
+Taxes are withheld from employee paychecks and set aside. You see these amounts on the payroll summary.
+
+### Deposits
+
+We deposit taxes with the IRS and state agencies:
+- **Federal taxes** — Deposited per IRS schedule (semi-weekly or monthly)
+- **State taxes** — Deposited per state requirements
+
+### Filing
+
+Pluvel files required tax returns:
+
+| Form | Frequency | What it reports |
+|------|-----------|----------------|
+| 941 | Quarterly | Federal income tax, Social Security, Medicare |
+| 940 | Annual | FUTA (federal unemployment) |
+| State forms | Varies | State withholding, unemployment |
+| W-2 | Annual | Employee wages and taxes |
+
+## Federal tax deposits
+
+The IRS determines your deposit schedule based on tax liability:
+
+| Total taxes owed | Deposit schedule |
+|------------------|------------------|
+| Less than $50,000/year | Monthly |
+| $50,000+/year | Semi-weekly |
+| Less than $2,500/quarter | With quarterly return |
+
+Pluvel tracks your schedule and makes deposits on time.
+
+## Quarterly Form 941
+
+Every quarter, Pluvel files Form 941 reporting:
+- Total wages paid
+- Federal income tax withheld
+- Social Security and Medicare taxes
+- Deposits made
+
+**Deadlines:**
+| Quarter | Due date |
+|---------|----------|
+| Q1 (Jan-Mar) | April 30 |
+| Q2 (Apr-Jun) | July 31 |
+| Q3 (Jul-Sep) | October 31 |
+| Q4 (Oct-Dec) | January 31 |
+
+## Annual Form 940
+
+Form 940 reports federal unemployment tax (FUTA):
+- Due January 31
+- Only on first $7,000 of each employee's wages
+- You may get a credit for state unemployment taxes paid
+
+## State payroll taxes
+
+Each state has its own requirements:
+
+<Tabs>
+  <Tab title="States with income tax">
+    Most states require:
+    - State income tax withholding
+    - State unemployment (SUTA)
+    - Quarterly and annual returns
+
+    Rates and thresholds vary by state.
+  </Tab>
+
+  <Tab title="States without income tax">
+    These states have no state income tax:
+    - Alaska, Florida, Nevada, New Hampshire (wages only), South Dakota, Tennessee, Texas, Washington, Wyoming
+
+    Still have state unemployment requirements.
+  </Tab>
+</Tabs>
+
+## Viewing tax liabilities
+
+See what you owe at any time:
+
+1. Go to **Payroll → Tax Filings**
+2. View:
+   - Current liabilities
+   - Upcoming deposits
+   - Filed returns
+   - Payment history
+
+## Tax notices
+
+If you receive a notice from the IRS or state:
+
+1. Go to **Payroll → Tax Filings**
+2. Click **Add Notice**
+3. Upload the notice
+4. We'll review and respond
+
+<Info>
+Many notices are routine. Pluvel's team can help interpret and respond to notices at no additional charge.
+</Info>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="What if I have employees in multiple states?">
+    You'll need to withhold and pay taxes in each state where employees work. Pluvel handles multi-state payroll automatically — we register with each state and handle all filings.
+  </Accordion>
+
+  <Accordion title="What's the penalty for late deposits?">
+    IRS penalties range from 2% (1-5 days late) to 15% (10+ days late after first notice). We deposit on time to avoid these.
+  </Accordion>
+
+  <Accordion title="Can I make extra tax payments?">
+    Yes. If you owe more than expected, you can make additional deposits through Pluvel to avoid penalties.
+  </Accordion>
+
+  <Accordion title="What about local taxes?">
+    Some cities and counties have their own payroll taxes (like Philadelphia, New York City). We handle these for supported localities.
+  </Accordion>
+</AccordionGroup>
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Run payroll" icon="money-check-dollar" href="/guides/payroll/run-payroll">
+    Process payroll with automatic tax calculations.
+  </Card>
+  <Card title="Year-end filing" icon="calendar" href="/guides/payroll/year-end">
+    W-2s, 1099s, and year-end requirements.
+  </Card>
+</CardGroup>

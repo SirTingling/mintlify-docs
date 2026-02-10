@@ -1,0 +1,303 @@
+---
+title: Custom Reports
+sidebarTitle: Custom Reports
+description: Build reports tailored to your specific needs.
+---
+
+Your CFO wants to see monthly revenue by customer segment. Your ops team needs payroll costs by department. Your board wants a specific format they've used for years. None of these are standard reports.
+
+Custom reports let you build exactly what you need — pick the data, set the filters, choose the grouping, and save it for next time. If you can imagine it, you can probably build it.
+
+## Creating a custom report
+
+<Steps>
+  <Step title="Go to Reports → Custom">
+    Click **New Custom Report**.
+  </Step>
+
+  <Step title="Choose a data source">
+    Select what data to report on:
+    - Transactions
+    - Invoices
+    - Bills
+    - Customers
+    - Vendors
+    - Employees
+    - Payroll
+    - Journal Entries
+  </Step>
+
+  <Step title="Select columns">
+    Choose which fields to include. Available fields depend on your data source.
+  </Step>
+
+  <Step title="Apply filters">
+    Narrow down the data:
+    - Date range
+    - Categories
+    - Customers/vendors
+    - Amounts
+    - Status
+  </Step>
+
+  <Step title="Set grouping and sorting">
+    Organize the output:
+    - Group by (category, customer, month, etc.)
+    - Sort by (date, amount, name)
+    - Show subtotals
+  </Step>
+
+  <Step title="Save and run">
+    Name your report and save it. Run immediately or schedule for later.
+  </Step>
+</Steps>
+
+## Available data sources
+
+### Transactions
+
+Financial transactions from all sources:
+
+| Field | Description |
+|-------|-------------|
+| Date | Transaction date |
+| Description | Transaction description |
+| Amount | Transaction amount |
+| Category | Assigned category |
+| Account | Bank/credit card account |
+| Type | Income, Expense, Transfer |
+| Payee | Who paid/received |
+| Status | Cleared, Pending, Reconciled |
+
+### Invoices
+
+Customer invoices:
+
+| Field | Description |
+|-------|-------------|
+| Invoice # | Invoice number |
+| Date | Invoice date |
+| Due Date | Payment due date |
+| Customer | Customer name |
+| Amount | Invoice total |
+| Balance | Amount still owed |
+| Status | Draft, Sent, Paid, Overdue |
+| Days Outstanding | Days since invoiced |
+
+### Bills
+
+Vendor bills:
+
+| Field | Description |
+|-------|-------------|
+| Bill # | Bill/reference number |
+| Date | Bill date |
+| Due Date | Payment due date |
+| Vendor | Vendor name |
+| Amount | Bill total |
+| Balance | Amount still owed |
+| Status | Open, Paid, Overdue |
+| Days Outstanding | Days since billed |
+
+### Payroll
+
+Payroll data:
+
+| Field | Description |
+|-------|-------------|
+| Pay Date | Check date |
+| Employee | Employee name |
+| Gross Pay | Gross wages |
+| Net Pay | Take-home pay |
+| Taxes | Total taxes withheld |
+| Deductions | Total deductions |
+| Hours | Hours worked |
+| Pay Type | Regular, Overtime, Bonus |
+
+## Filtering options
+
+### Date filters
+
+| Filter | Example |
+|--------|---------|
+| Exact date | March 15, 2025 |
+| Date range | March 1 - March 31, 2025 |
+| Relative | Last 30 days, This quarter |
+| Comparison | This month vs. last month |
+
+### Amount filters
+
+| Filter | Example |
+|--------|---------|
+| Equals | = $500 |
+| Greater than | > $1,000 |
+| Less than | < $100 |
+| Between | $100 - $500 |
+
+### Category filters
+
+- Include specific categories
+- Exclude categories
+- Parent category (includes children)
+
+### Status filters
+
+- Active / Inactive
+- Open / Closed / Paid
+- Pending / Cleared / Reconciled
+
+## Grouping and subtotals
+
+Group your data for analysis:
+
+### Group by options
+
+| Group By | Result |
+|----------|--------|
+| Month | Subtotals by month |
+| Quarter | Subtotals by quarter |
+| Year | Subtotals by year |
+| Category | Subtotals by category |
+| Customer/Vendor | Subtotals by contact |
+| Employee | Subtotals by employee |
+
+### Multiple levels
+
+Nest groupings for deeper analysis:
+- Primary: Category
+- Secondary: Month
+
+Result: Expenses by category, with monthly breakdown within each category.
+
+### Summary options
+
+| Option | Shows |
+|--------|-------|
+| Count | Number of records |
+| Sum | Total amount |
+| Average | Average amount |
+| Min/Max | Smallest/largest values |
+
+## Calculated fields
+
+Add calculations to your reports:
+
+| Calculation | Example |
+|-------------|---------|
+| Percentage of total | Each category as % of total expenses |
+| Running total | Cumulative sum over time |
+| Variance | Actual vs. budget |
+| Growth rate | Month-over-month change |
+
+## Saving and sharing
+
+### Save for reuse
+
+1. Click **Save Report**
+2. Name it descriptively
+3. Access from **Reports → My Reports**
+
+### Share with team
+
+1. Open a saved report
+2. Click **Share**
+3. Choose team members
+4. They see it in their **Reports → Shared**
+
+### Export
+
+| Format | Use Case |
+|--------|----------|
+| PDF | Print or share read-only |
+| Excel | Further analysis, pivot tables |
+| CSV | Import to other systems |
+| Google Sheets | Collaborative editing |
+
+## Scheduling
+
+Run custom reports automatically:
+
+1. Open a saved report
+2. Click **Schedule**
+3. Set frequency (daily, weekly, monthly)
+4. Add recipients
+5. Choose format (PDF, Excel)
+
+Scheduled reports run and email on your defined schedule.
+
+## Report templates
+
+Start from templates for common custom reports:
+
+### Expense by vendor
+
+See who you spend the most with:
+- Data: Transactions
+- Filter: Expenses only
+- Group by: Vendor
+- Sort: Amount descending
+
+### Revenue by customer
+
+See who pays you the most:
+- Data: Invoices (paid)
+- Group by: Customer
+- Sort: Amount descending
+
+### Monthly trend
+
+See patterns over time:
+- Data: Transactions
+- Group by: Month, then Category
+- Columns: Amount, Count
+- Compare: Year-over-year
+
+### Overdue invoices
+
+Focus on collections:
+- Data: Invoices
+- Filter: Status = Overdue
+- Sort: Days Outstanding descending
+
+## Dashboard integration
+
+Pin custom reports to your dashboard:
+
+1. Save the report
+2. Click **Add to Dashboard**
+3. Choose widget size (small, medium, large)
+4. Report appears on your dashboard, updated in real-time
+
+## Common uses
+
+### Management reporting
+
+- Weekly revenue summary
+- Monthly expense analysis
+- Department spending
+
+### Operational tracking
+
+- Outstanding invoices by customer
+- Vendor payment status
+- Payroll cost by department
+
+### Compliance
+
+- Transaction audit trail
+- Category verification
+- Bank reconciliation detail
+
+### Analysis
+
+- Profitability by customer
+- Cost trends over time
+- Budget variance
+
+<Card
+  title="Profit & Loss"
+  icon="arrow-right"
+  href="/features/reports/profit-loss"
+>
+  View the standard P&L report.
+</Card>

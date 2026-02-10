@@ -1,0 +1,414 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Pluvel",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg",
+    "href": "https://pluvel.com"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#7C3AED",
+    "light": "#8B5CF6",
+    "dark": "#6D28D9",
+    "anchors": {
+      "from": "#7C3AED",
+      "to": "#5B21B6"
+    }
+  },
+  "font": {
+    "headings": {
+      "family": "Inter",
+      "weight": 600
+    },
+    "body": {
+      "family": "Inter",
+      "weight": 400
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:support@pluvel.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Go to Pluvel",
+    "url": "https://pluvel.com"
+  },
+  "tabs": [
+    {
+      "name": "Guides",
+      "url": "guides"
+    },
+    {
+      "name": "Features",
+      "url": "features"
+    },
+    {
+      "name": "Integrations",
+      "url": "integrations"
+    },
+    {
+      "name": "For Accountants",
+      "url": "accountants"
+    },
+    {
+      "name": "Changelog",
+      "url": "changelog"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Contact Support",
+      "icon": "envelope",
+      "url": "mailto:support@pluvel.com"
+    },
+    {
+      "name": "Status",
+      "icon": "signal-bars",
+      "url": "https://status.pluvel.com"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "",
+      "pages": ["introduction"]
+    },
+    {
+      "group": "Getting Started",
+      "pages": [
+        "guides/getting-started/what-is-pluvel",
+        "guides/getting-started/create-account",
+        "guides/getting-started/setup-company",
+        "guides/getting-started/quick-start"
+      ]
+    },
+    {
+      "group": "Formation & Compliance",
+      "pages": [
+        "guides/formation/form-llc",
+        "guides/formation/form-corporation",
+        "guides/formation/get-ein",
+        "guides/formation/boi-report",
+        "guides/formation/stay-compliant"
+      ]
+    },
+    {
+      "group": "Managing Money",
+      "pages": [
+        "guides/money/connect-bank",
+        "guides/money/categorize-transactions",
+        "guides/money/reconcile-accounts",
+        "guides/money/create-invoices",
+        "guides/money/track-bills"
+      ]
+    },
+    {
+      "group": "Running Payroll",
+      "pages": [
+        "guides/payroll/add-employee",
+        "guides/payroll/add-contractor",
+        "guides/payroll/run-payroll",
+        "guides/payroll/payroll-taxes",
+        "guides/payroll/year-end"
+      ]
+    },
+    {
+      "group": "Reports & Taxes",
+      "pages": [
+        "guides/taxes/financial-reports",
+        "guides/taxes/sales-tax",
+        "guides/taxes/quarterly-filings",
+        "guides/taxes/export-accountant"
+      ]
+    },
+    {
+      "group": "Company Management",
+      "pages": [
+        "features/company/dashboard",
+        "features/company/profile",
+        "features/company/settings",
+        "features/company/team-members",
+        "features/company/notifications",
+        "features/company/switching-companies"
+      ]
+    },
+    {
+      "group": "Formation",
+      "pages": [
+        "features/formation/llc",
+        "features/formation/corporation",
+        "features/formation/s-corp",
+        "features/formation/nonprofit",
+        "features/formation/ein",
+        "features/formation/boi"
+      ]
+    },
+    {
+      "group": "Registered Agent",
+      "pages": [
+        "features/registered-agent/how-it-works",
+        "features/registered-agent/mail-forwarding",
+        "features/registered-agent/documents",
+        "features/registered-agent/changing-agent"
+      ]
+    },
+    {
+      "group": "Banking",
+      "pages": [
+        "features/banking/connecting-accounts",
+        "features/banking/mercury",
+        "features/banking/transactions",
+        "features/banking/manual-accounts",
+        "features/banking/reconciliation"
+      ]
+    },
+    {
+      "group": "Accounting",
+      "pages": [
+        "features/accounting/chart-of-accounts",
+        "features/accounting/journal-entries",
+        "features/accounting/categorization",
+        "features/accounting/bank-rules",
+        "features/accounting/ai-cfo",
+        "features/accounting/anomaly-detection",
+        "features/accounting/budgets",
+        "features/accounting/projects",
+        "features/accounting/fixed-assets",
+        "features/accounting/year-end-close",
+        "features/accounting/inventory"
+      ]
+    },
+    {
+      "group": "Invoicing",
+      "pages": [
+        "features/invoicing/creating-invoices",
+        "features/invoicing/estimates",
+        "features/invoicing/templates",
+        "features/invoicing/recurring",
+        "features/invoicing/payments",
+        "features/invoicing/customers",
+        "features/invoicing/credit-notes",
+        "features/invoicing/reminders"
+      ]
+    },
+    {
+      "group": "Bills & Expenses",
+      "pages": [
+        "features/bills/adding-bills",
+        "features/bills/bill-payments",
+        "features/bills/recurring-bills",
+        "features/bills/vendors",
+        "features/bills/purchase-orders",
+        "features/bills/vendor-credits",
+        "features/bills/expense-claims",
+        "features/bills/expense-reports",
+        "features/bills/receipts"
+      ]
+    },
+    {
+      "group": "Payroll",
+      "pages": [
+        "features/payroll/employees",
+        "features/payroll/contractors",
+        "features/payroll/pay-schedules",
+        "features/payroll/deductions",
+        "features/payroll/direct-deposit",
+        "features/payroll/direct-deposit-setup",
+        "features/payroll/running-payroll",
+        "features/payroll/pay-stubs",
+        "features/payroll/payroll-taxes",
+        "features/payroll/analytics",
+        "features/payroll/new-hire-reports",
+        "features/payroll/w2",
+        "features/payroll/1099",
+        "features/payroll/pto"
+      ]
+    },
+    {
+      "group": "Tax",
+      "pages": [
+        "features/tax/profile",
+        "features/tax/sales-tax",
+        "features/tax/payroll-tax",
+        "features/tax/941",
+        "features/tax/940",
+        "features/tax/state-taxes"
+      ]
+    },
+    {
+      "group": "Digital Mailroom",
+      "pages": [
+        "features/mailroom/how-it-works",
+        "features/mailroom/viewing-mail",
+        "features/mailroom/categorization",
+        "features/mailroom/actions",
+        "features/mailroom/settings"
+      ]
+    },
+    {
+      "group": "Compliance",
+      "pages": [
+        "features/compliance/calendar",
+        "features/compliance/annual-reports",
+        "features/compliance/licenses",
+        "features/compliance/renewals",
+        "features/compliance/notifications"
+      ]
+    },
+    {
+      "group": "Reports",
+      "pages": [
+        "features/reports/profit-loss",
+        "features/reports/balance-sheet",
+        "features/reports/cash-flow",
+        "features/reports/ar-aging",
+        "features/reports/ap-aging",
+        "features/reports/payroll-reports",
+        "features/reports/tax-reports",
+        "features/reports/custom"
+      ]
+    },
+    {
+      "group": "Overview",
+      "pages": [
+        "integrations/overview"
+      ]
+    },
+    {
+      "group": "Banking",
+      "pages": [
+        "integrations/plaid",
+        "integrations/mercury"
+      ]
+    },
+    {
+      "group": "Payments",
+      "pages": [
+        "integrations/stripe",
+        "integrations/square"
+      ]
+    },
+    {
+      "group": "Payroll",
+      "pages": [
+        "integrations/gusto",
+        "integrations/adp"
+      ]
+    },
+    {
+      "group": "Accounting",
+      "pages": [
+        "integrations/quickbooks",
+        "integrations/xero",
+        "integrations/wave"
+      ]
+    },
+    {
+      "group": "E-Commerce",
+      "pages": [
+        "integrations/shopify"
+      ]
+    },
+    {
+      "group": "Tax",
+      "pages": [
+        "integrations/taxcloud"
+      ]
+    },
+    {
+      "group": "Overview",
+      "pages": [
+        "accountants/overview"
+      ]
+    },
+    {
+      "group": "Getting Started",
+      "pages": [
+        "accountants/setup-firm",
+        "accountants/invite-team",
+        "accountants/add-client",
+        "accountants/firm-staff"
+      ]
+    },
+    {
+      "group": "Firm Dashboard",
+      "pages": [
+        "accountants/dashboard/client-overview",
+        "accountants/dashboard/calendar",
+        "accountants/dashboard/firm-calendar",
+        "accountants/dashboard/tasks",
+        "accountants/dashboard/alerts",
+        "accountants/dashboard/messages"
+      ]
+    },
+    {
+      "group": "Managing Clients",
+      "pages": [
+        "accountants/clients/onboarding",
+        "accountants/clients/switching",
+        "accountants/clients/permissions",
+        "accountants/clients/communication"
+      ]
+    },
+    {
+      "group": "Bookkeeper Workflows",
+      "pages": [
+        "accountants/workflows/transaction-review",
+        "accountants/workflows/reconciliation",
+        "accountants/workflows/month-end",
+        "accountants/workflows/document-requests",
+        "accountants/workflows/bookkeeper-tools"
+      ]
+    },
+    {
+      "group": "White-Label",
+      "pages": [
+        "accountants/white-label/overview",
+        "accountants/white-label/branding",
+        "accountants/white-label/client-portal",
+        "accountants/white-label/pricing"
+      ]
+    },
+    {
+      "group": "Billing",
+      "pages": [
+        "accountants/billing/how-it-works",
+        "accountants/billing/per-client",
+        "accountants/billing/invoicing"
+      ]
+    },
+    {
+      "group": "Changelog",
+      "pages": [
+        "changelog/overview",
+        "changelog/2026/february",
+        "changelog/2026/january"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/pluvel",
+    "linkedin": "https://linkedin.com/company/pluvel"
+  },
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true,
+    "raiseIssue": true
+  },
+  "search": {
+    "prompt": "Search Pluvel docs..."
+  },
+  "seo": {
+    "indexHiddenPages": false
+  },
+  "analytics": {
+    "posthog": {
+      "apiKey": ""
+    }
+  },
+  "redirects": [],
+  "isWhiteLabeled": true,
+  "backgroundImage": "/background.svg"
+}

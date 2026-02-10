@@ -1,0 +1,193 @@
+---
+title: Client Onboarding
+sidebarTitle: Onboarding
+description: Set up new clients efficiently with a structured workflow.
+---
+
+New client just signed. They forward you a zip file of "all their accounting stuff" — 847 files named things like "bank statement.pdf", "bank statement (1).pdf", and "taxes maybe.xlsx".
+
+Their prior accountant is "no longer available." The books haven't been reconciled since March. And they need financials for a loan application next week.
+
+This is client onboarding. Let's do it right.
+
+## The onboarding checklist
+
+Every new client gets a checklist that ensures nothing falls through the cracks. Work through it systematically, and you won't discover missing information six months later.
+
+### Phase 1: Get the information
+
+- [ ] **Business information** — Legal name, EIN, state of formation, entity type
+- [ ] **Bank access** — Either Plaid connection or view-only online banking access
+- [ ] **Prior financials** — Last 1-2 years of financial statements if they exist
+- [ ] **Previous accountant contact** — In case you need historical context
+- [ ] **Source documents** — Articles of incorporation, EIN letter, operating agreement
+
+### Phase 2: Set up the system
+
+- [ ] **Create company in Pluvel** — With correct entity type and fiscal year
+- [ ] **Connect bank accounts** — Via Plaid or direct integration
+- [ ] **Import chart of accounts** — Or start fresh with a template
+- [ ] **Set up integrations** — Stripe, Shopify, payroll, whatever they use
+- [ ] **Configure payroll** — If you're handling it
+
+### Phase 3: Migrate the data
+
+- [ ] **Import historical transactions** — At least current year, ideally 2-3 years
+- [ ] **Enter opening balances** — Starting point for all accounts
+- [ ] **Migrate from previous system** — QuickBooks, Xero, Wave, spreadsheets
+- [ ] **Verify balances match** — Old system to new system
+
+### Phase 4: Configure settings
+
+- [ ] **Fiscal year and periods** — Calendar year? Different fiscal year?
+- [ ] **Tax settings** — Sales tax nexus, withholding states
+- [ ] **Compliance tracking** — Annual reports, renewals, registrations
+- [ ] **Assign team members** — Who's responsible for this client
+- [ ] **Client portal access** — What can they see and do?
+
+### Phase 5: Verify everything
+
+- [ ] **Reconcile all accounts** — Through current
+- [ ] **Run trial balance** — Make sure it balances
+- [ ] **Generate P&L** — Compare to any prior reports
+- [ ] **Document discrepancies** — Note anything that doesn't match
+
+## Using the onboarding tracker
+
+Inside each client:
+
+1. Click **Onboarding** in the sidebar
+2. See your checklist with current progress
+3. Check off items as you complete them
+4. Add notes — "Got EIN letter from client's email on 1/15"
+
+Those notes matter. Six months from now when you wonder where you got a number, the note tells you.
+
+## Document collection
+
+### What to request (and why)
+
+| Document | Why you need it |
+|----------|----------------|
+| **Bank statements (12+ months)** | Reconciliation and historical context |
+| **Prior year tax returns** | Verify classifications, check opening balances |
+| **Articles of incorporation** | Confirm entity type, formation date, ownership |
+| **EIN letter** | Federal tax ID verification |
+| **State registrations** | Know which states require compliance |
+| **Insurance certificates** | Document coverage |
+| **Major contracts/leases** | Understand commitments and liabilities |
+
+### Getting documents efficiently
+
+Send a structured document request with a deadline:
+
+1. Click **Request Documents**
+2. Select the documents you need
+3. Set a realistic due date
+4. Add context: "I need these to complete your onboarding and start reconciliation"
+5. Send
+
+They receive a secure upload link. When they upload, you're notified. No back-and-forth email chains.
+
+## The client intake form
+
+Before you even start setup, get basic information through an intake form:
+
+- Business contact details
+- List of bank accounts and credit cards
+- Software and tools they use (Stripe, Shopify, payroll provider)
+- Known accounting issues or concerns
+- Goals and expectations
+
+Customize the form in **Templates → Client Intake Form**.
+
+## Data migration
+
+Most clients are coming from somewhere — QuickBooks, Xero, Wave, or a pile of spreadsheets.
+
+<Steps>
+  <Step title="Export from the old system">
+    Get chart of accounts, customers, vendors, and transactions. Most systems export to CSV. Some have direct API connections.
+  </Step>
+
+  <Step title="Review before importing">
+    Look at what you're bringing in:
+    - Duplicate accounts?
+    - Inactive items that should stay inactive?
+    - Categories that don't make sense?
+
+    Clean it up now. Garbage in, garbage out.
+  </Step>
+
+  <Step title="Import to Pluvel">
+    Use the migration wizard for QuickBooks and Xero — it handles the mapping automatically.
+
+    For CSV imports (Wave, spreadsheets), you'll map columns manually.
+  </Step>
+
+  <Step title="Verify the numbers">
+    Run trial balance in both systems. They should match.
+
+    If they don't, investigate before moving forward. Don't carry errors into the new system.
+  </Step>
+
+  <Step title="Set the cutover date">
+    Pick a date when Pluvel becomes the system of record. Usually the first of a month.
+
+    Before that date: historical data (don't edit).
+    After that date: live data (actively managed).
+  </Step>
+</Steps>
+
+## How long does this take?
+
+| Client complexity | Typical onboarding time |
+|-------------------|------------------------|
+| **Simple** — Solo business, few transactions, clean records | 1-2 days |
+| **Standard** — Small team, moderate volume, organized | 3-5 days |
+| **Complex** — Multiple entities, high volume, messy history | 1-2 weeks |
+
+Set expectations upfront. A client with three years of unreconciled books is not getting started this week.
+
+## Common onboarding problems
+
+<AccordionGroup>
+  <Accordion title="Client won't share bank credentials">
+    They don't have to. Send them Plaid's client-initiated flow: they log into their own bank through Plaid's secure window. You never see their password.
+  </Accordion>
+
+  <Accordion title="Prior accountant is MIA">
+    Work with what you have. Tax returns and bank statements are usually enough to reconstruct the important stuff. You're not the first to inherit a mess.
+  </Accordion>
+
+  <Accordion title="Chart of accounts is a disaster">
+    Don't import it. Start fresh with a Pluvel template and map old accounts during transaction import. A clean start beats importing 150 accounts when they only need 40.
+  </Accordion>
+
+  <Accordion title="Years of unreconciled books">
+    Prioritize current year — that's what matters for taxes. Reconstruct prior years only as needed, focusing on year-end balances rather than transaction-level accuracy.
+  </Accordion>
+
+  <Accordion title="Client expects instant setup">
+    Manage expectations. "I need to import your data, reconcile your accounts, and verify everything. That takes [X] days. I'll keep you updated."
+  </Accordion>
+</AccordionGroup>
+
+## Completing onboarding
+
+When all checklist items are done:
+
+1. Mark onboarding complete in Pluvel
+2. Client status changes from "Onboarding" to "Active"
+3. Schedule a walkthrough call — show them their dashboard, explain what they can access
+4. Set up recurring workflows — monthly close schedule, document request timing
+
+You're now in steady-state mode. The hard part is over.
+
+<Card
+  title="Switching between clients"
+  icon="arrow-right-arrow-left"
+  href="/accountants/clients/switching"
+>
+  Client onboarded? Learn to navigate between them efficiently.
+</Card>

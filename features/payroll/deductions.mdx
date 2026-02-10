@@ -1,0 +1,185 @@
+---
+title: Payroll Deductions
+sidebarTitle: Deductions
+description: Set up pre-tax and post-tax deductions.
+---
+
+An employee's gross pay is never what they take home. Between taxes (which you can't avoid) and deductions (which are often voluntary), a $5,000 paycheck might become $3,200 by the time it hits their bank account.
+
+Deductions cover benefits, retirement contributions, garnishments, and anything else that comes out of their pay before or after taxes.
+
+## Deduction types
+
+### Pre-tax deductions
+
+These come out *before* taxes are calculated — meaning they reduce taxable income. Employees pay less in taxes when they use pre-tax benefits.
+
+| Type | Common examples |
+|------|----------|
+| Health insurance | Medical, dental, vision premiums |
+| HSA contributions | Health Savings Account deposits |
+| FSA contributions | Flexible Spending Account deposits |
+| 401(k) traditional | Pre-tax retirement savings |
+| Commuter benefits | Transit passes, parking |
+
+### Post-tax deductions
+
+These come out *after* taxes are calculated — the employee has already paid income tax on this money.
+
+| Type | Common examples |
+|------|----------|
+| Roth 401(k) | After-tax retirement (tax-free withdrawals later) |
+| Life insurance | Employer-paid amounts over $50k are taxable |
+| Garnishments | Court-ordered child support, tax levies, creditor judgments |
+| Union dues | If applicable |
+| Charitable donations | Payroll giving programs |
+
+## Setting up deductions
+
+### Company-level setup
+
+First, create the deduction types your company offers:
+
+<Steps>
+  <Step title="Go to Settings">
+    Navigate to **Settings → Payroll → Deductions**.
+  </Step>
+
+  <Step title="Add a deduction type">
+    Click **Add Deduction Type**.
+  </Step>
+
+  <Step title="Configure it">
+    - Name (e.g., "Medical Insurance - Employee")
+    - Pre-tax or post-tax
+    - Category (health, retirement, other)
+    - How to calculate (fixed, percentage, per hour)
+  </Step>
+
+  <Step title="Save">
+    Now you can assign this deduction to employees.
+  </Step>
+</Steps>
+
+### Employee-level assignment
+
+Each employee opts into (or is assigned) specific deductions:
+
+1. Open the employee's profile
+2. Go to **Deductions**
+3. Click **Add Deduction**
+4. Select the type and enter their specific amount
+5. Save
+
+Different employees can have different amounts — one might contribute 6% to 401(k), another might contribute 10%.
+
+## Calculation methods
+
+| Method | How it works | Example |
+|--------|--------------|---------|
+| Fixed amount | Same dollar amount each period | $200/paycheck for health insurance |
+| Percentage | Percent of gross pay | 6% of gross to 401(k) |
+| Per hour | Amount times hours worked | Union dues at $0.50/hour |
+| Annual limit | Stops when limit is reached | 401(k) stops at $23,000 |
+
+### Percentage example
+
+Employee contributes 6% to 401(k):
+- Gross pay this period: $5,000
+- 401(k) deduction: $300
+
+Next period the gross might be different (overtime, bonus), and the deduction adjusts automatically.
+
+### Annual limits
+
+The IRS caps certain deductions:
+
+| Type | 2025 Limit |
+|------|------------|
+| 401(k) traditional/Roth | $23,000 ($30,500 if 50+) |
+| HSA (individual) | $4,150 |
+| HSA (family) | $8,300 |
+| FSA | $3,200 |
+
+Pluvel tracks year-to-date totals and automatically stops deductions when an employee hits the limit. No action needed from you.
+
+## Employer contributions
+
+Many benefits include an employer contribution:
+
+| Benefit | Typical employer contribution |
+|---------|--------------|
+| 401(k) | 50% match on first 6% (employee contributes 6%, you add 3%) |
+| HSA | Fixed amount per month ($50-100 common) |
+| Health insurance | 50-80% of premium |
+
+Set up employer portions in the deduction settings. They appear on the payroll summary as employer cost — not deducted from the employee.
+
+## Garnishments
+
+You just received a court order requiring you to withhold money from an employee's paycheck. This isn't optional.
+
+<Steps>
+  <Step title="Receive the order">
+    It arrives by mail — from a court, state agency, or the IRS.
+  </Step>
+
+  <Step title="Add the garnishment">
+    Set up the deduction with:
+    - Type (child support, tax levy, creditor judgment)
+    - Amount or percentage (as specified in the order)
+    - Maximum per pay period (some have caps)
+    - End date (if the order specifies one)
+  </Step>
+
+  <Step title="Withhold automatically">
+    Every payroll, the amount comes out.
+  </Step>
+
+  <Step title="Send the money">
+    Pay to the agency or recipient specified in the order, on the schedule they require.
+  </Step>
+</Steps>
+
+### Garnishment priority
+
+When an employee has multiple garnishments, federal law dictates the order:
+
+1. **Child support** — always first
+2. **Tax levies** — IRS and state tax
+3. **Other creditors** — credit cards, judgments, etc.
+
+And there are limits on how much total can be garnished (typically 25-50% of disposable income).
+
+<Warning>
+Follow garnishment orders exactly as written. Failing to garnish (or garnishing wrong) can make you personally liable. When in doubt, consult an employment attorney.
+</Warning>
+
+## Effective dates
+
+Deductions can be scheduled:
+
+- **Start date** — When the deduction begins (new hire, open enrollment)
+- **End date** — When it stops (employee leaves plan, garnishment satisfied)
+- **Change effective date** — When an amount change takes effect
+
+Set these in advance. During open enrollment, you might set new rates to start January 1 even though it's November.
+
+## Reports
+
+Track what's being deducted:
+
+| Report | What it shows |
+|--------|---------------|
+| Deduction summary | All deductions by type and employee |
+| Benefit costs | What benefits are costing you (employer portions) |
+| Garnishment register | Active garnishments and payments made |
+| 401(k) contributions | For sending to your plan administrator |
+
+<Card
+  title="Direct deposit"
+  icon="building-columns"
+  href="/features/payroll/direct-deposit"
+>
+  Get paychecks into employee bank accounts.
+</Card>

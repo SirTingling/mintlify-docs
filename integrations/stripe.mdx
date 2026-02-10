@@ -1,0 +1,181 @@
+---
+title: Stripe
+sidebarTitle: Stripe
+description: Connect Stripe to automatically import payments and reconcile deposits.
+---
+
+Your bank shows a $2,847.32 deposit from Stripe. What's in it? 47 different payments, batched together, minus fees. Matching that to individual invoices manually would take an hour. And you'd need to do it every time Stripe pays out.
+
+Connect Stripe to Pluvel and this happens automatically. Every payment, every refund, every fee — imported and matched to your invoices. That mystery deposit becomes 47 line items you can actually understand.
+
+## What the integration does
+
+When you connect Stripe:
+
+- **Payments sync automatically** — Every successful payment in Stripe creates a transaction in Pluvel
+- **Refunds are tracked** — Refunds appear as negative transactions, linked to the original payment
+- **Payouts match to bank deposits** — When Stripe deposits money to your bank, we match it to the Stripe transactions it contains
+- **Invoice matching** — If you include Pluvel invoice IDs in Stripe metadata, payments auto-match to invoices
+
+<Info>
+Stripe syncs in real-time via webhooks. New payments typically appear in Pluvel within seconds.
+</Info>
+
+## Connect Stripe
+
+<Steps>
+  <Step title="Go to Settings → Integrations">
+    Find Stripe in the Payments section and click **Connect**.
+  </Step>
+
+  <Step title="Authorize with Stripe">
+    You'll be redirected to Stripe. Log in and select the Stripe account you want to connect. If you have multiple Stripe accounts, choose the one you use for this business.
+  </Step>
+
+  <Step title="Grant permissions">
+    Pluvel requests read-only access to:
+    - Payments and refunds
+    - Payouts
+    - Customers (for matching)
+
+    We don't request write access — we can't create charges or modify your Stripe account.
+  </Step>
+
+  <Step title="Initial sync">
+    After connecting, we import the last 90 days of payments and payouts. This usually takes a few minutes depending on volume. You'll see a progress indicator.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/screenshots/stripe-connected.png" alt="Stripe connected in Pluvel" />
+</Frame>
+
+## How transactions appear
+
+Stripe payments appear in your transaction feed as income. Each transaction includes:
+
+| Field | Source |
+|-------|--------|
+| Amount | Stripe payment amount (after Stripe fees) |
+| Date | Payment date |
+| Description | Customer name or payment description |
+| Category | "Payment Processing" by default (you can recategorize) |
+| Reference | Stripe payment ID (pi_xxx) |
+
+<Tip>
+The amount that appears is the **net amount** after Stripe's processing fees. The fee itself appears as a separate expense transaction.
+</Tip>
+
+## Matching payouts to bank deposits
+
+Stripe batches payments and deposits them to your bank periodically (usually daily). These deposits contain multiple payments.
+
+**The challenge:** Your bank shows one deposit of $2,847.32. Stripe shows 47 individual payments. Which is which?
+
+**How Pluvel handles this:**
+
+1. We track each Stripe payout (the batch deposit)
+2. When the deposit clears in your bank (via Plaid), we match it by amount and date
+3. The bank transaction links to all the Stripe payments it contains
+
+This means you can see exactly which customer payments are included in each bank deposit.
+
+## Invoice matching
+
+To automatically match Stripe payments to Pluvel invoices:
+
+### Option 1: Use Pluvel's payment links
+
+When you send invoices from Pluvel with online payment enabled, we handle everything. The customer pays via Stripe, and the payment automatically marks the invoice as paid.
+
+### Option 2: Pass invoice ID in metadata
+
+If you collect payments through your own Stripe integration (website checkout, etc.), include the Pluvel invoice ID in the payment metadata:
+
+```javascript
+const paymentIntent = await stripe.paymentIntents.create({
+  amount: 10000,
+  currency: 'usd',
+  metadata: {
+    pluvel_invoice_id: 'inv_abc123'
+  }
+});
+```
+
+When this payment syncs to Pluvel, we'll automatically match it to the invoice and mark it as paid.
+
+## Managing the connection
+
+### View sync status
+
+Go to **Settings → Integrations → Stripe**. You'll see:
+
+- Connection status
+- Last sync time
+- Number of transactions imported
+- Any sync errors
+
+### Manual sync
+
+Syncing is automatic via webhooks, but you can trigger a manual sync to pull any missed transactions:
+
+1. Go to **Settings → Integrations → Stripe**
+2. Click **Sync Now**
+
+### Disconnect Stripe
+
+To disconnect:
+
+1. Go to **Settings → Integrations → Stripe**
+2. Click **Manage → Disconnect**
+
+Disconnecting stops future syncing but keeps all previously imported transactions. You can reconnect at any time.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Payments aren't syncing">
+    First, check if webhooks are working. Go to your Stripe Dashboard → Developers → Webhooks. Look for the Pluvel endpoint and check for failed deliveries.
+
+    If webhooks look fine, try a manual sync in Pluvel. If that doesn't work, disconnect and reconnect the integration.
+  </Accordion>
+
+  <Accordion title="Amounts don't match my bank">
+    Remember that Pluvel shows the net amount after Stripe fees. If you received a $100 payment with a $2.90 Stripe fee, you'll see:
+    - Income: $97.10 (the net amount)
+    - Expense: $2.90 (Stripe fee)
+
+    Your bank deposit will be $97.10.
+  </Accordion>
+
+  <Accordion title="Duplicate transactions">
+    If you see the same payment twice, you may have both Stripe and Plaid importing it. Go to the duplicate transaction and click **Mark as Duplicate**. We'll hide it and remember to skip similar transactions.
+  </Accordion>
+
+  <Accordion title="Old transactions didn't import">
+    Initial sync only imports the last 90 days. For older transactions, you can import them manually via CSV, or contact support and we can do a one-time historical import.
+  </Accordion>
+
+  <Accordion title="Connection says 'needs reauthorization'">
+    Stripe tokens can expire if you change your Stripe password or revoke access. Click **Reconnect** to reauthorize.
+  </Accordion>
+</AccordionGroup>
+
+## What's not included
+
+This integration is **read-only**. Pluvel can't:
+
+- Create charges or subscriptions in Stripe
+- Issue refunds
+- Modify customer information
+- Access your Stripe balance or transfer funds
+
+If you need to process payments from Pluvel invoices, we handle that through our own Stripe Connect integration, which is separate from this data sync.
+
+<Card
+  title="View all integrations"
+  icon="grid-2"
+  href="/integrations/overview"
+>
+  See what else Pluvel connects with.
+</Card>

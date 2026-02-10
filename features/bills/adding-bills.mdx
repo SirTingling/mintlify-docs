@@ -1,0 +1,154 @@
+---
+title: Adding Bills
+sidebarTitle: Adding bills
+description: Track bills and what you owe vendors.
+---
+
+Your vendor sent an invoice. If you don't track it somewhere, it either gets paid twice or not at all — both bad.
+
+Bills in Pluvel are the opposite of invoices: instead of money coming in, it's money going out. Record them here so you know what you owe, when it's due, and where your expenses are actually going.
+
+## Adding a bill
+
+<Steps>
+  <Step title="Go to Bills">
+    Navigate to **Bills & Expenses → Bills** or click **Add Bill**.
+  </Step>
+
+  <Step title="Select vendor">
+    Choose an existing vendor or create a new one.
+  </Step>
+
+  <Step title="Enter bill details">
+    - Bill number (from the vendor's invoice)
+    - Bill date
+    - Due date
+    - Total amount
+  </Step>
+
+  <Step title="Add line items">
+    Break down what you purchased:
+    - Description
+    - Category/account
+    - Amount
+  </Step>
+
+  <Step title="Save">
+    Bill is recorded and shows up in your payables.
+  </Step>
+</Steps>
+
+## Bill fields
+
+| Field | What it's for |
+|-------|-------------|
+| Vendor | Who you owe |
+| Bill number | The vendor's invoice number (for matching later) |
+| Bill date | Date on vendor's invoice |
+| Due date | When you need to pay |
+| Reference | Your internal reference or PO number |
+| Line items | What you bought |
+| Notes | Internal notes (vendor won't see these) |
+
+## Uploading bill images
+
+Attach the original bill so you have it when you need it:
+
+1. Click **Attach** or drag-and-drop
+2. Upload PDF or image
+3. Bill is stored with the record
+
+No more digging through email to find that invoice from February.
+
+### OCR scanning
+
+For uploaded bills, we can extract:
+- Vendor name
+- Amount
+- Date
+- Bill number
+
+Review what we extracted and confirm. Not perfect, but saves typing.
+
+## Email bills directly to Pluvel
+
+Forward vendor invoices without even opening Pluvel:
+
+1. Find your unique bills email in Settings
+2. Forward vendor invoices to that address
+3. Bills appear in your inbox for review
+
+Your AP@ email can auto-forward everything here.
+
+## Bill status
+
+| Status | What it means |
+|--------|---------|
+| Draft | Started but not finalized |
+| Open | Recorded, ready for payment |
+| Partial | You paid some, not all |
+| Paid | Fully paid |
+| Overdue | Past due date, still unpaid |
+| Void | Cancelled |
+
+## Categorizing line items
+
+For each thing you bought, assign the right expense account:
+
+- Office Supplies
+- Rent
+- Utilities
+- Professional Services
+- Software Subscriptions
+- Equipment
+- etc.
+
+This is what makes your expense reports accurate. "Where did all our money go?" becomes answerable.
+
+## Splitting bills
+
+One bill, multiple categories? Common situation:
+
+1. Add multiple line items
+2. Assign each to the right account
+3. Total matches the bill amount
+
+Example: A $500 Amazon order — $300 to office supplies, $200 to equipment.
+
+## Bill approval workflow
+
+For teams where not everyone should be able to commit to payments:
+
+1. Go to **Settings → Bills → Approvals**
+2. Enable approval workflow
+3. Set approval thresholds (auto-approve under $100, require approval over)
+4. Bills route for approval before they can be paid
+
+## Duplicate detection
+
+We'll warn you if you enter a bill that looks like a duplicate:
+
+- Same vendor
+- Same amount
+- Same (or similar) date
+
+Better to catch it before you pay something twice.
+
+## Bill reminders
+
+Get notified before bills are due:
+
+1. Go to **Settings → Notifications**
+2. Enable bill reminders
+3. Set how many days before due date
+4. Receive email or dashboard notification
+
+Never miss a due date. Never pay late fees you didn't have to.
+
+<Card
+  title="Pay bills"
+  icon="money-bill-transfer"
+  href="/features/bills/bill-payments"
+>
+  Record and schedule bill payments.
+</Card>

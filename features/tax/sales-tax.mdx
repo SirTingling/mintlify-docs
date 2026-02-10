@@ -1,0 +1,212 @@
+---
+title: Sales Tax
+sidebarTitle: Sales Tax
+description: Collect, track, and remit sales tax across multiple states.
+---
+
+Sales tax sounds simple until you realize there are over 13,000 tax jurisdictions in the US, each with different rates, rules, and product classifications. A product might be taxable in California but exempt in Texas. And if you sell online, you might owe tax in states you've never visited.
+
+Pluvel integrates with TaxCloud to calculate the right rate automatically, track what you owe, and help you file returns in every state where you have obligations.
+
+## How sales tax works in Pluvel
+
+<Steps>
+  <Step title="Configure nexus">
+    Tell us which states you have sales tax obligations (nexus).
+  </Step>
+
+  <Step title="Connect TaxCloud">
+    We use TaxCloud for real-time tax rate calculations based on product type and shipping address.
+  </Step>
+
+  <Step title="Tax is calculated">
+    When you create invoices or sync e-commerce sales, we calculate the correct tax.
+  </Step>
+
+  <Step title="Track and file">
+    We track collected tax and prepare your returns. File directly or export for manual filing.
+  </Step>
+</Steps>
+
+## Setting up sales tax
+
+### Step 1: Determine your nexus
+
+You have sales tax nexus in states where you:
+
+- Have a physical presence (office, warehouse, employees)
+- Exceed economic nexus thresholds (typically $100k in sales or 200 transactions)
+
+Go to **Settings → Sales Tax → Nexus** to add states.
+
+### Step 2: Connect TaxCloud
+
+TaxCloud handles the complexity of 13,000+ tax jurisdictions:
+
+1. Go to **Settings → Integrations → TaxCloud**
+2. Click **Connect** and create a TaxCloud account (free)
+3. Complete the TIC (Tax Information Code) setup for your products
+
+<Info>
+TaxCloud is free for tax calculation. They earn revenue from filing services, but you can file manually if you prefer.
+</Info>
+
+### Step 3: Map your products
+
+Different products are taxed differently. Common categories:
+
+| Category | Example | Typical Treatment |
+|----------|---------|-------------------|
+| General | Physical goods | Taxable |
+| Software SaaS | Cloud services | Varies by state |
+| Digital Goods | Downloads | Varies by state |
+| Services | Consulting | Often exempt |
+| Food | Groceries | Often exempt or reduced |
+
+Map your products to TaxCloud's TIC codes in **Settings → Products → Tax Categories**.
+
+## Collecting sales tax
+
+### On invoices
+
+When you create an invoice:
+
+1. Add line items with their tax categories
+2. Enter the customer's shipping/service address
+3. Pluvel calculates tax automatically
+4. Customer sees tax as a separate line item
+
+### From integrations
+
+If you use Shopify, Stripe, or Square:
+
+- Sales sync automatically to Pluvel
+- Tax collected is recorded
+- We match it to your nexus states
+
+## Tracking sales tax liability
+
+Go to **Reports → Tax → Sales Tax** to see:
+
+### By state
+
+| State | Taxable Sales | Tax Collected | Tax Rate | Due |
+|-------|---------------|---------------|----------|-----|
+| California | $45,230 | $3,619 | 8.00% avg | Mar 31 |
+| Texas | $28,100 | $2,311 | 8.22% avg | Apr 20 |
+| New York | $12,450 | $997 | 8.01% avg | Mar 20 |
+
+### By period
+
+View monthly or quarterly summaries to match your filing frequency.
+
+## Filing sales tax returns
+
+### Automatic filing (with TaxCloud)
+
+If you use TaxCloud's filing service:
+
+1. We send your sales data to TaxCloud monthly
+2. TaxCloud prepares and files returns in each state
+3. They remit payment on your behalf
+4. You fund your TaxCloud account to cover remittances
+
+### Manual filing
+
+If you file yourself:
+
+1. Go to **Reports → Tax → Sales Tax Returns**
+2. Select the period and state
+3. Download the report with totals by jurisdiction
+4. Enter figures into the state's filing portal
+5. Mark as filed in Pluvel
+
+## Understanding nexus
+
+### Physical nexus
+
+Traditional nexus—you have physical presence:
+
+- Office or retail location
+- Warehouse or inventory
+- Employees working in the state
+- Temporary presence (trade shows, pop-ups)
+
+### Economic nexus (post-Wayfair)
+
+Since 2018, most states require collection if you exceed thresholds:
+
+| Threshold Type | Common Amounts |
+|----------------|----------------|
+| Sales | $100,000 per year |
+| Transactions | 200 per year |
+
+We track your sales by state and alert you when approaching thresholds.
+
+### Marketplace facilitator rules
+
+If you sell through Amazon, Etsy, or eBay:
+
+- The marketplace collects and remits tax
+- You don't need to collect on those sales
+- Make sure to exclude marketplace sales from your nexus calculations
+
+## Exemption certificates
+
+Some customers are tax-exempt (nonprofits, resellers, government):
+
+### Storing certificates
+
+1. Go to **Customers → [Customer Name] → Tax Status**
+2. Upload their exemption certificate
+3. Select applicable states and expiration date
+
+### Applying exemptions
+
+When you invoice an exempt customer:
+
+- Tax is automatically excluded
+- The exemption certificate is referenced
+- Audit trail is maintained
+
+<Warning>
+You're responsible for collecting and validating exemption certificates. Invalid certificates mean you owe the tax.
+</Warning>
+
+## Use tax
+
+Use tax applies when you buy taxable items without paying sales tax (e.g., out-of-state purchases):
+
+1. We track purchases where no tax was charged
+2. Calculate use tax owed by state
+3. Include it in your return (or file separately)
+
+Go to **Reports → Tax → Use Tax** to see your obligations.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Do I need to collect sales tax?">
+    If you sell taxable goods or services and have nexus in a state, yes. Nexus can be physical (location, employees) or economic (sales exceed thresholds). Most states have economic nexus around $100k in sales.
+  </Accordion>
+
+  <Accordion title="What about SaaS products?">
+    SaaS taxability varies by state. About half of states tax SaaS. TaxCloud handles this complexity—just map your products correctly and we apply the right treatment.
+  </Accordion>
+
+  <Accordion title="How do I handle returns and refunds?">
+    When you issue a refund, the sales tax is also refunded. Pluvel tracks this and deducts it from your next period's liability.
+  </Accordion>
+
+  <Accordion title="What if I collected the wrong amount?">
+    If you under-collected, you owe the difference. If you over-collected, you should refund the customer or remit the extra to the state. Pluvel flags rate discrepancies in your reports.
+  </Accordion>
+</AccordionGroup>
+
+<Card
+  title="Connect TaxCloud"
+  icon="arrow-right"
+  href="/integrations/taxcloud"
+>
+  Set up automatic sales tax calculation.
+</Card>

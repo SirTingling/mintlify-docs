@@ -1,0 +1,182 @@
+---
+title: Categorize transactions
+sidebarTitle: Categorize transactions
+description: Organize your transactions for accurate financial records.
+---
+
+A transaction without a category is just a number. Is that $127 from AWS an operating expense or a cost of goods sold? Is that $500 from "Smith, J." revenue or a loan repayment?
+
+Categorization turns raw transactions into useful financial data. It's what makes your P&L accurate, your tax deductions legitimate, and your business insights meaningful.
+
+## Why categorization matters
+
+**Accurate reports** — Your Profit & Loss, Balance Sheet, and other reports depend on correct categorization.
+
+**Tax deductions** — Expenses need proper categories for tax time. Office supplies vs. meals vs. equipment — each has different tax treatment.
+
+**Business insights** — See where your money actually goes. Which categories eat up the most cash?
+
+## Categorize a transaction
+
+<Steps>
+  <Step title="Go to Banking">
+    Click **Banking** in the sidebar to see your transaction list.
+  </Step>
+
+  <Step title="Find uncategorized transactions">
+    Uncategorized transactions are highlighted. You can filter to show only uncategorized items.
+  </Step>
+
+  <Step title="Click on a transaction">
+    Open the transaction detail panel.
+  </Step>
+
+  <Step title="Select a category">
+    Choose from your chart of accounts. Common categories:
+
+    **Income:**
+    - Sales Revenue
+    - Service Revenue
+    - Interest Income
+
+    **Expenses:**
+    - Office Supplies
+    - Software & Subscriptions
+    - Professional Services
+    - Meals & Entertainment
+    - Travel
+    - Advertising
+  </Step>
+
+  <Step title="Add details (optional)">
+    - **Memo** — Notes about the transaction
+    - **Vendor/Customer** — Link to a contact
+    - **Receipt** — Attach documentation
+  </Step>
+
+  <Step title="Save">
+    Click **Save**. The transaction is now categorized.
+  </Step>
+</Steps>
+
+## Bulk categorization
+
+For multiple similar transactions:
+
+1. Check the boxes next to transactions you want to categorize
+2. Click **Bulk Actions** → **Categorize**
+3. Select the category
+4. All selected transactions are updated
+
+This is useful for categorizing a month's worth of a recurring expense at once.
+
+## Bank rules
+
+Set up rules to automatically categorize recurring transactions:
+
+1. Go to **Settings → Bank Rules** (or click **Create Rule** from a transaction)
+2. Define the condition:
+   - If description **contains** "AWS"
+   - If amount **equals** $9.99
+   - If vendor **is** "Spotify"
+3. Define the action:
+   - Categorize as "Software & Subscriptions"
+   - Add vendor "Amazon Web Services"
+4. Save the rule
+
+New matching transactions are categorized automatically.
+
+[Learn more about bank rules →](/features/accounting/bank-rules)
+
+## Split transactions
+
+Sometimes one transaction covers multiple categories. For example, an Amazon order with office supplies and cleaning supplies:
+
+1. Open the transaction
+2. Click **Split**
+3. Add line items:
+   - $45.00 → Office Supplies
+   - $22.00 → Cleaning & Maintenance
+4. Save
+
+The transaction now appears correctly in both categories.
+
+## Common categories
+
+### Income categories
+
+| Category | Use for |
+|----------|---------|
+| Sales Revenue | Product sales |
+| Service Revenue | Consulting, freelance work |
+| Interest Income | Bank interest, investment earnings |
+| Other Income | Miscellaneous income |
+
+### Expense categories
+
+| Category | Use for | Tax notes |
+|----------|---------|-----------|
+| Advertising | Ads, marketing, promotions | Fully deductible |
+| Bank Fees | Service charges, wire fees | Fully deductible |
+| Contractors | 1099 payments | Requires 1099 filing |
+| Insurance | Business insurance | Fully deductible |
+| Legal & Professional | Lawyers, accountants | Fully deductible |
+| Meals | Business meals | 50% deductible |
+| Office Supplies | Paper, pens, etc. | Fully deductible |
+| Rent | Office rent | Fully deductible |
+| Software | SaaS subscriptions | Fully deductible |
+| Travel | Flights, hotels | Fully deductible (business purpose) |
+| Utilities | Electric, internet | Fully deductible |
+
+## Handling specific transaction types
+
+<AccordionGroup>
+  <Accordion title="Transfers between accounts">
+    When money moves between your own accounts (checking to savings), it's a transfer, not income or expense. Categorize as **Transfer** or use the **Match** feature to link both sides.
+  </Accordion>
+
+  <Accordion title="Owner's draws / contributions">
+    Money you put into or take out of the business:
+    - **Owner's Contribution** — Money you invest
+    - **Owner's Draw** — Money you take out
+    These affect your equity, not income/expenses.
+  </Accordion>
+
+  <Accordion title="Reimbursements">
+    If you paid with a personal card and reimbursed yourself:
+    1. Record the expense with the correct category
+    2. Record the reimbursement as **Owner's Contribution** or offset the expense
+  </Accordion>
+
+  <Accordion title="Refunds">
+    Customer refund? Categorize as negative income (or a refund account).
+    Expense refund? Categorize as negative expense.
+  </Accordion>
+
+  <Accordion title="Loan payments">
+    Principal and interest are different:
+    - **Principal** — Reduces your liability (not an expense)
+    - **Interest** — Is an expense (Interest Expense category)
+
+    Split the transaction if needed.
+  </Accordion>
+</AccordionGroup>
+
+## Tips for efficiency
+
+1. **Categorize regularly** — Daily or weekly is easier than monthly
+2. **Use bank rules** — Set them up for recurring transactions
+3. **Be consistent** — Use the same category for similar expenses
+4. **When in doubt** — Check with your accountant or use a general category
+5. **Attach receipts** — Makes tax time and audits easier
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Create bank rules" icon="wand-magic-sparkles" href="/features/accounting/bank-rules">
+    Automate categorization for recurring transactions.
+  </Card>
+  <Card title="Reconcile accounts" icon="scale-balanced" href="/guides/money/reconcile-accounts">
+    Match your books to your bank statements.
+  </Card>
+</CardGroup>

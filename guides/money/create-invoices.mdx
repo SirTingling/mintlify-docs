@@ -1,0 +1,208 @@
+---
+title: Create invoices
+sidebarTitle: Create invoices
+description: Bill your customers and get paid.
+---
+
+Here's an uncomfortable truth: the longer an invoice sits unsent, the longer you wait to get paid. A freelancer who invoices the day the work is done gets paid 14 days faster on average than one who waits until "next week."
+
+This guide shows you how to create and send invoices that actually get paid — quickly.
+
+## The anatomy of an invoice that gets paid
+
+Before we get into buttons, understand what makes invoices effective:
+
+- **Clear due date** — "Net 30" means nothing to most people. "Due February 14" is unmistakable.
+- **Specific line items** — "Consulting Services: $5,000" raises questions. "Website redesign - homepage and 3 landing pages: $5,000" doesn't.
+- **Easy payment method** — A "Pay Now" button beats "mail a check to..." every time.
+- **Your contact info** — So they can reach you if something's unclear (instead of just not paying).
+
+## Create an invoice
+
+<Steps>
+  <Step title="Start the invoice">
+    Click **Invoicing** in the sidebar, then **Create Invoice**.
+  </Step>
+
+  <Step title="Pick the customer">
+    Select an existing customer or add a new one. For new customers, you need:
+    - Customer name (company or individual)
+    - Email address (where the invoice goes)
+    - Billing address (for the invoice itself)
+
+    Tip: Get the email right. Wrong email = invoice sitting in a spam folder = you not getting paid.
+  </Step>
+
+  <Step title="Add what you're billing for">
+    Each line item needs:
+    - **Description** — Be specific. "Logo design - 3 concepts, 2 revision rounds" is better than "Design work."
+    - **Quantity** — Hours, units, projects, whatever makes sense
+    - **Rate** — Price per unit
+    - **Amount** — Calculated automatically
+
+    Add as many line items as needed. More detail usually means fewer questions.
+  </Step>
+
+  <Step title="Set the terms">
+    - **Invoice number** — Auto-generated, or customize if you have a system
+    - **Invoice date** — Usually today
+    - **Due date** — When you expect payment
+    - **Payment terms** — Net 30, Due on Receipt, etc.
+
+    Here's a secret: shorter payment terms work. Clients who'd pay in 30 days with Net 30 often pay in 15 days with Net 15. They don't even notice the difference.
+  </Step>
+
+  <Step title="Add notes (optional)">
+    - **Notes to customer** — Thank them, reference the project, add payment instructions
+    - **Internal notes** — Only you see these. "Bob always pays late" is good to track.
+  </Step>
+
+  <Step title="Preview and send">
+    Preview shows exactly what your customer receives. When ready:
+    - **Send** — Emails immediately
+    - **Save as draft** — Save for later
+    - **Download PDF** — For your records or manual sending
+  </Step>
+</Steps>
+
+## Enable online payments (this is the big one)
+
+Customers who can pay with a button pay faster than customers who have to mail checks. It's not close.
+
+To enable online payments:
+
+1. Go to **Settings → Payments**
+2. Connect Stripe (or use Pluvel Payments)
+3. Enable payment methods:
+   - **Card** — Credit/debit cards (fastest, 2-3% fee)
+   - **ACH** — Bank transfer (slower but cheaper, usually 0.8% capped at $5)
+
+Once enabled, every invoice gets a "Pay Now" button. Customer clicks it, enters their card or bank info, done.
+
+**The numbers:**
+- Invoices with online payment: Average 11 days to payment
+- Invoices without: Average 27+ days
+- Checks that "got lost in the mail": Don't get us started
+
+## Payment terms explained
+
+| Term | What it means | When to use |
+|------|--------------|-------------|
+| Due on Receipt | Pay now | Rush jobs, new clients you don't know yet |
+| Net 15 | Due 15 days from invoice date | Recommended default for most businesses |
+| Net 30 | Due 30 days from invoice date | Standard for larger clients |
+| Net 60 | Due 60 days from invoice date | Enterprise clients who require it |
+| Custom | Any number of days | When you negotiate something specific |
+
+The default matters. Most people accept whatever terms you set. If you default to Net 30 when Net 15 would work, you're voluntarily waiting two extra weeks.
+
+Set your default in **Settings → Invoice Settings**.
+
+## Track where your money is
+
+Every invoice has a status:
+
+| Status | What it means | Your action |
+|--------|--------------|-------------|
+| **Draft** | Not sent yet | Finish and send it |
+| **Sent** | Delivered to customer | Wait (but not too long) |
+| **Viewed** | Customer opened it | They know. The clock's ticking. |
+| **Partial** | Some payment received | Follow up on the rest |
+| **Paid** | Fully paid | Celebrate |
+| **Overdue** | Past due date, unpaid | Send reminder immediately |
+
+The "Viewed" status is powerful. If an invoice was viewed a week ago but not paid, you know the customer saw it and chose not to act. Time to follow up.
+
+## Record manual payments
+
+When someone pays by check or wire:
+
+1. Open the invoice
+2. Click **Record Payment**
+3. Enter:
+   - Amount received
+   - Payment date
+   - Method (check, wire, cash)
+   - Reference (check number, wire confirmation)
+4. Save
+
+The invoice updates to Paid (or Partial if not the full amount).
+
+<Info>
+Online payments through Stripe record automatically. You don't need to do anything.
+</Info>
+
+## Send payment reminders
+
+For overdue invoices (because they happen):
+
+**Manual reminder:**
+1. Open the overdue invoice
+2. Click **Send Reminder**
+3. Customize the message if you want
+4. Send
+
+**Automatic reminders:**
+1. Go to **Settings → Invoice Settings → Reminders**
+2. Turn on automatic reminders
+3. Set timing:
+   - 3 days before due (gentle nudge)
+   - Day of (friendly reminder)
+   - 7 days overdue (firmer tone)
+   - 14 days overdue (getting serious)
+
+The best reminder is the one you don't have to remember to send.
+
+## Recurring invoices
+
+If you bill the same amount to the same client regularly — retainers, subscriptions, monthly services — set it up once:
+
+1. Go to **Invoicing → Recurring**
+2. Click **Create Recurring Invoice**
+3. Set up the template:
+   - Customer
+   - Line items
+   - Frequency (weekly, monthly, quarterly, yearly)
+   - Start date
+   - End date (or leave ongoing)
+4. Save
+
+Pluvel creates and sends invoices automatically. You stop thinking about it.
+
+[More on recurring invoices →](/features/invoicing/recurring)
+
+## Duplicate an existing invoice
+
+Similar job for the same client? Don't start from scratch:
+
+1. Open a previous invoice
+2. Click **Duplicate**
+3. Update what changed (date, line items, amounts)
+4. Send
+
+## Void vs. delete
+
+- **Void** — Cancels an invoice but keeps the record. Use this for invoices you already sent. The paper trail matters.
+- **Delete** — Removes completely. Only available for drafts that were never sent.
+
+Voided invoices don't affect revenue reports. They're just there for the audit trail.
+
+## Getting paid faster: the checklist
+
+1. **Invoice immediately.** Work done Friday? Invoice Friday. Not "sometime next week."
+2. **Enable online payments.** Card or ACH. Make it easy.
+3. **Use Net 15 instead of Net 30.** Most clients won't push back.
+4. **Set up automatic reminders.** Awkward to send. Effective when automated.
+5. **Be specific.** Detailed descriptions reduce back-and-forth questions that delay payment.
+6. **Follow up on "Viewed" invoices.** They saw it. They haven't paid. That's your cue.
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Set up recurring invoices" icon="repeat" href="/features/invoicing/recurring">
+    Automate billing for ongoing clients.
+  </Card>
+  <Card title="Manage customers" icon="users" href="/features/invoicing/customers">
+    Organize your customer records.
+  </Card>
+</CardGroup>

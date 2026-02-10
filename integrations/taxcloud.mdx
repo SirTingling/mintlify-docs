@@ -1,0 +1,209 @@
+---
+title: TaxCloud
+sidebarTitle: TaxCloud
+description: Automate multi-state sales tax calculation, collection, and filing.
+---
+
+Sales tax is a nightmare if you sell across state lines. Each state has different rates. Some have local taxes on top. Certain products are exempt in some states but not others. And you need to file returns in every state where you have nexus.
+
+TaxCloud handles all of it. Real-time tax calculation at checkout. Automatic filing in every state. They pay the states for you. Connect it to Pluvel and your sales tax compliance becomes someone else's problem.
+
+## What TaxCloud does
+
+| Function | What happens |
+|----------|--------------|
+| **Tax calculation** | Real-time rates for 13,000+ jurisdictions |
+| **Tax collection** | Correct rate applied at checkout |
+| **Tax filing** | Automatic returns in all your nexus states |
+| **Tax remittance** | They pay the states for you |
+| **Audit protection** | Documentation for every transaction |
+
+<Info>
+TaxCloud is free for basic usage. They make money from the states, not from you.
+</Info>
+
+## Do you need this?
+
+You probably need sales tax automation if:
+
+- You sell physical products online
+- You have nexus in multiple states
+- You ship to customers in different states
+- You'd rather not file 15 separate state returns
+
+### Economic nexus: the basics
+
+Most states now require you to collect sales tax once you exceed certain thresholds:
+
+| Threshold type | Examples |
+|----------------|----------|
+| $100,000 in sales | California, Texas, New York |
+| 200 transactions | Some states use count instead of dollars |
+| Combined | Many states use "either/or" — hit either threshold and you're in |
+
+If you're selling nationally, you probably have nexus in at least a few states.
+
+## Connect TaxCloud
+
+<Steps>
+  <Step title="Create a TaxCloud account">
+    Go to taxcloud.com and sign up. It's free to create an account.
+  </Step>
+
+  <Step title="Add your business info">
+    In TaxCloud, add your business address and register the states where you have nexus.
+  </Step>
+
+  <Step title="Get your API credentials">
+    In TaxCloud Settings, find your API ID and API Key.
+  </Step>
+
+  <Step title="Connect to Pluvel">
+    Go to **Settings → Integrations → TaxCloud** and enter your API credentials.
+  </Step>
+
+  <Step title="Configure tax settings">
+    Set your nexus states and product tax categories.
+  </Step>
+</Steps>
+
+## How it works with Pluvel
+
+### Invoice tax calculation
+
+When you create an invoice:
+
+1. You add line items and the customer's shipping address
+2. Pluvel sends the details to TaxCloud
+3. TaxCloud returns the exact tax rate for that address
+4. Tax is added to the invoice automatically
+
+You never have to look up rates or worry about getting it wrong.
+
+### E-commerce integration
+
+If you use Shopify with TaxCloud:
+
+1. TaxCloud calculates tax at Shopify checkout
+2. Sales sync to Pluvel with tax included
+3. TaxCloud handles filing — you don't touch it
+
+### Tracking tax collected
+
+All sales tax flows to your Sales Tax Payable account. You can see:
+
+- Tax collected by state
+- Tax collected by local jurisdiction
+- When filing is due
+
+## Setting up nexus
+
+Nexus means you have a tax obligation in a state. You create nexus through:
+
+| Nexus type | Example |
+|------------|---------|
+| Physical presence | Office, warehouse, or employee in the state |
+| Economic nexus | Sales over the threshold |
+| Click-through nexus | Affiliate relationships |
+| Marketplace nexus | Selling on Amazon, Etsy (though marketplaces often collect for you) |
+
+In TaxCloud, register every state where you have nexus. They'll file returns for those states.
+
+## Product taxability
+
+Different products have different tax treatment:
+
+| Category | Treatment |
+|----------|-----------|
+| Tangible goods | Taxable at standard rate |
+| Clothing | Exempt or reduced in some states |
+| Food/groceries | Exempt or reduced in many states |
+| Digital products | Varies by state |
+| Software/SaaS | Varies widely — some states tax, some don't |
+| Services | Usually exempt |
+
+Set the correct TIC (Taxability Information Code) for each product. TaxCloud uses this to apply the right rate.
+
+## How filing works
+
+TaxCloud files returns and remits tax automatically:
+
+1. At the end of each filing period (monthly, quarterly, or annually depending on the state)
+2. TaxCloud prepares returns for each nexus state
+3. They submit returns on your behalf
+4. They pay the states using their registered agent status
+5. You fund TaxCloud before the deadline
+
+<Warning>
+Make sure your TaxCloud account has sufficient funds before filing deadlines. Failed filings can result in penalties and interest.
+</Warning>
+
+## Viewing your tax data
+
+In Pluvel, you can see:
+
+- **Sales Tax Summary** — Tax collected by state
+- **Liability Report** — What you owe by filing period
+- **Transaction Detail** — Tax on individual transactions
+
+TaxCloud also has detailed reports in their dashboard.
+
+## Common issues
+
+<AccordionGroup>
+  <Accordion title="Tax not calculating">
+    Check that:
+
+    - Your TaxCloud API credentials are correct
+    - The customer address is complete (need full address for accurate lookup)
+    - The product has a valid TIC code
+    - Your TaxCloud account is active
+  </Accordion>
+
+  <Accordion title="Tax rate seems wrong">
+    Tax rates depend on:
+
+    - Ship-to address (not your business address)
+    - Product category
+    - State-specific exemptions
+
+    Verify the TIC code matches your product type.
+  </Accordion>
+
+  <Accordion title="State missing from filing">
+    You must register nexus states in TaxCloud before they'll file for you. Go to TaxCloud → States → Add State.
+  </Accordion>
+
+  <Accordion title="Customer claiming exemption">
+    Exempt customers (resellers, nonprofits) need exemption certificates. Upload these to TaxCloud and associate with the customer.
+  </Accordion>
+</AccordionGroup>
+
+## Alternatives
+
+TaxCloud isn't the only option:
+
+| Alternative | Best for |
+|-------------|----------|
+| Avalara | Enterprise, high transaction volume |
+| TaxJar | Mid-size businesses |
+| Manual filing | Low volume, few states |
+
+## What TaxCloud costs
+
+TaxCloud is free for:
+- Tax calculation
+- Filing in participating states
+
+Fees apply for:
+- Filing in non-participating states
+- Premium support
+- Some enterprise features
+
+<Card
+  title="Set up sales tax in Pluvel"
+  icon="percent"
+  href="/guides/taxes/sales-tax"
+>
+  Configure sales tax collection for your business.
+</Card>

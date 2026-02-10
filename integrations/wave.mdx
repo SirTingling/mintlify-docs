@@ -1,0 +1,180 @@
+---
+title: Wave
+sidebarTitle: Wave
+description: Migrate your accounting data from Wave.
+---
+
+Wave was great when you were getting started — free accounting software, simple invoicing, good enough for a freelancer or small business. But now you've outgrown it. Maybe you need better reporting. Maybe you want integrated payroll. Maybe you're just tired of the limitations.
+
+The catch: Wave doesn't have an API. You can't just click "Connect" and have everything transfer over. Instead, you'll export CSV files from Wave and import them into Pluvel. It takes about 30-60 minutes, but when you're done, all your data is here.
+
+## How Wave migration works
+
+No fancy OAuth flow here. You'll export CSVs from Wave, then upload them to Pluvel.
+
+<Info>
+Plan for about 30-60 minutes to export from Wave and import to Pluvel. It's not hard, just manual.
+</Info>
+
+## What you can import
+
+| Data | Import method |
+|------|---------------|
+| Chart of Accounts | CSV export |
+| Customers | CSV export |
+| Vendors | CSV export |
+| Products/Services | CSV export |
+| Invoices | CSV export |
+| Transactions | CSV export |
+| Bank transactions | Connect bank directly (recommended) |
+
+## Exporting from Wave
+
+<Steps>
+  <Step title="Log into Wave">
+    Go to waveapps.com and log in.
+  </Step>
+
+  <Step title="Export transactions">
+    Go to **Accounting → Transactions**, click **Export**, and download the CSV. Select your desired date range.
+  </Step>
+
+  <Step title="Export chart of accounts">
+    Go to **Accounting → Chart of Accounts → Export**.
+  </Step>
+
+  <Step title="Export customers">
+    Go to **Sales → Customers → Export**.
+  </Step>
+
+  <Step title="Export vendors">
+    Go to **Purchases → Vendors → Export**.
+  </Step>
+
+  <Step title="Export invoices">
+    Go to **Sales → Invoices** and export unpaid invoices.
+  </Step>
+</Steps>
+
+## Importing to Pluvel
+
+<Steps>
+  <Step title="Start the migration">
+    Go to **Settings → Migrate Data** and select Wave as your source.
+  </Step>
+
+  <Step title="Upload chart of accounts first">
+    Always start with the chart of accounts — this sets up your account structure.
+  </Step>
+
+  <Step title="Map columns">
+    Match Wave columns to Pluvel fields. We auto-detect most mappings, but verify them.
+  </Step>
+
+  <Step title="Upload customers and vendors">
+    Import your contact lists next.
+  </Step>
+
+  <Step title="Upload transactions">
+    Import your transaction history. Match transactions to the correct accounts.
+  </Step>
+
+  <Step title="Verify totals">
+    Compare account balances to your Wave reports. They should match.
+  </Step>
+</Steps>
+
+## How columns map
+
+Common Wave CSV columns map like this:
+
+| Wave column | Pluvel field |
+|-------------|--------------|
+| Transaction Date | Date |
+| Description | Description |
+| Account | Account |
+| Debit | Debit |
+| Credit | Credit |
+| Category | Category |
+
+## Handling Wave features
+
+### Wave Payments
+
+Wave Payments transactions export like regular transactions. The income appears in your transaction export.
+
+### Recurring invoices
+
+Wave recurring invoices don't export. Recreate them in Pluvel after migration — takes about 2 minutes each.
+
+### Wave Payroll
+
+Employee data doesn't export via CSV. Set up employees manually in Pluvel, or use our Gusto/ADP import if you're migrating payroll from those providers.
+
+### Receipts
+
+Receipt images attached in Wave don't export. Download any important receipts before canceling Wave.
+
+## Don't import bank transactions from Wave
+
+Here's a better approach:
+
+1. Connect your bank directly via Plaid in Pluvel
+2. Import the last 24 months of transactions directly from your bank
+3. This is more accurate than Wave's export
+
+Only use Wave CSV for historical transactions before your Plaid import period covers.
+
+## Verification checklist
+
+After importing, check these boxes:
+
+- [ ] Chart of accounts matches Wave
+- [ ] Customer balances match
+- [ ] Vendor balances match
+- [ ] Bank account balances match
+- [ ] P&L for last month matches
+- [ ] Balance sheet totals match
+
+## Common issues
+
+<AccordionGroup>
+  <Accordion title="CSV upload fails">
+    Common fixes:
+
+    - **Encoding issue** — Save as UTF-8 CSV, not just "CSV"
+    - **File too large** — Split into smaller chunks and import sequentially
+    - **Special characters** — Remove or escape characters like emojis or unusual punctuation
+  </Accordion>
+
+  <Accordion title="Accounts don't match up">
+    Wave and Pluvel may categorize accounts differently. During import, you can reclassify accounts to the correct Pluvel category.
+  </Accordion>
+
+  <Accordion title="Seeing duplicate transactions">
+    If you import Wave transactions AND connect your bank via Plaid, you'll see duplicates. Choose one source per date range. Mark duplicates as duplicates in your transaction feed.
+  </Accordion>
+
+  <Accordion title="Missing invoices">
+    Only unpaid/open invoices typically need importing. Paid invoices already exist as transactions in your ledger — you don't need the invoice record too.
+  </Accordion>
+</AccordionGroup>
+
+## After migration
+
+1. **Connect your banks** — Set up Plaid for ongoing transaction sync
+2. **Test invoicing** — Create a test invoice to make sure everything works
+3. **Recreate recurring items** — Set up any recurring invoices or bills
+4. **Cancel Wave** — Once verified, cancel your Wave account
+
+<Warning>
+Wave keeps historical data after you cancel, but download any reports or receipts you want to keep before canceling.
+</Warning>
+
+<Card
+  title="Connect your bank"
+  icon="building-columns"
+  href="/guides/money/connect-bank"
+>
+  Set up automatic bank transaction imports.
+</Card>

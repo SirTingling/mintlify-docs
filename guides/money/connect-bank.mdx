@@ -1,0 +1,200 @@
+---
+title: Connect your bank
+sidebarTitle: Connect bank
+description: Link your business bank accounts to automatically import transactions.
+---
+
+Manual transaction entry is a soul-crushing waste of time. You know this. That's why you're here.
+
+Connect your bank account once, and every transaction syncs automatically. No more downloading CSV files. No more copying numbers from your bank's website. Just transactions appearing in Pluvel, ready to categorize.
+
+## How the connection works
+
+Pluvel uses **Plaid** to connect to your bank — the same secure connection used by Venmo, Robinhood, and thousands of financial apps.
+
+When you connect:
+
+1. You log into your bank through Plaid's window (not Pluvel's)
+2. Plaid gives Pluvel read-only access to your transactions
+3. Transactions sync automatically, typically every 2-4 hours
+
+**The important part:** Pluvel never sees your bank password. Never stores it. Never touches it. Your credentials go directly to Plaid, which handles the security.
+
+## Connect your bank
+
+<Steps>
+  <Step title="Go to Banking">
+    From your dashboard, click **Banking** in the sidebar.
+  </Step>
+
+  <Step title="Click Connect Bank">
+    Hit the **Connect Bank Account** button.
+  </Step>
+
+  <Step title="Find your bank">
+    Type your bank's name in the search box. Over 12,000 institutions are supported:
+    - Big banks: Chase, Bank of America, Wells Fargo, Citi
+    - Business banks: Mercury, Relay, Bluevine, Brex
+    - Credit unions: Most are supported
+    - Regional banks: Almost always available
+  </Step>
+
+  <Step title="Log into your bank">
+    Enter your online banking credentials in Plaid's secure window.
+
+    Some banks ask for extra verification:
+    - A code texted or emailed to you
+    - Security question answers
+    - Push notification approval in your bank's app
+
+    This is your bank being careful. It's a good thing.
+  </Step>
+
+  <Step title="Select which accounts">
+    Choose the accounts you want to connect:
+    - Business checking (definitely)
+    - Business savings (if you use it)
+    - Business credit cards (yes, connect these too)
+    - Lines of credit (if applicable)
+
+    You can always add more accounts later.
+  </Step>
+
+  <Step title="Wait for the initial sync">
+    After connecting, Pluvel pulls your transaction history. This can take anywhere from a few minutes to a few hours, depending on your bank and how many transactions you have.
+
+    You'll get a notification when it's ready.
+  </Step>
+</Steps>
+
+## What gets imported
+
+| Account type | History available |
+|--------------|------------------|
+| Checking & Savings | Up to 24 months |
+| Credit cards | Up to 24 months |
+
+The actual history depends on what your bank provides to Plaid. Some banks give 24 months, some give 90 days. You get whatever's available.
+
+After the initial sync, new transactions typically appear within 1-4 hours of posting at your bank.
+
+## Connect multiple accounts
+
+Connect as many accounts as your business uses:
+
+- Multiple checking accounts at the same bank
+- Accounts at different banks
+- All your business credit cards
+- Lines of credit
+
+Each account appears separately in your Banking dashboard. You can reconcile them individually and see exactly where money flows.
+
+## If you use Mercury
+
+Mercury has a direct API integration that's better than the standard Plaid connection:
+
+1. Go to **Settings → Integrations**
+2. Find **Mercury** and click **Connect**
+3. Authorize in your Mercury dashboard
+
+The difference: Mercury's direct integration syncs in real-time (not every few hours), includes more transaction details, and rarely needs reconnection.
+
+[More about the Mercury integration →](/integrations/mercury)
+
+## When things go wrong
+
+<AccordionGroup>
+  <Accordion title="My bank isn't showing up">
+    A few things to try:
+    - Search by alternative names (some banks have multiple listings)
+    - Try the bank's full official name
+    - Look for parent company names if it's a regional bank
+
+    If it's truly not there, the bank may not support Plaid connections. You can add it as a manual account and import transactions via CSV.
+  </Accordion>
+
+  <Accordion title="Connection keeps failing during login">
+    Banks with stricter security sometimes block automated connections. Try:
+    - Connecting during business hours (some banks rate-limit after hours)
+    - Checking if your bank's website is working normally
+    - Creating an "app password" if your bank offers them
+    - Temporarily relaxing two-factor settings, then reconnecting
+
+    If nothing works, contact support — some banks need specific workarounds.
+  </Accordion>
+
+  <Accordion title="It connected but transactions aren't appearing">
+    Check the connection status in **Banking → Connected Accounts**.
+
+    If it shows healthy but no transactions:
+    - Wait a few hours. First syncs can be slow.
+    - Check that your bank actually has recent transactions to import.
+    - Some business accounts have delays on the bank side.
+
+    If it shows an error:
+    1. Click **Reconnect**
+    2. Log into your bank again
+    3. Wait for re-sync
+  </Accordion>
+
+  <Accordion title="I'm seeing duplicate transactions">
+    This usually happens when you've connected the same account two ways — like through Plaid and through a direct integration (Stripe, Square).
+
+    Don't delete them. Mark one as a duplicate:
+    1. Click the duplicate transaction
+    2. Click **Mark as Duplicate**
+    3. Pluvel hides it and learns to skip similar matches
+  </Accordion>
+
+  <Accordion title="Historical transactions are missing">
+    Plaid can only import what your bank provides. If you need older transactions:
+    1. Log into your bank's website
+    2. Export transactions as CSV
+    3. In Pluvel, go to **Banking → Import Transactions**
+    4. Upload and map the columns
+
+    It's a one-time hassle, but it fills the gap.
+  </Accordion>
+</AccordionGroup>
+
+## Manual accounts
+
+Some accounts can't connect automatically:
+- Petty cash
+- Foreign bank accounts
+- Very small credit unions
+- Cash on hand
+
+For these, add a manual account:
+
+1. Go to **Banking → Add Account**
+2. Select **Manual Account**
+3. Name the account and enter the starting balance
+4. Add transactions by hand as they occur
+
+Manual accounts work everywhere else — categorization, reports, reconciliation. They just don't auto-sync.
+
+## Is this actually secure?
+
+Yes. Here's why:
+
+**Read-only access.** Pluvel can see your transactions. It cannot move money, initiate transfers, or change anything in your bank account. Ever.
+
+**No credential storage.** Your bank username and password go directly to Plaid, not to Pluvel. We literally never see them.
+
+**Bank-level encryption.** Plaid uses 256-bit encryption — the same standard your bank uses for its mobile app.
+
+**Token-based authentication.** Your connection uses a secure token that can be revoked anytime. Changing your bank password doesn't break anything.
+
+**Disconnect whenever you want.** Go to **Banking → Connected Accounts**, click the account, click **Disconnect**. Done. Connection severed.
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Categorize transactions" icon="tags" href="/guides/money/categorize-transactions">
+    Organize your transactions for accurate bookkeeping.
+  </Card>
+  <Card title="Set up bank rules" icon="wand-magic-sparkles" href="/features/accounting/bank-rules">
+    Automatically categorize recurring transactions.
+  </Card>
+</CardGroup>

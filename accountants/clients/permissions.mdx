@@ -1,0 +1,163 @@
+---
+title: Client Permissions
+sidebarTitle: Permissions
+description: Control what clients can access in their portal.
+---
+
+Some clients want to see everything and make changes themselves. Others just want monthly reports — they hired you so they *don't* have to think about the books. And a few want access to things they probably shouldn't touch.
+
+Permissions let you match access to the relationship. Full control for hands-on clients, view-only for oversight, limited access for those who just need to upload receipts. You decide what each client can see and do.
+
+## Permission levels
+
+| Level | What they can do |
+|-------|------------------|
+| **Full access** | View and edit everything (like an owner) |
+| **Edit access** | Make changes, but can't modify settings |
+| **View only** | See everything, can't change anything |
+| **Limited** | See only what you explicitly share |
+| **Portal only** | Document uploads and messaging only |
+
+## Setting permissions
+
+<Steps>
+  <Step title="Open client settings">
+    Go to the client and click **Settings → Permissions**.
+  </Step>
+
+  <Step title="Choose base level">
+    Select the default permission level for the client.
+  </Step>
+
+  <Step title="Customize by area">
+    Override permissions for specific features if needed.
+  </Step>
+
+  <Step title="Save changes">
+    Changes take effect immediately.
+  </Step>
+</Steps>
+
+## Feature-level permissions
+
+Fine-tune access by area:
+
+| Feature | Permission options |
+|---------|-------------------|
+| Transactions | View / Edit / Hide |
+| Reports | View / Hide |
+| Invoicing | View / Edit / Hide |
+| Payroll | View / Hide |
+| Banking | View / Edit / Hide |
+| Documents | View / Upload / Hide |
+| Settings | View / Edit / Hide |
+| Team | View / Manage / Hide |
+
+### Example setups
+
+**Hands-off client** (you do everything):
+- Base: Portal only
+- Documents: Upload
+- Everything else: Hidden
+
+**Oversight client** (wants to monitor):
+- Base: View only
+- Documents: Upload
+- Reports: View
+
+**Active client** (does some work):
+- Base: Edit access
+- Payroll: View only
+- Settings: View only
+
+## Client users
+
+A client can have multiple users with different permissions:
+
+| Role | Typical permissions |
+|------|---------------------|
+| Owner | Full access |
+| CFO | Full access |
+| Bookkeeper | Edit transactions only |
+| Manager | View reports only |
+| Assistant | Document upload only |
+
+### Adding client users
+
+1. Go to **Client → Settings → Users**
+2. Click **Invite User**
+3. Enter email and select role
+4. Send invitation
+
+### Managing client users
+
+You control:
+- Who can access the client portal
+- What role each person has
+- Whether they receive notifications
+- Multi-factor authentication requirements
+
+## Sensitive data
+
+Some data requires explicit permission to view:
+
+| Data type | Default visibility |
+|-----------|-------------------|
+| Bank balances | Visible to View+ |
+| Transaction amounts | Visible to View+ |
+| Payroll details | Hidden by default |
+| SSN/EIN | Hidden by default |
+| Bank account numbers | Hidden by default |
+
+Override in **Settings → Permissions → Sensitive Data**.
+
+## Action restrictions
+
+Beyond viewing, control what clients can do:
+
+| Action | Who can do it |
+|--------|---------------|
+| Create transactions | Edit+ only |
+| Categorize transactions | Edit+ only |
+| Create invoices | Edit+ only |
+| Run payroll | Requires specific permission |
+| Connect banks | Requires specific permission |
+| Change settings | Admin only |
+
+## Audit trail
+
+All permission changes are logged:
+
+- Who changed what
+- When it changed
+- Previous and new values
+
+View in **Client → Settings → Audit Log**.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Can clients see my notes?">
+    No. Internal notes and team comments are never visible to clients unless you explicitly share them.
+  </Accordion>
+
+  <Accordion title="Can clients see other clients?">
+    Never. Each client only sees their own data. There's no way for clients to access or even know about other clients.
+  </Accordion>
+
+  <Accordion title="Can I restrict specific reports?">
+    Yes. In feature permissions, expand Reports and choose which specific reports they can access.
+  </Accordion>
+
+  <Accordion title="What if a client needs temporary elevated access?">
+    You can temporarily upgrade their permissions, then downgrade later. Consider using time-limited access for sensitive situations.
+  </Accordion>
+</AccordionGroup>
+
+<Card
+  title="Communicate with clients"
+  icon="comment"
+  href="/accountants/clients/communication"
+>
+  Send messages and request documents.
+</Card>

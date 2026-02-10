@@ -1,0 +1,153 @@
+---
+title: Plaid
+sidebarTitle: Plaid
+description: Connect your bank accounts securely through Plaid.
+---
+
+Manually entering every transaction from your bank statement is a fantastic way to waste hours of your life and probably make a few typos in the process.
+
+Plaid connects your bank accounts to Pluvel securely. Your transactions import automatically — up to 24 months of history — and new transactions sync daily. You never share your password with us.
+
+## How it works
+
+<Steps>
+  <Step title="Click Connect Bank">
+    In Pluvel, go to **Settings → Banking** and click **Connect Bank Account**.
+  </Step>
+
+  <Step title="Find your bank">
+    Plaid shows a search interface. Find your bank by name — over 12,000 financial institutions are supported.
+  </Step>
+
+  <Step title="Log in through Plaid">
+    Enter your online banking credentials in Plaid's secure window. Pluvel never sees your password.
+  </Step>
+
+  <Step title="Select accounts">
+    Choose which accounts to connect — checking, savings, credit cards. You don't have to connect everything.
+  </Step>
+
+  <Step title="Transactions start syncing">
+    Pluvel imports up to 24 months of history and syncs new transactions daily.
+  </Step>
+</Steps>
+
+## What Plaid can and can't see
+
+When you connect through Plaid, we receive:
+
+| We receive | Used for |
+|------------|----------|
+| Account balances | Cash position, reconciliation |
+| Transaction history | Categorization, reporting |
+| Account details | Account name, type, last 4 digits |
+
+We do **not** receive:
+
+- Your login credentials
+- Full account numbers
+- Ability to move money
+
+<Info>
+Plaid uses read-only access. We can see your transactions but cannot initiate transfers, payments, or any changes to your accounts.
+</Info>
+
+## Which banks work
+
+Plaid supports over 12,000 US financial institutions:
+
+- Chase, Bank of America, Wells Fargo, Citi
+- Capital One, US Bank, PNC, TD Bank
+- Most credit unions
+- Most regional banks
+
+Some banks offer direct integrations with better reliability:
+
+- **Mercury** — [Use our direct integration](/integrations/mercury) for real-time sync
+
+## How often transactions sync
+
+| Sync type | Frequency |
+|-----------|-----------|
+| Automatic | Every 6-12 hours |
+| Manual | On-demand (click Sync Now) |
+| Initial import | Up to 24 months of history |
+
+<Tip>
+New transactions usually appear within a few hours. Need them sooner? Click **Sync Now** in your banking settings.
+</Tip>
+
+## Is this actually secure?
+
+Plaid is trusted by thousands of financial apps and used by major companies like Venmo, Coinbase, and Robinhood. Here's how your data is protected:
+
+- **Your password is never shared with us** — You log in directly to Plaid's secure interface
+- **We receive a token, not credentials** — If Pluvel were breached, attackers couldn't access your bank
+- **Everything is encrypted** — Data is encrypted in transit and at rest
+- **Plaid is SOC 2 Type II certified** — Regular security audits by independent firms
+- **Read-only access** — Even with the connection, no one can move money
+
+## Common issues
+
+<AccordionGroup>
+  <Accordion title="My bank isn't listed">
+    Try searching by the full name or alternate names. Some banks operate under different names in different regions.
+
+    If it's genuinely not supported, you can add the account manually and import transactions via CSV.
+  </Accordion>
+
+  <Accordion title="Connection keeps disconnecting">
+    Banks occasionally require re-authentication for security. This is normal and happens every few months with some banks.
+
+    To reconnect:
+    1. Go to **Settings → Banking**
+    2. Click on the disconnected account
+    3. Click **Reconnect**
+    4. Log in again through Plaid
+  </Accordion>
+
+  <Accordion title="Transactions are delayed">
+    Delays happen when:
+    - Your bank is slow to report to Plaid (common with smaller banks)
+    - The transaction is still pending
+    - There's a temporary sync issue
+
+    Try clicking **Sync Now**. If transactions are still missing after 24 hours, contact support.
+  </Accordion>
+
+  <Accordion title="Missing historical transactions">
+    Plaid imports up to 24 months, but some banks limit how far back they share data. For older transactions, import via CSV.
+  </Accordion>
+
+  <Accordion title="Multi-factor authentication problems">
+    If your bank uses MFA, you'll complete it during the Plaid connection process. Some banks require you to approve the connection in their mobile app.
+  </Accordion>
+</AccordionGroup>
+
+## Disconnecting
+
+To disconnect a bank account:
+
+1. Go to **Settings → Banking**
+2. Click on the account
+3. Click **Manage → Disconnect**
+
+This stops future syncing but keeps all transactions you've already imported.
+
+## Completely revoking access
+
+To remove Plaid's access entirely:
+
+1. Disconnect the account in Pluvel (above)
+2. Visit [my.plaid.com](https://my.plaid.com) to manage all your Plaid connections
+3. Find Pluvel and revoke access
+
+You can also revoke through your bank's connected apps settings.
+
+<Card
+  title="Connect your bank"
+  icon="building-columns"
+  href="/guides/money/connect-bank"
+>
+  Step-by-step guide to connecting your first bank account.
+</Card>

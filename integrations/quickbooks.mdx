@@ -1,0 +1,189 @@
+---
+title: QuickBooks
+sidebarTitle: QuickBooks
+description: Migrate your accounting data from QuickBooks Online.
+---
+
+You've been running QuickBooks for years. Hundreds of customers. Thousands of transactions. A chart of accounts you've carefully built up. Now you want to move to Pluvel, but the thought of starting over from scratch makes you want to lie down.
+
+Good news: you don't have to recreate anything. Connect your QuickBooks account and we'll import everything — chart of accounts, customers, vendors, invoices, bills, and your entire transaction history.
+
+## What comes over
+
+| Data | What imports |
+|------|--------------|
+| **Chart of Accounts** | All accounts with hierarchy intact |
+| **Customers** | Names, addresses, contact info, outstanding balances |
+| **Vendors** | Names, addresses, contact info, what you owe them |
+| **Products/Services** | Items, prices, descriptions |
+| **Invoices** | Open and paid — your full receivables history |
+| **Bills** | Open and paid — your full payables history |
+| **Journal entries** | Historical transactions |
+| **Bank transactions** | Everything you've already categorized |
+
+<Info>
+This is a one-time migration, not an ongoing sync. After importing, Pluvel becomes your system of record. Changes you make in QuickBooks won't appear in Pluvel.
+</Info>
+
+## Before you connect
+
+A little prep work makes the import cleaner:
+
+1. **Reconcile your accounts** — Unreconciled transactions can cause balance mismatches
+2. **Clean up unused accounts** — That "Test Account" from 2019 doesn't need to migrate
+3. **Run comparison reports** — Export your current P&L and Balance Sheet so you can verify after import
+4. **Know your fiscal year** — We need to know when your year starts
+
+## Connect QuickBooks
+
+<Steps>
+  <Step title="Start the connection">
+    Go to **Settings → Integrations**, find QuickBooks in the Accounting section, and click **Connect**.
+  </Step>
+
+  <Step title="Sign into QuickBooks">
+    You'll be redirected to Intuit. Log in with your QuickBooks Online credentials and select the company to connect.
+  </Step>
+
+  <Step title="Authorize Pluvel">
+    Grant permission for Pluvel to read your QuickBooks data. We only request read access — we can't make changes to your QuickBooks account.
+  </Step>
+
+  <Step title="Choose what to import">
+    Select which data types to bring over. We recommend importing everything for a complete migration.
+  </Step>
+
+  <Step title="Map your accounts">
+    Review how QuickBooks accounts map to Pluvel's chart of accounts. Most map automatically, but you can adjust any that need different treatment.
+  </Step>
+
+  <Step title="Run the import">
+    Click **Import** and let it run. You'll get an email when it's done.
+  </Step>
+</Steps>
+
+## How accounts map
+
+Your QuickBooks account types translate to Pluvel like this:
+
+| QuickBooks type | Pluvel type |
+|-----------------|-------------|
+| Bank | Assets - Cash and Bank |
+| Accounts Receivable | Assets - Receivables |
+| Other Current Asset | Assets - Current Assets |
+| Fixed Asset | Assets - Fixed Assets |
+| Accounts Payable | Liabilities - Payables |
+| Credit Card | Liabilities - Credit Cards |
+| Other Current Liability | Liabilities - Current |
+| Long Term Liability | Liabilities - Long-Term |
+| Equity | Equity |
+| Income | Revenue |
+| Cost of Goods Sold | Expenses - COGS |
+| Expense | Expenses |
+| Other Income | Other Income |
+| Other Expense | Other Expenses |
+
+## How long it takes
+
+| Company size | Typical duration |
+|--------------|------------------|
+| Small (under 1,000 transactions) | 5-10 minutes |
+| Medium (1,000-10,000 transactions) | 15-30 minutes |
+| Large (10,000+ transactions) | 1-2 hours |
+
+You'll see a progress indicator. For large imports, you can close the browser and we'll email you when it's done.
+
+## QuickBooks features that need attention
+
+### Classes and locations
+
+QuickBooks classes import as tracking categories in Pluvel. You can use them the same way for departmental reporting.
+
+### Inventory
+
+If you track inventory in QuickBooks, your items import with quantities and values. Pluvel supports basic inventory tracking for invoicing purposes.
+
+### Sales tax
+
+Sales tax settings don't automatically transfer. You'll need to configure your sales tax in Pluvel after the import.
+
+### Recurring transactions
+
+Recurring invoices and bills don't import. You'll recreate them in Pluvel — it takes about 5 minutes each.
+
+## Verify your import
+
+After importing, check that everything came through correctly:
+
+<Steps>
+  <Step title="Compare trial balances">
+    Run a trial balance in both systems. Total debits should equal total credits, and the totals should match between systems.
+  </Step>
+
+  <Step title="Check your P&L">
+    Run a P&L for the same date range in both systems. Revenue and expenses should match.
+  </Step>
+
+  <Step title="Review open invoices">
+    Your total outstanding receivables should be the same.
+  </Step>
+
+  <Step title="Spot-check customer balances">
+    Pick 3-4 customers with open balances and verify they match.
+  </Step>
+</Steps>
+
+## Common issues
+
+<AccordionGroup>
+  <Accordion title="Import is taking forever">
+    Large imports can take up to 2 hours. You'll get an email when complete. Don't disconnect or start another import while one is running.
+  </Accordion>
+
+  <Accordion title="Account balances don't match">
+    Common causes:
+
+    - Unreconciled transactions in QuickBooks
+    - Transactions entered after you started the import
+    - Pending transactions that haven't posted yet
+
+    Run reports for the same exact date range in both systems to compare apples to apples.
+  </Accordion>
+
+  <Accordion title="Missing transactions">
+    We import transactions from the start of your current fiscal year. Older transactions become opening balances. If you need full historical detail, contact support.
+  </Accordion>
+
+  <Accordion title="Duplicate accounts">
+    If you accidentally imported twice, you'll see duplicate accounts. Merge them in **Settings → Accounting → Chart of Accounts**.
+  </Accordion>
+
+  <Accordion title="Products didn't come over">
+    Products/services only import if you selected that option. You can run a partial import for just products if you missed them.
+  </Accordion>
+</AccordionGroup>
+
+## QuickBooks Desktop users
+
+We support QuickBooks **Online** only. If you're on QuickBooks Desktop:
+
+1. **Convert to QuickBooks Online first** — Intuit offers a conversion tool
+2. **Then connect to Pluvel** — Use this standard integration
+3. **Or export as CSV** — Export your data as CSV files and import manually
+
+## After migration
+
+Once everything is verified:
+
+1. **Stop entering new transactions in QuickBooks** — All new activity goes in Pluvel
+2. **Keep QuickBooks active for a month** — In case you need to reference anything
+3. **Download any reports you want** — Export them before you cancel
+4. **Then cancel your QuickBooks subscription**
+
+<Card
+  title="Set up your chart of accounts"
+  icon="sitemap"
+  href="/features/accounting/chart-of-accounts"
+>
+  Learn how to manage your accounts in Pluvel.
+</Card>

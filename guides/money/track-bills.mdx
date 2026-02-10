@@ -1,0 +1,179 @@
+---
+title: Track bills
+sidebarTitle: Track bills
+description: Manage what you owe to vendors and suppliers.
+---
+
+A vendor invoice sits in your email. You'll pay it later. Later turns into next week. Next week turns into "past due." Now there's a late fee, maybe an angry email, maybe your service gets shut off.
+
+Tracking bills properly means knowing exactly what you owe, to whom, and when it's due — before "I'll pay that later" becomes "why didn't anyone tell me?"
+
+## Add a bill
+
+<Steps>
+  <Step title="Go to Bills">
+    Click **Bills** in the sidebar, then **Add Bill**.
+  </Step>
+
+  <Step title="Select a vendor">
+    Choose an existing vendor or create a new one:
+    - Vendor name
+    - Contact info (optional)
+    - Default expense category (optional)
+  </Step>
+
+  <Step title="Enter bill details">
+    - **Bill number** — The vendor's invoice/bill number
+    - **Bill date** — Date on the vendor's invoice
+    - **Due date** — When payment is due
+    - **Amount** — Total owed
+  </Step>
+
+  <Step title="Add line items">
+    Break down the bill by expense category:
+    - **Description** — What you're paying for
+    - **Category** — Expense account (Office Supplies, Professional Services, etc.)
+    - **Amount** — Cost per line
+  </Step>
+
+  <Step title="Attach documentation">
+    Upload the original bill/invoice PDF. Keeps everything in one place.
+  </Step>
+
+  <Step title="Save">
+    Click **Save**. The bill appears in your Bills list and affects your Accounts Payable.
+  </Step>
+</Steps>
+
+## Bill statuses
+
+| Status | Meaning |
+|--------|---------|
+| Draft | Not finalized |
+| Open | Awaiting payment |
+| Partial | Partially paid |
+| Paid | Fully paid |
+| Overdue | Past due date |
+
+Filter your bills by status to see what needs attention.
+
+## Record a payment
+
+When you pay a bill:
+
+<Steps>
+  <Step title="Open the bill">
+    Click on the bill you're paying.
+  </Step>
+
+  <Step title="Click Pay Bill">
+    Click the **Pay** button.
+  </Step>
+
+  <Step title="Enter payment details">
+    - **Payment amount** — Full or partial
+    - **Payment date** — When you paid
+    - **Payment method** — Check, ACH, card, etc.
+    - **Bank account** — Which account the money came from
+    - **Reference** — Check number, confirmation code
+  </Step>
+
+  <Step title="Save">
+    The bill updates to Paid or Partial.
+  </Step>
+</Steps>
+
+## Match to bank transactions
+
+When a bill payment appears in your bank feed:
+
+1. Open the bank transaction
+2. Click **Match to Bill**
+3. Select the bill it pays
+4. The bill is marked as paid and the transaction is categorized
+
+This keeps everything linked and prevents duplicates.
+
+## Upload receipts
+
+Add documentation to any bill:
+
+1. Open the bill
+2. Click **Attachments**
+3. Upload files (PDF, image)
+4. Or drag and drop onto the bill
+
+Receipts are stored and searchable.
+
+## Recurring bills
+
+For regular expenses (rent, subscriptions):
+
+1. Go to **Bills → Recurring**
+2. Click **Create Recurring Bill**
+3. Set:
+   - Vendor
+   - Amount and line items
+   - Frequency (monthly, quarterly, etc.)
+   - Next bill date
+4. Save
+
+Pluvel creates bills automatically on schedule.
+
+## Bulk upload
+
+Got many bills? Upload a CSV:
+
+1. Go to **Bills → Import**
+2. Download the template
+3. Fill in your bills
+4. Upload the completed CSV
+5. Review and confirm
+
+## Accounts Payable report
+
+See everything you owe:
+
+1. Go to **Reports → Accounts Payable Aging**
+2. View bills grouped by age:
+   - Current (not due)
+   - 1-30 days overdue
+   - 31-60 days overdue
+   - 60+ days overdue
+
+This helps you prioritize payments and manage cash flow.
+
+## Tips for managing bills
+
+<AccordionGroup>
+  <Accordion title="Process bills immediately">
+    When a bill arrives, enter it right away. Set the due date so you don't forget. Waiting leads to missed payments and late fees.
+  </Accordion>
+
+  <Accordion title="Use consistent vendor names">
+    "Amazon" vs "Amazon.com" vs "AMAZON" creates confusion. Pick one name per vendor and stick to it.
+  </Accordion>
+
+  <Accordion title="Attach the original document">
+    Always upload the vendor's invoice. You'll need it for audits, disputes, or just remembering what you paid for.
+  </Accordion>
+
+  <Accordion title="Review AP weekly">
+    Check your Accounts Payable aging every week. Know what's coming due and plan your cash accordingly.
+  </Accordion>
+
+  <Accordion title="Negotiate payment terms">
+    If cash is tight, ask vendors for Net 30 or Net 45 instead of immediate payment. Many vendors offer terms to business customers.
+  </Accordion>
+</AccordionGroup>
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Manage vendors" icon="store" href="/features/bills/vendors">
+    Organize your vendor records.
+  </Card>
+  <Card title="View AP aging" icon="chart-bar" href="/features/reports/ap-aging">
+    See what you owe and when.
+  </Card>
+</CardGroup>

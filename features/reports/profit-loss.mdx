@@ -1,0 +1,199 @@
+---
+title: Profit & Loss Report
+sidebarTitle: Profit & Loss
+description: See your revenue, expenses, and net income.
+---
+
+"We're bringing in money, but it feels like there's never anything left." Sound familiar? Revenue doesn't equal profit — you need to see what's actually happening between money coming in and money going out.
+
+The Profit & Loss (P&L) report — also called an Income Statement — shows exactly that: your revenue, your costs, and what's left over. It answers the simplest question in business: "Did we make money or lose money?"
+
+## Accessing the P&L
+
+1. Go to **Reports** in the sidebar
+2. Click **Profit & Loss**
+3. Select your date range
+
+## Report structure
+
+The P&L follows a standard structure:
+
+```
+Revenue
+  - Product Sales
+  - Service Revenue
+  - Other Income
+= Gross Revenue
+
+Less: Cost of Goods Sold (COGS)
+  - Materials
+  - Direct Labor
+= Gross Profit
+
+Less: Operating Expenses
+  - Payroll
+  - Rent
+  - Utilities
+  - Marketing
+  - Software
+  - Insurance
+  - Professional Services
+= Operating Income (EBIT)
+
+Less: Other Expenses
+  - Interest Expense
+  - Depreciation
+= Net Income (Profit/Loss)
+```
+
+## Key metrics
+
+| Metric | Formula | What It Tells You |
+|--------|---------|-------------------|
+| Gross Revenue | Sum of all income | Total money earned |
+| Gross Profit | Revenue - COGS | Profit before overhead |
+| Gross Margin | Gross Profit / Revenue | Efficiency of production |
+| Operating Income | Gross Profit - OpEx | Profit from core operations |
+| Net Income | Total Revenue - Total Expenses | Bottom line |
+| Net Margin | Net Income / Revenue | Overall profitability |
+
+## Date ranges
+
+Select from preset or custom ranges:
+
+| Preset | Period |
+|--------|--------|
+| This Month | Current month to date |
+| Last Month | Previous full month |
+| This Quarter | Current quarter to date |
+| Last Quarter | Previous full quarter |
+| This Year | January 1 to today |
+| Last Year | Previous full year |
+| Custom | Any date range you specify |
+
+## Comparison views
+
+Compare performance across periods:
+
+### Year-over-Year
+
+1. Select a date range
+2. Click **Compare**
+3. Choose "Previous Year"
+4. See side-by-side columns with variance
+
+### Month-over-Month
+
+Compare any two months to see:
+- Revenue growth/decline
+- Expense changes
+- Profit improvement
+
+### Budget vs. Actual
+
+If you've set a budget:
+1. Click **Compare → Budget**
+2. See actual vs. budgeted amounts
+3. Variance shown as $ and %
+
+## Drill-down
+
+Click any line item to see details:
+
+### Account detail
+
+Clicking "Software Expenses: $2,450" shows:
+- Individual transactions
+- Dates and vendors
+- Running balance
+
+### Transaction list
+
+From the detail view:
+- Click any transaction to see the journal entry
+- Jump to the invoice, bill, or bank transaction
+
+## Export options
+
+| Format | Use Case |
+|--------|----------|
+| PDF | Share with stakeholders, attach to emails |
+| Excel | Further analysis, custom formatting |
+| CSV | Import into other systems |
+| Google Sheets | Collaborative editing |
+
+### Scheduled exports
+
+Set up automatic exports:
+1. Click **Schedule**
+2. Choose frequency (weekly, monthly)
+3. Select format
+4. Enter email recipients
+5. Reports are sent automatically
+
+## Cash vs. Accrual
+
+Toggle between accounting methods:
+
+| Method | Revenue Recognized | Expenses Recognized |
+|--------|--------------------|--------------------|
+| Cash | When received | When paid |
+| Accrual | When earned | When incurred |
+
+<Info>
+Your default method is set in **Settings → Accounting**. The toggle lets you see both views without changing your books.
+</Info>
+
+### Why it matters
+
+Cash basis may show:
+- Lower revenue (unpaid invoices excluded)
+- Lower expenses (unpaid bills excluded)
+
+Accrual basis shows:
+- True earned revenue
+- True incurred expenses
+- More accurate matching
+
+## Categorization impact
+
+The P&L is only as accurate as your categorization:
+
+- **Uncategorized transactions** appear as "Other Income" or "Other Expenses"
+- Review and categorize regularly for accurate reporting
+- Use bank rules to automate recurring categorization
+
+Go to **Banking → Transactions** to categorize.
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why doesn't my P&L match my bank balance?">
+    The P&L shows income and expenses, not cash flow. Differences include:
+    - Unpaid invoices (accrual basis)
+    - Accounts payable (bills not yet paid)
+    - Loan principal (not an expense)
+    - Owner draws (not an expense)
+    - Asset purchases (capitalized, not expensed)
+  </Accordion>
+
+  <Accordion title="What's the difference between COGS and Operating Expenses?">
+    COGS (Cost of Goods Sold) are costs directly tied to producing what you sell—materials, direct labor. Operating expenses are overhead—rent, utilities, marketing. COGS varies with sales volume; OpEx is more fixed.
+  </Accordion>
+
+  <Accordion title="How do I add budget figures?">
+    Go to **Settings → Accounting → Budgets**. Enter monthly budget amounts per category. Then use Compare → Budget on reports.
+  </Accordion>
+
+  <Accordion title="Why are some categories missing?">
+    Only categories with transactions in the selected period appear. To see all categories (including zeros), click **Show All Accounts**.
+  </Accordion>
+</AccordionGroup>
+
+<Card
+  title="Balance Sheet"
+  icon="arrow-right"
+  href="/features/reports/balance-sheet"
+>
+  See your assets, liabilities, and equity.
+</Card>

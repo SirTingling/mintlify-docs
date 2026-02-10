@@ -1,0 +1,232 @@
+---
+title: Payroll Taxes
+sidebarTitle: Payroll Taxes
+description: How Pluvel handles payroll tax calculation, deposits, and filings.
+---
+
+Payroll taxes are the part of running payroll that keeps business owners up at night. Withhold the wrong amount? Problem. Deposit late? Penalties. File the wrong form? More penalties. The IRS doesn't forgive honest mistakes.
+
+The good news: Pluvel handles all of it automatically — calculation, deposits, and filings for federal and all 50 states. You run payroll; we handle the tax compliance.
+
+## What we handle
+
+| Tax Type | Who Pays | Rate | Pluvel Handles |
+|----------|----------|------|----------------|
+| Federal Income Tax | Employee | Varies by W-4 | Withholding, deposits, 941 |
+| Social Security | Both | 6.2% each | Withholding, deposits, 941 |
+| Medicare | Both | 1.45% each | Withholding, deposits, 941 |
+| Additional Medicare | Employee | 0.9% over $200k | Withholding, deposits |
+| FUTA | Employer | 6% (0.6% with credit) | Deposits, 940 |
+| State Income Tax | Employee | Varies by state | Withholding, deposits, state returns |
+| SUTA/SUI | Employer | Varies by state/rate | Deposits, state returns |
+
+## Tax deposit schedules
+
+The IRS and states determine your deposit schedule based on tax liability:
+
+### Federal deposits
+
+| If Your Tax Liability Is... | Deposit Schedule |
+|-----------------------------|------------------|
+| $50,000 or less (lookback period) | Monthly |
+| More than $50,000 | Semi-weekly |
+| $100,000+ in a single day | Next business day |
+
+Pluvel automatically determines your schedule and makes deposits on time.
+
+### Monthly depositors
+
+Taxes withheld in a month are due by the 15th of the following month.
+
+| Payroll Run | Taxes Due |
+|-------------|-----------|
+| January 1-31 | February 15 |
+| February 1-28 | March 15 |
+
+### Semi-weekly depositors
+
+| Payday Falls On | Deposit Due |
+|-----------------|-------------|
+| Wednesday, Thursday, Friday | Following Wednesday |
+| Saturday, Sunday, Monday, Tuesday | Following Friday |
+
+## How deposits work
+
+<Steps>
+  <Step title="Payroll runs">
+    When you submit payroll, we calculate all taxes owed.
+  </Step>
+
+  <Step title="Funds debited">
+    We debit your funding account for net pay + tax deposits.
+  </Step>
+
+  <Step title="Deposits made">
+    We submit deposits to the IRS (via EFTPS) and state agencies.
+  </Step>
+
+  <Step title="Confirmation">
+    You receive confirmation in Pluvel. Go to **Payroll → Tax Deposits** to see history.
+  </Step>
+</Steps>
+
+<Info>
+Your funding account must have sufficient funds. We debit 2 business days before the check date to ensure timely tax deposits.
+</Info>
+
+## Viewing tax deposits
+
+Go to **Payroll → Tax Deposits** to see:
+
+- **Upcoming deposits** — What's scheduled and when
+- **Completed deposits** — History with confirmation numbers
+- **Tax liability** — Running totals by quarter
+
+### Deposit detail
+
+Each deposit shows:
+
+| Field | Description |
+|-------|-------------|
+| Date | When the deposit was made |
+| Agency | IRS, state, or local |
+| Amount | Total deposited |
+| Period | Pay period or quarter |
+| Confirmation | EFTPS or agency confirmation number |
+
+## Tax filings
+
+Beyond deposits, we file the required returns:
+
+### Federal filings
+
+| Form | Frequency | Due Date | What It Reports |
+|------|-----------|----------|-----------------|
+| 941 | Quarterly | End of month after quarter | Wages, withholding, FICA |
+| 940 | Annual | January 31 | FUTA liability and payments |
+| W-2 | Annual | January 31 | Employee wage statements |
+| 944 | Annual | January 31 | Small employer wages (if eligible) |
+
+### State filings
+
+Filing schedules vary by state. Common patterns:
+
+- **Quarterly withholding returns** — Report state income tax withheld
+- **Quarterly unemployment returns** — Report SUTA wages and tax
+- **Annual reconciliation** — Match withholding to W-2s
+
+Go to **Payroll → Tax Filings** to see upcoming and completed filings.
+
+## Setting up tax deposits
+
+### Initial setup
+
+When you first enable payroll:
+
+1. Enter your federal EIN in **Settings → Tax**
+2. Add state tax accounts for each state
+3. Connect your funding account in **Settings → Payroll → Funding**
+4. We determine your deposit schedule based on prior liability
+
+### New employer
+
+If you're a new employer with no prior liability:
+
+- You start as a monthly depositor
+- After your lookback period (about 18 months), we'll adjust if needed
+
+### Changing funding accounts
+
+To change your payroll funding account:
+
+1. Go to **Settings → Payroll → Funding Account**
+2. Click **Change Account**
+3. Verify the new account (micro-deposits take 1-2 business days)
+4. Future debits use the new account
+
+<Warning>
+Ensure the new account has sufficient funds before switching. In-progress payrolls use the account configured at submission.
+</Warning>
+
+## Tax rates and updates
+
+### Federal rates
+
+Federal rates (Social Security, Medicare) are set by law. We update them automatically each year if they change.
+
+### State rates
+
+State rates vary:
+
+- **Withholding** — Based on employee W-4 and state tables (updated annually)
+- **Unemployment** — Assigned rate specific to your company (you enter this)
+
+### Updating your SUTA rate
+
+States assign unemployment rates based on your claims history:
+
+1. You receive a rate notice annually (usually December or January)
+2. Enter the new rate in **Settings → Tax → State Accounts → [State]**
+3. We use the new rate for future payrolls
+
+## Common issues
+
+<AccordionGroup>
+  <Accordion title="Deposit failed">
+    If a deposit fails:
+
+    1. We notify you immediately
+    2. Check your funding account balance
+    3. We retry automatically if possible
+    4. For persistent failures, contact support
+
+    Late deposits may incur IRS/state penalties—we'll help you understand your options.
+  </Accordion>
+
+  <Accordion title="Wrong deposit schedule">
+    If your deposit schedule is incorrect:
+
+    1. Check your lookback period liability
+    2. Provide the IRS notice showing your assigned schedule
+    3. We'll adjust your settings
+
+    You can also contact the IRS to verify your official schedule.
+  </Accordion>
+
+  <Accordion title="State account not verified">
+    If we can't verify a state account:
+
+    1. Double-check the account number format
+    2. Ensure the account is active with the state
+    3. Some states have long verification delays (2-4 weeks)
+
+    You can proceed with payroll while verification is pending.
+  </Accordion>
+
+  <Accordion title="Tax notice from IRS or state">
+    If you receive a notice:
+
+    1. Upload it to **Mailroom** or send to support@pluvel.com
+    2. We'll review and identify the issue
+    3. We help you respond or correct if needed
+
+    Don't ignore notices—penalties compound quickly.
+  </Accordion>
+</AccordionGroup>
+
+<CardGroup cols={2}>
+  <Card
+    title="Form 941"
+    icon="file-invoice"
+    href="/features/tax/941"
+  >
+    Quarterly federal tax return details.
+  </Card>
+  <Card
+    title="Form 940"
+    icon="file-invoice"
+    href="/features/tax/940"
+  >
+    Annual FUTA tax return details.
+  </Card>
+</CardGroup>

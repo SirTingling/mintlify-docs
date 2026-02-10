@@ -1,0 +1,144 @@
+---
+title: Manual Accounts
+sidebarTitle: Manual accounts
+description: Track accounts that can't be connected automatically.
+---
+
+Not every account connects via Plaid. Your local credit union might not be supported. Your foreign business account definitely isn't. And good luck connecting your petty cash drawer.
+
+Manual accounts let you track these in Pluvel anyway. Import transactions via CSV or enter them by hand. Same categorization, same reports, same reconciliation — just without the automatic sync.
+
+## When you need a manual account
+
+- Banks not supported by Plaid
+- Foreign bank accounts
+- Investment accounts
+- Petty cash
+- PayPal or Stripe (if you prefer CSV over integration)
+- Loan accounts
+
+## Creating a manual account
+
+<Steps>
+  <Step title="Go to Banking">
+    Navigate to **Banking → Accounts**.
+  </Step>
+
+  <Step title="Click Add Account">
+    Select **Add Manual Account**.
+  </Step>
+
+  <Step title="Enter details">
+    Fill in:
+    - Account name
+    - Account type (checking, savings, credit card, etc.)
+    - Starting balance
+    - As-of date
+  </Step>
+
+  <Step title="Save">
+    The account appears in your account list.
+  </Step>
+</Steps>
+
+## Importing transactions
+
+### CSV import
+
+Import transactions from a downloaded bank statement:
+
+1. Open the manual account
+2. Click **Import Transactions**
+3. Upload your CSV file
+4. Map columns to fields (date, description, amount)
+5. Review the import preview
+6. Confirm import
+
+### Supported formats
+
+- CSV (comma-separated)
+- Excel (.xlsx)
+- OFX/QFX (from many banks)
+- QBO (QuickBooks format)
+
+If your bank offers a download option, it probably works.
+
+### Column mapping
+
+Map your file's columns to Pluvel fields:
+
+| Pluvel field | Your column might be called |
+|--------------|-------------|
+| Date | Transaction Date, Posted Date |
+| Description | Description, Memo, Payee |
+| Amount | Amount, Debit/Credit |
+| Reference | Check Number, Reference |
+
+For files with separate debit and credit columns, select both. We'll figure it out.
+
+## Manual entry
+
+When you only have a few transactions (or for petty cash):
+
+1. Open the account
+2. Click **Add Transaction**
+3. Enter:
+   - Date
+   - Description
+   - Amount (positive for deposits, negative for withdrawals)
+   - Category (optional)
+4. Save
+
+## Updating balances
+
+For manual accounts, update the balance periodically to catch discrepancies:
+
+1. Open the account
+2. Click **Update Balance**
+3. Enter current balance and as-of date
+4. Any difference creates a reconciliation adjustment
+
+<Tip>
+Update manual account balances at least monthly. Finding a $50 discrepancy is annoying. Finding a $500 discrepancy from six months ago is worse.
+</Tip>
+
+## Reconciliation
+
+Reconcile manual accounts just like connected ones:
+
+1. Get your bank statement
+2. Go to **Banking → Reconciliation**
+3. Select the manual account
+4. Enter statement ending balance
+5. Clear transactions that appear on the statement
+6. Complete when balanced
+
+Same process, same verification.
+
+## Converting to connected
+
+If your bank becomes available via Plaid (or if Plaid starts supporting it):
+
+1. Connect the account via Plaid
+2. Pluvel matches it to your manual account
+3. Future transactions import automatically
+4. Historical manual transactions remain
+
+You don't lose anything — you just stop doing data entry.
+
+## Making this less painful
+
+- **Import weekly or monthly** — Don't let it build up
+- **Use the same CSV format each time** — Column mapping saves
+- **Reconcile regularly** — Monthly at minimum
+- **Keep your statements** — Store them as attachments in Pluvel
+
+Manual accounts are more work than connected ones. But some accounts are worth tracking even if it takes effort.
+
+<Card
+  title="Reconciliation"
+  icon="check-double"
+  href="/features/banking/reconciliation"
+>
+  Reconcile your bank accounts.
+</Card>

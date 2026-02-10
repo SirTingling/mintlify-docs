@@ -1,0 +1,188 @@
+---
+title: Xero
+sidebarTitle: Xero
+description: Migrate your accounting data from Xero.
+---
+
+You've built your entire accounting system in Xero. Contacts, invoices, bank rules, tracking categories — years of careful setup. The idea of recreating all that manually? No thank you.
+
+Connect your Xero account and we'll bring everything over. Your chart of accounts, customers, suppliers, invoices, bills, and transaction history. Even your tracking categories survive the move.
+
+## What comes over
+
+| Data | What imports |
+|------|--------------|
+| **Chart of Accounts** | All accounts with hierarchy intact |
+| **Contacts** | Customers and suppliers with full details |
+| **Invoices** | Draft, sent, and paid invoices |
+| **Bills** | Draft, awaiting payment, and paid bills |
+| **Bank transactions** | Reconciled transactions with categories |
+| **Manual journals** | All your journal entries |
+| **Products** | Tracked and untracked items |
+| **Tax rates** | Your tax configurations |
+
+<Info>
+This is a one-time migration. After importing, Pluvel becomes your system of record. Future changes in Xero won't sync.
+</Info>
+
+## Before you connect
+
+Make the migration smoother with a bit of prep:
+
+1. **Finish pending reconciliations** — Unreconciled items can cause balance mismatches
+2. **Export comparison reports** — Run your P&L and Balance Sheet so you can verify after import
+3. **Check your permissions** — You need Advisor or Standard user access in Xero
+4. **Know your organization** — Which Xero org are you migrating?
+
+## Connect Xero
+
+<Steps>
+  <Step title="Start the connection">
+    Go to **Settings → Integrations**, find Xero in the Accounting section, and click **Connect**.
+  </Step>
+
+  <Step title="Sign into Xero">
+    You'll be redirected to Xero. Log in with your credentials. If you manage multiple organizations, select the one you want to migrate.
+  </Step>
+
+  <Step title="Authorize Pluvel">
+    Grant permission for us to read your Xero data. We only request read access.
+  </Step>
+
+  <Step title="Choose what to import">
+    Select which data types to bring over. We recommend importing everything.
+  </Step>
+
+  <Step title="Review account mapping">
+    Check how Xero accounts map to Pluvel. Most map automatically — adjust any that need different treatment.
+  </Step>
+
+  <Step title="Run the import">
+    Click **Import** and let it run.
+  </Step>
+</Steps>
+
+## How accounts map
+
+Your Xero account classes translate to Pluvel:
+
+| Xero class | Pluvel type |
+|------------|-------------|
+| ASSET | Assets |
+| BANK | Assets - Cash and Bank |
+| CURRENT | Assets - Current Assets |
+| FIXED | Assets - Fixed Assets |
+| LIABILITY | Liabilities |
+| CURRLIAB | Liabilities - Current |
+| TERMLIAB | Liabilities - Long-Term |
+| EQUITY | Equity |
+| REVENUE | Revenue |
+| DIRECTCOSTS | Expenses - COGS |
+| EXPENSE | Expenses |
+| OVERHEADS | Expenses - Operating |
+
+## Xero features that need attention
+
+### Tracking categories
+
+Your Xero tracking categories import as cost centers or departments. You can use them the same way for segmented reporting.
+
+### Multi-currency
+
+If you use multiple currencies in Xero, transactions import in their original currency. Set up the same currencies in Pluvel before importing so everything maps correctly.
+
+### Repeating invoices and bills
+
+Repeating transactions don't automatically import. You'll need to recreate them in Pluvel — about 2 minutes each.
+
+### Projects
+
+Xero Projects data imports as job/project tags on transactions. The structure is preserved.
+
+### Payroll
+
+Xero Payroll data doesn't migrate. Set up employees fresh in Pluvel Payroll, or use our Gusto/ADP import if you're moving from those systems.
+
+## How long it takes
+
+| Company size | Typical duration |
+|--------------|------------------|
+| Small (under 1,000 transactions) | 5-10 minutes |
+| Medium (1,000-10,000 transactions) | 15-30 minutes |
+| Large (10,000+ transactions) | 1-2 hours |
+
+## Verify your import
+
+After importing, make sure everything came through:
+
+<Steps>
+  <Step title="Compare trial balances">
+    Run a trial balance in both systems. Totals should match.
+  </Step>
+
+  <Step title="Check your P&L">
+    Run a P&L for the same period in both systems.
+  </Step>
+
+  <Step title="Verify key balances">
+    Check bank, AR, and AP balances specifically.
+  </Step>
+
+  <Step title="Review contacts">
+    Spot-check a few customers and vendors to verify their info imported correctly.
+  </Step>
+</Steps>
+
+## Common issues
+
+<AccordionGroup>
+  <Accordion title="Authorization failed">
+    Check your Xero permissions:
+
+    - You need Standard or Advisor user role
+    - You need access to the specific organization
+
+    If you're an Advisor, you need "full access" to the client organization, not just reporting access.
+  </Accordion>
+
+  <Accordion title="Organization doesn't appear">
+    Only organizations you have access to show up. Check your Xero user permissions if one is missing.
+  </Accordion>
+
+  <Accordion title="Missing transactions">
+    We import transactions from the start of your current fiscal year. Earlier transactions become opening balances.
+  </Accordion>
+
+  <Accordion title="Tax rates look wrong">
+    Tax rates import, but you should verify them. Go to **Settings → Tax** to confirm your configuration.
+  </Accordion>
+
+  <Accordion title="Where are my bank feeds?">
+    Xero bank feeds don't transfer — they're tied to your Xero account. Connect your banks to Pluvel directly via Plaid or our direct integrations.
+  </Accordion>
+</AccordionGroup>
+
+## After migration
+
+Once everything checks out:
+
+1. **Connect your bank accounts** — Set up Plaid connections so transactions flow into Pluvel
+2. **Verify settings** — Check tax rates, fiscal year, and other settings
+3. **Test the workflow** — Create a test invoice and bill to make sure everything works
+4. **Keep Xero active for a month** — In case you need to reference anything
+
+<Warning>
+Don't cancel Xero until you've verified Pluvel is working correctly. Give it at least one full month-end close.
+</Warning>
+
+## Xero Practice Manager
+
+If you use Xero Practice Manager (XPM), that data doesn't import. XPM is a separate product for accounting firms and isn't part of this migration.
+
+<Card
+  title="Explore Pluvel accounting"
+  icon="calculator"
+  href="/features/accounting/chart-of-accounts"
+>
+  Learn how to manage your accounts in Pluvel.
+</Card>
