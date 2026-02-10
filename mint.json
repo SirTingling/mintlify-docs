@@ -63,11 +63,6 @@
       "name": "Contact Support",
       "icon": "envelope",
       "url": "mailto:support@pluvel.com"
-    },
-    {
-      "name": "Status",
-      "icon": "signal-bars",
-      "url": "https://status.pluvel.com"
     }
   ],
   "navigation": [
