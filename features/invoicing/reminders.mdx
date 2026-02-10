@@ -1,0 +1,169 @@
+---
+title: Payment Reminders
+sidebarTitle: Reminders
+description: Automatically remind customers about unpaid invoices.
+---
+
+You sent the invoice two weeks ago. It's due tomorrow. Your customer hasn't paid, and you're wondering if they forgot or if you should say something.
+
+Payment reminders solve this awkwardness. Set them up once, and customers get polite nudges automatically. You don't have to decide when to follow up or write the "just checking in" email.
+
+## Reminder types
+
+| Type | When it sends |
+|------|-----------|
+| Before due | X days before due date ("Heads up, this is due soon") |
+| On due date | The day payment is due |
+| After due | X days after due date ("This is now overdue") |
+
+## Setting up automatic reminders
+
+<Steps>
+  <Step title="Go to Settings">
+    Navigate to **Settings → Invoicing → Reminders**.
+  </Step>
+
+  <Step title="Enable reminders">
+    Turn on **Automatic Reminders**.
+  </Step>
+
+  <Step title="Configure the schedule">
+    Decide when reminders send:
+    - How many days before due date
+    - Whether to send on the due date
+    - How many days after due date (and how often)
+  </Step>
+
+  <Step title="Set limits">
+    Maximum number of reminders per invoice. You probably don't want to send 47 reminders.
+  </Step>
+
+  <Step title="Save">
+    Reminders now send automatically.
+  </Step>
+</Steps>
+
+## Example schedule
+
+| Reminder | When it sends |
+|----------|--------|
+| First | 3 days before due |
+| Second | On due date |
+| Third | 7 days after due |
+| Fourth | 14 days after due |
+| Final | 30 days after due |
+
+After the final reminder, it's probably time for a phone call.
+
+## Customizing reminder emails
+
+Edit what customers receive:
+
+1. Go to **Settings → Emails → Reminders**
+2. Select which reminder to edit
+3. Customize:
+   - Subject line
+   - Email body
+   - Tone (friendly early, firmer later)
+
+### Variables you can use
+
+| Variable | What it becomes |
+|----------|--------|
+| `{{customer_name}}` | Customer's name |
+| `{{invoice_number}}` | Invoice number |
+| `{{amount_due}}` | Outstanding amount |
+| `{{due_date}}` | Invoice due date |
+| `{{days_overdue}}` | Number of days late |
+| `{{payment_link}}` | Link to pay online |
+
+### Example email
+
+```
+Subject: Payment reminder: Invoice {{invoice_number}}
+
+Hi {{customer_name}},
+
+This is a friendly reminder that invoice {{invoice_number}}
+for {{amount_due}} is due on {{due_date}}.
+
+Pay now: {{payment_link}}
+
+Thanks,
+[Your Company]
+```
+
+## Manual reminders
+
+Sometimes you want to send a reminder right now:
+
+1. Open the invoice
+2. Click **Send Reminder**
+3. Customize the message (optional)
+4. Send
+
+Good for high-priority invoices or when automatic timing doesn't fit.
+
+## Pausing reminders
+
+Stop reminders for a specific invoice:
+
+1. Open the invoice
+2. Click **Pause Reminders**
+3. No automatic reminders for this invoice
+
+Useful when you're in active conversation with the customer about payment, or when there's a dispute.
+
+Resume anytime.
+
+## Excluding certain customers
+
+Some customers shouldn't get automated reminders (your biggest client who always pays, just slowly):
+
+1. Go to their customer profile
+2. Toggle off **Send Payment Reminders**
+3. They won't receive automatic reminders
+
+You can still send manual reminders.
+
+## Reminder history
+
+See what's been sent:
+
+1. Open the invoice
+2. View **Activity** tab
+3. See each reminder with date, time, and delivery status
+
+"Did we already remind them about this?" — now you'll know.
+
+## Late fees
+
+Automatically add late fees to overdue invoices:
+
+1. Go to **Settings → Invoicing → Late Fees**
+2. Enable late fees
+3. Configure:
+   - Percentage or fixed amount
+   - Grace period (days after due before fee applies)
+   - Maximum fee
+4. Fees added automatically
+
+<Info>
+Include late fee terms in your payment terms so customers know upfront. Surprise fees damage relationships.
+</Info>
+
+## Best practices
+
+- **Start friendly** — Early reminders should feel like helpful notifications, not demands
+- **Escalate gradually** — Later reminders can be more direct about consequences
+- **Always include payment link** — Make it easy to pay in every reminder
+- **Know when to stop** — After 3-4 reminders, automation isn't working. Pick up the phone
+- **Consider the relationship** — Your biggest client might need different treatment than a one-time customer
+
+<Card
+  title="Add vendor bills"
+  icon="receipt"
+  href="/features/bills/adding-bills"
+>
+  Track what you owe vendors.
+</Card>

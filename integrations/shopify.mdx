@@ -1,0 +1,196 @@
+---
+title: Shopify
+sidebarTitle: Shopify
+description: Connect Shopify to sync orders, payouts, and sales data.
+---
+
+You're running an e-commerce business. Orders come in at all hours. Each one has product revenue, shipping charges, sales tax, maybe a discount. At the end of the week, Shopify deposits a lump sum into your bank account.
+
+Which orders are in that deposit? What were your actual product sales vs. shipping revenue? How much sales tax did you collect for each state?
+
+Connect Shopify and stop guessing. Every order syncs automatically with line-item detail, and we match your payouts to bank deposits so you always know exactly what you earned.
+
+## What syncs
+
+When you connect Shopify:
+
+- **Orders import automatically** — Every sale creates a transaction in Pluvel
+- **Payouts tracked** — When Shopify pays you, we match it to your bank deposit
+- **Refunds recorded** — Refunds appear as negative transactions
+- **Sales tax tracked** — Tax amounts by jurisdiction for your returns
+- **Product revenue breakdown** — See exactly what sold
+
+<Info>
+Shopify syncs several times daily via API. New orders typically appear within a few hours.
+</Info>
+
+## Connect Shopify
+
+<Steps>
+  <Step title="Start the connection">
+    Go to **Settings → Integrations**, find Shopify in the E-Commerce section, and click **Connect**.
+  </Step>
+
+  <Step title="Enter your store URL">
+    Enter your Shopify store URL — the `yourstore.myshopify.com` one.
+  </Step>
+
+  <Step title="Authorize the app">
+    You'll be redirected to Shopify. Log in and approve the Pluvel app.
+  </Step>
+
+  <Step title="Select what to sync">
+    Choose what to import:
+    - Orders and transactions
+    - Products
+    - Customers
+  </Step>
+
+  <Step title="Initial import">
+    We import the last 90 days of orders. Takes a few minutes depending on volume.
+  </Step>
+</Steps>
+
+## How orders appear
+
+Each Shopify order becomes a transaction in Pluvel:
+
+| Field | Source |
+|-------|--------|
+| Amount | Order total (including shipping and tax) |
+| Date | Order date |
+| Description | Customer name and order number |
+| Category | Sales Revenue (by default) |
+| Reference | Shopify order ID |
+
+### Line-item breakdown
+
+For each order, we create separate entries for:
+
+- **Product revenue** — What you actually sold (before tax and shipping)
+- **Shipping income** — If you charge for shipping
+- **Sales tax** — Tax collected (broken out by jurisdiction)
+- **Discounts** — Discount amounts (as negative revenue)
+
+This means your reports show real product revenue, not just order totals.
+
+## Matching payouts to bank deposits
+
+Shopify batches orders and pays you every 1-2 business days. Here's how we connect the dots:
+
+1. The Shopify payout appears in your integrations
+2. The bank deposit appears via Plaid
+3. Pluvel matches them automatically
+4. You can see exactly which orders are in each payout
+
+No more mystery deposits. That $12,847.32 bank deposit? Click it and see every order that's included.
+
+## Sales tax tracking
+
+If you collect sales tax through Shopify:
+
+- Tax amounts import with each order
+- Tax is tracked by jurisdiction (state, county, city)
+- Use this data for your sales tax returns
+
+<Tip>
+Selling in multiple states? Connect TaxCloud to automate filing.
+</Tip>
+
+## Multiple stores
+
+Running multiple Shopify stores?
+
+1. Connect each store separately
+2. Each store's sales appear with a store tag
+3. Reports can filter by store
+4. Payouts reconcile per store
+
+## Products and cost of goods sold
+
+When you connect products, we import:
+
+| Field | Purpose |
+|-------|---------|
+| Product name | Transaction descriptions |
+| SKU | Reference matching |
+| Cost | Cost of goods sold (if entered in Shopify) |
+| Price | Revenue tracking |
+
+If you track product costs in Shopify, we can calculate COGS automatically. No more estimating gross margin.
+
+## Managing the connection
+
+### Check sync status
+
+Go to **Settings → Integrations → Shopify** to see:
+
+- Connection status
+- Last sync time
+- Orders synced
+- Any errors
+
+### Force a sync
+
+Click **Sync Now** to pull recent orders immediately.
+
+### Disconnect
+
+1. Go to **Settings → Integrations → Shopify**
+2. Click **Manage → Disconnect**
+
+This stops syncing but keeps imported data.
+
+To also remove from Shopify:
+1. Go to Shopify Admin → Settings → Apps
+2. Find Pluvel and click Remove
+
+## Common issues
+
+<AccordionGroup>
+  <Accordion title="Orders not syncing">
+    If orders aren't appearing:
+
+    1. Check that the app is still authorized in Shopify
+    2. Try a manual sync
+    3. Verify the orders are completed (draft orders don't sync)
+    4. Look for error messages in integration settings
+  </Accordion>
+
+  <Accordion title="Payout amounts don't match bank">
+    Shopify payouts include orders minus fees and refunds. If amounts don't match:
+
+    - Check for pending refunds
+    - Verify Shopify Payments fees are accounted for
+    - Look for chargebacks
+  </Accordion>
+
+  <Accordion title="Duplicate orders">
+    Duplicates can happen if you import from multiple sources (Shopify integration + manual CSV). Use one method per time period.
+  </Accordion>
+
+  <Accordion title="Missing historical orders">
+    Initial sync imports 90 days. Need older orders? Contact support for a one-time historical import.
+  </Accordion>
+
+  <Accordion title="Test orders appearing">
+    Shopify test orders (from Bogus Gateway) may import. Delete them manually or filter them out in reports.
+  </Accordion>
+</AccordionGroup>
+
+## What we can't do
+
+This integration is read-only. Pluvel can't:
+
+- Create orders in Shopify
+- Modify products or inventory
+- Issue refunds
+- Access your Shopify balance
+
+<Card
+  title="Set up sales tax"
+  icon="percent"
+  href="/integrations/taxcloud"
+>
+  Automate multi-state sales tax compliance.
+</Card>

@@ -1,0 +1,162 @@
+---
+title: Payroll Taxes
+sidebarTitle: Payroll taxes
+description: Understand and manage payroll tax obligations.
+---
+
+Payroll taxes are the least fun part of having employees. You withhold money from their paychecks (income tax, Social Security, Medicare), pay your own share on top of that (employer taxes), and send it all to various government agencies on very specific schedules.
+
+Miss a deposit? Penalties. Late filing? More penalties. Get it wrong? You guessed it.
+
+The good news: Pluvel handles the calculations, deposits, and filings automatically. You just need to understand what's happening.
+
+## Types of payroll taxes
+
+### Employee withholdings
+
+You take these out of employee paychecks:
+
+| Tax | Rate | Notes |
+|-----|------|-------------|
+| Federal income tax | 0-37% | Based on W-4 and income |
+| State income tax | 0-13% | Depends on state (some states have none) |
+| Social Security | 6.2% | On first $168,600 (2024) |
+| Medicare | 1.45% | On all wages |
+| Additional Medicare | 0.9% | Only on wages over $200k |
+
+### Employer taxes
+
+You pay these on top of wages (not deducted from employees):
+
+| Tax | Rate | Notes |
+|-----|------|-------------|
+| Social Security | 6.2% | Matching the employee's 6.2% |
+| Medicare | 1.45% | Matching the employee's 1.45% |
+| FUTA | 0.6% | Federal unemployment (on first $7,000/employee) |
+| SUTA | 0.5-6%+ | State unemployment (varies wildly by state and your experience rating) |
+
+For every dollar in wages, expect to pay roughly 8-10% extra in employer taxes (before benefits).
+
+## Tax calculations
+
+Every payroll, Pluvel calculates taxes automatically:
+
+<Steps>
+  <Step title="Calculate gross pay">
+    Hours × rate, salary portion, bonuses, commissions — everything earned.
+  </Step>
+
+  <Step title="Apply pre-tax deductions">
+    401(k), health insurance, HSA — reduces taxable wages.
+  </Step>
+
+  <Step title="Calculate taxes on taxable wages">
+    Federal, state, Social Security, Medicare — based on remaining amount and W-4 settings.
+  </Step>
+
+  <Step title="Withhold and track">
+    Taxes come out of the paycheck and queue up for deposit.
+  </Step>
+</Steps>
+
+You don't do any of this manually. Pluvel handles the math.
+
+## Tax deposits and filings
+
+Taxes need to be deposited on a schedule, then reported on forms:
+
+| Tax | Deposit frequency | Filed on |
+|-----|-----------|------|
+| Federal income + FICA | Per your deposit schedule | Form 941 (quarterly) |
+| FUTA | Quarterly (if over $500) | Form 940 (annual) |
+| State income | Varies by state | State forms (quarterly/annual) |
+| SUTA | Quarterly | State unemployment forms |
+
+### Your deposit schedule
+
+The IRS assigns you a deposit schedule based on your tax liability:
+
+| Annual payroll tax liability | Deposit schedule |
+|------------------|----------|
+| Under $50,000 | Monthly (15th of following month) |
+| $50,000 or more | Semi-weekly (Wed/Fri depending on payday) |
+| Under $2,500 per quarter | Can pay with quarterly return |
+
+Pluvel knows your schedule and makes deposits automatically. You don't need to remember deadlines.
+
+## What Pluvel handles
+
+| Task | You | Pluvel |
+|------|-----|--------|
+| Calculate withholdings | | ✓ |
+| Make federal tax deposits | | ✓ |
+| Make state tax deposits | | ✓ |
+| File Form 941 (quarterly) | | ✓ |
+| File Form 940 (annual) | | ✓ |
+| File state returns | | ✓ |
+| Generate and file W-2s | | ✓ |
+
+You just run payroll. We handle the compliance.
+
+## Tax account setup
+
+Before we can file on your behalf, we need your tax registration numbers:
+
+### Federal
+
+- **EIN** — Your employer identification number (we can help you get one if you don't have it)
+- **EFTPS enrollment** — The IRS system for electronic tax payments
+
+### State
+
+Each state where you have employees requires registration:
+- **Withholding account** — For state income tax
+- **Unemployment account** — For SUTA
+
+Pluvel walks you through state registration during setup. Some states take days, others take weeks.
+
+## Viewing tax liabilities
+
+See what you owe at any time:
+
+1. Go to **Payroll → Tax Liabilities**
+2. View by tax type (federal, state, FUTA, SUTA)
+3. See upcoming deposit dates
+4. Track what's been deposited
+
+This is your audit trail. If anyone ever asks "did you pay your payroll taxes?" you have the answer.
+
+## Tax credits
+
+Some credits can reduce your employer tax burden:
+
+| Credit | What it's for |
+|--------|-------------|
+| Work Opportunity Tax Credit (WOTC) | Hiring veterans, ex-felons, long-term unemployed |
+| R&D Credit | Research and development (can offset payroll taxes for startups) |
+| FICA Tip Credit | Restaurants paying FICA on employee tips |
+
+These require separate filings and documentation. Talk to your accountant about eligibility.
+
+## Multi-state payroll
+
+Remote employees in different states? Each state has its own rules:
+
+- Different withholding rates and brackets
+- Different unemployment tax rates
+- Different filing schedules
+- Reciprocity agreements (some states give credit for taxes paid to other states)
+
+Pluvel handles the complexity. You tell us where each employee works; we calculate, deposit, and file for each state.
+
+<Warning>
+If an employee moves to a new state, update their work location immediately. Wrong state = wrong taxes = cleanup headache.
+</Warning>
+
+<Card
+  title="W-2 forms"
+  icon="file-contract"
+  href="/features/payroll/w2"
+>
+  Year-end tax forms for employees.
+</Card>

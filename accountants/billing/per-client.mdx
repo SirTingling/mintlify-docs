@@ -1,0 +1,171 @@
+---
+title: Per-Client Billing
+sidebarTitle: Per-client
+description: Bill your clients through Pluvel.
+---
+
+Optionally use Pluvel to bill your clients directly. We handle invoicing and payment collection, then pay you.
+
+## How it works
+
+<Steps>
+  <Step title="Set up billing for a client">
+    Go to **Client → Settings → Billing** and configure their fee.
+  </Step>
+
+  <Step title="Client adds payment method">
+    Client enters their credit card or bank account in their portal.
+  </Step>
+
+  <Step title="We charge them monthly">
+    On their billing date, we charge the configured amount.
+  </Step>
+
+  <Step title="We pay you">
+    Collected amounts are deposited to your bank account.
+  </Step>
+</Steps>
+
+## Setting client fees
+
+For each client, configure:
+
+| Setting | Description |
+|---------|-------------|
+| Monthly fee | Fixed amount charged monthly |
+| Billing day | Day of month to charge (1-28) |
+| Start date | When billing should begin |
+| Payment method | Card or bank account required |
+
+### Variable billing
+
+For non-fixed fees:
+
+1. Enable **Variable Billing**
+2. Each month, set the amount before billing day
+3. Or connect to time tracking for automatic calculation
+
+## Fee structures
+
+Support for multiple fee types:
+
+| Type | Example |
+|------|---------|
+| Flat monthly | $500/month |
+| Flat + variable | $300 base + hourly overage |
+| Percentage | 1% of revenue (set manually or connect data) |
+| Transaction-based | $X per transaction (calculated automatically) |
+
+## Payment methods
+
+Clients can pay via:
+
+- **Credit card** — Visa, Mastercard, American Express
+- **ACH bank transfer** — Lower fees, longer processing
+
+### Payment method on file
+
+Clients enter their payment method in:
+- Their portal → Settings → Payment Method
+- Or you can enter it for them (with their permission)
+
+## Collecting payments
+
+### Automatic charging
+
+With a payment method on file:
+- We charge on the billing day
+- Client receives a receipt
+- You receive a payment notification
+
+### Manual invoicing
+
+Prefer to send invoices instead?
+1. Disable auto-billing for the client
+2. Create invoices manually in **Client → Invoices**
+3. Send to client
+4. They pay online
+
+## Payouts to you
+
+Collected payments are deposited to your bank:
+
+| Payout frequency | Description |
+|------------------|-------------|
+| Daily | Payments deposited next business day |
+| Weekly | All payments deposited on Friday |
+| Monthly | All payments deposited on 1st |
+
+Set your preference in **Firm Settings → Billing → Payouts**.
+
+### Payout details
+
+Each payout shows:
+- Client breakdown
+- Gross collected
+- Processing fees
+- Net deposited
+
+## Processing fees
+
+Fees are deducted from client payments:
+
+| Method | Fee |
+|--------|-----|
+| Credit card | 2.9% + $0.30 |
+| ACH | 0.8% (max $5) |
+
+Example: $500 charge via credit card
+- Gross: $500.00
+- Fee: $14.80
+- Net to you: $485.20
+
+<Tip>
+Encourage clients to use ACH for lower fees on larger payments.
+</Tip>
+
+## Failed payments
+
+When a client payment fails:
+
+1. We retry after 3 days
+2. Client receives notification
+3. You receive an alert
+4. After 3 failures, marked as failed
+
+### Handling failures
+
+Options:
+- Contact client to update payment method
+- Manually create invoice for the amount
+- Pause service until paid
+
+## Billing portal
+
+Clients can manage their billing:
+
+- View invoices and payment history
+- Update payment method
+- Download receipts
+- See upcoming charges
+
+Access via their portal → Settings → Billing.
+
+## Reporting
+
+Track client billing:
+
+- **Revenue by client** — What each client pays
+- **Collection rate** — Successful vs. failed payments
+- **Outstanding** — Unpaid invoices
+- **Trends** — Revenue over time
+
+View in **Firm Dashboard → Billing → Reports**.
+
+<Card
+  title="Invoice clients"
+  icon="file-invoice"
+  href="/accountants/billing/invoicing"
+>
+  Create and send invoices to clients.
+</Card>

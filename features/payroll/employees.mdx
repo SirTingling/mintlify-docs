@@ -1,0 +1,203 @@
+---
+title: Employee Management
+sidebarTitle: Employees
+description: Add and manage employees for payroll.
+---
+
+You just hired someone. Now you need to get them into the system before their first paycheck — which means collecting a lot of information you probably don't have yet (their SSN, their W-4, their bank account). Welcome to onboarding.
+
+The good news: once an employee is set up, payroll runs automatically. The tedious part is one-time.
+
+## Adding an employee
+
+<Steps>
+  <Step title="Go to Payroll">
+    Navigate to **Payroll → Employees** and click **Add Employee**.
+  </Step>
+
+  <Step title="Enter personal info">
+    - Legal name
+    - Email
+    - Phone
+    - Address
+    - Date of birth
+    - SSN
+  </Step>
+
+  <Step title="Employment details">
+    - Start date
+    - Job title
+    - Department
+    - Work location
+    - Employment type (full-time, part-time)
+  </Step>
+
+  <Step title="Compensation">
+    - Pay type (salary or hourly)
+    - Pay rate
+    - Pay schedule
+  </Step>
+
+  <Step title="Tax withholding">
+    Enter W-4 information:
+    - Filing status
+    - Withholding allowances
+    - Additional withholding
+  </Step>
+
+  <Step title="Direct deposit">
+    Bank account for payments.
+  </Step>
+</Steps>
+
+## Employee information
+
+### Personal details
+
+The basics you need for every employee:
+
+| Field | Why it matters |
+|-------|-------------|
+| Legal name | Must match their SSN card exactly — one typo breaks tax filings |
+| Preferred name | What they actually go by |
+| Email | Where pay stubs and tax forms go |
+| Phone | For urgent payroll questions |
+| Address | Determines state tax withholding — wrong state = wrong taxes |
+| DOB | Required for compliance |
+| SSN | Everything ties to this. Triple-check it. |
+
+### Employment details
+
+| Field | Why it matters |
+|-------|-------------|
+| Start date | Triggers new hire reporting to the state |
+| Job title | For your records and their pay stub |
+| Department | Helps with cost analysis ("what's engineering costing us?") |
+| Manager | For approval workflows |
+| Work location | Affects tax jurisdiction if you have multiple offices |
+| Status | Active, on leave, or terminated |
+
+## Compensation
+
+This is where money gets decided.
+
+### Salaried employees
+
+| Field | What it does |
+|-------|-------------|
+| Annual salary | The number you agreed on |
+| Per-period pay | Calculated automatically (annual ÷ pay periods) |
+| Exempt status | Are they exempt from overtime? (FLSA classification) |
+
+A $60,000 salary paid bi-weekly = $2,307.69 per paycheck (before deductions and taxes eat into it).
+
+### Hourly employees
+
+| Field | What it does |
+|-------|-------------|
+| Hourly rate | What they earn per hour |
+| Overtime rate | Usually 1.5x base (some states require 2x) |
+| Default hours | Pre-fills each payroll, but you can adjust |
+
+For hourly employees, you'll enter actual hours worked each pay period.
+
+## Tax withholding
+
+This is where most new employers get confused. The employee's W-4 tells you how much federal tax to withhold — and getting it wrong means they'll owe a big bill (or get a big refund) at tax time.
+
+### Federal (W-4)
+
+| Field | What it controls |
+|-------|-------------|
+| Filing status | Single, married, head of household |
+| Multiple jobs | Checked if they (or spouse) have other jobs |
+| Dependents | Reduces withholding per dependent |
+| Additional withholding | "Take an extra $50 from each check" |
+
+Don't worry about calculating anything. Enter what's on the W-4, and Pluvel does the math.
+
+### State withholding
+
+Every state is different. Some mirror the federal form, some have their own. Enter the state-specific info:
+- State filing status
+- State allowances
+- Additional state withholding
+
+<Info>
+Employees can update their own W-4 information through self-service. You don't need to be in the loop for every life change.
+</Info>
+
+## Direct deposit
+
+Most employees want direct deposit. Get their bank details:
+
+### Single account
+
+- Bank name
+- Routing number (9 digits)
+- Account number
+- Account type (checking or savings)
+
+### Split deposits
+
+Some employees want to auto-save:
+- "$500 to savings, rest to checking"
+- "20% to emergency fund, 80% to checking"
+- Up to 3 accounts
+
+## Employee self-service
+
+Let employees manage their own stuff:
+
+- View and download pay stubs
+- Update address and contact info
+- Change direct deposit accounts
+- Update W-4 withholding
+- Download tax documents (W-2s)
+
+Enable in **Settings → Payroll → Self-Service**. Fewer "can you send me my pay stub?" messages.
+
+## Employee status
+
+| Status | What happens |
+|--------|---------|
+| Active | Included in regular payroll runs |
+| On leave | Temporarily excluded from payroll |
+| Terminated | Removed from payroll, history preserved |
+
+## Terminating an employee
+
+<Steps>
+  <Step title="Open their profile">
+    Find the employee in the list.
+  </Step>
+
+  <Step title="Click Terminate">
+    Select **Terminate Employee**.
+  </Step>
+
+  <Step title="Enter termination details">
+    - Last day of work
+    - Reason (voluntary, involuntary, etc.)
+    - Final pay date
+  </Step>
+
+  <Step title="Process final pay">
+    Run their last paycheck. Include:
+    - Wages through their last day
+    - PTO payout (if your policy requires it)
+    - Any owed bonuses or commissions
+  </Step>
+</Steps>
+
+<Warning>
+Some states require final pay within 24-72 hours of termination. California, for example, requires immediate payment for involuntary terminations. Know your state's rules.
+</Warning>
+
+<Card
+  title="Manage contractors"
+  icon="user-tie"
+  href="/features/payroll/contractors"
+>
+  Contractors work differently. Here's how to track them.
+</Card>

@@ -1,0 +1,237 @@
+---
+title: Mailroom Settings
+sidebarTitle: Settings
+description: Configure notifications, forwarding, and mail handling preferences.
+---
+
+Different people want different things from their mailroom. Some want immediate alerts for everything. Others prefer a weekly digest so mail doesn't interrupt their day. Some want junk mail scanned "just in case." Others want it shredded on sight.
+
+The settings let you configure exactly how your mailroom works — notification timing, automatic rules, forwarding addresses, and retention policies.
+
+## Accessing settings
+
+Go to **Settings → Mailroom** to configure:
+
+- Notifications
+- Forwarding addresses
+- Junk mail handling
+- Retention policies
+- Automatic rules
+
+## Notification settings
+
+### By priority
+
+| Category | Email | Push | Timing |
+|----------|-------|------|--------|
+| Urgent (IRS, State, Legal) | Always | Always | Immediate |
+| Important (Bank, Business) | Configurable | Configurable | Configurable |
+| Low (Junk) | Never | Never | Never |
+
+### Notification timing
+
+For non-urgent mail, choose when to be notified:
+
+| Option | Behavior |
+|--------|----------|
+| Immediate | Notify as soon as mail is scanned |
+| Same day | Notify by end of business day |
+| Daily digest | One email with all new mail |
+| Weekly digest | One email per week |
+
+### Digest schedule
+
+If you choose digest:
+
+- **Daily:** Sent at 9 AM your local time
+- **Weekly:** Sent Monday at 9 AM
+
+Change your timezone in **Settings → Account → Timezone**.
+
+### Quiet hours
+
+Suppress notifications during certain hours:
+
+1. Enable **Quiet Hours**
+2. Set start and end time (e.g., 9 PM - 8 AM)
+3. Urgent mail still notifies; everything else waits
+
+## Forwarding addresses
+
+Manage addresses for mail forwarding:
+
+### Add an address
+
+1. Go to **Settings → Mailroom → Forwarding Addresses**
+2. Click **Add Address**
+3. Enter:
+   - Label (e.g., "Home", "Office", "Accountant")
+   - Street address
+   - City, State, ZIP
+4. Optionally set as default
+
+### Default address
+
+Your default address is pre-selected when you forward mail. Change it by clicking **Set as Default** on any address.
+
+### Remove an address
+
+1. Click the address
+2. Click **Remove**
+3. Confirm deletion
+
+In-progress shipments continue to the removed address.
+
+## Junk mail handling
+
+Configure how we treat likely junk mail:
+
+| Setting | What Happens |
+|---------|--------------|
+| **Scan and filter** | Scanned but hidden from main inbox |
+| **Scan and show** | Scanned and shown with all mail |
+| **Don't scan** | Logged only, not digitized |
+| **Auto-shred** | Destroyed without scanning |
+
+<Info>
+"Auto-shred" is aggressive—use it only if you're sure you don't need marketing mail.
+</Info>
+
+### Junk mail review
+
+Even if filtered, junk mail is accessible:
+
+1. Go to **Mailroom**
+2. Click **Filter → Category → Junk**
+3. Review and recategorize if needed
+
+## Retention policies
+
+How long we keep your mail:
+
+### Digital scans
+
+| Plan | Default Retention |
+|------|-------------------|
+| Starter | 1 year |
+| Growth | 3 years |
+| Scale | 7 years |
+
+After retention expires, scans are deleted. Download important documents before expiration.
+
+### Physical mail
+
+Physical mail is held for 90 days unless you request an action:
+
+- **Forwarded** — Shipped to you
+- **Shredded** — Destroyed
+- **Extended hold** — Request additional 90 days ($2/item)
+
+After 90 days with no action, mail is securely shredded.
+
+### Changing retention
+
+To extend digital retention:
+
+1. Go to **Settings → Mailroom → Retention**
+2. Choose a longer period (may require plan upgrade)
+
+## Automatic rules
+
+Create rules for automatic mail handling:
+
+### Create a rule
+
+1. Go to **Settings → Mailroom → Rules**
+2. Click **Add Rule**
+3. Define conditions (sender, category, content)
+4. Set actions (archive, categorize, notify)
+
+### Rule conditions
+
+| Condition | Options |
+|-----------|---------|
+| Sender contains | Text match on sender name/address |
+| Category is | IRS, State, Bank, etc. |
+| Subject contains | Text match on OCR content |
+| Date received | Within last X days |
+
+### Rule actions
+
+| Action | Description |
+|--------|-------------|
+| Categorize as | Assign a specific category |
+| Archive after X days | Auto-archive when aged |
+| Shred after X days | Auto-shred when aged |
+| Notify specific person | Additional notification |
+| Add note | Automatically attach a note |
+
+### Example rules
+
+1. **Archive bank statements**
+   - If category is Bank
+   - Archive after 30 days
+
+2. **Alert accountant about IRS**
+   - If category is IRS
+   - Also notify accountant@cpa.com
+
+3. **Auto-shred marketing**
+   - If sender contains "Marketing" or "Promo"
+   - Shred after 7 days (no scan)
+
+## Email preferences
+
+### Notification emails from
+
+Choose the sender address for mailroom emails:
+
+- `mailroom@pluvel.com` (default)
+- Your company domain (if configured)
+
+### Reply handling
+
+If someone replies to a mailroom notification:
+
+- Replies go to your support email
+- Or discarded (no-reply mode)
+
+## Mobile notifications
+
+Configure push notifications for the Pluvel mobile app:
+
+1. Download the Pluvel app
+2. Log in and enable notifications
+3. Configure which categories trigger push
+
+### Push settings
+
+| Category | Default Push |
+|----------|--------------|
+| IRS | Yes |
+| State | Yes |
+| Legal | Yes |
+| Bank | No |
+| Business | No |
+| Junk | No |
+
+## Access permissions
+
+Control who can access the mailroom:
+
+| Role | View | Forward | Shred | Settings |
+|------|------|---------|-------|----------|
+| Owner | Yes | Yes | Yes | Yes |
+| Admin | Yes | Yes | Yes | Yes |
+| Accountant | Yes | Yes | No | No |
+| Team Member | No | No | No | No |
+
+Invite team members with appropriate roles in **Settings → Team**.
+
+<Card
+  title="How the mailroom works"
+  icon="arrow-right"
+  href="/features/mailroom/how-it-works"
+>
+  Overview of the digital mailroom.
+</Card>

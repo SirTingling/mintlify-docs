@@ -1,0 +1,101 @@
+---
+title: Anomaly Detection
+sidebarTitle: Anomaly Detection
+description: Automatic alerts when something looks off in your transactions.
+---
+
+You're not going to manually review every transaction. Nobody does. But you also don't want to miss the one that's a duplicate charge, a fraudulent withdrawal, or an expense that's 3x higher than usual.
+
+Anomaly Detection watches your transactions and flags the weird ones.
+
+## What Gets Flagged
+
+Pluvel looks for patterns that don't match your history:
+
+**Unusual amounts** — Your AWS bill is normally $200. This month it's $1,800. Flagged.
+
+**Duplicate charges** — Same vendor, same amount, same day. Probably a mistake.
+
+**New vendors with large amounts** — First transaction from "XYZ Corp" and it's $5,000? Worth a look.
+
+**Round numbers from vendors** — Your utility bill is always $147.32. Suddenly it's exactly $500. That's odd.
+
+**Timing anomalies** — A charge at 3am from a vendor you normally see during business hours.
+
+## How It Works
+
+When you connect your bank accounts, Pluvel builds a profile of your normal activity. After about 30 days of data, it knows what "normal" looks like for you.
+
+New transactions get compared against that profile. If something's off by more than a configurable threshold, you get an alert.
+
+<Info>
+Anomaly detection improves over time. The more transactions it sees, the better it understands what's normal for your business.
+</Info>
+
+## Viewing Anomalies
+
+Go to **Finance → Accounting → Anomaly Detection** to see all flagged transactions.
+
+Each anomaly shows:
+- The transaction details
+- Why it was flagged (amount, timing, vendor, etc.)
+- How different it is from your typical pattern
+- Options to dismiss, investigate, or mark as fraud
+
+## Taking Action
+
+When you see an anomaly, you have options:
+
+| Action | When to Use |
+|--------|-------------|
+| **Dismiss** | It's fine, just unusual. Don't flag similar ones. |
+| **Expected** | You knew about it (planned large purchase). |
+| **Investigate** | Need to look into it. Adds to your task list. |
+| **Report Fraud** | Contact your bank immediately. We'll help document it. |
+
+Dismissed anomalies help train the system. If you dismiss several $5,000 charges from the same vendor, it'll stop flagging those.
+
+## Alert Settings
+
+Control how aggressive the detection is:
+
+**Sensitivity** — High catches more but may have false positives. Low catches less but misses fewer important things. Most users leave it at Medium.
+
+**Notification preferences** — Get alerts via email, in-app notification, or both. You can set thresholds — only email me for anomalies over $500, for example.
+
+**Categories to watch** — Maybe you only care about bank withdrawals and wire transfers, not every small charge. Configure which transaction types get scrutinized.
+
+Go to **Settings → Notifications → Anomaly Alerts** to adjust.
+
+## Real Examples
+
+**Caught a subscription you forgot to cancel.**
+A user saw their old project management tool still charging $49/month, six months after they'd switched. Flagged because it was from a "dormant" vendor.
+
+**Spotted a double-charge.**
+Vendor charged twice for the same invoice. Same amount, same day. Anomaly Detection flagged it, user got a refund.
+
+**Identified fraud early.**
+A $2,000 charge appeared from a vendor the user had never heard of. Flagged immediately because it was a new vendor with a large amount. Turned out their card was compromised. They caught it within hours instead of discovering it at month-end.
+
+## Limitations
+
+Anomaly Detection isn't perfect. It can't catch:
+
+- Fraud that looks like normal activity (if someone knows your patterns)
+- Gradual increases that stay within thresholds
+- Issues with cash transactions (we only see what's in your connected accounts)
+
+It's a safety net, not a replacement for reviewing your statements.
+
+## Privacy
+
+All analysis happens within Pluvel. We're not sharing your transaction data with external services to detect anomalies — it's all done on our infrastructure with your data.
+
+<Card
+  title="Configure alerts"
+  icon="bell"
+  href="/features/company/notifications"
+>
+  Customize when and how you get notified about anomalies.
+</Card>

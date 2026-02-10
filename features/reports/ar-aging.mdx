@@ -1,0 +1,239 @@
+---
+title: Accounts Receivable Aging
+sidebarTitle: AR Aging
+description: Track outstanding invoices and customer payment status.
+---
+
+You sent the invoice 45 days ago. The payment was due 15 days ago. You're not sure if you followed up, or when, or whether they even received it. Now multiply that by 20 customers and $80,000 in outstanding invoices.
+
+The AR Aging report shows exactly who owes you money, how much, and how long it's been overdue. It's the first place to look when cash is tight — because money you've already earned is sitting in other people's bank accounts.
+
+## Accessing the report
+
+1. Go to **Reports** in the sidebar
+2. Click **AR Aging** (under Receivables)
+3. View as of today or select a different date
+
+## Report structure
+
+The report groups outstanding invoices by age:
+
+| Column | Invoices |
+|--------|----------|
+| Current | Not yet due |
+| 1-30 Days | 1-30 days past due |
+| 31-60 Days | 31-60 days past due |
+| 61-90 Days | 61-90 days past due |
+| 90+ Days | More than 90 days past due |
+
+### Example
+
+| Customer | Current | 1-30 | 31-60 | 61-90 | 90+ | Total |
+|----------|---------|------|-------|-------|-----|-------|
+| Acme Corp | $2,500 | $1,200 | $0 | $0 | $0 | $3,700 |
+| Beta Inc | $0 | $0 | $3,400 | $0 | $0 | $3,400 |
+| Gamma LLC | $5,000 | $0 | $0 | $0 | $2,100 | $7,100 |
+| **Total** | **$7,500** | **$1,200** | **$3,400** | **$0** | **$2,100** | **$14,200** |
+
+## Understanding aging
+
+### Current
+
+Invoices within their payment terms—not yet due. No action needed unless terms are about to expire.
+
+### 1-30 days past due
+
+Recently overdue. Send a friendly reminder. Most invoices get paid in this window.
+
+### 31-60 days past due
+
+Attention needed. Follow up more persistently. Consider calling instead of just emailing.
+
+### 61-90 days past due
+
+Significant concern. Personal outreach, payment plans, or escalation may be needed.
+
+### 90+ days past due
+
+High risk. May need collection efforts, legal action, or write-off consideration.
+
+## Drill-down
+
+Click any amount to see detail:
+
+### Customer detail
+
+Clicking a customer's row shows:
+- All outstanding invoices
+- Invoice dates and due dates
+- Invoice numbers and amounts
+- Days overdue for each
+
+### Invoice detail
+
+Click an invoice to see:
+- Full invoice details
+- Payment history (partial payments)
+- Associated activities and notes
+- Send reminder or view PDF
+
+## Actions from the report
+
+### Send reminders
+
+1. Select invoices (checkbox)
+2. Click **Send Reminder**
+3. Choose reminder template
+4. Send to selected customers
+
+### Export for collections
+
+1. Filter to 60+ days overdue
+2. Click **Export**
+3. Use for collection calls or send to agency
+
+### Record payments
+
+1. Click the invoice
+2. Click **Record Payment**
+3. Enter payment details
+
+## Filtering and sorting
+
+### By customer
+
+- Search by customer name
+- Filter to show only specific customers
+
+### By age
+
+- Show only Current
+- Show only Overdue (any)
+- Show only 60+ days (at risk)
+
+### By amount
+
+- Sort largest to smallest
+- Filter minimum amount
+
+## Key metrics
+
+At the top of the report:
+
+| Metric | Description |
+|--------|-------------|
+| Total AR | All outstanding invoices |
+| Current | Not yet due |
+| Total Overdue | All past due invoices |
+| Average Days to Pay | Historical collection speed |
+| Days Sales Outstanding (DSO) | Average AR / Daily Sales |
+
+### DSO benchmark
+
+| DSO | Interpretation |
+|-----|----------------|
+| < 30 | Excellent collection |
+| 30-45 | Good, room to improve |
+| 45-60 | Needs attention |
+| > 60 | Collection problems |
+
+## Aging by date
+
+Change the "as of" date to see historical aging:
+
+1. Click the date picker
+2. Select a past date
+3. Report shows AR as of that date
+
+Useful for:
+- Month-end reporting
+- Tracking improvement over time
+- Audits and reconciliation
+
+## Scheduled reports
+
+Send AR aging automatically:
+
+1. Click **Schedule**
+2. Set frequency (weekly recommended)
+3. Add recipients
+4. Review and act on each delivery
+
+## Using for collections
+
+### Prioritization
+
+Focus collection efforts on:
+1. **Largest amounts** — Biggest impact on cash
+2. **Oldest invoices** — Hardest to collect
+3. **Good customers** — Likely to pay with reminder
+
+### Collection workflow
+
+<Steps>
+  <Step title="Current to 30 days">
+    Automatic reminder email on day 1 past due.
+  </Step>
+
+  <Step title="30-45 days">
+    Personal email or phone call. Ask if there's an issue.
+  </Step>
+
+  <Step title="45-60 days">
+    Escalate to decision-maker. Offer payment plan if needed.
+  </Step>
+
+  <Step title="60-90 days">
+    Formal demand letter. Consider stopping service.
+  </Step>
+
+  <Step title="90+ days">
+    Final notice. Send to collections or write off.
+  </Step>
+</Steps>
+
+## Writing off bad debt
+
+If an invoice is uncollectible:
+
+1. Click the invoice
+2. Click **Write Off**
+3. Confirm the write-off
+4. Entry recorded to Bad Debt Expense
+
+<Warning>
+Only write off invoices after genuine collection efforts. Write-offs reduce income and taxes but also show collection problems.
+</Warning>
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="How do I reduce AR aging?">
+    - Invoice promptly
+    - Shorter payment terms (net 15 vs net 30)
+    - Accept credit cards
+    - Require deposits
+    - Send early reminders
+    - Follow up consistently
+  </Accordion>
+
+  <Accordion title="What's a healthy aging profile?">
+    Ideally:
+    - 80%+ in Current
+    - < 15% in 1-30 days
+    - < 5% in 31-60 days
+    - Minimal in 60+
+  </Accordion>
+
+  <Accordion title="How are partial payments shown?">
+    The report shows remaining balance. If a $1,000 invoice has a $300 payment, it shows $700 outstanding, aged from the original invoice date.
+  </Accordion>
+</AccordionGroup>
+
+<Card
+  title="AP Aging Report"
+  icon="arrow-right"
+  href="/features/reports/ap-aging"
+>
+  Track what you owe vendors.
+</Card>

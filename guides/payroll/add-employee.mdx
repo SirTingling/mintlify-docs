@@ -1,0 +1,225 @@
+---
+title: Add your first employee
+sidebarTitle: Add employee
+description: Set up an employee in Pluvel for payroll.
+---
+
+Hiring your first employee is exciting. The paperwork that comes with it is not.
+
+There's the W-4, the I-9, state tax forms, direct deposit setup, and a dozen fields where one typo means a tax filing problem six months from now. This guide walks you through adding an employee correctly — so payday goes smoothly and tax season doesn't become a nightmare.
+
+## Before you start
+
+You need paperwork from the employee. Don't skip this part:
+
+| Form | What it's for | Where to get it |
+|------|--------------|-----------------|
+| **W-4** | Federal tax withholding elections | Employee fills out (available from IRS) |
+| **State W-4** | State tax withholding (if your state has income tax) | Employee fills out |
+| **I-9** | Proves they're authorized to work in the US | You and employee complete together |
+| **Direct deposit form** | Bank account details for payment | Employee provides |
+
+You can collect these on paper or have the employee complete them digitally through Pluvel's self-service onboarding (more on that below).
+
+## Add the employee
+
+<Steps>
+  <Step title="Go to Payroll">
+    Click **Payroll** in the sidebar, then **Employees**.
+  </Step>
+
+  <Step title="Click Add Employee">
+    Hit the **Add Employee** button.
+  </Step>
+
+  <Step title="Enter their information">
+    The basics:
+    - **Full legal name** — Exactly as it appears on their Social Security card. "Mike" on their SS card? Enter "Mike," not "Michael."
+    - **Email address** — Where pay stubs and tax forms will be sent
+    - **Date of birth** — Required for tax filing
+    - **Social Security Number** — Required (no exceptions)
+    - **Home address** — Affects state tax calculations
+
+    Double-check the SSN. One wrong digit causes IRS matching failures. It's the most common payroll setup mistake.
+  </Step>
+
+  <Step title="Set employment details">
+    - **Start date** — Their first day of work
+    - **Job title** — For your records
+    - **Department** — Optional, helps with reporting
+    - **Work location** — Where they primarily work (this determines which state taxes apply)
+  </Step>
+
+  <Step title="Set up compensation">
+    **Pay type:**
+    - **Salary** — Fixed amount regardless of hours (you enter annual amount)
+    - **Hourly** — Rate per hour (you enter hourly rate)
+
+    **Pay schedule:**
+    - Weekly (52 pay periods/year)
+    - Bi-weekly (26 pay periods/year)
+    - Semi-monthly (24 pay periods/year — 1st and 15th)
+    - Monthly (12 pay periods/year)
+
+    Bi-weekly is most common. Semi-monthly is easier for salaried employees. Monthly is uncommon and some states restrict it.
+  </Step>
+
+  <Step title="Enter tax withholding">
+    This comes from their W-4:
+    - **Filing status** — Single, Married Filing Jointly, Head of Household
+    - **Multiple jobs checkbox** — If they have other jobs
+    - **Dependents** — For additional withholding credits
+    - **Extra withholding** — Any additional amount they requested
+
+    For states with income tax, enter the state W-4 info too. Each state's form is slightly different.
+  </Step>
+
+  <Step title="Set up direct deposit">
+    Most employees want direct deposit:
+    - **Bank name**
+    - **Routing number** (9 digits)
+    - **Account number**
+    - **Account type** — Checking or Savings
+
+    Employees can split deposits across multiple accounts (e.g., 80% to checking, 20% to savings). Add more accounts if needed.
+  </Step>
+
+  <Step title="Add deductions (optional)">
+    If they have recurring deductions:
+    - Health insurance premiums
+    - 401(k) contributions (percentage or flat amount)
+    - HSA contributions
+    - Other pre-tax or post-tax deductions
+
+    These get subtracted automatically each payroll.
+  </Step>
+
+  <Step title="Save">
+    Click **Save**. The employee is ready for payroll.
+  </Step>
+</Steps>
+
+## Let employees onboard themselves
+
+Instead of entering everything manually:
+
+1. Add the employee's name and email
+2. Click **Send Invite**
+3. They receive an email with a link
+4. They complete:
+   - Personal information
+   - W-4 (with digital signature)
+   - State tax forms
+   - Direct deposit setup
+
+This saves you data entry and puts the responsibility on the right person. They know their SSN and bank account — you're just asking for typos if you're the one entering it.
+
+## Make sure your company is set up
+
+Before you can actually run payroll, verify your company setup in **Settings → Payroll**:
+
+| Requirement | Why it matters |
+|------------|----------------|
+| **EIN (Federal Tax ID)** | Required for all federal tax filings |
+| **State tax IDs** | Required for each state where employees work |
+| **Payroll bank account** | The account we debit for payroll |
+| **Workers' comp** | Required by most states — fines for non-compliance |
+
+If any of these are missing, you'll get a warning before you can run payroll.
+
+## Employee vs. contractor
+
+Quick gut check: is this person actually an employee?
+
+**Employee (W-2):**
+- You control how, when, and where they work
+- They use your equipment and tools
+- You provide training
+- They work only (or mostly) for you
+
+**Contractor (1099):**
+- They control how the work gets done
+- They use their own tools
+- They have other clients
+- They could profit or lose money on the engagement
+
+Misclassifying employees as contractors triggers IRS penalties, back taxes, and state labor law violations. When in doubt, they're probably an employee.
+
+[Add a contractor instead →](/guides/payroll/add-contractor)
+
+## Updating employee information
+
+Things change — addresses, bank accounts, tax elections:
+
+1. Go to **Payroll → Employees**
+2. Click on the employee
+3. Edit the relevant section
+4. Save
+
+Changes to tax withholding take effect on the next payroll. Changes to bank accounts typically need one pay period to verify.
+
+## When someone leaves
+
+When an employee's time ends:
+
+1. Open their employee record
+2. Click **Actions → Terminate**
+3. Enter:
+   - Last day of work
+   - Termination reason (for your records)
+   - Whether they get a final paycheck
+4. Run the final payroll if applicable
+
+The employee record gets archived — you can still access it for tax forms and records, but they won't appear on future payrolls.
+
+<Info>
+Some states have strict final paycheck timing requirements (California: same day if fired, 72 hours if quit). Know your state's rules.
+</Info>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="What if they don't have an SSN yet?">
+    New hires who've applied for an SSN but haven't received it can use their ITIN temporarily. But they need an SSN eventually for proper tax reporting. Don't let this linger.
+  </Accordion>
+
+  <Accordion title="Do I need to run a background check?">
+    Pluvel doesn't handle background checks. If you want one, use a third-party service before adding them to payroll. It's separate from the payroll process.
+  </Accordion>
+
+  <Accordion title="Can employees see their pay stubs?">
+    Yes. If you invite them to Pluvel, they can:
+    - View all pay stubs
+    - Download W-2s at tax time
+    - Update their address and direct deposit
+    - Adjust W-4 withholdings
+
+    They can't see other employees' information or company-level data.
+  </Accordion>
+
+  <Accordion title="How do I handle benefits?">
+    Set up benefit deductions in the employee's profile (step 8 above). The amount gets deducted each paycheck automatically.
+
+    For actual benefits administration (enrolling in plans, managing carriers), you'll need a separate benefits provider or integration.
+  </Accordion>
+
+  <Accordion title="What about remote employees in other states?">
+    Their work location determines which state taxes apply. You'll need:
+    - State tax ID for their state (if you don't already have one)
+    - Compliance with their state's labor laws
+    - State unemployment insurance registration
+
+    Pluvel handles the multi-state tax calculations once you're registered.
+  </Accordion>
+</AccordionGroup>
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Run payroll" icon="money-check-dollar" href="/guides/payroll/run-payroll">
+    Process your first payroll.
+  </Card>
+  <Card title="Set up direct deposit" icon="building-columns" href="/features/payroll/direct-deposit">
+    Configure how and when employees get paid.
+  </Card>
+</CardGroup>

@@ -1,0 +1,168 @@
+---
+title: Inventory
+sidebarTitle: Inventory
+description: Track products you buy and sell, and calculate cost of goods sold.
+---
+
+If you sell physical products, inventory tracking helps you know what you have, what it cost, and how much you're making on each sale. Pluvel handles basic inventory — not warehouse management, but enough for most small product businesses.
+
+<Info>
+Inventory tracking is included on Growth and Scale plans. Starter plan users can upgrade to access it.
+</Info>
+
+## What Inventory Tracking Does
+
+- **Tracks quantities** — How many units of each product you have
+- **Calculates COGS** — What you paid for the items you sold
+- **Values inventory** — What your unsold stock is worth
+- **Monitors levels** — Alerts when stock is running low
+
+## Setting Up Products
+
+Go to **Finance → Accounting → Inventory** and click **Add Product**.
+
+Enter:
+
+| Field | Example |
+|-------|---------|
+| Name | Widget Pro |
+| SKU | WP-001 |
+| Cost | $15.00 (what you pay) |
+| Price | $39.99 (what you charge) |
+| Starting quantity | 50 units |
+| Reorder point | 10 units |
+
+The cost is your landed cost — purchase price plus shipping, duties, etc. This is what drives your cost of goods sold.
+
+## Purchasing Inventory
+
+When you buy inventory from a supplier:
+
+1. Create a bill from the vendor
+2. Mark line items as inventory purchases
+3. Select the product
+4. Enter quantity received
+
+Your inventory count goes up. The cost goes to Inventory (an asset account), not directly to expenses.
+
+## Selling Inventory
+
+When you sell something:
+
+**From an invoice** — Add an inventory item to an invoice. When the invoice is created, quantity decreases and COGS is recorded.
+
+**From a sales integration** — If you connect Shopify or Square, sales sync automatically and update inventory.
+
+**Manual adjustment** — For sales outside Pluvel, manually adjust inventory with a reason.
+
+## Cost of Goods Sold
+
+Here's the accounting part. When you buy inventory:
+
+- Inventory (Asset) increases
+- Cash or AP decreases
+
+When you sell inventory:
+
+- Revenue increases
+- Inventory (Asset) decreases
+- COGS (Expense) increases
+
+COGS is the cost of the items you sold, not the items you bought. This is important for accurate profit reporting.
+
+## Valuation Methods
+
+Pluvel supports common inventory valuation methods:
+
+**FIFO (First In, First Out)** — Oldest inventory sells first. If you bought 10 units at $10, then 10 at $12, selling 5 uses the $10 cost. Most common, usually required for tax.
+
+**Average Cost** — Every purchase updates your average cost. Simple, less precise.
+
+Choose in **Settings → Accounting → Inventory**. Stick with one method — changing mid-year creates headaches.
+
+## Inventory Reports
+
+**Inventory Valuation** — What you have and what it's worth.
+
+**Stock Movement** — Purchases in, sales out, adjustments.
+
+**COGS Report** — Cost of goods sold by product, period, or category.
+
+**Low Stock Alert** — Products at or below reorder point.
+
+Find these in **Reports → Inventory**.
+
+## Adjustments
+
+Sometimes inventory counts don't match reality:
+
+- Theft or damage
+- Counting errors
+- Returns you didn't record
+
+Go to a product and click **Adjust Quantity**. Enter the new count and a reason. Pluvel creates an adjustment entry to account for the difference.
+
+## Physical Counts
+
+Periodically (monthly, quarterly, annually), do a physical count:
+
+1. Print your inventory list
+2. Walk through and count everything
+3. Note discrepancies
+4. Enter adjustments in Pluvel
+
+Regular counts catch problems early. Annual counts are usually required for tax purposes.
+
+## Limitations
+
+Pluvel handles basic inventory. We're not a full warehouse management system. We don't do:
+
+- Multiple warehouse locations
+- Lot tracking or serial numbers
+- Manufacturing / BOM (bill of materials)
+- Barcode scanning
+- Kitting or bundling
+
+If you need those, you'll want a dedicated inventory system that integrates with Pluvel.
+
+## Integrations
+
+For automated inventory updates:
+
+| Integration | What It Does |
+|-------------|--------------|
+| Shopify | Sales reduce inventory automatically |
+| Square | POS sales sync to Pluvel |
+| Manual import | Upload inventory counts via CSV |
+
+<Warning>
+If you use an external system for inventory, make sure it syncs to Pluvel — or you'll have duplicate entry and discrepancies. Pick one system of record for inventory counts.
+</Warning>
+
+## E-commerce Sellers
+
+If you sell on Shopify, Amazon, or similar:
+
+1. Connect the integration
+2. Map your products to Pluvel inventory items
+3. Sales sync automatically
+4. Inventory counts stay in sync
+
+Don't manually create invoices for online sales — the integration handles that.
+
+<CardGroup cols={2}>
+  <Card
+    title="Shopify integration"
+    icon="shopify"
+    href="/integrations/shopify"
+  >
+    Connect your Shopify store for automatic inventory sync.
+  </Card>
+  <Card
+    title="Reports"
+    icon="chart-bar"
+    href="/features/reports/custom"
+  >
+    Build custom inventory and COGS reports.
+  </Card>
+</CardGroup>

@@ -1,0 +1,147 @@
+---
+title: Direct Deposit Setup
+sidebarTitle: Direct Deposit Setup
+description: Set up bank accounts for paying employees electronically.
+---
+
+Direct deposit gets paychecks into employee bank accounts automatically. No paper checks to print, sign, or distribute. Most employees prefer it, and it's easier for you.
+
+## Setting Up Your Funding Account
+
+Before employees can receive direct deposits, you need a bank account to fund them.
+
+Go to **Settings → Payroll → Funding Account**.
+
+You'll need:
+- Bank name
+- Routing number (9 digits)
+- Account number
+- Account type (checking is most common)
+
+Pluvel verifies the account with test deposits — two small amounts (usually under $1) that you'll need to confirm.
+
+<Info>
+Verification takes 1-2 business days. You can't run payroll until the funding account is verified.
+</Info>
+
+## How Funding Works
+
+When you run payroll:
+
+1. **4 business days before check date** — We calculate the total payroll amount
+2. **2 business days before** — We initiate a debit from your funding account
+3. **Check date** — Money arrives in employee accounts
+
+The 4-day lead time is required by the ACH network. Plan your payroll submissions accordingly.
+
+## Employee Bank Accounts
+
+Each employee needs their bank info on file.
+
+**Employee self-service:** Employees log into Pluvel and enter their own bank details. They verify with micro-deposits, just like the company account.
+
+**Admin entry:** You can enter bank info on behalf of employees. Go to the employee profile → Payroll → Direct Deposit.
+
+Either way, bank info is encrypted and stored securely. Only designated admins can view full account numbers.
+
+## Split Deposits
+
+Employees can split their paycheck across multiple accounts:
+
+- Send $500 to savings, rest to checking
+- Send a fixed amount to one account, percentage to another
+- Up to 3 deposit destinations
+
+Employees set this up in their profile, or you can configure it for them.
+
+## Verification Process
+
+### Company Account
+
+1. You enter bank details
+2. Pluvel sends two micro-deposits (e.g., $0.12 and $0.34)
+3. You log into your bank, find the deposits
+4. Enter the amounts in Pluvel to verify
+
+### Employee Accounts
+
+Same process, but employees do it themselves:
+
+1. Employee enters their bank info
+2. We send micro-deposits
+3. Employee confirms the amounts
+4. Account is verified
+
+Unverified employee accounts can't receive direct deposits. Payroll will issue them a paper check until they verify.
+
+## Changing Bank Accounts
+
+**Employee changes:** Employees can update their own bank info anytime. New accounts need verification. There's a brief hold period (usually 2 pay cycles) for security.
+
+**Company changes:** Changing your funding account requires re-verification. Plan ahead — you can't run payroll during the verification period.
+
+<Warning>
+Be cautious of employee requests to change bank accounts right before payday, especially via email. This is a common fraud vector. Verify unusual requests through a separate channel.
+</Warning>
+
+## Paper Checks
+
+If an employee can't or won't use direct deposit:
+
+- They won't enter bank info (or you'll skip it)
+- Pluvel generates a pay stub
+- You print and sign a check manually
+- Mark it as paid in Pluvel
+
+Paper checks are tracked separately. You'll see which employees get checks vs. direct deposit on each payroll.
+
+## Prenote Transactions
+
+When you add a new bank account, Pluvel sends a "prenote" — a $0 test transaction to verify the account exists and routing is correct. This happens automatically during verification and catches errors before real money moves.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Micro-deposits didn't arrive">
+    Check the routing and account numbers. If they're wrong, deposits go to the wrong place. If correct, wait 3-4 business days — some banks are slow. If still nothing, try a different verification method (instant verification via Plaid is available for some banks).
+  </Accordion>
+
+  <Accordion title="Payroll debit failed">
+    This usually means insufficient funds or an account issue. We'll alert you immediately. You'll need to resolve it with your bank and potentially run a late payroll once the account is in good standing.
+  </Accordion>
+
+  <Accordion title="Employee didn't receive their deposit">
+    First, confirm the account is verified. Then check the payroll status — if it says "deposited," contact the employee's bank. Deposits can take 1-2 days to appear depending on the receiving bank.
+  </Accordion>
+
+  <Accordion title="Can I use a savings account for funding?">
+    Some savings accounts work, but many have transaction limits (often 6 per month under Regulation D). A checking account is safer for payroll funding.
+  </Accordion>
+</AccordionGroup>
+
+## Security
+
+Direct deposit involves moving money, so security matters:
+
+- Bank info is encrypted at rest and in transit
+- Only designated admins can view full account numbers
+- Changes to bank info are logged in the audit trail
+- Employees are notified when their bank info changes
+- You can require two-factor auth for payroll operations
+
+<CardGroup cols={2}>
+  <Card
+    title="Running payroll"
+    icon="play"
+    href="/features/payroll/running-payroll"
+  >
+    Once direct deposit is set up, run your first payroll.
+  </Card>
+  <Card
+    title="Employee setup"
+    icon="user"
+    href="/features/payroll/employees"
+  >
+    Add employees and their payment preferences.
+  </Card>
+</CardGroup>

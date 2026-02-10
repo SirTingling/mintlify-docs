@@ -1,0 +1,144 @@
+---
+title: Purchase Orders
+sidebarTitle: Purchase Orders
+description: Create POs to authorize purchases before you receive a bill.
+---
+
+Purchase orders let you formally request goods or services from a vendor before they send you a bill. It's a commitment to buy — and a way to control what gets purchased and by whom.
+
+Not every business needs POs. But if you have multiple people making purchases, or you want a paper trail before money goes out the door, they're useful.
+
+## When to Use Purchase Orders
+
+**Multi-person approval** — Someone requests, someone else approves
+**Vendor expectations** — Some vendors require a PO number before they'll ship
+**Budget control** — See committed spend before bills arrive
+**Matching** — Compare what you ordered to what you were billed
+
+If you're a solo founder buying stuff as needed, you probably don't need this. If you have a team placing orders, you might.
+
+## Creating a Purchase Order
+
+Go to **Finance → Bills → Purchase Orders** and click **New PO**.
+
+Fill in:
+- **Vendor** — Who you're ordering from
+- **Line items** — What you're buying, quantities, prices
+- **Delivery date** (optional) — When you expect it
+- **Shipping address** (optional) — Where to send it
+- **Notes** — Special instructions for the vendor
+
+Pluvel assigns a PO number automatically. You can customize the format in Settings.
+
+## Sending to Vendors
+
+Once created, you can:
+
+**Email the PO** — Send directly from Pluvel. Vendor gets a PDF they can reference.
+
+**Download PDF** — Send it yourself through your own email.
+
+**Mark as sent** — If you called it in or ordered through their portal, just mark it sent for your records.
+
+The vendor fulfills the order and eventually sends you a bill.
+
+## PO Statuses
+
+| Status | Meaning |
+|--------|---------|
+| Draft | Not sent yet |
+| Sent | Waiting for vendor to fulfill |
+| Partial | Some items received, not all |
+| Received | Everything delivered |
+| Billed | Bill received and matched |
+| Closed | Complete, nothing more to do |
+| Cancelled | Order cancelled before fulfillment |
+
+Most POs go: Draft → Sent → Received → Billed → Closed.
+
+## Receiving Against a PO
+
+When stuff arrives:
+
+1. Go to the PO
+2. Click **Receive**
+3. Mark which items arrived (and quantities)
+4. Save
+
+If everything arrived, the PO moves to "Received." If only some arrived, it's "Partial" and you can receive the rest later.
+
+## Matching Bills to POs
+
+When the vendor's bill arrives:
+
+1. Create the bill (or it syncs from email)
+2. Click **Match to PO**
+3. Select the PO
+4. Pluvel compares line items
+
+**3-way matching** — PO, received items, and bill all line up. This is the gold standard. You ordered 10 widgets, received 10 widgets, and were billed for 10 widgets.
+
+If something doesn't match:
+- Billed for more than you ordered? Flag it.
+- Received less than billed? Don't pay the full amount.
+- Prices different? Investigate before paying.
+
+<Info>
+3-way matching catches errors and fraud. Vendor bills you for items you never received? The match fails and you investigate before paying.
+</Info>
+
+## Approval Workflows
+
+If you want purchases approved before they go out:
+
+1. Go to **Settings → Bills → Approvals**
+2. Enable PO approvals
+3. Set thresholds (approve all POs, or only those over $500, etc.)
+4. Assign approvers
+
+When someone creates a PO, it goes into "Pending Approval" status. Approver gets notified, reviews, and approves or rejects.
+
+## Committed Spend
+
+POs represent money you've committed but not yet billed for. This is useful for budgeting.
+
+**Reports → Committed Spend** shows:
+- Open PO value (what you've promised to pay)
+- Received but not billed (delivered, waiting for invoice)
+- Cash flow projection including committed purchases
+
+So if you have $50,000 in the bank and $20,000 in open POs, your actual available cash might be closer to $30,000.
+
+## When POs Are Overkill
+
+You probably don't need POs for:
+- Recurring subscriptions (Slack, AWS, etc.)
+- Small, frequent purchases under a threshold
+- Expenses you reimburse employees for
+
+Use POs where the formality adds value — larger purchases, vendor relationships with history, situations where you need approval controls.
+
+## Tips
+
+**Set a threshold.** Not everything needs a PO. Maybe only purchases over $500. Configure what makes sense for your business.
+
+**Don't skip receiving.** The PO → Receive → Bill workflow breaks down if you skip receiving. You lose the ability to catch billing errors.
+
+**Close stale POs.** Old POs that will never be fulfilled should be cancelled. They clutter your reports and overstate committed spend.
+
+<CardGroup cols={2}>
+  <Card
+    title="Adding bills"
+    icon="file-invoice-dollar"
+    href="/features/bills/adding-bills"
+  >
+    Create bills and match them to your POs.
+  </Card>
+  <Card
+    title="Vendor management"
+    icon="building"
+    href="/features/bills/vendors"
+  >
+    Manage your vendors and their PO history.
+  </Card>
+</CardGroup>

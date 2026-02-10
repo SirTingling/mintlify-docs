@@ -1,0 +1,232 @@
+---
+title: Accounts Payable Aging
+sidebarTitle: AP Aging
+description: Track what you owe vendors and upcoming payments.
+---
+
+Cash is tight this week. You have $12,000 in bills coming due, but only $8,000 in the bank. Which vendors can wait? Which ones will cut you off if you're late? Which ones offer early-payment discounts you're missing?
+
+The AP Aging report answers these questions. It shows what you owe, when it's due, and how long it's been outstanding — so you can manage cash flow instead of reacting to angry vendor emails.
+
+## Accessing the report
+
+1. Go to **Reports** in the sidebar
+2. Click **AP Aging** (under Payables)
+3. View as of today or select a different date
+
+## Report structure
+
+The report groups outstanding bills by age:
+
+| Column | Bills |
+|--------|-------|
+| Current | Not yet due |
+| 1-30 Days | 1-30 days past due |
+| 31-60 Days | 31-60 days past due |
+| 61-90 Days | 61-90 days past due |
+| 90+ Days | More than 90 days past due |
+
+### Example
+
+| Vendor | Current | 1-30 | 31-60 | 61-90 | 90+ | Total |
+|--------|---------|------|-------|-------|-----|-------|
+| Office Supply Co | $450 | $0 | $0 | $0 | $0 | $450 |
+| AWS | $2,200 | $0 | $0 | $0 | $0 | $2,200 |
+| Marketing Agency | $0 | $5,000 | $0 | $0 | $0 | $5,000 |
+| **Total** | **$2,650** | **$5,000** | **$0** | **$0** | **$0** | **$7,650** |
+
+## Understanding aging
+
+### Current
+
+Bills within their payment terms. No action needed yet, but plan for these payments.
+
+### 1-30 days past due
+
+Recently overdue. Pay soon to maintain good vendor relationships. May incur late fees.
+
+### 31-60 days past due
+
+Attention needed. Vendors may limit your credit or require payment before new orders.
+
+### 61-90 days past due
+
+Significant concern. Vendor relationships at risk. May affect your credit.
+
+### 90+ days past due
+
+Critical. May face collections, service cutoffs, or legal action.
+
+## Drill-down
+
+Click any amount to see details:
+
+### Vendor detail
+
+Clicking a vendor's row shows:
+- All outstanding bills
+- Bill dates and due dates
+- Bill numbers and amounts
+- Days overdue for each
+
+### Bill detail
+
+Click a bill to see:
+- Full bill details
+- Payment history (partial payments)
+- Attached documents
+- Pay Now or schedule payment
+
+## Actions from the report
+
+### Pay bills
+
+1. Select bills (checkbox)
+2. Click **Pay Selected**
+3. Choose payment method
+4. Confirm payment
+
+### Schedule payments
+
+1. Select a bill
+2. Click **Schedule Payment**
+3. Choose future date
+4. Payment runs automatically
+
+### Export for review
+
+1. Click **Export**
+2. Download as PDF or Excel
+3. Review in meetings or with accountant
+
+## Filtering and sorting
+
+### By vendor
+
+- Search by vendor name
+- Filter to show only specific vendors
+
+### By age
+
+- Show only Current (upcoming)
+- Show only Overdue (all)
+- Show only 60+ days (at risk)
+
+### By amount
+
+- Sort largest to smallest
+- Filter minimum amount
+
+## Key metrics
+
+At the top of the report:
+
+| Metric | Description |
+|--------|-------------|
+| Total AP | All outstanding bills |
+| Due This Week | Bills due in next 7 days |
+| Overdue | All past due bills |
+| Average Days to Pay | Your historical payment speed |
+| Days Payable Outstanding (DPO) | Average AP / Daily Expenses |
+
+### DPO considerations
+
+| DPO | Consideration |
+|-----|---------------|
+| < 30 | Paying quickly, good relationships |
+| 30-45 | Balanced approach |
+| 45-60 | Stretching payments |
+| > 60 | May strain vendor relationships |
+
+## Cash flow management
+
+Use AP aging for cash planning:
+
+### Weekly payment runs
+
+1. Review AP aging every week
+2. Prioritize overdue bills
+3. Schedule payments for due-soon bills
+4. Consider cash position before paying early
+
+### Early payment discounts
+
+Some vendors offer discounts for early payment:
+
+| Terms | Meaning |
+|-------|---------|
+| 2/10 Net 30 | 2% discount if paid in 10 days, else full amount in 30 |
+| 1/15 Net 45 | 1% discount if paid in 15 days, else full amount in 45 |
+
+Track these in the bill details. The report can filter bills with early pay discounts available.
+
+## Payment prioritization
+
+When cash is tight, prioritize:
+
+1. **Payroll** — Always first (legal obligation)
+2. **Taxes** — Penalties compound quickly
+3. **Critical vendors** — Those who can shut down operations
+4. **Lease/rent** — Avoid eviction
+5. **Utilities** — Avoid service disruption
+6. **Other vendors** — Negotiate if needed
+
+## Vendor relationships
+
+### Communicating about late payments
+
+If you can't pay on time:
+
+1. Contact vendor before the due date
+2. Explain the situation
+3. Propose a payment plan
+4. Get agreement in writing
+
+### Tracking vendor terms
+
+See payment terms for each vendor in **Vendors** section. Update terms when negotiated.
+
+## Scheduled reports
+
+Send AP aging automatically:
+
+1. Click **Schedule**
+2. Set frequency (weekly recommended)
+3. Add recipients
+4. Review for payment planning
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="How do I reduce AP aging?">
+    - Set up payment schedules
+    - Pay bills on due date (not before or after)
+    - Use auto-pay for recurring bills
+    - Reconcile bills promptly when received
+  </Accordion>
+
+  <Accordion title="Should I always pay early?">
+    Not necessarily. Use full payment terms unless:
+    - Early payment discounts are offered
+    - You want to strengthen the relationship
+    - You have excess cash
+
+    Paying too early ties up working capital.
+  </Accordion>
+
+  <Accordion title="How are partial payments shown?">
+    The report shows remaining balance. If a $1,000 bill has a $400 payment, it shows $600 outstanding.
+  </Accordion>
+
+  <Accordion title="What about credit card bills?">
+    Credit card statements appear as bills when imported or entered. The balance shows in AP until paid.
+  </Accordion>
+</AccordionGroup>
+
+<Card
+  title="Payroll Reports"
+  icon="arrow-right"
+  href="/features/reports/payroll-reports"
+>
+  View payroll summaries and tax reports.
+</Card>

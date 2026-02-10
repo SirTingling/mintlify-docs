@@ -1,0 +1,199 @@
+---
+title: Bank Reconciliation
+sidebarTitle: Reconciliation
+description: Reconcile bank accounts efficiently.
+---
+
+Reconciliation is how you prove the books match reality. The bank says $47,832.16. Your books say $47,832.16. Everything ties. Client is happy. Auditor is happy. You're happy.
+
+When they don't match, you've got work to do.
+
+## How reconciliation works in Pluvel
+
+<Steps>
+  <Step title="Enter the statement balance">
+    Pull the ending balance from the bank statement. This is your target number.
+  </Step>
+
+  <Step title="Pluvel compares everything">
+    Transactions in your books get compared against what the bank shows. Matches are marked automatically.
+  </Step>
+
+  <Step title="Clear what matches">
+    Matched transactions get a checkmark. Cleared means "yes, the bank agrees this happened."
+  </Step>
+
+  <Step title="Investigate what doesn't">
+    Unmatched items need your attention. Something's in your books that isn't at the bank, or vice versa.
+  </Step>
+
+  <Step title="Zero it out">
+    When your adjusted book balance equals the statement balance, you're reconciled. Lock it and move on.
+  </Step>
+</Steps>
+
+## Starting a reconciliation
+
+1. Open the client
+2. Go to **Banking → Reconciliation**
+3. Select which account (checking, savings, credit card)
+4. Enter statement ending date
+5. Enter statement ending balance
+6. Click **Start Reconciliation**
+
+You'll see a list of transactions and a running difference at the top. Your job: get that difference to $0.00.
+
+## The reconciliation screen
+
+| Section | What you're looking at |
+|---------|----------------------|
+| **Statement balance** | The number from the bank statement |
+| **Book balance** | What your records say as of that date |
+| **Cleared balance** | Sum of transactions you've marked as cleared |
+| **Difference** | What's left to figure out — your target is $0.00 |
+| **Transaction list** | Individual items to clear or investigate |
+
+## Clearing transactions
+
+### Auto-matching
+
+Pluvel automatically clears transactions when:
+- Exact amount and date match
+- Amount matches with date within a few days
+- Same recurring transaction you've matched before
+
+These show green checkmarks. They're done.
+
+### Manual clearing
+
+For items that didn't auto-match:
+
+1. Find the transaction in the list
+2. Check the box next to it
+3. Watch the difference update
+
+If a transaction clears at the bank but shows a different date in your books, that's fine. Clear it anyway. Minor date discrepancies are normal.
+
+### Bulk clearing
+
+Got 50 small transactions that all match? Select them all and clear in one click. Don't process them individually.
+
+## When things don't match
+
+### Transaction in your books, not at the bank
+
+Common reasons:
+- **Timing** — Check written but not cashed yet. Leave it uncleared.
+- **Error** — You recorded something that didn't happen. Delete or void it.
+- **Duplicate** — Same thing entered twice. Mark one as duplicate.
+
+For timing differences, don't stress. They'll clear next month when the check gets cashed.
+
+### Transaction at the bank, not in your books
+
+You're missing something:
+- **Bank fee** — Add an expense for "Bank Service Fees"
+- **Interest** — Add income for "Interest Earned"
+- **Client spent money you don't know about** — Send them a question
+
+Click **Add Transaction** directly from the reconciliation screen to create missing entries without losing your place.
+
+### Amount differences
+
+Same transaction, different amounts. Research which is right:
+- Check the actual receipt or invoice
+- Ask the client what it was supposed to be
+- Look for transposition errors ($85 vs $58)
+
+Fix the amount in your books to match reality.
+
+## Reconciliation adjustments
+
+Sometimes you end up with a small difference that you can't track down:
+
+| Difference | What to do |
+|------------|-----------|
+| **Under $1.00** | Write off to "Bank Adjustments" — not worth more research time |
+| **$1-10** | Spend 5 minutes looking. If you can't find it, adjust. |
+| **Over $10** | Keep digging. Something's wrong. |
+
+To make an adjustment:
+1. Click **Add Adjustment**
+2. Enter amount and category (usually "Bank Adjustments" or "Reconciliation Differences")
+3. Add a note explaining what you tried
+4. The adjustment closes the gap
+
+These should be rare. If you're adjusting every reconciliation, there's a systemic problem.
+
+## Completing the reconciliation
+
+When difference shows $0.00:
+
+1. Click **Complete Reconciliation**
+2. Add any notes for the record
+3. Confirm
+
+What happens:
+- All cleared transactions are locked
+- The reconciliation is recorded with timestamp and your name
+- Those transactions can't be edited without unreconciling
+
+## Reconciliation history
+
+View past reconciliations in **Banking → Reconciliation → History**.
+
+Each one shows:
+- Statement date and balance
+- How many transactions were cleared
+- Any adjustments made
+- Who completed it
+- When
+
+This is your audit trail. When a client asks "was January reconciled?" you can point to the record.
+
+## Unreconciling (when you must)
+
+Found an error after completing? You can undo:
+
+1. Go to reconciliation history
+2. Click the reconciliation you need to fix
+3. Click **Unreconcile**
+
+<Warning>
+This reopens all transactions from that period. They can be edited again. Only do this if you have a real error — not just to tweak something minor.
+</Warning>
+
+## Multi-account tracking
+
+For clients with several accounts, track status in one place:
+
+| Account | Last reconciled | Status |
+|---------|-----------------|--------|
+| Operating Checking | Jan 31 | ✓ Current |
+| Savings | Jan 31 | ✓ Current |
+| Credit Card | Dec 31 | ⚠️ Behind |
+| Payroll Account | Jan 31 | ✓ Current |
+
+The yellow warning means you're a month behind. Catch up before it becomes two months.
+
+View this in **Banking → Reconciliation → Overview** or on the firm dashboard for all clients.
+
+## Best practices from people who do this all day
+
+**Reconcile monthly, religiously.** Two months behind is twice as hard. Three months is a nightmare.
+
+**Use statement dates.** Reconcile to the actual statement ending date, not today's date.
+
+**Document adjustments.** When you make an adjustment, note what you tried before giving up.
+
+**Watch for patterns.** If the same type of discrepancy keeps appearing, fix the root cause.
+
+**Clear the prior month first.** Don't start February's reconciliation until January is complete.
+
+<Card
+  title="Month-end close"
+  icon="calendar-check"
+  href="/accountants/workflows/month-end"
+>
+  Reconciliation done? Time to close the month.
+</Card>

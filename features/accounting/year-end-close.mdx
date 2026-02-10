@@ -1,0 +1,157 @@
+---
+title: Year-End Close
+sidebarTitle: Year-End Close
+description: Close your books for the year and prepare for taxes and reporting.
+---
+
+December 31st hits, and suddenly everyone's asking about year-end close. What is it? Do you need it? How do you do it without messing up your books?
+
+Here's the practical version.
+
+## What Year-End Close Actually Is
+
+Year-end close means finalizing your books for the fiscal year. You're saying "these numbers are final" so you can:
+
+- Prepare accurate tax returns
+- Generate annual financial statements
+- Start the new year with clean opening balances
+- Prevent accidental changes to historical data
+
+In accounting terms, you're closing out temporary accounts (revenue, expenses) and rolling net income into retained earnings.
+
+## When to Do It
+
+**For taxes:** Close before your tax deadline. For most businesses, that's March 15th (S-corps, partnerships) or April 15th (C-corps, sole props).
+
+**For clean books:** Ideally within 30-45 days of year-end. The longer you wait, the more likely you'll find transactions that belong in the prior year.
+
+<Warning>
+Don't close too early. Make sure you've accounted for all December transactions, invoices, and bills first. Banks can take a few days to post transactions from the last days of the year.
+</Warning>
+
+## Before You Close
+
+Run through this checklist:
+
+<Steps>
+  <Step title="Reconcile all accounts">
+    Every bank and credit card account should be reconciled through December 31st. No outstanding items that you can't explain.
+  </Step>
+
+  <Step title="Review uncategorized transactions">
+    Anything uncategorized won't appear correctly in your P&L. Categorize everything.
+  </Step>
+
+  <Step title="Post adjusting entries">
+    Depreciation, accrued expenses, prepaid allocations — if your accountant needs to make adjustments, now's the time.
+  </Step>
+
+  <Step title="Review accounts receivable">
+    Mark any truly uncollectible invoices as bad debt. You don't want phantom income on your books.
+  </Step>
+
+  <Step title="Review accounts payable">
+    Make sure all December bills are recorded, even if they weren't paid until January.
+  </Step>
+
+  <Step title="Verify inventory (if applicable)">
+    If you carry inventory, confirm your ending count matches your books.
+  </Step>
+
+  <Step title="Run preliminary reports">
+    Generate P&L and Balance Sheet. Do the numbers look right? Any obvious errors?
+  </Step>
+</Steps>
+
+## Closing the Year
+
+Once everything's reviewed:
+
+1. Go to **Finance → Accounting → Year-End Close**
+2. Select the fiscal year to close
+3. Review the pre-close summary
+4. Click **Close Year**
+
+Pluvel will:
+- Calculate net income (revenue minus expenses)
+- Create a closing entry that moves net income to Retained Earnings
+- Lock the period so transactions can't be added or modified
+- Set opening balances for the new year
+
+## What Gets Locked
+
+After closing:
+
+| Account Type | What Happens |
+|--------------|--------------|
+| Revenue | Balances reset to zero, net amount moves to equity |
+| Expenses | Balances reset to zero, net amount moves to equity |
+| Assets | Balances carry forward |
+| Liabilities | Balances carry forward |
+| Equity | Retained earnings updated with prior year net income |
+
+You can still view historical transactions. You just can't edit them.
+
+## Reopening a Closed Year
+
+Made a mistake? Need to post a late adjustment?
+
+You can reopen a closed year, but:
+- Only account owners can do this
+- You'll need to re-close once corrections are made
+- It's logged in your audit trail
+
+Go to **Finance → Accounting → Year-End Close**, find the closed year, and click **Reopen**. Make your changes, then close again.
+
+<Info>
+If you frequently need to reopen, you might be closing too early. Give yourself at least 45 days into the new year before closing.
+</Info>
+
+## Working with Your Accountant
+
+If you have an accountant (through Firm Mode or external):
+
+1. **Share read access** so they can review your books
+2. **Let them post adjustments** before you close
+3. **Generate the reports** they need (P&L, Balance Sheet, Trial Balance)
+4. **Close after they approve** — many accountants want to review before year-end is finalized
+
+Most accountants make adjusting entries in February or March. Don't rush to close on January 1st unless you're sure everything is final.
+
+## Multi-Year View
+
+After a few years in Pluvel, you'll have historical data. Go to **Reports** to see:
+
+- Year-over-year P&L comparison
+- Balance Sheet trends
+- Revenue growth over time
+
+This historical context is one of the best reasons to do year-end close properly. Clean history = useful insights.
+
+## Common Questions
+
+<AccordionGroup>
+  <Accordion title="Do I have to close the year?">
+    Technically no. Pluvel doesn't force you. But your accountant will want clean books for taxes, and you'll want accurate retained earnings on your Balance Sheet. We strongly recommend it.
+  </Accordion>
+
+  <Accordion title="My net income looks wrong">
+    Check for uncategorized transactions, missing invoices, or bills that weren't recorded. The P&L should match what you expect. If it's wildly off, investigate before closing.
+  </Accordion>
+
+  <Accordion title="What if I have a non-calendar fiscal year?">
+    Pluvel supports any fiscal year end. Go to Settings → Company → Fiscal Year to set yours. The close process is the same, just at a different date.
+  </Accordion>
+
+  <Accordion title="Can I close previous years I never closed?">
+    Yes. Close them in order (you can't close 2024 before closing 2023). Each year's net income rolls into retained earnings for the next.
+  </Accordion>
+</AccordionGroup>
+
+<Card
+  title="Financial reports"
+  icon="file-chart-line"
+  href="/features/reports/profit-loss"
+>
+  Generate the reports you need before closing.
+</Card>

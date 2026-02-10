@@ -1,0 +1,154 @@
+---
+title: Mercury
+sidebarTitle: Mercury
+description: Connect Mercury for real-time banking data and enhanced features.
+---
+
+Mercury is a business bank built for startups. If you're already banking there, you'll want to use our direct integration instead of connecting through Plaid.
+
+The difference? Real-time transaction sync instead of every 6-12 hours. Full transaction history instead of just 24 months. And connections that don't randomly disconnect and ask you to re-authenticate.
+
+## Why direct beats Plaid
+
+| Feature | Plaid | Mercury Direct |
+|---------|-------|----------------|
+| Transaction sync | Every 6-12 hours | Real-time (seconds) |
+| Historical data | Up to 24 months | Full history |
+| Transaction details | Standard | Enhanced (memos, attachments) |
+| Balance updates | Hourly | Real-time |
+| Connection reliability | Occasional reauth needed | Always connected |
+
+## Connect Mercury
+
+<Steps>
+  <Step title="Find the integration">
+    Go to **Settings → Integrations** and find Mercury in the Banking section.
+  </Step>
+
+  <Step title="Start the connection">
+    Click **Connect** to begin the OAuth flow.
+  </Step>
+
+  <Step title="Authorize in Mercury">
+    You'll be redirected to Mercury. Log in and authorize Pluvel to access your account data.
+  </Step>
+
+  <Step title="Select accounts">
+    Choose which Mercury accounts to sync — checking, savings, and credit cards.
+  </Step>
+
+  <Step title="Watch it sync">
+    We import your full transaction history. Usually takes a few minutes depending on how much history you have.
+  </Step>
+</Steps>
+
+<Info>
+Already connected Mercury through Plaid? Disconnect that first, then set up the direct integration for better sync.
+</Info>
+
+## What syncs
+
+| Data | Details |
+|------|---------|
+| Transactions | All transactions with full details, memos, and attachments |
+| Balances | Real-time available and pending balances |
+| Account info | Account names, masked numbers, types |
+| Pending transactions | Transactions that haven't settled yet |
+
+## Real-time means real-time
+
+Unlike Plaid connections that sync every few hours, Mercury sends us updates instantly via webhooks:
+
+- New transactions appear within seconds
+- Balance changes reflect immediately
+- Pending transactions show as they happen
+
+Your Pluvel dashboard always shows your actual current cash position. No more wondering if that big payment went through yet.
+
+## Better transaction data
+
+Mercury provides richer information than standard bank feeds:
+
+- **Cleaner merchant names** — Not cryptic strings like "SQ *COFFEE SHOP"
+- **Memos** — Any notes you added in Mercury sync over
+- **Attachments** — Receipts you uploaded in Mercury appear in Pluvel
+- **Categories** — Mercury's categorization (which you can override)
+
+## Multiple accounts
+
+If you have multiple Mercury accounts:
+
+- Connect them all during the authorization flow
+- Each account appears separately in Pluvel
+- Categorize and reconcile each independently
+
+## Treasury accounts
+
+Mercury Treasury accounts (for earning yield on idle cash) are fully supported. They appear as separate accounts and sync just like checking.
+
+## Managing the connection
+
+### Check sync status
+
+Go to **Settings → Integrations → Mercury**. You'll see:
+
+- Connection status
+- Last sync time
+- Connected accounts
+- Any errors
+
+### Add new accounts
+
+If you opened new Mercury accounts after connecting, click **Refresh** in integration settings to detect them.
+
+### Disconnect
+
+To disconnect:
+
+1. Go to **Settings → Integrations → Mercury**
+2. Click **Manage → Disconnect**
+
+This stops syncing but keeps all imported transactions.
+
+## Common issues
+
+<AccordionGroup>
+  <Accordion title="Transactions not appearing">
+    With real-time sync, transactions should appear within seconds. If they're not:
+
+    1. Check if the transaction shows in Mercury
+    2. Verify the correct account is connected
+    3. Click **Sync Now**
+    4. Check for error messages in integration settings
+  </Accordion>
+
+  <Accordion title="Connection needs reauthorization">
+    This happens if you changed your Mercury password or revoked access. Click **Reconnect** and authorize again.
+  </Accordion>
+
+  <Accordion title="New accounts not showing">
+    Accounts opened after you connected don't appear automatically. Click **Refresh** in integration settings to detect them.
+  </Accordion>
+
+  <Accordion title="Seeing duplicate transactions">
+    If you had Mercury connected via Plaid and switched to the direct integration, you might see duplicates. Disconnect the Plaid connection to stop it. Mark existing duplicates as duplicates in your transaction feed.
+  </Accordion>
+</AccordionGroup>
+
+## Switching from Plaid
+
+If you connected Mercury through Plaid and want to switch:
+
+1. Go to **Settings → Integrations → Mercury** and connect the direct integration
+2. Go to **Settings → Banking** and disconnect the Plaid connection for Mercury
+3. New transactions will come through the direct integration
+
+Historical transactions from both connections are preserved — you won't lose anything.
+
+<Card
+  title="Open a Mercury account"
+  icon="arrow-up-right-from-square"
+  href="https://mercury.com"
+>
+  Mercury offers free business checking with great integrations.
+</Card>

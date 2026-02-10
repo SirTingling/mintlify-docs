@@ -1,0 +1,140 @@
+---
+title: Fixed Assets
+sidebarTitle: Fixed Assets
+description: Track equipment, vehicles, and property — plus calculate depreciation automatically.
+---
+
+Bought a $5,000 laptop? A $30,000 vehicle? That's not just an expense — it's an asset that loses value over time. Fixed Assets in Pluvel helps you track these purchases, calculate depreciation, and keep your books accurate.
+
+## What's a Fixed Asset?
+
+Anything you buy for business use that:
+- Costs more than your capitalization threshold (typically $2,500+)
+- Lasts more than a year
+- Gradually loses value over time
+
+Common examples: computers, office furniture, vehicles, machinery, buildings.
+
+Not fixed assets: office supplies, software subscriptions, inventory for resale.
+
+## Adding an Asset
+
+Go to **Finance → Accounting → Fixed Assets** and click **Add Asset**.
+
+Enter:
+
+| Field | Example |
+|-------|---------|
+| Name | MacBook Pro 16" |
+| Category | Computer Equipment |
+| Purchase Date | March 15, 2024 |
+| Purchase Price | $3,499 |
+| Useful Life | 5 years |
+| Depreciation Method | Straight-line |
+| Salvage Value | $0 |
+
+If you already recorded the purchase as a regular expense, link that transaction. Pluvel will reclassify it from an expense to an asset.
+
+## Depreciation Methods
+
+Pluvel supports the common methods:
+
+**Straight-line** — Same amount each year. $3,000 asset over 5 years = $600/year depreciation. Simple and common.
+
+**Double declining balance** — More depreciation early, less later. Good for assets that lose value quickly (technology).
+
+**MACRS** — IRS-preferred method with specific recovery periods. If your accountant mentions MACRS, use this.
+
+Your accountant can tell you which method to use. When in doubt, straight-line is usually fine for simple businesses.
+
+## How Depreciation Works
+
+Each month (or year, depending on your settings), Pluvel creates a depreciation entry:
+
+- Debit: Depreciation Expense (shows up on your P&L)
+- Credit: Accumulated Depreciation (reduces the asset's book value)
+
+You don't have to do anything. It happens automatically based on the schedule you set up.
+
+<Info>
+Depreciation posts to your books on the schedule you choose — monthly, quarterly, or annually. Monthly is most common for accurate financial statements.
+</Info>
+
+## Viewing Your Assets
+
+The Fixed Assets list shows:
+
+| Column | Meaning |
+|--------|---------|
+| Asset Name | What you called it |
+| Category | Type of asset |
+| Purchase Price | Original cost |
+| Book Value | Current value after depreciation |
+| Monthly Depreciation | How much it depreciates each period |
+| Status | Active, fully depreciated, or disposed |
+
+Click any asset to see its full history: original purchase, all depreciation entries, and current value.
+
+## Selling or Disposing Assets
+
+When you sell, donate, or throw away an asset:
+
+1. Go to the asset record
+2. Click **Dispose**
+3. Enter the disposal date and amount received (if any)
+
+Pluvel calculates the gain or loss:
+
+- If you sell for more than book value: gain
+- If you sell for less than book value: loss
+- If you throw it away: loss equal to remaining book value
+
+The gain or loss shows up on your P&L.
+
+## Common Scenarios
+
+<AccordionGroup>
+  <Accordion title="I bought a vehicle for business">
+    Add it as a fixed asset. Vehicles typically depreciate over 5 years using MACRS. If you use it partially for personal use, only add the business portion as an asset. (Ask your accountant about the details — vehicle depreciation gets complicated.)
+  </Accordion>
+
+  <Accordion title="I already expensed something I should have capitalized">
+    No problem. Add it as a fixed asset now and link the original transaction. Pluvel will reclassify it. You may need an adjusting entry if this crosses fiscal years.
+  </Accordion>
+
+  <Accordion title="My computer died after 2 years">
+    Dispose of it with $0 proceeds. The remaining book value becomes a loss. If it was insured and you got paid, enter the insurance payment as the disposal amount.
+  </Accordion>
+
+  <Accordion title="What about improvements to an asset?">
+    Major improvements (new engine, office renovation) can be capitalized and added to the asset's value. Minor repairs are just expenses. The test: does it extend the useful life or just maintain it?
+  </Accordion>
+</AccordionGroup>
+
+## Reporting
+
+**Fixed Asset Register** — Complete list of all assets with cost, depreciation, and book value.
+
+**Depreciation Schedule** — Shows depreciation by asset, by month or year.
+
+**Tax Report** — Formatted for tax prep, showing MACRS depreciation for the tax year.
+
+Find these in **Reports → Assets**.
+
+## A Note on Taxes
+
+Book depreciation (what's on your financial statements) and tax depreciation (what you report to the IRS) can be different. Section 179 deductions, bonus depreciation, and MACRS rules can create differences.
+
+Pluvel tracks book depreciation. Your accountant may make adjustments for tax purposes. This is normal — most businesses have book-tax differences for fixed assets.
+
+<Warning>
+Fixed assets over $2,500 typically need to be capitalized for tax purposes. Expensing them incorrectly can cause issues with the IRS. When in doubt, check with your accountant.
+</Warning>
+
+<Card
+  title="Journal entries"
+  icon="pen"
+  href="/features/accounting/journal-entries"
+>
+  Depreciation creates journal entries automatically. Here's how to view or adjust them.
+</Card>

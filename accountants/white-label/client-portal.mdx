@@ -1,0 +1,189 @@
+---
+title: Client Portal
+sidebarTitle: Client portal
+description: Customize the client portal experience.
+---
+
+The client portal is where your clients access their financial data, upload documents, and communicate with you.
+
+## Custom domain
+
+Set up a branded URL for client access.
+
+### Domain setup
+
+<Steps>
+  <Step title="Choose your subdomain">
+    Pick a subdomain like:
+    - books.yourfirm.com
+    - portal.yourfirm.com
+    - clients.yourfirm.com
+  </Step>
+
+  <Step title="Add DNS record">
+    Add a CNAME record pointing to `portal.pluvel.com`:
+
+    ```
+    Type: CNAME
+    Host: books (or your chosen subdomain)
+    Value: portal.pluvel.com
+    TTL: 3600
+    ```
+  </Step>
+
+  <Step title="Enter domain in Pluvel">
+    Go to **Firm Settings → White Label → Domain**.
+    Enter your full subdomain (books.yourfirm.com).
+  </Step>
+
+  <Step title="Verify and activate">
+    Click **Verify Domain**. Once DNS propagates (up to 24 hours), your domain is active.
+  </Step>
+</Steps>
+
+### SSL certificate
+
+We automatically provision an SSL certificate for your domain. No action required.
+
+## Login page
+
+Customize the login experience:
+
+| Element | Customization |
+|---------|---------------|
+| Background | Color, gradient, or image |
+| Logo | Your logo (centered) |
+| Welcome text | Custom headline |
+| Footer | Your contact info |
+
+### Login page settings
+
+1. Go to **Firm Settings → White Label → Login Page**
+2. Configure each element
+3. Preview changes
+4. Publish
+
+## Portal layout
+
+Control what clients see in their portal:
+
+### Navigation items
+
+Show or hide sections:
+
+- Dashboard
+- Transactions
+- Invoices
+- Documents
+- Reports
+- Settings
+
+Disable sections clients shouldn't access.
+
+### Dashboard widgets
+
+Choose which widgets appear on their dashboard:
+
+- Cash position
+- Recent transactions
+- Outstanding invoices
+- Document requests
+- Messages
+
+### Quick actions
+
+Customize the action buttons:
+
+- Upload documents
+- Contact us
+- View reports
+- Pay invoice
+
+## Portal content
+
+### Welcome message
+
+Set a welcome message that appears when clients first log in:
+
+1. Go to **White Label → Portal → Welcome**
+2. Write your message (supports rich text)
+3. Add a video introduction (optional)
+4. Set to show once or always
+
+### Help content
+
+Add custom help content:
+
+- FAQ section
+- Getting started guide
+- Contact information
+- Links to your help resources
+
+### Announcements
+
+Post announcements visible to all clients:
+
+- Year-end reminders
+- Holiday schedules
+- Service updates
+
+Announcements appear as a banner in the portal.
+
+## Client permissions
+
+Control what clients can do in their portal:
+
+| Permission | Options |
+|------------|---------|
+| View transactions | All / Categorized only / None |
+| Edit transactions | Yes / No |
+| Upload documents | Yes / No |
+| Run reports | Yes / No |
+| Invite team members | Yes / No |
+| Update payment method | Yes / No |
+
+Set defaults at the firm level, override per client.
+
+## Mobile experience
+
+The portal is mobile-responsive. Clients can:
+
+- View their dashboard
+- Upload documents (including camera photos)
+- Send messages
+- View reports
+
+### Mobile app (coming soon)
+
+A branded mobile app is in development. You'll be able to offer a dedicated app under your brand.
+
+## SSO integration
+
+For enterprise clients, enable Single Sign-On:
+
+1. Go to **White Label → SSO**
+2. Configure your identity provider (Okta, Azure AD, etc.)
+3. Clients log in with their existing credentials
+
+Available on Firm Scale plan.
+
+## Analytics
+
+Track portal usage:
+
+| Metric | Description |
+|--------|-------------|
+| Logins | How often clients log in |
+| Pages viewed | What they look at |
+| Documents uploaded | Upload activity |
+| Time spent | Engagement level |
+
+View in **Firm Dashboard → Analytics → Portal**.
+
+<Card
+  title="White-label pricing"
+  icon="dollar-sign"
+  href="/accountants/white-label/pricing"
+>
+  Understand white-label pricing options.
+</Card>

@@ -1,0 +1,148 @@
+---
+title: Tax Profile
+sidebarTitle: Tax Profile
+description: Set up your company's tax profile and identifiers.
+---
+
+Before Pluvel can file taxes on your behalf, we need to know who you are — your EIN, your state tax accounts, your entity type. This is the boring-but-essential setup that makes everything else work.
+
+Set it up once. We use it for every payroll tax deposit, every quarterly filing, every W-2 and 1099 at year-end.
+
+## What's in your tax profile
+
+| Field | Description |
+|-------|-------------|
+| **Federal EIN** | Your 9-digit Employer Identification Number (XX-XXXXXXX) |
+| **State Tax ID** | State withholding/unemployment account numbers |
+| **Business Type** | Sole Prop, LLC, S-Corp, C-Corp, Partnership, Nonprofit |
+| **Tax Year** | Calendar (Jan-Dec) or Fiscal |
+| **Accounting Method** | Cash or Accrual |
+
+## Setting up your tax profile
+
+<Steps>
+  <Step title="Go to Settings → Tax">
+    From your dashboard, click **Settings** in the sidebar, then **Tax**.
+  </Step>
+
+  <Step title="Enter your Federal EIN">
+    Your EIN is the 9-digit number the IRS assigned when you registered as an employer. Format: XX-XXXXXXX.
+
+    <Info>
+    Don't have an EIN? If you formed your company through Pluvel, we applied for one automatically. Check **Company → Documents** for your EIN confirmation letter.
+    </Info>
+  </Step>
+
+  <Step title="Add state tax accounts">
+    For each state where you have employees or tax obligations, enter:
+
+    - **State Withholding Account** — For income tax withheld from employee paychecks
+    - **State Unemployment Account** — Your SUTA/SUI account number
+    - **Tax Rates** — Your assigned unemployment rate (if known)
+  </Step>
+
+  <Step title="Confirm business details">
+    Verify your:
+    - Legal business name (must match IRS records exactly)
+    - Business address
+    - Entity type
+    - Fiscal year end
+  </Step>
+</Steps>
+
+## State tax registrations
+
+When you hire employees in a new state, you need to register for state taxes. Pluvel can help with this.
+
+### States with automatic registration
+
+For these states, we can register you automatically when you add your first employee:
+
+- California
+- Texas
+- Florida
+- New York
+- And 20+ others
+
+When you add an employee in a new state, we'll prompt you to authorize registration.
+
+### Manual registration states
+
+Some states require you to register directly:
+
+1. We provide the registration links and instructions
+2. You complete registration on the state's website
+3. Enter your account numbers in Pluvel
+
+## Tax calendar integration
+
+Your tax profile powers your tax calendar. Once set up, you'll see:
+
+- **Filing deadlines** — Federal and state due dates
+- **Payment reminders** — When deposits are due
+- **Form availability** — When W-2s, 1099s, and other forms are ready
+
+Go to **Dashboard → Compliance** to see your upcoming tax obligations.
+
+## Changing your tax profile
+
+### Updating tax IDs
+
+You can update state tax account numbers anytime. Federal EIN changes are rare (usually only after a business restructure) and require verification.
+
+### Changing entity type
+
+If your business changes from LLC to S-Corp (or similar):
+
+1. Update your entity type in Settings → Tax
+2. We adjust withholding calculations going forward
+3. Historical data remains under the original entity type
+
+<Warning>
+Entity type changes have significant tax implications. Consult a tax professional before making this change.
+</Warning>
+
+### Multi-state expansion
+
+When you expand to a new state:
+
+1. Go to **Settings → Tax → State Tax Accounts**
+2. Click **Add State**
+3. Select the state and enter account numbers (or request registration)
+
+## Verification and accuracy
+
+### Why accuracy matters
+
+Incorrect tax profile information can cause:
+
+- Failed payroll tax deposits
+- IRS and state notices
+- Penalty assessments
+- W-2/1099 mismatches
+
+### Verification process
+
+When you enter or change tax identifiers, we verify them against:
+
+- IRS EIN database (for federal)
+- State agency records (where available)
+
+If verification fails, you'll see a warning. Double-check your numbers before proceeding.
+
+## Access and permissions
+
+| Role | Can View | Can Edit |
+|------|----------|----------|
+| Owner | Yes | Yes |
+| Admin | Yes | Yes |
+| Accountant | Yes | Yes |
+| Employee | No | No |
+
+<Card
+  title="Set up payroll taxes"
+  icon="arrow-right"
+  href="/features/tax/payroll-tax"
+>
+  Configure tax deposits and filing schedules.
+</Card>

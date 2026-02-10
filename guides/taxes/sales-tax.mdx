@@ -1,0 +1,159 @@
+---
+title: Sales tax
+sidebarTitle: Sales tax
+description: Collect and remit sales tax on your sales.
+---
+
+There are over 13,000 tax jurisdictions in the United States. Each has its own rules about what's taxable, at what rate, and when you need to file. State, county, city, district — some places stack four layers of sales tax. And if you sell online, you might have obligations in states you've never visited.
+
+If this sounds complicated, it is. Here's what you need to know.
+
+## Do you need to collect sales tax?
+
+You need to collect sales tax if you have **nexus** in a state:
+
+**Physical nexus:**
+- Office or warehouse in the state
+- Employees working in the state
+- Inventory stored in the state
+
+**Economic nexus:**
+- Exceed sales threshold (typically $100,000 or 200 transactions)
+- Thresholds vary by state
+
+<Info>
+After the 2018 Wayfair decision, most states can require out-of-state sellers to collect sales tax if they exceed economic nexus thresholds.
+</Info>
+
+## Set up sales tax
+
+<Steps>
+  <Step title="Determine where you have nexus">
+    List states where you have physical presence or exceed economic thresholds.
+  </Step>
+
+  <Step title="Register with each state">
+    Apply for a sales tax permit in each state. Pluvel can help with registration in supported states.
+  </Step>
+
+  <Step title="Configure tax rates in Pluvel">
+    Go to **Settings → Tax → Sales Tax**:
+    - Add your registered states
+    - Enter your permit numbers
+    - Set collection start date
+  </Step>
+
+  <Step title="Enable on invoices">
+    When creating invoices:
+    - Tax is calculated based on customer location
+    - Rates automatically applied (with TaxCloud integration)
+  </Step>
+</Steps>
+
+## How sales tax works
+
+1. **Collect** — Add tax to customer invoices
+2. **Track** — Pluvel records tax collected
+3. **Remit** — Pay the state what you've collected
+
+**Tax rates** depend on:
+- State rate (e.g., California 7.25%)
+- Local rates (city, county, district)
+- Product type (some items exempt)
+
+Total rates can be 10%+ in some areas.
+
+## TaxCloud integration
+
+Pluvel integrates with TaxCloud for automatic:
+- Rate calculation by address
+- Product taxability (knows what's exempt)
+- Multi-state filing
+
+[Set up TaxCloud integration →](/integrations/taxcloud)
+
+## Filing and remittance
+
+### Filing frequency
+
+States assign filing frequency based on your volume:
+
+| Volume | Frequency |
+|--------|-----------|
+| Low | Annual |
+| Medium | Quarterly |
+| High | Monthly |
+
+### Filing deadlines
+
+Typically due the 20th of the month following the period (varies by state).
+
+### How to file
+
+**With TaxCloud:**
+1. Go to **Tax → Sales Tax**
+2. Review the calculated return
+3. Submit through TaxCloud
+4. Payment is made automatically
+
+**Without TaxCloud:**
+1. Export sales tax report from Pluvel
+2. File directly with each state's website
+3. Pay via their portal
+
+## Sales tax reports
+
+View your sales tax data:
+
+1. Go to **Reports → Sales Tax**
+2. See collected tax by state/jurisdiction
+3. Export for filing
+
+The report shows:
+- Taxable sales
+- Tax collected
+- Filing status
+
+## Common exemptions
+
+Some sales may be exempt:
+
+| Exemption | Description |
+|-----------|-------------|
+| Resale | Buyer will resell the item |
+| Nonprofit | Tax-exempt organization |
+| Manufacturing | Ingredients in manufacturing |
+| Interstate | Shipped out of state (varies) |
+
+Collect exemption certificates from exempt buyers and keep on file.
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="What if I haven't been collecting tax?">
+    You may owe back taxes plus penalties. Consider a voluntary disclosure agreement (VDA) with the state — this often reduces penalties. Consult a sales tax specialist.
+  </Accordion>
+
+  <Accordion title="Do I charge tax on services?">
+    It depends on the state. Some states tax certain services (repair, SaaS). Many don't tax professional services. Check each state's rules.
+  </Accordion>
+
+  <Accordion title="What about shipping charges?">
+    Varies by state. Some tax shipping, some don't, some only tax if the shipped item is taxable. Pluvel/TaxCloud handles this automatically.
+  </Accordion>
+
+  <Accordion title="How do I handle multi-state sales?">
+    Collect tax based on the destination (where you ship to). Register in states where you have nexus and exceed thresholds.
+  </Accordion>
+</AccordionGroup>
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Set up TaxCloud" icon="cloud" href="/integrations/taxcloud">
+    Automate sales tax calculation and filing.
+  </Card>
+  <Card title="Quarterly filings" icon="calendar" href="/guides/taxes/quarterly-filings">
+    Understand all your quarterly tax obligations.
+  </Card>
+</CardGroup>

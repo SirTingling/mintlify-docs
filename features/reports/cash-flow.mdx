@@ -1,0 +1,234 @@
+---
+title: Cash Flow Statement
+sidebarTitle: Cash Flow
+description: See where your cash comes from and where it goes.
+---
+
+"We had our best quarter ever, but somehow we can't make payroll." This happens more than you'd think. Profit and cash aren't the same thing — you can be profitable on paper and still run out of money.
+
+The Cash Flow Statement explains why. It tracks every dollar moving in and out of your business, so you can see where the cash actually went.
+
+## Why cash flow matters
+
+You can be profitable and still run out of cash:
+- Customers pay slowly (accounts receivable grows)
+- You buy inventory before selling it
+- You invest in equipment
+- Loan payments reduce cash but aren't expenses
+
+The Cash Flow Statement reveals these dynamics.
+
+## Accessing the report
+
+1. Go to **Reports** in the sidebar
+2. Click **Cash Flow Statement**
+3. Select your date range
+
+## Report structure
+
+Cash flow is divided into three activities:
+
+### Operating Activities
+
+Cash from day-to-day business:
+
+```
+Net Income
++ Depreciation & Amortization
++ Decrease in Accounts Receivable
+- Increase in Accounts Receivable
++ Decrease in Inventory
+- Increase in Inventory
++ Increase in Accounts Payable
+- Decrease in Accounts Payable
+= Net Cash from Operations
+```
+
+### Investing Activities
+
+Cash from buying/selling assets:
+
+```
+- Purchase of Equipment
+- Purchase of Investments
++ Sale of Equipment
++ Sale of Investments
+= Net Cash from Investing
+```
+
+### Financing Activities
+
+Cash from debt and equity:
+
+```
++ Proceeds from Loans
+- Loan Repayments
++ Owner Contributions
+- Owner Draws/Distributions
+= Net Cash from Financing
+```
+
+### Net Change in Cash
+
+```
+Net Cash from Operations
++ Net Cash from Investing
++ Net Cash from Financing
+= Net Change in Cash
+
+Beginning Cash Balance
++ Net Change in Cash
+= Ending Cash Balance
+```
+
+## Key metrics
+
+| Metric | Formula | What It Shows |
+|--------|---------|---------------|
+| Operating Cash Flow | From operations section | Core business health |
+| Free Cash Flow | Operating - CapEx | Cash available for growth/distributions |
+| Cash Burn Rate | Net cash decrease / months | How fast you're using reserves |
+| Cash Runway | Cash balance / monthly burn | Months until cash runs out |
+
+## Direct vs. Indirect Method
+
+Pluvel uses the indirect method (starting from net income) by default. This is the standard approach and reconciles to your P&L.
+
+<Info>
+The direct method (listing all cash receipts and payments) is available but less common. Contact support if you need it.
+</Info>
+
+## Date ranges
+
+| Preset | Period |
+|--------|--------|
+| This Month | Current month to date |
+| Last Month | Previous full month |
+| This Quarter | Current quarter to date |
+| Last Quarter | Previous full quarter |
+| This Year | Year to date |
+| Last Year | Previous full year |
+| Custom | Any date range |
+
+## Comparison views
+
+### Period comparison
+
+Compare cash flow across periods:
+
+1. Select a date range
+2. Click **Compare**
+3. Choose a prior period
+4. See side-by-side cash flows
+
+### Trend analysis
+
+View multiple periods at once:
+- Last 6 months
+- Last 4 quarters
+- Last 3 years
+
+## Common patterns
+
+### Healthy pattern
+
+- Positive operating cash flow
+- Investing outflows (growing the business)
+- Moderate financing (manageable debt)
+
+### Warning signs
+
+| Pattern | Concern |
+|---------|---------|
+| Negative operating cash flow | Business isn't generating cash |
+| Growing AR faster than revenue | Collection problems |
+| Financing covers operating | Relying on debt to survive |
+| Decreasing cash runway | Running out of runway |
+
+## Cash flow forecasting
+
+Based on your historical patterns, Pluvel projects future cash:
+
+1. Go to **Reports → Cash Flow → Forecast**
+2. See projected cash position for next 90 days
+3. Adjust assumptions (growth rate, collection timing)
+
+### Forecast factors
+
+- Seasonal patterns from prior years
+- Outstanding invoices and expected collection
+- Scheduled bills and payroll
+- Loan payments
+
+## Improving cash flow
+
+### Speed up collections
+
+- Invoice immediately when work is complete
+- Offer early payment discounts
+- Follow up on overdue invoices
+- Accept card payments
+
+### Slow down payments
+
+- Use full payment terms (net 30, net 45)
+- Negotiate longer terms with vendors
+- Time large purchases strategically
+
+### Monitor working capital
+
+Working Capital = Current Assets - Current Liabilities
+
+- High working capital = more cash buffer
+- Low working capital = potential cash crunch
+
+## Export and sharing
+
+| Format | Use Case |
+|--------|----------|
+| PDF | Share with stakeholders |
+| Excel | Detailed analysis |
+| CSV | Import to other tools |
+
+### Scheduled reports
+
+Send automatic cash flow reports:
+
+1. Click **Schedule**
+2. Set frequency
+3. Add recipients
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why is operating cash flow different from net income?">
+    Net income includes non-cash items (depreciation) and timing differences (revenue recognized but not collected). Operating cash flow adjusts for these to show actual cash movement.
+  </Accordion>
+
+  <Accordion title="What's free cash flow?">
+    Free Cash Flow = Operating Cash Flow - Capital Expenditures
+
+    It's the cash available after maintaining/growing operations. Use it for dividends, debt repayment, or reserves.
+  </Accordion>
+
+  <Accordion title="How do I improve a negative cash flow?">
+    Common strategies:
+    - Speed up customer collections
+    - Delay vendor payments (within terms)
+    - Reduce inventory levels
+    - Delay major purchases
+    - Seek financing before you need it
+  </Accordion>
+
+  <Accordion title="Why does depreciation add back to cash?">
+    Depreciation reduced net income but no cash actually left the business. Adding it back shows the true cash generated from operations.
+  </Accordion>
+</AccordionGroup>
+
+<Card
+  title="AR Aging Report"
+  icon="arrow-right"
+  href="/features/reports/ar-aging"
+>
+  Track outstanding customer invoices.
+</Card>

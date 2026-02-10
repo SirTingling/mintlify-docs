@@ -1,0 +1,151 @@
+---
+title: Notifications
+sidebarTitle: Notifications
+description: Control what alerts you receive and how you get them.
+---
+
+Pluvel can notify you about deadlines, approvals, anomalies, and dozens of other things. You probably don't want all of them. Here's how to configure what reaches you.
+
+## Notification Channels
+
+You can receive notifications via:
+
+**In-app** — Badge on the bell icon in Pluvel. Good for things you'll see next time you log in.
+
+**Email** — Sent to your account email. Good for things that need attention even if you're not in Pluvel.
+
+**Mobile push** — If you have the Pluvel app installed. Good for urgent stuff.
+
+**Slack** (if integrated) — Posts to a channel. Good for team visibility.
+
+Each notification type can be configured separately per channel.
+
+## Categories
+
+### Compliance & Deadlines
+
+| Notification | Default | Description |
+|--------------|---------|-------------|
+| Deadline reminders | Email, Push | 30, 14, 7, 1 days before due dates |
+| Filing confirmations | Email | When we file something on your behalf |
+| Missed deadlines | Email, Push | When something wasn't filed on time |
+| License renewals | Email | Business licenses expiring soon |
+
+### Financial
+
+| Notification | Default | Description |
+|--------------|---------|-------------|
+| Low cash alert | Email, Push | Balance falls below threshold |
+| Large transactions | Email | Transactions over a certain amount |
+| Anomalies detected | In-app, Email | Unusual transactions flagged |
+| Budget thresholds | In-app | 80% or 100% of budget used |
+
+### Invoicing & Payments
+
+| Notification | Default | Description |
+|--------------|---------|-------------|
+| Invoice paid | In-app | Customer paid an invoice |
+| Invoice overdue | In-app, Email | Invoice past due date |
+| Payment failed | Email, Push | Customer payment didn't process |
+| Estimate accepted | In-app, Email | Customer approved a quote |
+
+### Payroll
+
+| Notification | Default | Description |
+|--------------|---------|-------------|
+| Payroll due | Email | Reminder to submit payroll |
+| Payroll processed | Email | Confirmation after submission |
+| Direct deposit issues | Email, Push | Bank account problems |
+| New hire reports filed | In-app | State filings completed |
+
+### Approvals
+
+| Notification | Default | Description |
+|--------------|---------|-------------|
+| Expense pending | In-app, Email | Someone submitted an expense for your approval |
+| Bill pending | In-app, Email | Bill needs approval before payment |
+| PO pending | In-app | Purchase order waiting for approval |
+
+### Mailroom
+
+| Notification | Default | Description |
+|--------------|---------|-------------|
+| New mail received | In-app | Mail scanned and available |
+| Action required | Email | Mail needs your attention |
+| IRS correspondence | Email, Push | Anything from the IRS |
+
+## Configuring Notifications
+
+Go to **Settings → Notifications**.
+
+You'll see each notification type with toggles for:
+- In-app (on/off)
+- Email (on/off)
+- Push (on/off)
+
+For some notifications, you can set thresholds:
+- Cash alert: when balance falls below $____
+- Large transaction: amounts over $____
+- Budget alert: at ___% of budget
+
+## Digest vs. Immediate
+
+Some notifications can be batched:
+
+**Immediate** — As soon as it happens. Good for urgent things (low cash, payment failures).
+
+**Daily digest** — One email per day with everything from the last 24 hours. Good for non-urgent updates.
+
+**Weekly summary** — Once per week. Good for things you want to track but don't need to act on immediately.
+
+Choose based on how quickly you need to act.
+
+## Team Notifications
+
+If you have team members, you can configure who gets what:
+
+- **Owner notifications** — Only the account owner (deadlines, compliance, IRS stuff)
+- **Admin notifications** — All admins (approvals, payroll)
+- **Personal notifications** — Each person (their own expenses, tasks assigned to them)
+
+Configure team notification routing in **Settings → Team → Notification Routing**.
+
+## Snooze and Mute
+
+**Snooze** — Temporarily silence a specific notification. "Remind me about this invoice in 3 days."
+
+**Mute** — Permanently hide a specific item. "Stop telling me about this old invoice."
+
+Right-click (or long-press on mobile) any notification to access these options.
+
+## Do Not Disturb
+
+Going on vacation? Turn on DND:
+
+1. **Settings → Notifications → Do Not Disturb**
+2. Set start and end dates
+3. Choose what still gets through (only critical, or nothing)
+
+Critical notifications (like bank account issues or IRS letters) can optionally bypass DND.
+
+<Warning>
+Be careful with DND during compliance deadlines. You might miss something important. Consider delegating to a team member instead of fully muting.
+</Warning>
+
+## Email Preferences
+
+If you're getting too many emails:
+
+- Switch non-urgent items to daily digest
+- Turn off email for things you can check in-app
+- Unsubscribe from marketing (separate from operational emails)
+
+We never send marketing to operational email preferences. "Your invoice is overdue" and "Check out our new feature" are separate settings.
+
+<Card
+  title="Compliance calendar"
+  icon="calendar"
+  href="/features/compliance/calendar"
+>
+  See all your upcoming deadlines in one place.
+</Card>

@@ -1,0 +1,171 @@
+---
+title: Mail Categorization
+sidebarTitle: Categorization
+description: How Pluvel classifies your incoming mail.
+---
+
+Not all mail is equal. An IRS audit notice demands your immediate attention. A credit card offer does not. Yet both arrive in the same stack of mail.
+
+We automatically categorize every piece of mail so urgent items float to the top and junk gets filtered out of your main view. Government notices trigger immediate alerts; marketing mail quietly waits in a folder you can ignore.
+
+## Category types
+
+| Category | Color | Priority | Examples |
+|----------|-------|----------|----------|
+| IRS | Red | Urgent | Tax notices, payment demands, audit letters |
+| State | Orange | High | Secretary of State, tax agencies, compliance |
+| Legal | Orange | High | Court documents, legal notices, demand letters |
+| Bank/Financial | Blue | Medium | Statements, notices, account updates |
+| Business | Gray | Normal | Vendor letters, general correspondence |
+| Junk | Light gray | Low | Marketing, solicitations, catalogs |
+
+## How categorization works
+
+<Steps>
+  <Step title="Sender recognition">
+    We check the return address against our database of known senders (IRS, state agencies, major banks, etc.).
+  </Step>
+
+  <Step title="Content analysis">
+    For unknown senders, we scan document content for keywords that indicate document type.
+  </Step>
+
+  <Step title="Category assigned">
+    Based on sender and content, we assign a category. You see this in your inbox.
+  </Step>
+
+  <Step title="Notification triggered">
+    High-priority categories trigger immediate notifications; lower priority may go to digest.
+  </Step>
+</Steps>
+
+## Priority handling
+
+### Urgent (IRS, State, Legal)
+
+- Scanned within hours of receipt
+- Immediate email and push notification
+- Prominent display in inbox
+- Marked with urgency indicator
+
+### Normal (Bank, Business)
+
+- Scanned within 1 business day
+- Email notification (configurable timing)
+- Standard inbox display
+
+### Low (Junk)
+
+- Logged but not scanned by default
+- No notification
+- Visible in "All Mail" filter only
+- Auto-shredded after 30 days (configurable)
+
+## Junk mail handling
+
+We identify likely junk mail by:
+
+- Known marketing senders
+- Bulk mail class indicators
+- "Resident" or generic addressing
+
+### Junk mail options
+
+Go to **Settings → Mailroom → Junk Mail**:
+
+| Option | Behavior |
+|--------|----------|
+| Don't scan | Logged only, not scanned or stored |
+| Scan but filter | Scanned but hidden from main inbox |
+| Treat as regular | Scanned and shown with other mail |
+| Auto-shred | Destroyed after 7 days, never scanned |
+
+## Correcting categories
+
+If we miscategorize something:
+
+1. Open the document
+2. Click the category badge
+3. Select the correct category
+4. (Optional) Report sender for future improvement
+
+### Training the system
+
+When you correct a category:
+
+- Future mail from that sender uses your correction
+- Our system learns from corrections across all users
+- Accuracy improves over time
+
+## Creating custom categories
+
+Beyond the default categories, you can add your own:
+
+1. Go to **Settings → Mailroom → Categories**
+2. Click **Add Category**
+3. Name it and choose a color
+4. Set notification preferences
+
+### Routing rules
+
+Create rules to auto-assign categories based on:
+
+- Sender address or name
+- Keywords in content
+- Envelope markings
+
+Example rule: "If sender contains 'First National Bank', categorize as Bank/Financial"
+
+## Category-based views
+
+Filter your inbox by category:
+
+1. Click the category filter dropdown
+2. Select one or more categories
+3. Inbox shows only matching mail
+
+### Saved views
+
+Save frequently used filters:
+
+1. Set your filters
+2. Click **Save View**
+3. Name it (e.g., "Tax Documents Only")
+4. Access from the Views dropdown
+
+## Category reporting
+
+See mail statistics by category:
+
+1. Go to **Mailroom → Analytics**
+2. View breakdown by category
+3. Track mail volume trends
+
+This helps identify:
+
+- Which types of mail you receive most
+- Seasonal patterns (tax season, renewal periods)
+- Whether junk filtering is working
+
+## Notification customization
+
+Each category has independent notification settings:
+
+| Category | Email | Push | Timing |
+|----------|-------|------|--------|
+| IRS | Yes | Yes | Immediate |
+| State | Yes | Yes | Immediate |
+| Legal | Yes | Yes | Immediate |
+| Bank | Yes | Optional | Same day |
+| Business | Yes | No | Daily digest |
+| Junk | No | No | Never |
+
+Adjust in **Settings → Mailroom → Notifications → By Category**.
+
+<Card
+  title="Take action on mail"
+  icon="arrow-right"
+  href="/features/mailroom/actions"
+>
+  Forward, download, and manage your mail.
+</Card>

@@ -1,0 +1,162 @@
+---
+title: Integrations
+sidebarTitle: Overview
+description: Connect Pluvel to the tools you already use.
+---
+
+Your bank transactions are in one place. Stripe payments in another. Payroll data somewhere else. Shopify orders in a fourth tab. Getting a complete picture of your finances means logging into five different tools and manually piecing it together.
+
+Integrations fix that. Connect the tools you already use — banking, payments, payroll, e-commerce, accounting — and the data flows into Pluvel automatically. One place, one view, no copy-pasting.
+
+## Available integrations
+
+### Banking
+
+<CardGroup cols={2}>
+  <Card
+    title="Plaid"
+    icon="building-columns"
+    href="/integrations/plaid"
+  >
+    Connect any of 12,000+ banks. Transactions sync automatically, usually within hours.
+  </Card>
+  <Card
+    title="Mercury"
+    icon="bolt"
+    href="/integrations/mercury"
+  >
+    Direct integration with Mercury. Real-time transaction sync, no Plaid middleman.
+  </Card>
+</CardGroup>
+
+### Payments
+
+<CardGroup cols={2}>
+  <Card
+    title="Stripe"
+    icon="credit-card"
+    href="/integrations/stripe"
+  >
+    Import payments, match to invoices, reconcile deposits. Real-time via webhooks.
+  </Card>
+  <Card
+    title="Square"
+    icon="square"
+    href="/integrations/square"
+  >
+    Sync Square payments and deposits. Coming soon.
+  </Card>
+</CardGroup>
+
+### Payroll
+
+<CardGroup cols={2}>
+  <Card
+    title="Gusto"
+    icon="users"
+    href="/integrations/gusto"
+  >
+    Import employees, contractors, payroll runs, and tax forms. Auto-generate journal entries.
+  </Card>
+  <Card
+    title="ADP"
+    icon="building"
+    href="/integrations/adp"
+  >
+    Pull payroll data from ADP Workforce Now. Coming soon.
+  </Card>
+</CardGroup>
+
+### Accounting
+
+<CardGroup cols={3}>
+  <Card
+    title="QuickBooks"
+    icon="calculator"
+    href="/integrations/quickbooks"
+  >
+    Import your chart of accounts, customers, vendors, and historical transactions from QuickBooks Online.
+  </Card>
+  <Card
+    title="Xero"
+    icon="x"
+    href="/integrations/xero"
+  >
+    Migrate from Xero. Import accounts, contacts, invoices, and bills.
+  </Card>
+  <Card
+    title="Wave"
+    icon="wave-pulse"
+    href="/integrations/wave"
+  >
+    Import data from Wave via CSV export.
+  </Card>
+</CardGroup>
+
+### E-Commerce
+
+<Card
+  title="Shopify"
+  icon="shop"
+  href="/integrations/shopify"
+>
+  Sync orders, refunds, and payouts. Automatic sales recording and inventory cost tracking.
+</Card>
+
+### Tax
+
+<Card
+  title="TaxCloud"
+  icon="receipt"
+  href="/integrations/taxcloud"
+>
+  Automated sales tax calculation, collection, and filing across all states.
+</Card>
+
+## How integrations work
+
+### Connecting
+
+Most integrations use OAuth — you click "Connect," log in to the service, and authorize Pluvel to access your data. We never see your passwords.
+
+A few integrations (like Mercury) use API keys that you generate in that service's dashboard and paste into Pluvel.
+
+### Syncing
+
+Integrations sync data in two ways:
+
+**Real-time (webhooks):** Services like Stripe and Gusto push updates to Pluvel immediately. A new payment appears in Pluvel within seconds.
+
+**Periodic (polling):** We pull data on a schedule — typically hourly for banking, daily for others. You can trigger a manual sync anytime.
+
+### Data ownership
+
+Your data stays yours. Connecting an integration doesn't give us ownership of anything. If you disconnect, we stop syncing new data but keep what's already imported (so your books stay intact).
+
+## Managing integrations
+
+All integrations are managed in **Settings → Integrations**.
+
+For each connected integration, you can:
+
+- **View status** — Connection health, last sync time, any errors
+- **Sync now** — Trigger an immediate sync
+- **Configure** — Adjust settings specific to that integration
+- **Disconnect** — Remove the connection (keeps existing data)
+
+<Frame>
+  <img src="/images/screenshots/integrations-hub.png" alt="Integrations hub in Pluvel" />
+</Frame>
+
+## Requesting an integration
+
+Don't see what you need? [Let us know](mailto:support@pluvel.com?subject=Integration%20request) — we prioritize based on demand.
+
+Common requests we're considering:
+
+- PayPal
+- Rippling (payroll)
+- Justworks (payroll)
+- Relay (banking)
+- Amazon Seller Central
+- WooCommerce

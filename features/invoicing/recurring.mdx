@@ -1,0 +1,180 @@
+---
+title: Recurring Invoices
+sidebarTitle: Recurring
+description: Automate invoicing for repeat customers.
+---
+
+You bill the same client the same amount every month. Or every week. Or every quarter.
+
+Creating that invoice manually each time is tedious. Forgetting to send it is expensive.
+
+Recurring invoices solve both problems. Set it up once, and invoices generate and send automatically on schedule. You get paid without thinking about it.
+
+## Creating a recurring invoice
+
+<Steps>
+  <Step title="Create the invoice">
+    Build your invoice as normal — customer, line items, amounts.
+  </Step>
+
+  <Step title="Make it recurring">
+    Instead of clicking Send, click **Make Recurring**.
+  </Step>
+
+  <Step title="Set the schedule">
+    How often?
+    - Weekly
+    - Bi-weekly
+    - Monthly
+    - Quarterly
+    - Annually
+    - Custom interval
+  </Step>
+
+  <Step title="Set the timing">
+    - **Start date:** When the first invoice generates
+    - **End date:** When to stop (leave blank for indefinite)
+    - **Send day:** Which day of the period to send
+  </Step>
+
+  <Step title="Save">
+    Invoices now generate automatically on schedule.
+  </Step>
+</Steps>
+
+## Schedule options
+
+| Frequency | Best for |
+|-----------|----------|
+| Weekly | Ongoing weekly services, hourly billing |
+| Bi-weekly | Every two weeks |
+| Monthly | Retainers, subscriptions, SaaS |
+| Quarterly | Quarterly services, consulting |
+| Annually | Annual renewals, maintenance contracts |
+| Custom | Any specific interval (every 45 days, etc.) |
+
+## Timing details
+
+### Start date
+
+When should the first invoice go out? Can be today or a future date.
+
+### End date
+
+When should invoices stop? Leave blank if it's ongoing (like a retainer with no end date).
+
+### Number of occurrences
+
+Alternative to end date — "send 12 invoices then stop."
+
+### Send day
+
+- For monthly: which day (1-28, or "last day of month")
+- For weekly: which day of the week
+
+## Auto-send vs. draft mode
+
+| Mode | What happens |
+|------|----------|
+| Auto-send | Invoice generates and emails automatically |
+| Draft | Invoice generates but waits for your review |
+
+Use draft mode if amounts might vary or you need to add details before sending. Auto-send if it's truly the same every time.
+
+## Managing recurring invoices
+
+View all your recurring schedules:
+
+1. Go to **Invoicing → Recurring**
+2. See all active and paused schedules
+3. Click any to view details
+
+### Pause
+
+Stop temporarily without deleting:
+
+1. Click the recurring invoice
+2. Click **Pause**
+3. No new invoices generate until you resume
+
+Useful for clients on vacation or projects on hold.
+
+### Resume
+
+Click **Resume** to restart a paused schedule. Next invoice generates on the normal schedule.
+
+### Edit
+
+Change the amount, line items, or schedule:
+
+1. Click the recurring invoice
+2. Click **Edit**
+3. Make changes
+4. Save
+
+Changes apply to future invoices. Already-generated invoices stay as they were.
+
+### Cancel
+
+Stop permanently:
+
+1. Click the recurring invoice
+2. Click **Cancel**
+3. No future invoices generate
+
+Previous invoices remain in your records.
+
+## Generated invoices
+
+Each recurring schedule creates individual invoices:
+
+- Linked back to the recurring schedule
+- Can be edited individually if needed
+- Track payments separately
+
+View all generated invoices from the recurring invoice detail page.
+
+## Dynamic content
+
+Use variables for content that changes:
+
+| Variable | What it becomes |
+|----------|--------|
+| `{{period_start}}` | Start date of billing period |
+| `{{period_end}}` | End date of billing period |
+| `{{month}}` | Current month name |
+| `{{year}}` | Current year |
+
+Example line item: "Monthly retainer - {{month}} {{year}}"
+
+Becomes: "Monthly retainer - February 2025"
+
+## Changing prices
+
+Need to raise your rates?
+
+1. Edit the recurring invoice
+2. Update the line item amounts
+3. Save
+
+The next invoice uses the new price. Previous invoices keep the old price.
+
+## Notifying customers
+
+Configure what customers receive:
+
+| Setting | What it does |
+|---------|-------------|
+| Invoice email | The invoice itself (customizable) |
+| Upcoming notice | Heads-up before billing ("You'll be billed $X on March 1") |
+| Payment receipt | Confirmation when payment received |
+
+Upcoming notices are good for larger amounts or new recurring relationships.
+
+<Card
+  title="Accept payments"
+  icon="credit-card"
+  href="/features/invoicing/payments"
+>
+  Get paid online.
+</Card>

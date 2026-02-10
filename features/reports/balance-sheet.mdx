@@ -1,0 +1,247 @@
+---
+title: Balance Sheet
+sidebarTitle: Balance Sheet
+description: View your company's assets, liabilities, and equity.
+---
+
+A bank asks for your financial statements before approving a loan. An investor wants to see your books before writing a check. Your accountant needs a year-end snapshot for taxes. They're all asking for the same thing: your Balance Sheet.
+
+The Balance Sheet shows your company's financial position at a specific point in time. What do you own? What do you owe? What's left for the owners?
+
+## The fundamental equation
+
+```
+Assets = Liabilities + Equity
+```
+
+This equation always balances—hence "balance sheet."
+
+## Accessing the Balance Sheet
+
+1. Go to **Reports** in the sidebar
+2. Click **Balance Sheet**
+3. Select the "as of" date
+
+## Report structure
+
+### Assets
+
+What your company owns:
+
+```
+Current Assets
+  - Cash and Cash Equivalents
+  - Accounts Receivable
+  - Inventory
+  - Prepaid Expenses
+
+Long-Term Assets
+  - Property and Equipment
+  - Less: Accumulated Depreciation
+  - Intangible Assets
+
+= Total Assets
+```
+
+### Liabilities
+
+What your company owes:
+
+```
+Current Liabilities
+  - Accounts Payable
+  - Credit Cards
+  - Accrued Expenses
+  - Payroll Liabilities
+  - Current Portion of Long-Term Debt
+
+Long-Term Liabilities
+  - Loans Payable
+  - Notes Payable
+
+= Total Liabilities
+```
+
+### Equity
+
+What's left for owners:
+
+```
+Owner's Equity
+  - Owner Contributions
+  - Retained Earnings
+  - Current Year Earnings
+  - Owner Draws
+
+= Total Equity
+```
+
+## Key accounts explained
+
+| Account | Description |
+|---------|-------------|
+| Cash | Money in bank accounts |
+| Accounts Receivable | Unpaid customer invoices |
+| Inventory | Goods held for sale |
+| Accounts Payable | Unpaid vendor bills |
+| Payroll Liabilities | Taxes and wages owed |
+| Retained Earnings | Accumulated profits from prior years |
+| Current Year Earnings | This year's profit (links to P&L) |
+
+## Date selection
+
+The Balance Sheet shows position as of a specific date:
+
+| Option | Shows |
+|--------|-------|
+| Today | Current position |
+| End of Last Month | Last month-end position |
+| End of Last Quarter | Last quarter-end position |
+| End of Last Year | Year-end position |
+| Custom Date | Any specific date |
+
+## Comparison views
+
+### Period-over-period
+
+Compare balance sheets across time:
+
+1. Select an "as of" date
+2. Click **Compare**
+3. Choose a previous date
+4. See changes in each account
+
+### Common comparisons
+
+| Comparison | Shows |
+|------------|-------|
+| This month vs. last month | Recent changes |
+| This quarter vs. last quarter | Quarterly trends |
+| Year-end vs. prior year-end | Annual growth |
+
+## Drill-down
+
+Click any account to see:
+
+- Current balance
+- All transactions affecting the account
+- Sub-accounts (if applicable)
+
+### Transaction detail
+
+From account detail:
+- See every debit and credit
+- Jump to source documents (invoices, bills, journal entries)
+- Filter by date range
+
+## Understanding equity
+
+### Owner contributions
+
+Money invested by owners:
+- Initial capital
+- Additional investments
+- Does NOT include profits
+
+### Retained earnings
+
+Accumulated profits from prior years:
+- Auto-calculated by Pluvel
+- Rolls forward each year-end
+
+### Current year earnings
+
+This year's profit or loss:
+- Equals your year-to-date P&L net income
+- At year-end, moves to Retained Earnings
+
+### Owner draws/distributions
+
+Money taken out by owners:
+- Reduces equity
+- Not an expense (doesn't reduce profit)
+- Important for personal tax planning
+
+## Export options
+
+| Format | Use Case |
+|--------|----------|
+| PDF | Share with banks, investors |
+| Excel | Detailed analysis |
+| CSV | Import to other systems |
+
+## Scheduled reports
+
+Send automatic Balance Sheets:
+
+1. Click **Schedule**
+2. Choose frequency (monthly, quarterly)
+3. Select format
+4. Add recipients
+5. Receive on schedule
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Why doesn't my cash match my bank statement?">
+    Possible reasons:
+    - Outstanding checks (issued but not cashed)
+    - Deposits in transit
+    - Unrecorded transactions
+    - Timing differences
+
+    Reconcile your accounts regularly to match.
+  </Accordion>
+
+  <Accordion title="What are Retained Earnings?">
+    Retained Earnings accumulate your company's profits (minus distributions) from all prior years. Each year-end, current year earnings roll into Retained Earnings.
+  </Accordion>
+
+  <Accordion title="Why doesn't my Balance Sheet balance?">
+    It should always balance. If it doesn't:
+    - Check for journal entry errors
+    - Look for one-sided transactions
+    - Contact support if persistent
+
+    Pluvel enforces double-entry accounting, so imbalances are rare.
+  </Accordion>
+
+  <Accordion title="How do I record depreciation?">
+    Depreciation is recorded via journal entry:
+    - Debit: Depreciation Expense (P&L)
+    - Credit: Accumulated Depreciation (Balance Sheet)
+
+    Go to **Accounting → Journal Entries** to record.
+  </Accordion>
+</AccordionGroup>
+
+## Using the Balance Sheet
+
+### For loan applications
+
+Banks want to see:
+- Total assets (collateral)
+- Debt-to-equity ratio
+- Working capital (current assets - current liabilities)
+
+### For investors
+
+Investors evaluate:
+- Book value (total equity)
+- Asset efficiency
+- Leverage (debt vs. equity)
+
+### For tax planning
+
+Track:
+- Owner draws for distribution planning
+- Equity for S-Corp reasonable compensation
+- Asset values for depreciation
+
+<Card
+  title="Cash Flow Statement"
+  icon="arrow-right"
+  href="/features/reports/cash-flow"
+>
+  Track where your cash comes from and goes.
+</Card>

@@ -1,0 +1,178 @@
+---
+title: Square
+sidebarTitle: Square
+description: Connect Square to sync payments, invoices, and sales data.
+---
+
+You're running a coffee shop, retail store, or service business. Every day, dozens of card swipes, Apple Pay taps, and cash transactions flow through Square. Then you have to somehow get all of that into your accounting system.
+
+Connect Square and stop the manual entry. Every payment, refund, and Square invoice syncs automatically. Fees are tracked separately so your books reflect the true cost of processing.
+
+## What syncs
+
+When you connect Square:
+
+- **Payments import automatically** — Card payments, Apple Pay, cash, refunds — everything
+- **Square invoices appear** — Any invoices you've created in Square sync over
+- **Daily sales summaries** — See revenue by day for easy reporting
+- **Payouts match up** — When Square deposits to your bank, we connect the dots
+
+<Info>
+Square syncs every few hours via API. New payments typically appear within 2-4 hours.
+</Info>
+
+## Connect Square
+
+<Steps>
+  <Step title="Start the connection">
+    Go to **Settings → Integrations**, find Square in the Payments section, and click **Connect**.
+  </Step>
+
+  <Step title="Authorize with Square">
+    You'll be redirected to Square. Log in and select the Square account to connect.
+  </Step>
+
+  <Step title="Grant read access">
+    Pluvel requests access to read:
+    - Payments and refunds
+    - Invoices
+    - Customers
+    - Locations (if you have multiple)
+
+    We don't request write access — we can't charge cards or modify your Square account.
+  </Step>
+
+  <Step title="Select locations">
+    Running multiple Square locations? Choose which ones to sync.
+  </Step>
+
+  <Step title="Initial import">
+    We import the last 90 days of transactions. Usually takes a few minutes.
+  </Step>
+</Steps>
+
+## How transactions appear
+
+Square payments show up in your transaction feed as income:
+
+| Field | Source |
+|-------|--------|
+| Amount | Net amount (after Square fees) |
+| Date | Payment date |
+| Description | Customer name or payment description |
+| Category | "Payment Processing" by default |
+| Reference | Square payment ID |
+
+<Tip>
+Square fees appear as separate expense transactions. A $100 payment with a $2.75 fee shows as $97.25 income plus a $2.75 expense. Your books reflect reality.
+</Tip>
+
+## Multiple locations
+
+Running multiple Square locations? Each one handles separately:
+
+- Each location syncs independently
+- Enable or disable specific locations
+- Reports can filter by location
+- Each location's fees are tracked separately
+
+## Matching payouts to bank deposits
+
+Square batches your payments and deposits them every 1-2 business days. Here's what happens:
+
+1. We track the Square payout (transfer)
+2. When the deposit appears in your bank (via Plaid or Mercury), we match it
+3. You can see exactly which payments are in each bank deposit
+
+No more mystery deposits. You'll know exactly what's in that $4,832.17 deposit.
+
+## Square invoices
+
+Square invoices sync automatically:
+
+| Square status | Pluvel status |
+|---------------|---------------|
+| Sent | Outstanding |
+| Viewed | Outstanding |
+| Paid | Paid |
+| Canceled | Voided |
+
+View Square invoices in your Pluvel invoicing section. Editing still happens in Square — this is a one-way sync.
+
+## Managing the connection
+
+### Check sync status
+
+Go to **Settings → Integrations → Square** to see:
+
+- Connection status
+- Last sync time
+- Connected locations
+- Transaction count
+- Any errors
+
+### Force a sync
+
+Click **Sync Now** to pull recent transactions immediately instead of waiting.
+
+### Change locations
+
+To add or remove locations:
+
+1. Go to **Settings → Integrations → Square**
+2. Click **Manage Locations**
+3. Check or uncheck locations
+
+### Disconnect
+
+1. Go to **Settings → Integrations → Square**
+2. Click **Manage → Disconnect**
+
+This stops future syncing but keeps everything you've already imported.
+
+## Common issues
+
+<AccordionGroup>
+  <Accordion title="Payments aren't syncing">
+    Square syncs every few hours. If payments are missing:
+
+    1. Check if the payment shows in your Square Dashboard
+    2. Verify the correct location is connected
+    3. Try a manual sync
+    4. Look for error messages in integration settings
+  </Accordion>
+
+  <Accordion title="Amounts don't match my bank deposit">
+    Pluvel shows net amounts after Square fees. A $100 payment with a $2.75 Square fee appears as:
+
+    - Income: $97.25 (net amount)
+    - Expense: $2.75 (Square fee)
+
+    Your bank deposit will be $97.25.
+  </Accordion>
+
+  <Accordion title="Missing Square invoices">
+    Only invoices created in Square sync over. Invoices you create in Pluvel don't appear in Square.
+  </Accordion>
+
+  <Accordion title="Duplicate transactions">
+    If you see the same payment twice, you might have both Square and bank connections importing. Go to the duplicate and click **Mark as Duplicate**.
+  </Accordion>
+</AccordionGroup>
+
+## What we can't do
+
+This integration is read-only. Pluvel can't:
+
+- Create payments or charges in Square
+- Issue refunds
+- Create or edit Square invoices
+- Access your Square balance for transfers
+
+<Card
+  title="View all integrations"
+  icon="grid-2"
+  href="/integrations/overview"
+>
+  See what else Pluvel connects with.
+</Card>

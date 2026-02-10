@@ -1,0 +1,128 @@
+---
+title: Credit Notes
+sidebarTitle: Credit Notes
+description: Issue credits and refunds to customers when things need adjusting.
+---
+
+Customer overpaid? Delivered less than you billed? Need to refund a retainer? Credit notes handle the money flowing the other direction — from you back to the customer.
+
+## When to Use Credit Notes
+
+Common situations:
+
+- **Refunds** — Customer paid but wants their money back
+- **Overpayment** — Customer paid $1,000 when the invoice was $800
+- **Partial delivery** — You billed for 10 hours but only delivered 8
+- **Goodwill adjustment** — Knocking money off because something went wrong
+- **Price correction** — You invoiced at the wrong rate
+
+Credit notes create a formal record of the adjustment. Better than just editing the original invoice (which you shouldn't do once it's been sent).
+
+## Creating a Credit Note
+
+Go to **Finance → Invoicing → Credit Notes** and click **New Credit Note**.
+
+You can:
+
+**Create from an invoice** — Select the invoice you're crediting. Line items pull in automatically. Adjust amounts or quantities as needed.
+
+**Create standalone** — For credits not tied to a specific invoice (goodwill, prepayment refunds).
+
+Either way, specify:
+- Customer
+- Line items (what's being credited)
+- Amount
+- Reason (internal note for your records)
+
+## Applying Credit Notes
+
+Once created, a credit note can be:
+
+**Applied to an invoice** — Customer has an unpaid invoice? Apply the credit and reduce what they owe.
+
+**Refunded** — Pay the customer back directly. Pluvel records the payment going out.
+
+**Left as credit** — Sits on the customer's account as a future credit. They can apply it to their next invoice.
+
+To apply a credit note:
+1. Open the credit note
+2. Click **Apply**
+3. Select an unpaid invoice
+4. Confirm
+
+The invoice balance updates automatically.
+
+## Example: Partial Refund
+
+You invoiced Acme Corp $5,000 for consulting. They paid in full. Later, you agree the scope was smaller than planned — you owe them $800 back.
+
+1. Create a credit note for $800
+2. Reference the original invoice
+3. Choose **Refund**
+4. Record the payment (check, transfer, however you're paying them)
+
+Your books show: $5,000 revenue from original invoice, $800 credit note, net $4,200 recognized.
+
+## Credit Notes vs. Voiding Invoices
+
+| Scenario | What to Do |
+|----------|------------|
+| Invoice sent in error, customer never saw it | Void the invoice |
+| Invoice paid, now needs adjustment | Issue a credit note |
+| Invoice sent but not paid, customer disputes | Depends — void if it's completely wrong, credit note if partial |
+
+Voiding removes the invoice from your books like it never happened. Credit notes keep the original invoice and create an offsetting record.
+
+Once an invoice is paid, never void it. Use a credit note.
+
+## Viewing Credit Notes
+
+Your credit note list shows:
+
+| Status | Meaning |
+|--------|---------|
+| Draft | Created but not finalized |
+| Open | Issued, waiting to be applied or refunded |
+| Applied | Used against an invoice |
+| Refunded | Money paid back to customer |
+
+Filter by status or customer to find what you need.
+
+## Reporting
+
+Credit notes affect your reports:
+
+- **Revenue** — Credit notes reduce revenue in the period issued
+- **Accounts Receivable** — Applied credits reduce AR balance
+- **Cash Flow** — Refunded credits show as cash outflow
+
+You can see credit notes in the **Sales → Credit Notes** report, or they'll appear on customer statements.
+
+## Tips
+
+**Be specific about the reason.** "Refund" isn't helpful. "Refund for hours not used in March project" tells you something when you look back.
+
+**Don't over-use credit notes.** If you're issuing a lot of them, you might have a quoting or scoping problem. Fix the root cause.
+
+**Apply promptly.** Unapplied credit notes sitting around cause confusion. If you owe someone money, deal with it.
+
+<Warning>
+Credit notes affect your taxable income. If you're refunding something you already reported as revenue, the credit note reduces that revenue. Make sure your timing is correct, especially around year-end.
+</Warning>
+
+<CardGroup cols={2}>
+  <Card
+    title="Creating invoices"
+    icon="file-invoice"
+    href="/features/invoicing/creating-invoices"
+  >
+    Create the invoices that credit notes reference.
+  </Card>
+  <Card
+    title="Customer management"
+    icon="users"
+    href="/features/invoicing/customers"
+  >
+    View a customer's full transaction history including credits.
+  </Card>
+</CardGroup>

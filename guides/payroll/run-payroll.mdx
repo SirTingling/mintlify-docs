@@ -1,0 +1,169 @@
+---
+title: Run your first payroll
+sidebarTitle: Run payroll
+description: Process payroll for your employees in Pluvel.
+---
+
+Payroll is stressful the first time. Calculate the wrong taxes? IRS penalty. Miss a deposit deadline? Employees don't get paid. Forget to withhold something? Now you owe money.
+
+Pluvel handles the hard parts — tax calculations, compliance, direct deposits, filings. You review the numbers, click submit, and people get paid correctly and on time.
+
+<Info>
+Before you can run payroll, you need at least one employee set up. See [Add your first employee](/guides/payroll/add-employee) if you haven't done this yet.
+</Info>
+
+## Before you start
+
+Make sure you have:
+
+- **Company tax information** — Your federal EIN and state tax IDs. Go to Settings → Tax to add these.
+- **Bank account for payroll** — The account we'll debit for payroll. Go to Settings → Payroll → Funding Account.
+- **At least one employee** — With their tax withholding (W-4) and direct deposit info completed.
+
+## Running payroll
+
+<Steps>
+  <Step title="Go to Payroll → Run Payroll">
+    From your dashboard, click **Payroll** in the sidebar, then **Run Payroll**.
+  </Step>
+
+  <Step title="Select pay period">
+    Choose the pay period you're paying for. Pluvel suggests the next pay period based on your pay schedule, but you can select a different one if needed.
+
+    <Frame>
+      <img src="/images/screenshots/payroll-select-period.png" alt="Select pay period" />
+    </Frame>
+  </Step>
+
+  <Step title="Review employees">
+    You'll see a list of employees included in this payroll. By default, all active employees on this pay schedule are included.
+
+    - **Add bonus or commission** — Click the employee row to add one-time earnings
+    - **Exclude someone** — Uncheck the box next to their name (useful if someone is on leave)
+    - **Adjust hours** — For hourly employees, enter or verify their hours worked
+  </Step>
+
+  <Step title="Review totals">
+    Pluvel shows you the breakdown:
+
+    | Category | Description |
+    |----------|-------------|
+    | Gross Pay | Total wages before deductions |
+    | Employee Taxes | Federal, state, Social Security, Medicare withheld from employees |
+    | Deductions | 401(k), health insurance, and other deductions |
+    | Net Pay | What employees receive (gross minus taxes and deductions) |
+    | Employer Taxes | Your portion of Social Security, Medicare, FUTA, SUTA |
+    | **Total Cost** | Net pay + employer taxes (what leaves your bank account) |
+
+    <Frame>
+      <img src="/images/screenshots/payroll-review.png" alt="Review payroll totals" />
+    </Frame>
+  </Step>
+
+  <Step title="Submit payroll">
+    Click **Submit Payroll**. You'll see a confirmation with:
+
+    - Check date (when employees get paid)
+    - Debit date (when we pull funds from your account)
+    - Total amount
+
+    Confirm to process the payroll.
+  </Step>
+</Steps>
+
+## After you submit
+
+Once payroll is submitted:
+
+1. **Funds are debited** — We pull the total payroll cost from your funding account 2 business days before the check date.
+2. **Direct deposits are sent** — Employees receive their pay on the check date.
+3. **Pay stubs are generated** — Each employee can view their pay stub in Pluvel (if you've given them access) or you can download PDFs.
+4. **Tax liabilities are tracked** — Pluvel records the taxes owed. We file and pay them on schedule.
+
+<Warning>
+Make sure your funding account has sufficient funds. If the debit fails, payroll will be delayed and you may incur fees.
+</Warning>
+
+## Pay schedules
+
+Pluvel supports common pay schedules:
+
+| Schedule | Frequency | Pay periods/year |
+|----------|-----------|------------------|
+| Weekly | Every week | 52 |
+| Bi-weekly | Every two weeks | 26 |
+| Semi-monthly | 1st and 15th (or similar) | 24 |
+| Monthly | Once per month | 12 |
+
+Set your pay schedule in **Settings → Payroll → Pay Schedule**. You can have different schedules for different employee groups (for example, hourly employees on bi-weekly and salaried on semi-monthly).
+
+## Payroll deadlines
+
+<Tabs>
+  <Tab title="Direct deposit">
+    Submit payroll at least **4 business days** before the check date for direct deposits to arrive on time.
+
+    | Check date | Submit by |
+    |------------|-----------|
+    | Friday | Monday (same week) |
+    | Last day of month | 4 business days prior |
+  </Tab>
+
+  <Tab title="Paper checks">
+    If you print checks yourself, you can submit payroll up until the check date. But we still need time to calculate taxes and generate pay stubs — submit at least 1 day in advance.
+  </Tab>
+</Tabs>
+
+## Common situations
+
+<AccordionGroup>
+  <Accordion title="Paying a bonus">
+    When reviewing employees, click on the employee row and select **Add Earnings**. Choose "Bonus" as the earning type and enter the amount. Bonuses are taxed differently (federal supplemental rate of 22% flat).
+  </Accordion>
+
+  <Accordion title="Employee worked overtime">
+    For hourly employees, enter their regular hours and overtime hours separately. Pluvel calculates overtime at 1.5x the regular rate. Some states have different overtime rules (California daily overtime, for example) — we handle this automatically based on the employee's work state.
+  </Accordion>
+
+  <Accordion title="Someone started mid-pay-period">
+    Add them as an employee with their start date. When you run payroll, adjust their hours or salary to reflect the partial period. For salaried employees, Pluvel can prorate automatically if you enable it in Settings.
+  </Accordion>
+
+  <Accordion title="I need to fix a payroll I already submitted">
+    If you haven't passed the processing deadline, you can cancel the payroll and resubmit. Go to **Payroll → History**, find the payroll, and click **Cancel**. After the deadline, you'll need to make corrections on the next payroll or process an off-cycle payroll.
+  </Accordion>
+
+  <Accordion title="Running an off-cycle payroll">
+    For one-time payments (termination pay, bonus-only run, correction), click **Run Payroll** and select **Off-cycle** instead of a regular pay period. Choose which employees to include and the payment type.
+  </Accordion>
+</AccordionGroup>
+
+## Tax filings
+
+Pluvel handles these payroll tax filings for you:
+
+- **Federal 941** — Quarterly, reports wages and taxes withheld
+- **Federal 940** — Annual, reports FUTA (federal unemployment)
+- **State withholding** — Varies by state, usually quarterly
+- **State unemployment** — Varies by state, usually quarterly
+
+We file on time and pay the taxes from your funding account. You can see upcoming filings and payment dates in **Payroll → Tax Filings**.
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card
+    title="Handle payroll taxes"
+    icon="landmark"
+    href="/guides/payroll/payroll-taxes"
+  >
+    Understand what we file and when.
+  </Card>
+  <Card
+    title="Year-end (W-2s and 1099s)"
+    icon="calendar"
+    href="/guides/payroll/year-end"
+  >
+    What happens at the end of the year.
+  </Card>
+</CardGroup>

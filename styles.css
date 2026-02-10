@@ -1,0 +1,284 @@
+/* Pluvel Documentation Custom Styles */
+
+/* ============================================
+   Typography
+   ============================================ */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-top: 2rem;
+}
+
+/* Body text */
+p {
+  line-height: 1.7;
+}
+
+/* Code */
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.875em;
+}
+
+/* ============================================
+   Cards
+   ============================================ */
+
+/* Card hover effect */
+.card {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Card icons - keep them subtle */
+.card-icon {
+  opacity: 0.8;
+}
+
+/* ============================================
+   Tables
+   ============================================ */
+
+table {
+  font-size: 0.9375rem;
+}
+
+th {
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+td, th {
+  padding: 0.75rem 1rem;
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+  background-color: rgba(124, 58, 237, 0.02);
+}
+
+/* ============================================
+   Callouts (Info, Warning, Tip)
+   ============================================ */
+
+/* Info box */
+.callout-info {
+  background-color: rgba(124, 58, 237, 0.05);
+  border-left: 3px solid #7C3AED;
+}
+
+/* Warning box */
+.callout-warning {
+  background-color: rgba(245, 158, 11, 0.05);
+  border-left: 3px solid #F59E0B;
+}
+
+/* Tip box */
+.callout-tip {
+  background-color: rgba(16, 185, 129, 0.05);
+  border-left: 3px solid #10B981;
+}
+
+/* ============================================
+   Sidebar
+   ============================================ */
+
+/* Active page indicator */
+.sidebar-item-active {
+  background-color: rgba(124, 58, 237, 0.1);
+  border-left: 2px solid #7C3AED;
+}
+
+/* Group headers */
+.sidebar-group-header {
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6B7280;
+  margin-top: 1.5rem;
+}
+
+/* ============================================
+   Search
+   ============================================ */
+
+/* Search input */
+.search-input {
+  border-radius: 8px;
+}
+
+/* Search results */
+.search-result {
+  border-radius: 6px;
+}
+
+.search-result:hover {
+  background-color: rgba(124, 58, 237, 0.05);
+}
+
+/* ============================================
+   Steps Component
+   ============================================ */
+
+/* Step number */
+.step-number {
+  background-color: #7C3AED;
+  color: white;
+  font-weight: 600;
+}
+
+/* Step connector line */
+.step-connector {
+  background-color: rgba(124, 58, 237, 0.2);
+}
+
+/* ============================================
+   Accordion
+   ============================================ */
+
+.accordion-trigger {
+  font-weight: 500;
+}
+
+.accordion-trigger:hover {
+  color: #7C3AED;
+}
+
+.accordion-content {
+  color: #4B5563;
+}
+
+/* ============================================
+   Tabs
+   ============================================ */
+
+.tab-active {
+  border-bottom-color: #7C3AED;
+  color: #7C3AED;
+}
+
+.tab:hover {
+  color: #7C3AED;
+}
+
+/* ============================================
+   Code Blocks
+   ============================================ */
+
+/* Code block header */
+.code-header {
+  background-color: #1F2937;
+  border-bottom: 1px solid #374151;
+}
+
+/* Copy button */
+.code-copy-button {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.code-block:hover .code-copy-button {
+  opacity: 1;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.footer {
+  border-top: 1px solid #E5E7EB;
+  padding-top: 2rem;
+  margin-top: 4rem;
+}
+
+/* ============================================
+   Dark Mode Adjustments
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  /* Callouts */
+  .callout-info {
+    background-color: rgba(124, 58, 237, 0.1);
+  }
+
+  .callout-warning {
+    background-color: rgba(245, 158, 11, 0.1);
+  }
+
+  .callout-tip {
+    background-color: rgba(16, 185, 129, 0.1);
+  }
+
+  /* Tables */
+  tbody tr:nth-child(even) {
+    background-color: rgba(124, 58, 237, 0.05);
+  }
+
+  /* Sidebar */
+  .sidebar-item-active {
+    background-color: rgba(124, 58, 237, 0.15);
+  }
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  /* Stack cards on mobile */
+  .card-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  .sidebar,
+  .topbar,
+  .footer {
+    display: none;
+  }
+
+  .content {
+    max-width: 100%;
+    margin: 0;
+  }
+}
